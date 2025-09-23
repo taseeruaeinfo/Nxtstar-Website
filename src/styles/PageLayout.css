@@ -1,0 +1,72 @@
+/* PageLayout.css */
+.page-container {
+    min-height: calc(100vh - 60px);
+    /* Adjust based on actual navbar height */
+}
+
+.page-header {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.page-header-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 1rem;
+}
+
+.page-description {
+    color: #6c757d;
+    max-width: 700px;
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+}
+
+.breadcrumb-item {
+    color: #6c757d;
+}
+
+.breadcrumb-item:not(:last-child):after {
+    content: '/';
+    margin: 0 0.5rem;
+    color: #adb5bd;
+}
+
+.breadcrumb-link {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.breadcrumb-link:hover {
+    color: #0056b3;
+}
+
+.breadcrumb-active {
+    color: #0056b3;
+    font-weight: 500;
+}
+
+.page-content {
+    padding: 3rem 0;
+}
+
+.page-content-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
