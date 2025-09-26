@@ -24,10 +24,16 @@
 .button-secondary {
     background-color: #ff6b00;
     color: white;
+    font-weight: 600;
+    padding: 0.65rem 1rem;
+    box-shadow: 0 4px 12px rgba(255, 107, 0, 0.3);
+    font-size: 0.85rem;
 }
 
 .button-secondary:hover {
-    background-color: #e66000;
+    background-color: #ff7d1f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 107, 0, 0.4);
 }
 
 .button-outline {

@@ -1,47 +1,241 @@
 /* HomePage.css */
 .hero-section {
-    background-color: #f8f9fa;
+    background-color: #0056b3;
+    /* Fallback color */
     padding: 5rem 0;
     position: relative;
+    min-height: 80vh;
+    /* Ensure hero section has good height */
+    display: flex;
+    align-items: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.65) 0%,
+            rgba(0, 0, 0, 0.5) 100%);
+    /* Darker gradient overlay for better text contrast */
+    z-index: 1;
 }
 
 .hero-container {
-    max-width: 1280px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 3rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    max-width: 1600px;
+    position: relative;
+    z-index: 2;
+    /* Place above the overlay */
 }
 
 .hero-content {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 48%;
+    max-width: 48%;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    /* Increased size */
     font-weight: 800;
     margin-bottom: 1.5rem;
     line-height: 1.2;
-    color: #333333;
+    color: #ffffff;
+    /* Keeping white but adding stronger contrast elements */
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.7);
+    /* Much stronger shadow */
+    letter-spacing: -0.5px;
+    /* Tighter letter spacing for modern look */
+    position: relative;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
+    /* Text outline for better visibility */
 }
 
 .hero-title span {
-    color: #0056b3;
+    color: #ffdd00;
+    /* Brighter yellow */
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9), 0 0 15px rgba(0, 0, 0, 0.8);
+    position: relative;
+    display: inline-block;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
+    /* Darker text outline for the highlight */
+}
+
+.hero-title span::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #ffdd00, #ffa500);
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(255, 204, 0, 0.7);
+    /* Glow effect */
 }
 
 .hero-description {
-    font-size: 1.125rem;
-    margin-bottom: 2rem;
-    color: #6c757d;
+    font-size: 1.25rem;
+    /* Larger font size */
+    margin-bottom: 2.5rem;
+    /* More space before CTA */
+    color: #f0f0f0;
+    /* Slightly off-white for better visibility against various backgrounds */
     line-height: 1.7;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.7);
+    /* Stronger shadow */
+    max-width: 95%;
+    /* Prevent text from extending too far */
+    font-weight: 500;
+    /* Bolder for better visibility */
+    letter-spacing: 0.2px;
+    /* Slight letter spacing for better readability */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Semi-transparent background */
+    padding: 10px 15px;
+    /* Add some padding */
+    border-radius: 8px;
+    /* Rounded corners */
+    backdrop-filter: blur(2px);
+    /* Slight blur effect behind text */
 }
 
 .hero-cta {
     display: flex;
-    gap: 1rem;
+    gap: 1.25rem;
+    /* Increased spacing between buttons */
+    margin-left: 0.25rem;
+    /* Slight left margin for alignment */
+}
+
+.hero-calculator {
+    flex: 0 0 45%;
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    bottom: 3rem;
+    overflow: hidden;
+    z-index: 3;
+    /* Ensure calculator is above overlay */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-calculator:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.hero-calculator::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to bottom right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.1) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes shine {
+    0% {
+        left: -150%;
+        top: -50%;
+    }
+
+    100% {
+        left: 100%;
+        top: 100%;
+    }
+}
+
+.calculator-header {
+    margin-bottom: 0.75rem;
+    text-align: center;
+    position: relative;
+}
+
+.calculator-icon {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto 0.5rem;
+    background: linear-gradient(135deg, #0056b3, #0077cc);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.25rem;
+    box-shadow: 0 5px 15px rgba(0, 86, 179, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 86, 179, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 86, 179, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 86, 179, 0);
+    }
+}
+
+.calculator-header h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #0056b3;
+    margin-bottom: 0.35rem;
+}
+
+.calculator-header p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.calculator-features {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.feature svg {
+    margin-right: 4px;
+    color: #0056b3;
+    font-size: 0.9rem;
 }
 
 .hero-image {
@@ -61,9 +255,9 @@
 }
 
 .section-container {
-    max-width: 1280px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 2rem;
 }
 
 .section-header {
@@ -173,44 +367,146 @@
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .form-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    color: #0056b3;
+    font-size: 0.85rem;
+}
+
+.form-icon {
+    margin-right: 8px;
+    font-size: 1rem;
 }
 
 .form-control {
     width: 100%;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+    border: 2px solid #e0e6ed;
+    border-radius: 0.5rem;
     background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.form-control:focus {
+    border-color: #0056b3;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.15);
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: #a0aec0;
 }
 
 .form-select {
     width: 100%;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+    border: 2px solid #e0e6ed;
+    border-radius: 0.5rem;
     background-color: #f8f9fa;
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23212529' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%230056b3' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: right 1rem center;
-    background-size: 16px 12px;
+    background-position: right 0.8rem center;
+    background-size: 12px 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.form-select:focus {
+    border-color: #0056b3;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.15);
+    outline: none;
+}
+
+.calculator-form {
+    position: relative;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+
+.calculator-form form {
+    position: relative;
+    z-index: 2;
+}
+
+.calculator-guarantee {
+    padding: 0.5rem;
+    background: rgba(0, 86, 179, 0.05);
+    border-radius: 8px;
+    font-size: 0.8rem;
+    text-align: center;
+    color: #0056b3;
+}
+
+.calculator-guarantee p {
+    margin: 0.1rem 0;
+}
+
+.btn-icon {
+    margin-right: 8px;
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+#hero-heading, #hero-desc {
+    
+    color: #ffffff !important;
 }
 
 @media (max-width: 991.98px) {
+    .hero-section {
+        padding: 5rem 0;
+        min-height: auto;
+        /* Allow natural height on mobile */
+    }
 
     .hero-content,
+    .hero-calculator,
     .hero-image {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+
+    .hero-content {
+        margin-bottom: 3.5rem;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+        /* Slightly smaller on tablets */
+    }
+
+    .hero-description {
+        font-size: 1.15rem;
+        /* Slightly smaller on tablets */
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgba(0, 0, 0, 0.3);
+        /* Slightly darker background on smaller screens */
+    }
+
+    .hero-calculator {
+        margin-top: 1rem;
+        max-width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1.5rem;
     }
 
     .hero-image {
@@ -231,7 +527,25 @@
         grid-template-columns: 1fr;
     }
 
+    .hero-title {
+        font-size: 2.5rem;
+        /* Smaller on mobile */
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+        max-width: 95%;
+    }
+
     .hero-cta {
         flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-section {
+        padding: 4rem 0;
     }
 }

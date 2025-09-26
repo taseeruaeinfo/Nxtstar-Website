@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
+import { motion, AnimatePresence } from 'framer-motion';
 import '../../styles/Navbar.css';
+import logo from '../../assets/images/logo.png';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,115 +41,223 @@ const Navbar = () => {
         { name: 'FAQs', path: '/faqs' }
     ];
 
+    // Animation variants
+    const navbarVariants = {
+        hidden: { opacity: 0, y: -20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.5,
+                when: "beforeChildren",
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: -10 },
+        visible: { opacity: 1, y: 0 }
+    };
+
+    const logoVariants = {
+        hidden: { opacity: 0, x: -20 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
+    };
+
     return (
-        <nav className="navbar">
+        <motion.nav
+            className="navbar"
+            initial="hidden"
+            animate="visible"
+            variants={navbarVariants}
+        >
             <div className="navbar-container">
                 <div className="navbar-content">
                     {/* Logo */}
-                    <Link to="/" className="navbar-logo">
-                        <span className="logo-text">NXTStar</span>
-                        {/* Add your logo image here */}
-                        {/* <img src="/logo.png" alt="NXTStar Logo" /> */}
-                    </Link>
+                    <motion.div variants={logoVariants}>
+                        <Link to="/" className="navbar-logo">
+                            <span className="logo-text"></span>
+                            {/* Add your logo image here */}
+                            <img src={logo} alt="NXTStar Logo" />
+                        </Link>
+                    </motion.div>
 
                     {/* Desktop Navigation */}
-                    <div className="navbar-nav">
+                    <motion.div className="navbar-nav">
                         {navLinks.map((link, index) => (
-                            <div key={index} className="nav-item">
+                            <motion.div
+                                key={index}
+                                className="nav-item"
+                                variants={itemVariants}
+                                whileHover={{ scale: 1.05 }}
+                            >
                                 <Link
                                     to={link.path}
                                     className="nav-link"
                                 >
                                     {link.name}
+                                    {link.dropdownItems && (
+                                        <FaChevronDown className="dropdown-icon" />
+                                    )}
                                 </Link>
 
                                 {/* Dropdown for items with subitems */}
                                 {link.dropdownItems && (
-                                    <div className="dropdown-menu">
+                                    <motion.div
+                                        className="dropdown-menu"
+                                        initial={{ opacity: 0, y: -20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.2 }}
+                                    >
                                         {link.dropdownItems.map((item, idx) => (
-                                            <Link
+                                            <motion.div
                                                 key={idx}
-                                                to={item.path}
-                                                className="dropdown-item"
+                                                whileHover={{ x: 5 }}
+                                                transition={{ duration: 0.2 }}
                                             >
-                                                {item.name}
-                                            </Link>
+                                                <Link
+                                                    to={item.path}
+                                                    className="dropdown-item"
+                                                >
+                                                    {item.name}
+                                                </Link>
+                                            </motion.div>
                                         ))}
-                                    </div>
+                                    </motion.div>
                                 )}
-                            </div>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
 
                     {/* Call to action buttons */}
-                    <div className="navbar-cta">
-                        <Link to="/refer-earn" className="btn btn-outline">
-                            Refer & Earn
-                        </Link>
-                        <a href="https://calendly.com/nxtstar" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                            Book a Call
-                        </a>
-                    </div>
+                    <motion.div
+                        className="navbar-cta"
+                        variants={itemVariants}
+                    >
+                        <motion.div whileHover={{ scale: 1.05 }}>
+                            <Link to="/refer-earn" className="btn btn-outline">
+                                Refer & Earn
+                            </Link>
+                        </motion.div>
+                        <motion.div whileHover={{ scale: 1.05 }}>
+                            <a href="https://calendly.com/nxtstar" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                                Book a Call
+                            </a>
+                        </motion.div>
+                    </motion.div>
 
                     {/* Mobile menu button */}
-                    <button
+                    <motion.button
                         type="button"
                         className="mobile-menu-button"
                         onClick={toggleMenu}
+                        whileTap={{ scale: 0.9 }}
                     >
                         {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-                    </button>
+                    </motion.button>
                 </div>
             </div>
 
             {/* Mobile Navigation */}
-            {isMenuOpen && (
-                <div className="mobile-menu">
-                    <div className="mobile-menu-container">
-                        <div className="mobile-nav">
-                            {navLinks.map((link, index) => (
-                                <div key={index} className="mobile-nav-item">
-                                    <Link
-                                        to={link.path}
-                                        className="nav-link"
-                                        onClick={() => !link.dropdownItems && setIsMenuOpen(false)}
+            <AnimatePresence>
+                {isMenuOpen && (
+                    <motion.div
+                        className="mobile-menu"
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                    >
+                        <div className="mobile-menu-container">
+                            <motion.div
+                                className="mobile-nav"
+                                initial="hidden"
+                                animate="visible"
+                                variants={{
+                                    hidden: { opacity: 0 },
+                                    visible: {
+                                        opacity: 1,
+                                        transition: {
+                                            staggerChildren: 0.07
+                                        }
+                                    }
+                                }}
+                            >
+                                {navLinks.map((link, index) => (
+                                    <motion.div
+                                        key={index}
+                                        className="mobile-nav-item"
+                                        variants={{
+                                            hidden: { y: 20, opacity: 0 },
+                                            visible: { y: 0, opacity: 1 }
+                                        }}
                                     >
-                                        {link.name}
-                                    </Link>
+                                        <Link
+                                            to={link.path}
+                                            className="nav-link"
+                                            onClick={() => !link.dropdownItems && setIsMenuOpen(false)}
+                                        >
+                                            {link.name}
+                                            {link.dropdownItems && (
+                                                <FaChevronDown className="dropdown-icon mobile-dropdown-icon" />
+                                            )}
+                                        </Link>
 
-                                    {/* Mobile dropdown items */}
-                                    {link.dropdownItems && (
-                                        <div className="mobile-dropdown">
-                                            {link.dropdownItems.map((item, idx) => (
-                                                <div key={idx} className="mobile-dropdown-item">
-                                                    <Link
-                                                        to={item.path}
-                                                        className="nav-link"
-                                                        onClick={() => setIsMenuOpen(false)}
+                                        {/* Mobile dropdown items */}
+                                        {link.dropdownItems && (
+                                            <motion.div
+                                                className="mobile-dropdown"
+                                                initial={{ opacity: 0 }}
+                                                animate={{ opacity: 1 }}
+                                                transition={{ delay: 0.2 }}
+                                            >
+                                                {link.dropdownItems.map((item, idx) => (
+                                                    <motion.div
+                                                        key={idx}
+                                                        className="mobile-dropdown-item"
+                                                        whileHover={{ x: 5 }}
+                                                        whileTap={{ scale: 0.97 }}
                                                     >
-                                                        {item.name}
-                                                    </Link>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
-                                </div>
-                            ))}
+                                                        <Link
+                                                            to={item.path}
+                                                            className="nav-link"
+                                                            onClick={() => setIsMenuOpen(false)}
+                                                        >
+                                                            {item.name}
+                                                        </Link>
+                                                    </motion.div>
+                                                ))}
+                                            </motion.div>
+                                        )}
+                                    </motion.div>
+                                ))}
 
-                            {/* Mobile CTA buttons */}
-                            <div className="mobile-cta">
-                                <Link to="/refer-earn" className="btn btn-outline">
-                                    Refer & Earn
-                                </Link>
-                                <a href="https://calendly.com/nxtstar" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                                    Book a Call
-                                </a>
-                            </div>
+                                {/* Mobile CTA buttons */}
+                                <motion.div
+                                    className="mobile-cta"
+                                    variants={{
+                                        hidden: { y: 20, opacity: 0 },
+                                        visible: { y: 0, opacity: 1 }
+                                    }}
+                                >
+                                    <motion.div whileTap={{ scale: 0.97 }}>
+                                        <Link to="/refer-earn" className="btn btn-outline">
+                                            Refer & Earn
+                                        </Link>
+                                    </motion.div>
+                                    <motion.div whileTap={{ scale: 0.97 }}>
+                                        <a href="https://calendly.com/nxtstar" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                                            Book a Call
+                                        </a>
+                                    </motion.div>
+                                </motion.div>
+                            </motion.div>
                         </div>
-                    </div>
-                </div>
-            )}
-        </nav>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </motion.nav>
     );
 };
 

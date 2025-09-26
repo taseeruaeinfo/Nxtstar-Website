@@ -1,100 +1,195 @@
 import { Link } from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 import '../../styles/Footer.css';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
 
+    const footerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1,
+                delayChildren: 0.2
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 }
+    };
+
+    const socialIconVariants = {
+        hidden: { scale: 0 },
+        visible: { scale: 1 }
+    };
+
     return (
         <>
-            <footer className="footer">
+            <motion.footer
+                className="footer"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+                variants={footerVariants}
+            >
                 <div className="footer-container">
-                    <div className="footer-content">
+                    <motion.div className="footer-content" variants={footerVariants}>
                         {/* Company Info */}
-                        <div className="footer-column">
+                        <motion.div className="footer-column" variants={itemVariants}>
                             <Link to="/" className="footer-logo">
                                 <span className="footer-logo-text">NXTStar</span>
                             </Link>
-                            <p className="footer-description">
+                            <motion.p
+                                className="footer-description"
+                                variants={itemVariants}
+                            >
                                 Your trusted partner for business setup in the UAE. We provide comprehensive solutions for mainland, freezone, and offshore company formation.
-                            </p>
-                            <div className="social-links">
-                                <a href="https://facebook.com/nxtstar" target="_blank" rel="noopener noreferrer" className="social-icon">
+                            </motion.p>
+                            <motion.div className="social-links" variants={itemVariants}>
+                                <motion.a
+                                    href="https://facebook.com/nxtstar"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="social-icon"
+                                    variants={socialIconVariants}
+                                    whileHover={{ scale: 1.2, rotate: 5 }}
+                                    whileTap={{ scale: 0.9 }}
+                                >
                                     <FaFacebookF />
-                                </a>
-                                <a href="https://twitter.com/nxtstar" target="_blank" rel="noopener noreferrer" className="social-icon">
+                                </motion.a>
+                                <motion.a
+                                    href="https://twitter.com/nxtstar"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="social-icon"
+                                    variants={socialIconVariants}
+                                    whileHover={{ scale: 1.2, rotate: 5 }}
+                                    whileTap={{ scale: 0.9 }}
+                                >
                                     <FaTwitter />
-                                </a>
-                                <a href="https://linkedin.com/company/nxtstar" target="_blank" rel="noopener noreferrer" className="social-icon">
+                                </motion.a>
+                                <motion.a
+                                    href="https://linkedin.com/company/nxtstar"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="social-icon"
+                                    variants={socialIconVariants}
+                                    whileHover={{ scale: 1.2, rotate: 5 }}
+                                    whileTap={{ scale: 0.9 }}
+                                >
                                     <FaLinkedinIn />
-                                </a>
-                                <a href="https://instagram.com/nxtstar" target="_blank" rel="noopener noreferrer" className="social-icon">
+                                </motion.a>
+                                <motion.a
+                                    href="https://instagram.com/nxtstar"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="social-icon"
+                                    variants={socialIconVariants}
+                                    whileHover={{ scale: 1.2, rotate: 5 }}
+                                    whileTap={{ scale: 0.9 }}
+                                >
                                     <FaInstagram />
-                                </a>
-                            </div>
-                        </div>
+                                </motion.a>
+                            </motion.div>
+                        </motion.div>
 
                         {/* Business Setup */}
-                        <div className="footer-column">
-                            <h3 className="footer-heading">Business Setup</h3>
-                            <ul className="footer-links">
-                                <li className="footer-link"><Link to="/business/mainland">Mainland</Link></li>
-                                <li className="footer-link"><Link to="/business/freezone">Freezone</Link></li>
-                                <li className="footer-link"><Link to="/business/offshore">Offshore</Link></li>
-                            </ul>
-                        </div>
+                        <motion.div className="footer-column" variants={itemVariants}>
+                            <motion.h3 className="footer-heading" variants={itemVariants}>Business Setup</motion.h3>
+                            <motion.ul className="footer-links" variants={itemVariants}>
+                                <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
+                                    <Link to="/business/mainland">Mainland</Link>
+                                </motion.li>
+                                <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
+                                    <Link to="/business/freezone">Freezone</Link>
+                                </motion.li>
+                                <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
+                                    <Link to="/business/offshore">Offshore</Link>
+                                </motion.li>
+                            </motion.ul>
+                        </motion.div>
 
                         {/* Services */}
-                        <div className="footer-column">
-                            <h3 className="footer-heading">Services</h3>
-                            <ul className="footer-links">
-                                <li className="footer-link"><Link to="/services/registration-licenses">Registration & Licenses</Link></li>
-                                <li className="footer-link"><Link to="/services/visa-pro">Residence Visa & PRO</Link></li>
-                                <li className="footer-link"><Link to="/services/golden-visa">Golden Visa</Link></li>
-                                <li className="footer-link"><Link to="/services/taxation">Taxation</Link></li>
-                            </ul>
-                        </div>
+                        <motion.div className="footer-column" variants={itemVariants}>
+                            <motion.h3 className="footer-heading" variants={itemVariants}>Services</motion.h3>
+                            <motion.ul className="footer-links" variants={itemVariants}>
+                                <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
+                                    <Link to="/services/registration-licenses">Registration & Licenses</Link>
+                                </motion.li>
+                                <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
+                                    <Link to="/services/visa-pro">Residence Visa & PRO</Link>
+                                </motion.li>
+                                <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
+                                    <Link to="/services/golden-visa">Golden Visa</Link>
+                                </motion.li>
+                                <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
+                                    <Link to="/services/taxation">Taxation</Link>
+                                </motion.li>
+                            </motion.ul>
+                        </motion.div>
 
                         {/* Quick Links */}
-                        <div className="footer-column">
-                            <h3 className="footer-heading">Quick Links</h3>
-                            <ul className="footer-links">
-                                <li className="footer-link"><Link to="/blogs">Blogs</Link></li>
-                                <li className="footer-link"><Link to="/contact">Contact Us</Link></li>
-                                <li className="footer-link"><Link to="/faqs">FAQs</Link></li>
-                                <li className="footer-link"><Link to="/refer-earn">Refer & Earn</Link></li>
-                            </ul>
-                        </div>
+                        <motion.div className="footer-column" variants={itemVariants}>
+                            <motion.h3 className="footer-heading" variants={itemVariants}>Quick Links</motion.h3>
+                            <motion.ul className="footer-links" variants={itemVariants}>
+                                <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
+                                    <Link to="/blogs">Blogs</Link>
+                                </motion.li>
+                                <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
+                                    <Link to="/contact">Contact Us</Link>
+                                </motion.li>
+                                <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
+                                    <Link to="/faqs">FAQs</Link>
+                                </motion.li>
+                                <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
+                                    <Link to="/refer-earn">Refer & Earn</Link>
+                                </motion.li>
+                            </motion.ul>
+                        </motion.div>
 
                         {/* Contact */}
-                        <div className="footer-column">
-                            <h3 className="footer-heading">Contact Us</h3>
-                            <ul className="footer-links">
-                                <li className="footer-link">Office #123, XYZ Building</li>
-                                <li className="footer-link">Dubai, United Arab Emirates</li>
-                                <li className="footer-link">Phone: +971 4 123 4567</li>
-                                <li className="footer-link">Email: info@nxtstar.com</li>
-                            </ul>
-                        </div>
-                    </div>
+                        <motion.div className="footer-column" variants={itemVariants}>
+                            <motion.h3 className="footer-heading" variants={itemVariants}>Contact Us</motion.h3>
+                            <motion.ul className="footer-links" variants={itemVariants}>
+                                <motion.li className="footer-link" variants={itemVariants}>Office #123, XYZ Building</motion.li>
+                                <motion.li className="footer-link" variants={itemVariants}>Dubai, United Arab Emirates</motion.li>
+                                <motion.li className="footer-link" variants={itemVariants}>Phone: +971 4 123 4567</motion.li>
+                                <motion.li className="footer-link" variants={itemVariants}>Email: info@nxtstar.com</motion.li>
+                            </motion.ul>
+                        </motion.div>
+                    </motion.div>
 
                     {/* Copyright */}
-                    <div className="copyright">
+                    <motion.div
+                        className="copyright"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.5 }}
+                    >
                         &copy; {currentYear} NXTStar. All rights reserved.
-                    </div>
+                    </motion.div>
                 </div>
-            </footer>
+            </motion.footer>
 
             {/* WhatsApp Button */}
-            <a
+            <motion.a
                 href="https://wa.me/97141234567"
                 className="whatsapp-icon"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Chat with us on WhatsApp"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 1, type: "spring", stiffness: 200 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
             >
                 <FaWhatsapp />
-            </a>
+            </motion.a>
         </>
     );
 };
