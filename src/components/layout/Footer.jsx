@@ -73,7 +73,7 @@ const Footer = () => {
                                     <FaTwitter />
                                 </motion.a>
                                 <motion.a
-                                    href="https://linkedin.com/company/nxtstar"
+                                    href="https://www.linkedin.com/company/nxtstar/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="social-icon"
@@ -84,7 +84,7 @@ const Footer = () => {
                                     <FaLinkedinIn />
                                 </motion.a>
                                 <motion.a
-                                    href="https://instagram.com/nxtstar"
+                                    href="https://www.instagram.com/nxtstar.dxb"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="social-icon"

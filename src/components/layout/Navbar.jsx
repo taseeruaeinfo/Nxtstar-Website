@@ -141,7 +141,7 @@ const Navbar = () => {
                             </Link>
                         </motion.div>
                         <motion.div whileHover={{ scale: 1.05 }}>
-                            <a href="https://calendly.com/nxtstar" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                            <a href="https://calendly.com/nehajakhar401/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                                 Book a Call
                             </a>
                         </motion.div>

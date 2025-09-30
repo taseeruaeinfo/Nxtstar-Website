@@ -5,6 +5,8 @@ import HomePage from './pages/HomePage';
 import BusinessSetupPage from './pages/BusinessSetupPage';
 import ServicesPage from './pages/ServicesPage';
 import PageLayout from './components/layout/PageLayout';
+import Contact from './pages/Contact';
+import FAQ from './pages/FAQ';
 import { AnimatePresence } from 'framer-motion';
 import MotionWrapper from './components/ui/MotionWrapper';
 import './styles/index.css';
@@ -53,26 +55,14 @@ function AnimationLayout() {
         {/* Contact Us Page */}
         <Route path="/contact" element={
           <MotionWrapper>
-            <PageLayout
-              title="Contact Us"
-              description="Get in touch with our team for inquiries, consultations, or support."
-              breadcrumbs={[{ label: 'Contact', url: '/contact' }]}
-            >
-              <div>Contact Us Page Coming Soon</div>
-            </PageLayout>
+            <Contact />
           </MotionWrapper>
         } />
 
         {/* FAQs Page */}
         <Route path="/faqs" element={
           <MotionWrapper>
-            <PageLayout
-              title="Frequently Asked Questions"
-              description="Find answers to common questions about business setup in the UAE."
-              breadcrumbs={[{ label: 'FAQs', url: '/faqs' }]}
-            >
-              <div>FAQs Coming Soon</div>
-            </PageLayout>
+            <FAQ />
           </MotionWrapper>
         } />
 

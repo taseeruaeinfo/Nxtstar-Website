@@ -106,10 +106,10 @@ const HomePage = () => {
                 backgroundPosition: 'center'
             }}>
                 <div className="hero-container">
-                    <div className="hero-content">
+                    <div className="hero-content-home">
                         <PopUp>
                             <h1 className="hero-title" id='hero-heading'>
-                                Start, Scale & Succeed in the <span>UAE</span> – Your Partner in Business Setup
+                                <h1 id='scs'>Start, Scale & Succeed in the </h1><span>UAE</span> – Your Partner in Business Setup
                             </h1>
                         </PopUp>
                         <PopUpBounce delay={0.2}>
@@ -225,10 +225,7 @@ const HomePage = () => {
                                     </Button>
                                 </form>
                             </div>
-                            <div className="calculator-guarantee">
-                                <p>✓ Free, no-obligation cost estimate</p>
-                                <p>✓ Detailed breakdown within 24 hours</p>
-                            </div>
+                            
                         </div>
                     </RotatePopUp>
                 </div>

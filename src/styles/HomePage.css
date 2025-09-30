@@ -38,28 +38,27 @@
     /* Place above the overlay */
 }
 
-.hero-content {
+.hero-content-home {
     flex: 0 0 48%;
-    max-width: 48%;
     position: relative;
     z-index: 2;
 }
 
+#scs{
+    color: #ffffff !important;
+    font-size: 5rem;
+}
+
 .hero-title {
     font-size: 3.5rem;
-    /* Increased size */
     font-weight: 800;
     margin-bottom: 1.5rem;
     line-height: 1.2;
     color: #ffffff;
-    /* Keeping white but adding stronger contrast elements */
     text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.7);
-    /* Much stronger shadow */
     letter-spacing: -0.5px;
-    /* Tighter letter spacing for modern look */
     position: relative;
-    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
-    /* Text outline for better visibility */
+    /* -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3); */
 }
 
 .hero-title span {
@@ -68,8 +67,6 @@
     text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9), 0 0 15px rgba(0, 0, 0, 0.8);
     position: relative;
     display: inline-block;
-    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
-    /* Darker text outline for the highlight */
 }
 
 .hero-title span::after {
@@ -474,14 +471,14 @@
         /* Allow natural height on mobile */
     }
 
-    .hero-content,
+    .hero-content-home,
     .hero-calculator,
     .hero-image {
         flex: 0 0 100%;
         max-width: 100%;
     }
 
-    .hero-content {
+    .hero-content-home {
         margin-bottom: 3.5rem;
         text-align: center;
     }
