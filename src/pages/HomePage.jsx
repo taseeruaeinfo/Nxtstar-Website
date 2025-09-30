@@ -109,7 +109,7 @@ const HomePage = () => {
                     <div className="hero-content-home">
                         <PopUp>
                             <h1 className="hero-title" id='hero-heading'>
-                                <h1 id='scs'>Start, Scale & Succeed in the </h1><span>UAE</span> – Your Partner in Business Setup
+                                <h1 id='scs'>Start, Scale & Succeed </h1> in the <span>UAE</span> – Your Partner in Business Setup
                             </h1>
                         </PopUp>
                         <PopUpBounce delay={0.2}>
@@ -154,7 +154,7 @@ const HomePage = () => {
                             <div className="calculator-form">
                                 <form onSubmit={handleSubmit}>
                                     <div className="form-group">
-                                        <label htmlFor="name" className="form-label">
+                                        <label htmlFor="name" className="form-label-cc">
                                             <span className="form-icon">👤</span>
                                             Full Name
                                         </label>

@@ -1,11 +1,33 @@
-/* HomePage.css */
+/* Style for calculator select field */
+.calculator-form select.form-select {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+    border: 2px solid #e0e6ed;
+    border-radius: 0.5rem;
+    background-color: #f8f9fa;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%230056b3' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    background-size: 12px 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.calculator-form select.form-select:focus {
+    border-color: #0056b3;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.15);
+    outline: none;
+}
+
 .hero-section {
     background-color: #0056b3;
-    /* Fallback color */
     padding: 5rem 0;
     position: relative;
     min-height: 80vh;
-    /* Ensure hero section has good height */
     display: flex;
     align-items: center;
 }
@@ -20,7 +42,6 @@
     background: linear-gradient(135deg,
             rgba(0, 0, 0, 0.65) 0%,
             rgba(0, 0, 0, 0.5) 100%);
-    /* Darker gradient overlay for better text contrast */
     z-index: 1;
 }
 
@@ -35,7 +56,6 @@
     max-width: 1600px;
     position: relative;
     z-index: 2;
-    /* Place above the overlay */
 }
 
 .hero-content-home {
@@ -44,13 +64,14 @@
     z-index: 2;
 }
 
-#scs{
+#scs {
     color: #ffffff !important;
     font-size: 5rem;
 }
 
 .hero-title {
-    font-size: 3.5rem;
+
+    font-size: 1.5rem;
     font-weight: 800;
     margin-bottom: 1.5rem;
     line-height: 1.2;
@@ -58,12 +79,10 @@
     text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.7);
     letter-spacing: -0.5px;
     position: relative;
-    /* -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3); */
 }
 
 .hero-title span {
     color: #ffdd00;
-    /* Brighter yellow */
     text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9), 0 0 15px rgba(0, 0, 0, 0.8);
     position: relative;
     display: inline-block;
@@ -79,41 +98,28 @@
     background: linear-gradient(to right, #ffdd00, #ffa500);
     border-radius: 3px;
     box-shadow: 0 2px 6px rgba(255, 204, 0, 0.7);
-    /* Glow effect */
 }
 
 .hero-description {
-    font-size: 1.25rem;
-    /* Larger font size */
+    font-size: 1rem;
+
     margin-bottom: 2.5rem;
-    /* More space before CTA */
     color: #f0f0f0;
-    /* Slightly off-white for better visibility against various backgrounds */
     line-height: 1.7;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.7);
-    /* Stronger shadow */
     max-width: 95%;
-    /* Prevent text from extending too far */
     font-weight: 500;
-    /* Bolder for better visibility */
     letter-spacing: 0.2px;
-    /* Slight letter spacing for better readability */
     background-color: rgba(0, 0, 0, 0.2);
-    /* Semi-transparent background */
     padding: 10px 15px;
-    /* Add some padding */
     border-radius: 8px;
-    /* Rounded corners */
     backdrop-filter: blur(2px);
-    /* Slight blur effect behind text */
 }
 
 .hero-cta {
     display: flex;
     gap: 1.25rem;
-    /* Increased spacing between buttons */
     margin-left: 0.25rem;
-    /* Slight left margin for alignment */
 }
 
 .hero-calculator {
@@ -128,7 +134,6 @@
     bottom: 3rem;
     overflow: hidden;
     z-index: 3;
-    /* Ensure calculator is above overlay */
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -367,14 +372,17 @@
     margin-bottom: 0.75rem;
 }
 
-.form-label {
+.form-label-cc {
     display: flex;
+
     align-items: center;
     margin-bottom: 0.25rem;
     font-weight: 600;
     color: #0056b3;
     font-size: 0.85rem;
 }
+
+
 
 .form-icon {
     margin-right: 8px;
@@ -403,21 +411,28 @@
     color: #a0aec0;
 }
 
-.form-select {
+.form-label-cc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    color: #0056b3;
+    font-size: 0.85rem;
+    justify-content: flex-start;
+    text-align: left;
     width: 100%;
-    padding: 0.6rem 0.8rem;
-    font-size: 0.9rem;
-    border: 2px solid #e0e6ed;
-    border-radius: 0.5rem;
-    background-color: #f8f9fa;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%230056b3' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 0.8rem center;
-    background-size: 12px 8px;
-    transition: all 0.3s ease;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    cursor: pointer;
+}
+
+.form-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    color: #0056b3;
+    font-size: 0.85rem;
+    justify-content: flex-start;
+    text-align: left;
+    width: 100%;
 }
 
 .form-select:focus {
@@ -459,8 +474,9 @@
     vertical-align: middle;
 }
 
-#hero-heading, #hero-desc {
-    
+#hero-heading,
+#hero-desc {
+
     color: #ffffff !important;
 }
 
@@ -468,7 +484,6 @@
     .hero-section {
         padding: 5rem 0;
         min-height: auto;
-        /* Allow natural height on mobile */
     }
 
     .hero-content-home,
@@ -485,17 +500,14 @@
 
     .hero-title {
         font-size: 3rem;
-        /* Slightly smaller on tablets */
     }
 
     .hero-description {
         font-size: 1.15rem;
-        /* Slightly smaller on tablets */
         max-width: 90%;
         margin-left: auto;
         margin-right: auto;
         background-color: rgba(0, 0, 0, 0.3);
-        /* Slightly darker background on smaller screens */
     }
 
     .hero-calculator {
@@ -526,7 +538,6 @@
 
     .hero-title {
         font-size: 2.5rem;
-        /* Smaller on mobile */
     }
 
     .hero-description {
