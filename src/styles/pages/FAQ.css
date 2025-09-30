@@ -1,0 +1,77 @@
+/* FAQ Page Styles */
+.faq-page {
+    max-width: 900px;
+    margin: 3rem auto 0 auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(0, 119, 182, 0.08);
+    padding: 2.5rem 2rem 2rem 2rem;
+    position: relative;
+    bottom: 10rem;
+}
+
+.faq-title {
+    color: #0077b6;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e3eaf3;
+    padding-bottom: 1rem;
+}
+
+.faq-item.open {
+    background: #fafdff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 119, 182, 0.04);
+}
+
+.faq-question {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #0a2540;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    outline: none;
+    transition: color 0.2s;
+}
+
+.faq-question:hover {
+    color: #0077b6;
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    color: #0077b6;
+    margin-left: 1rem;
+}
+
+.faq-answer {
+    margin-top: 0.5rem;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    padding-left: 0.5rem;
+}
+
+@media (max-width: 700px) {
+    .faq-page {
+        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+    }
+}
