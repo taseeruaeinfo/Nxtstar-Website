@@ -35,6 +35,21 @@ const Contact = () => {
         return newErrors;
     };
 
+    const getFlagStyle = (code) => {
+        const flags = {
+            '+971': 'url(https://flagcdn.com/16x12/ae.png)',
+            '+91': 'url(https://flagcdn.com/16x12/in.png)',
+            '+44': 'url(https://flagcdn.com/16x12/gb.png)',
+            '+1': 'url(https://flagcdn.com/16x12/us.png)',
+            '+92': 'url(https://flagcdn.com/16x12/pk.png)',
+        };
+        return {
+            backgroundImage: flags[code] || 'none',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+        };
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const validationErrors = validateForm();
@@ -96,19 +111,25 @@ const Contact = () => {
                                     <label htmlFor="mobile">Mobile <span className="required">*</span></label>
                                     <div className="input-icon-wrapper">
                                         <span className="input-icon"><FaPhoneAlt /></span>
-                                        <select
-                                            name="countryCode"
-                                            value={formData.countryCode}
-                                            onChange={handleInputChange}
-                                            className={errors.countryCode ? 'error country-code-select' : 'country-code-select'}
-                                            style={{ marginRight: '0.5rem', minWidth: 80 }}
-                                        >
-                                            <option value="+971">+971</option>
-                                            <option value="+91">+91</option>
-                                            <option value="+44">+44</option>
-                                            <option value="+1">+1</option>
-                                            <option value="+92">+92</option>
-                                        </select>
+                                        <div style={{ position: 'relative', marginRight: '0.5rem' }}>
+                                            <div 
+                                                className="country-flag" 
+                                                style={getFlagStyle(formData.countryCode)}
+                                            ></div>
+                                            <select
+                                                name="countryCode"
+                                                value={formData.countryCode}
+                                                onChange={handleInputChange}
+                                                className={errors.countryCode ? 'error country-code-select' : 'country-code-select'}
+                                                style={{ minWidth: 140 }}
+                                            >
+                                                <option value="+971">+971 (UAE)</option>
+                                                <option value="+91">+91 (India)</option>
+                                                <option value="+44">+44 (UK)</option>
+                                                <option value="+1">+1 (USA)</option>
+                                                <option value="+92">+92 (Pakistan)</option>
+                                            </select>
+                                        </div>
                                         <input
                                             type="tel"
                                             id="mobile"

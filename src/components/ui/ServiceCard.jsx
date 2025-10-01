@@ -3,7 +3,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import '../../styles/ServiceCard.css';
 
-const ServiceCard = ({ icon, title, description, link }) => {
+const ServiceCard = ({ icon, image, title, description, link }) => {
     return (
         <motion.div
             className="service-card"
@@ -20,12 +20,18 @@ const ServiceCard = ({ icon, title, description, link }) => {
             viewport={{ once: true, amount: 0.3 }}
         >
             <motion.div
-                className="service-card-icon"
+                className="service-card-image-container"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.2 }}
             >
-                {icon}
+                {image ? (
+                    <img src={image} alt={title} className="service-card-image" />
+                ) : (
+                    <div className="service-card-icon">
+                        {icon}
+                    </div>
+                )}
             </motion.div>
             <motion.h3
                 className="service-card-title"

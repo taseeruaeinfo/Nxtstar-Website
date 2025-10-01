@@ -33,19 +33,19 @@ const HomePage = () => {
 
     const services = [
         {
-            icon: <FaBuilding />,
+            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
             title: 'Mainland Business Setup',
             description: 'Set up your business in UAE mainland with 100% ownership and operate anywhere in the UAE without restrictions.',
             link: '/business/mainland'
         },
         {
-            icon: <FaGlobe />,
+            image: "https://images.unsplash.com/photo-1542744095-291d1f67b221?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
             title: 'Freezone Company Formation',
             description: 'Establish your company in UAE free zones with 100% ownership, tax exemptions, and full repatriation of profits.',
             link: '/business/freezone'
         },
         {
-            icon: <FaShieldAlt />,
+            image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
             title: 'Offshore Company Setup',
             description: 'Protect your assets and enjoy complete privacy with our offshore company formation services.',
             link: '/business/offshore'
@@ -55,23 +55,50 @@ const HomePage = () => {
     const benefits = [
         {
             icon: <FaMoneyBillWave />,
+            image: "https://images.unsplash.com/photo-1589561457421-7ff71a5001dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
             title: 'Tax Benefits',
             description: 'The UAE offers significant tax advantages with no corporate tax in free zones, no personal income tax, and numerous double taxation agreements.'
         },
         {
             icon: <FaGlobe />,
+            image: "https://images.unsplash.com/photo-1573488584686-a042be5485ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
             title: 'Strategic Location',
             description: 'Located at the crossroads of Europe, Asia, and Africa, the UAE provides easy access to markets across the Middle East, Africa, and South Asia.'
         },
         {
             icon: <FaChartLine />,
+            image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
             title: 'Strong Economy',
             description: 'The UAE boasts a diverse and robust economy, offering stability and growth opportunities across various sectors.'
         },
         {
             icon: <FaHandshake />,
+            image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
             title: 'Business-Friendly Environment',
             description: 'With minimal bureaucracy, business-friendly regulations, and strong legal frameworks, the UAE makes it easy to establish and operate a business.'
+        }
+    ];
+
+    const whyChooseUs = [
+        {
+            image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+            title: 'Expert Guidance',
+            description: 'Our team of consultants has extensive experience in UAE business setup across various industries.'
+        },
+        {
+            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+            title: 'End-to-End Support',
+            description: 'From initial consultation to post-setup services, we provide comprehensive support at every stage.'
+        },
+        {
+            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+            title: 'Customized Solutions',
+            description: 'We tailor our services to meet your specific business requirements and objectives.'
+        },
+        {
+            image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+            title: 'Transparent Process',
+            description: 'We ensure complete transparency in our processes and fee structures, with no hidden costs.'
         }
     ];
 
@@ -128,7 +155,7 @@ const HomePage = () => {
                             </div>
                         </PopUp>
                     </div>
-                    <RotatePopUp delay={0.2}>
+                    <PopUpBounce delay={0.2}>
                         <div className="hero-calculator">
                             <div className="calculator-header">
                                 <div className="calculator-icon">
@@ -227,26 +254,26 @@ const HomePage = () => {
                             </div>
                             
                         </div>
-                    </RotatePopUp>
+                    </PopUpBounce>
                 </div>
             </section>
 
             {/* Core Services Section */}
-            <section className="section">
+            <section className="section core-services-section">
                 <div className="section-container">
-                    <PopUp>
+                     
                         <div className="section-header">
                             <h2 className="section-title">Our Core Services</h2>
                             <p className="section-description">
                                 We offer comprehensive business setup solutions tailored to your specific needs. Our expertise spans across mainland, freezone, and offshore company formation.
                             </p>
                         </div>
-                    </PopUp>
+                     
                     <div className="services-grid">
                         {services.map((service, index) => (
                             <PopUpBounce key={index} delay={0.1 * index}>
                                 <ServiceCard
-                                    icon={service.icon}
+                                    image={service.image}
                                     title={service.title}
                                     description={service.description}
                                     link={service.link}
@@ -262,27 +289,27 @@ const HomePage = () => {
             {/* Why UAE Section */}
             <section className="section why-uae-section">
                 <div className="section-container">
-                    <PopUp>
+                     
                         <div className="section-header">
                             <h2 className="section-title">Why Start a Business in the UAE?</h2>
                             <p className="section-description">
                                 The United Arab Emirates offers numerous advantages for entrepreneurs and businesses looking to establish their presence in the region.
                             </p>
                         </div>
-                    </PopUp>
+                     
+                    
+                    {/* Grid Layout */}
                     <div className="benefits-grid">
                         {benefits.map((benefit, index) => (
-                            <PopUp key={index} delay={0.1 * index}>
+                            <PopUpBounce key={index} delay={0.1 * index}>
                                 <div className="benefit-card">
-                                    <RotatePopUp delay={0.2 + 0.1 * index}>
-                                        <div className="benefit-icon">
-                                            {benefit.icon}
-                                        </div>
-                                    </RotatePopUp>
+                                    <div className="benefit-image-container">
+                                        <img src={benefit.image} alt={benefit.title} className="benefit-image" />
+                                    </div>
                                     <h3 className="benefit-title">{benefit.title}</h3>
                                     <p className="benefit-description">{benefit.description}</p>
                                 </div>
-                            </PopUp>
+                            </PopUpBounce>
                         ))}
                     </div>
                 </div>
@@ -291,39 +318,26 @@ const HomePage = () => {
             {/* Why Choose Us Section */}
             <section className="section why-us-section">
                 <div className="section-container">
-                    <PopUp>
+                     
                         <div className="section-header">
                             <h2 className="section-title">Why Choose NXTStar?</h2>
                             <p className="section-description">
                                 We're committed to making your business setup journey in the UAE smooth and successful.
                             </p>
                         </div>
-                    </PopUp>
+                     
                     <div className="benefits-grid">
-                        <PopUpBounce delay={0.1}>
-                            <div className="benefit-card">
-                                <h3 className="benefit-title">Expert Guidance</h3>
-                                <p className="benefit-description">Our team of consultants has extensive experience in UAE business setup across various industries.</p>
-                            </div>
-                        </PopUpBounce>
-                        <PopUpBounce delay={0.2}>
-                            <div className="benefit-card">
-                                <h3 className="benefit-title">End-to-End Support</h3>
-                                <p className="benefit-description">From initial consultation to post-setup services, we provide comprehensive support at every stage.</p>
-                            </div>
-                        </PopUpBounce>
-                        <PopUpBounce delay={0.3}>
-                            <div className="benefit-card">
-                                <h3 className="benefit-title">Customized Solutions</h3>
-                                <p className="benefit-description">We tailor our services to meet your specific business requirements and objectives.</p>
-                            </div>
-                        </PopUpBounce>
-                        <PopUpBounce delay={0.4}>
-                            <div className="benefit-card">
-                                <h3 className="benefit-title">Transparent Process</h3>
-                                <p className="benefit-description">We ensure complete transparency in our processes and fee structures, with no hidden costs.</p>
-                            </div>
-                        </PopUpBounce>
+                        {whyChooseUs.map((benefit, index) => (
+                            <PopUpBounce key={index} delay={0.1 * index}>
+                                <div className="benefit-card">
+                                    <div className="benefit-image-container">
+                                        <img src={benefit.image} alt={benefit.title} className="benefit-image" />
+                                    </div>
+                                    <h3 className="benefit-title">{benefit.title}</h3>
+                                    <p className="benefit-description">{benefit.description}</p>
+                                </div>
+                            </PopUpBounce>
+                        ))}
                     </div>
                 </div>
             </section>
