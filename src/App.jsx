@@ -7,6 +7,8 @@ import ServicesPage from './pages/ServicesPage';
 import PageLayout from './components/layout/PageLayout';
 import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
+import BlogPage from './pages/BlogPage';
+import BlogPostPage from './pages/BlogPostPage';
 import { AnimatePresence } from 'framer-motion';
 import MotionWrapper from './components/ui/MotionWrapper';
 import './styles/index.css';
@@ -42,13 +44,14 @@ function AnimationLayout() {
         {/* Blogs Page */}
         <Route path="/blogs" element={
           <MotionWrapper>
-            <PageLayout
-              title="Blogs & Resources"
-              description="Latest insights, updates, and resources on UAE business setup and related topics."
-              breadcrumbs={[{ label: 'Blogs', url: '/blogs' }]}
-            >
-              <div>Blogs Coming Soon</div>
-            </PageLayout>
+            <BlogPage />
+          </MotionWrapper>
+        } />
+
+        {/* Individual Blog Post Page */}
+        <Route path="/blog/:id" element={
+          <MotionWrapper>
+            <BlogPostPage />
           </MotionWrapper>
         } />
 
