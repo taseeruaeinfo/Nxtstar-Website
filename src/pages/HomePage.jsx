@@ -16,6 +16,7 @@ const HomePage = () => {
         phone: '',
         businessType: '',
     });
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleChange = (e) => {
         setFormData({
@@ -24,11 +25,71 @@ const HomePage = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission logic here
-        console.log(formData);
-        alert('Form submitted! We will contact you soon.');
+        console.log('Form submitted');
+        console.log('Form data:', formData);
+        
+        // Validate form data
+        if (!formData.name.trim()) {
+            alert('Please enter your name.');
+            return;
+        }
+        
+        if (!formData.email.trim()) {
+            alert('Please enter your email address.');
+            return;
+        }
+        
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+        
+        if (!formData.phone.trim()) {
+            alert('Please enter your phone number.');
+            return;
+        }
+        
+        // Phone number validation (allowing international formats)
+        const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+        if (!phoneRegex.test(formData.phone.replace(/[\s\-\(\)]/g, ''))) {
+            alert('Please enter a valid phone number (e.g., +1234567890).');
+            return;
+        }
+        
+        if (!formData.businessType) {
+            alert('Please select a business type.');
+            return;
+        }
+        
+        // Set loading state to true
+        setIsLoading(true);
+        
+        try {
+            const res = await fetch("http://localhost:5000/send-form", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await res.json();
+            console.log('Response:', data);
+            if (data.success) {
+                alert("✅ Form submitted successfully!");
+                setFormData({ name: "", email: "", phone: "", businessType: "" });
+            } else {
+                alert("❌ Failed to send form: " + data.message);
+            }
+        } catch (err) {
+            console.error(err);
+            alert("⚠️ Something went wrong: " + err.message);
+        } finally {
+            // Set loading state to false regardless of success or failure
+            setIsLoading(false);
+        }
     };
 
     const services = [
@@ -171,7 +232,7 @@ const HomePage = () => {
                                 </div>
                                 <div className="feature">
                                     <FaPercentage />
-                                    <span>Special Discounts</span>
+                                    <span>Fast Response</span>
                                 </div>
                                 <div className="feature">
                                     <FaCheck />
@@ -247,12 +308,22 @@ const HomePage = () => {
                                             <option value="offshore">Offshore</option>
                                         </select>
                                     </div>
-                                    <Button type="secondary" block>
-                                        <FaTags className="btn-icon" /> Calculate Your Business Setup Cost
+                                    <Button type="submit" block disabled={isLoading}>
+                                        {isLoading ? (
+                                            <>
+                                                <span className="spinner" style={{ marginRight: '8px' }}></span>
+                                                Sending...
+                                            </>
+                                        ) : (
+                                            <>
+                                                <FaTags className="btn-icon" /> Calculate Your Business Setup Cost
+                                            </>
+                                        )}
                                     </Button>
+
                                 </form>
                             </div>
-                            
+
                         </div>
                     </PopUpBounce>
                 </div>
@@ -261,14 +332,14 @@ const HomePage = () => {
             {/* Core Services Section */}
             <section className="section core-services-section">
                 <div className="section-container">
-                     
-                        <div className="section-header">
-                            <h2 className="section-title">Our Core Services</h2>
-                            <p className="section-description">
-                                We offer comprehensive business setup solutions tailored to your specific needs. Our expertise spans across mainland, freezone, and offshore company formation.
-                            </p>
-                        </div>
-                     
+
+                    <div className="section-header">
+                        <h2 className="section-title">Our Core Services</h2>
+                        <p className="section-description">
+                            We offer comprehensive business setup solutions tailored to your specific needs. Our expertise spans across mainland, freezone, and offshore company formation.
+                        </p>
+                    </div>
+
                     <div className="services-grid">
                         {services.map((service, index) => (
                             <PopUpBounce key={index} delay={0.1 * index}>
@@ -289,15 +360,15 @@ const HomePage = () => {
             {/* Why UAE Section */}
             <section className="section why-uae-section">
                 <div className="section-container">
-                     
-                        <div className="section-header">
-                            <h2 className="section-title">Why Start a Business in the UAE?</h2>
-                            <p className="section-description">
-                                The United Arab Emirates offers numerous advantages for entrepreneurs and businesses looking to establish their presence in the region.
-                            </p>
-                        </div>
-                     
-                    
+
+                    <div className="section-header">
+                        <h2 className="section-title">Why Start a Business in the UAE?</h2>
+                        <p className="section-description">
+                            The United Arab Emirates offers numerous advantages for entrepreneurs and businesses looking to establish their presence in the region.
+                        </p>
+                    </div>
+
+
                     {/* Grid Layout */}
                     <div className="benefits-grid">
                         {benefits.map((benefit, index) => (
@@ -318,14 +389,14 @@ const HomePage = () => {
             {/* Why Choose Us Section */}
             <section className="section why-us-section">
                 <div className="section-container">
-                     
-                        <div className="section-header">
-                            <h2 className="section-title">Why Choose NXTStar?</h2>
-                            <p className="section-description">
-                                We're committed to making your business setup journey in the UAE smooth and successful.
-                            </p>
-                        </div>
-                     
+
+                    <div className="section-header">
+                        <h2 className="section-title">Why Choose NXTStar?</h2>
+                        <p className="section-description">
+                            We're committed to making your business setup journey in the UAE smooth and successful.
+                        </p>
+                    </div>
+
                     <div className="benefits-grid">
                         {whyChooseUs.map((benefit, index) => (
                             <PopUpBounce key={index} delay={0.1 * index}>

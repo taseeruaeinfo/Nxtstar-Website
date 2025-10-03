@@ -61,7 +61,7 @@ const Button = ({
     // Otherwise render as button
     return (
         <motion.button
-            type="button"
+            type={type === 'submit' ? 'submit' : 'button'}
             className={buttonClasses}
             onClick={onClick}
             {...props}
