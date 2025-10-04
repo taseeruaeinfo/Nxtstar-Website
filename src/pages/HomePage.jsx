@@ -8,6 +8,7 @@ import Button from '../components/ui/Button';
 import { PopUp, PopUpBounce, RotatePopUp } from '../components/ui/Motion';
 import heroBackgroundImage from '../assets/images/homePage.png';
 import '../styles/HomePage.css';
+const backend_url = import.meta.env.VITE_BACKEND_URL;
 
 const HomePage = () => {
     const [formData, setFormData] = useState({
@@ -69,7 +70,7 @@ const HomePage = () => {
         setIsLoading(true);
         
         try {
-            const res = await fetch("http://localhost:5000/send-form", {
+            const res = await fetch(`${backend_url}/api/send-form`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
