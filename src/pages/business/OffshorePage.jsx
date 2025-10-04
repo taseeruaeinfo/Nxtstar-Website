@@ -19,14 +19,6 @@ const OffshorePage = () => {
         {
             title: 'No Physical Presence Required',
             description: 'Manage your offshore company remotely without maintaining a physical office.'
-        },
-        {
-            title: 'Minimal Reporting Requirements',
-            description: 'Simpler accounting and reporting obligations compared to onshore companies.'
-        },
-        {
-            title: 'Banking Flexibility',
-            description: 'Access to international banking facilities with multi-currency accounts.'
         }
     ];
 
@@ -244,7 +236,7 @@ const OffshorePage = () => {
                     </div>
                 </section>
 
-                <section className="pricing-section">
+                {/* <section className="pricing-section">
                     <div className="section-content">
                         <h2>Offshore Formation Packages</h2>
                         <p className="section-intro">
@@ -329,7 +321,7 @@ const OffshorePage = () => {
                             <p>* Custom packages available for complex structures</p>
                         </div>
                     </div>
-                </section>
+                </section> */}
 
                 <section className="faq-section">
                     <div className="section-content">

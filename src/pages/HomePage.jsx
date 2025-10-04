@@ -28,8 +28,8 @@ const HomePage = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Form submitted');
-        console.log('Form data:', formData);
+        // console.log('Form submitted');
+        // console.log('Form data:', formData);
         
         // Validate form data
         if (!formData.name.trim()) {
@@ -79,7 +79,7 @@ const HomePage = () => {
             const data = await res.json();
             console.log('Response:', data);
             if (data.success) {
-                alert("✅ Form submitted successfully!");
+                alert("✅ Our team will shortly get in touch with you..");
                 setFormData({ name: "", email: "", phone: "", businessType: "" });
             } else {
                 alert("❌ Failed to send form: " + data.message);
@@ -454,7 +454,7 @@ const HomePage = () => {
                                     <Button to="/contact" type="primary" size="lg">
                                         Get Started
                                     </Button>
-                                    <Button href="https://calendly.com/nxtstar" type="outline" size="lg">
+                                    <Button href="https://calendly.com/nehajakhar401/30min" type="outline" size="lg">
                                         Book a Consultation
                                     </Button>
                                 </div>

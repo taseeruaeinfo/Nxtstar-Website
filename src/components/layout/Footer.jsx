@@ -84,7 +84,7 @@ const Footer = () => {
                                     <FaLinkedinIn />
                                 </motion.a>
                                 <motion.a
-                                    href="https://www.instagram.com/nxtstar.dxb"
+                                    href="https://www.instagram.com/nxtstar.ae"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="social-icon"
@@ -129,6 +129,15 @@ const Footer = () => {
                                 <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
                                     <Link to="/services/taxation">Taxation</Link>
                                 </motion.li>
+                                <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
+                                    <Link to="/services/corporate-structuring">Corporate Structuring</Link>
+                                </motion.li>
+                                <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
+                                    <Link to="/services/trademark">Trademark Registration</Link>
+                                </motion.li>
+                                <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
+                                    <Link to="/services/website">Website Development</Link>
+                                </motion.li>
                             </motion.ul>
                         </motion.div>
 
@@ -155,10 +164,10 @@ const Footer = () => {
                         <motion.div className="footer-column" variants={itemVariants}>
                             <motion.h3 className="footer-heading" variants={itemVariants}>Contact Us</motion.h3>
                             <motion.ul className="footer-links" variants={itemVariants}>
-                                <motion.li className="footer-link" variants={itemVariants}>Office #123, XYZ Building</motion.li>
+                                <motion.li className="footer-link" variants={itemVariants}>Palace tower, dubai silicom oasis</motion.li>
                                 <motion.li className="footer-link" variants={itemVariants}>Dubai, United Arab Emirates</motion.li>
-                                <motion.li className="footer-link" variants={itemVariants}>Phone: +971 4 123 4567</motion.li>
-                                <motion.li className="footer-link" variants={itemVariants}>Email: info@nxtstar.com</motion.li>
+                                <motion.li className="footer-link" variants={itemVariants}>Phone: +971 582594158</motion.li>
+                                <motion.li className="footer-link" variants={itemVariants}>nxtstar.business.setup@gmail.com</motion.li>
                             </motion.ul>
                         </motion.div>
                     </motion.div>
@@ -177,7 +186,7 @@ const Footer = () => {
 
             {/* WhatsApp Button */}
             <motion.a
-                href="https://wa.me/97141234567"
+                href="https://wa.me/+971582594158"
                 className="whatsapp-icon"
                 target="_blank"
                 rel="noopener noreferrer"
