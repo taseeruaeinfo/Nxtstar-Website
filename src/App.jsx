@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
+import ReferAndEarnPage from './pages/ReferAndEarnPage';
 import { AnimatePresence } from 'framer-motion';
 import MotionWrapper from './components/ui/MotionWrapper';
 import './styles/index.css';
@@ -72,13 +73,7 @@ function AnimationLayout() {
         {/* Refer & Earn Page */}
         <Route path="/refer-earn" element={
           <MotionWrapper>
-            <PageLayout
-              title="Refer & Earn"
-              description="Refer businesses to us and earn rewards for successful referrals."
-              breadcrumbs={[{ label: 'Refer & Earn', url: '/refer-earn' }]}
-            >
-              <div>Refer & Earn Page Coming Soon</div>
-            </PageLayout>
+            <ReferAndEarnPage />
           </MotionWrapper>
         } />
 

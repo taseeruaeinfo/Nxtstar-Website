@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import PageLayout from '../components/layout/PageLayout';
 import Button from '../components/ui/Button';
-import { FaUser, FaPhoneAlt, FaEnvelope, FaRegBuilding } from 'react-icons/fa';
+import { FaUser, FaPhoneAlt, FaEnvelope, FaRegBuilding, FaCheckCircle } from 'react-icons/fa';
 import '../styles/pages/Contact.css';
 import contactimg from '../assets/images/contact.jpg';
 
@@ -58,18 +58,22 @@ const Contact = () => {
             return;
         }
         setIsSubmitting(true);
+        // Simulate API call
         setTimeout(() => {
             setIsSubmitting(false);
             setSubmitSuccess(true);
             setFormData({ name: '', mobile: '', email: '', details: '' });
-            setTimeout(() => setSubmitSuccess(false), 4000);
-        }, 1200);
+            // Reset success message after 5 seconds
+            setTimeout(() => setSubmitSuccess(false), 5000);
+        }, 1500);
     };
 
     return (
         <PageLayout
-
+            title="Contact Us"
+            description="Get in touch with NXTStar for all your UAE business setup needs. We're here to help you start, scale, and succeed in the UAE."
             breadcrumbs={[
+                // { label: 'Home', url: '/' },
                 { label: 'Contact', url: '/contact' }
             ]}
         >
@@ -83,35 +87,37 @@ const Contact = () => {
                         />
                     </div>
                     <div className="contact-form-wrapper">
-                        <h2 style={{ marginBottom: '1rem', fontSize: '1.5rem', color: 'var(--color-primary)' }}>Contact Form</h2>
+                        <h2>Contact Us</h2>
                         {submitSuccess ? (
                             <div className="success-message">
-                                <h3>Thank you!</h3>
-                                <p>Your message has been sent. We'll get back to you soon.</p>
+                                <FaCheckCircle className="success-icon" />
+                                <h3>Thank You!</h3>
+                                <p>Your message has been sent successfully. We'll get back to you within 24 hours.</p>
                             </div>
                         ) : (
                             <form className="contact-form" onSubmit={handleSubmit}>
-                                <div className="form-group icon-input">
-                                    <label htmlFor="name">Name <span className="required">*</span></label>
-                                    <div className="input-icon-wrapper">
-                                        <span className="input-icon"><FaUser /></span>
-                                        <input
-                                            type="text"
-                                            id="name"
-                                            name="name"
-                                            value={formData.name}
-                                            onChange={handleInputChange}
-                                            className={errors.name ? 'error' : ''}
-                                            placeholder="Your name"
-                                        />
-                                    </div>
+                                <div className="form-group">
+                                    <label htmlFor="name">
+                                        <FaUser className="input-icon" /> Full Name <span className="required">*</span>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleInputChange}
+                                        className={errors.name ? 'error' : ''}
+                                        placeholder="Enter your full name"
+                                    />
                                     {errors.name && <div className="error-message">{errors.name}</div>}
                                 </div>
-                                <div className="form-group icon-input">
-                                    <label htmlFor="mobile">Mobile <span className="required">*</span></label>
-                                    <div className="input-icon-wrapper">
-                                        <span className="input-icon"><FaPhoneAlt /></span>
-                                        <div style={{ position: 'relative', marginRight: '0.5rem' }}>
+                                
+                                <div className="form-row">
+                                    <div className="form-group phone-group">
+                                        <label htmlFor="mobile">
+                                            <FaPhoneAlt className="input-icon" /> Mobile Number <span className="required">*</span>
+                                        </label>
+                                        <div className="phone-input-wrapper">
                                             <div 
                                                 className="country-flag" 
                                                 style={getFlagStyle(formData.countryCode)}
@@ -121,7 +127,6 @@ const Contact = () => {
                                                 value={formData.countryCode}
                                                 onChange={handleInputChange}
                                                 className={errors.countryCode ? 'error country-code-select' : 'country-code-select'}
-                                                style={{ minWidth: 140 }}
                                             >
                                                 <option value="+971">+971 (UAE)</option>
                                                 <option value="+91">+91 (India)</option>
@@ -129,56 +134,56 @@ const Contact = () => {
                                                 <option value="+1">+1 (USA)</option>
                                                 <option value="+92">+92 (Pakistan)</option>
                                             </select>
+                                            <input
+                                                type="tel"
+                                                id="mobile"
+                                                name="mobile"
+                                                value={formData.mobile}
+                                                onChange={handleInputChange}
+                                                className={errors.mobile ? 'error phone-input' : 'phone-input'}
+                                                placeholder="Enter mobile number"
+                                            />
                                         </div>
-                                        <input
-                                            type="tel"
-                                            id="mobile"
-                                            name="mobile"
-                                            value={formData.mobile}
-                                            onChange={handleInputChange}
-                                            className={errors.mobile ? 'error' : ''}
-                                            placeholder="Your mobile number"
-                                            style={{ flex: 1 }}
-                                        />
+                                        {errors.countryCode && <div className="error-message">{errors.countryCode}</div>}
+                                        {errors.mobile && <div className="error-message">{errors.mobile}</div>}
                                     </div>
-                                    {errors.countryCode && <div className="error-message">{errors.countryCode}</div>}
-                                    {errors.mobile && <div className="error-message">{errors.mobile}</div>}
                                 </div>
-                                <div className="form-group icon-input">
-                                    <label htmlFor="email">Email <span className="required">*</span></label>
-                                    <div className="input-icon-wrapper">
-                                        <span className="input-icon"><FaEnvelope /></span>
-                                        <input
-                                            type="email"
-                                            id="email"
-                                            name="email"
-                                            value={formData.email}
-                                            onChange={handleInputChange}
-                                            className={errors.email ? 'error' : ''}
-                                            placeholder="Your email"
-                                        />
-                                    </div>
+                                
+                                <div className="form-group">
+                                    <label htmlFor="email">
+                                        <FaEnvelope className="input-icon" /> Email Address <span className="required">*</span>
+                                    </label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleInputChange}
+                                        className={errors.email ? 'error' : ''}
+                                        placeholder="Enter your email address"
+                                    />
                                     {errors.email && <div className="error-message">{errors.email}</div>}
                                 </div>
-                                <div className="form-group icon-input">
-                                    <label htmlFor="details">Business Details <span className="required">*</span></label>
-                                    <div className="input-icon-wrapper">
-                                        <span className="input-icon"><FaRegBuilding /></span>
-                                        <textarea
-                                            id="details"
-                                            name="details"
-                                            value={formData.details}
-                                            onChange={handleInputChange}
-                                            className={errors.details ? 'error' : ''}
-                                            placeholder="Describe your business needs"
-                                            rows={3}
-                                        ></textarea>
-                                    </div>
+                                
+                                <div className="form-group">
+                                    <label htmlFor="details">
+                                        <FaRegBuilding className="input-icon" /> Business Details <span className="required">*</span>
+                                    </label>
+                                    <textarea
+                                        id="details"
+                                        name="details"
+                                        value={formData.details}
+                                        onChange={handleInputChange}
+                                        className={errors.details ? 'error' : ''}
+                                        placeholder="Tell us about your business needs and requirements"
+                                        rows={4}
+                                    ></textarea>
                                     {errors.details && <div className="error-message">{errors.details}</div>}
                                 </div>
-                                <div className="form-submit" style={{ marginTop: 16 }}>
-                                    <Button type="primary" size="md" disabled={isSubmitting}>
-                                        {isSubmitting ? 'Sending...' : 'Submit'}
+                                
+                                <div className="form-submit">
+                                    <Button type="submit" size="lg" disabled={isSubmitting}>
+                                        {isSubmitting ? 'Sending Message...' : 'Send Message'}
                                     </Button>
                                 </div>
                             </form>
@@ -187,7 +192,7 @@ const Contact = () => {
                 </div>
             </div>
             <div className="map-section">
-                <h3>Our Location</h3>
+                <h3>Our Location in Dubai</h3>
                 <div className="map-container">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14439.951609602107!2d55.27547811491486!3d25.18599433959108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f682829c85c07%3A0xa5eda9fb3c93b69d!2sBusiness%20Bay%20-%20Dubai!5e0!3m2!1sen!2sae!4v1695076964609!5m2!1sen!2sae"
