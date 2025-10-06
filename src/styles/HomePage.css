@@ -657,6 +657,7 @@
     margin-right: 8px;
     font-size: 1rem;
     vertical-align: middle;
+    
 }
 
 #hero-heading,
@@ -817,6 +818,12 @@
     .hero-section {
         padding: 4rem 0;
     }
+}
+
+
+.cost-calc-button {
+    background-color: rgb(17, 27, 46);
+    color: #ffffff;
 }
 
 /* Add spinner styles */

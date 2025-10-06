@@ -1,0 +1,142 @@
+/* AnimatedBackground.css */
+
+/* Animated Background Container */
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    /* Remove the clip path to allow background to extend to footer */
+}
+
+/* Animated Gradient */
+.gradient-animation {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(45deg,
+            rgba(10, 15, 30, 0.95) 0%,
+            rgba(20, 30, 60, 0.95) 15%,
+            rgba(30, 40, 80, 0.95) 30%,
+            rgba(40, 20, 60, 0.95) 45%,
+            rgba(20, 25, 50, 0.95) 60%,
+            rgba(15, 20, 45, 0.95) 75%,
+            rgba(10, 12, 35, 0.95) 90%,
+            rgba(10, 15, 30, 0.95) 100%);
+    background-size: 400% 400%;
+    animation: gradientAnimation 30s ease infinite;
+    z-index: 0;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+        transform: rotate(0deg);
+    }
+
+    50% {
+        background-position: 100% 50%;
+        transform: rotate(3deg);
+    }
+
+    100% {
+        background-position: 0% 50%;
+        transform: rotate(0deg);
+    }
+}
+
+/* Particles Container */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Individual Particle */
+.particle {
+    position: absolute;
+    background-color: rgba(252, 252, 252, 0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 10px 2px rgba(120, 180, 255, 0.2);
+}
+
+/* Glassmorphism Styles */
+.glass-card {
+    background: rgba(20, 30, 60, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 15px;
+    border: 1px solid rgba(120, 140, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+    background: rgba(30, 40, 70, 0.5);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+/* Apply glassmorphism to existing cards */
+.benefit-card {
+    background: rgba(20, 30, 60, 0.6) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(120, 140, 255, 0.2) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+.benefit-card:hover {
+    background: rgba(25, 35, 65, 0.7) !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+    transform: translateY(-8px) !important;
+}
+
+/* Star particle styles */
+.star-particle {
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.95) 0%, rgba(200, 220, 255, 0.6) 70%, transparent 100%) !important;
+}
+
+/* Apply to calculator */
+.hero-calculator {
+    background: rgba(25, 35, 65, 0.7) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(120, 140, 255, 0.2) !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Apply to sections */
+.section {
+    position: relative;
+    z-index: 2;
+}
+
+/* Background overlay for sections to improve readability */
+.section-background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 15, 35, 0.85);
+    z-index: -1;
+}
+
+/* Ensure readable text on glassmorphism cards */
+.glass-card * {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}

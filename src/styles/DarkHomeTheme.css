@@ -1,0 +1,217 @@
+/* Dark Theme Overrides for HomePage */
+
+/* Global styles for the homepage */
+.dark-theme .hero-section {
+    position: relative;
+}
+
+.dark-theme .section {
+    position: relative;
+    z-index: 5;
+}
+
+.dark-theme .section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 15, 35, 0.8);
+    z-index: -1;
+}
+
+/* Text colors */
+.dark-theme .section-title {
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dark-theme .section-description {
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .benefit-title {
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .benefit-description {
+    color: rgba(200, 210, 255, 0.85) !important;
+}
+
+/* Neon-like glowing effects for special elements */
+.dark-theme .hero-title span {
+    color: #6af !important;
+    text-shadow: 0 0 10px rgba(100, 170, 255, 0.8), 0 0 20px rgba(100, 170, 255, 0.4);
+}
+
+.dark-theme .hero-title span::after {
+    background: linear-gradient(to right, #6af, #6cf);
+    box-shadow: 0 0 10px rgba(100, 170, 255, 0.8), 0 0 20px rgba(100, 170, 255, 0.4);
+}
+
+.dark-theme .calculator-icon {
+    background: linear-gradient(135deg, #1e3a6d, #2a4f92);
+    box-shadow: 0 0 15px rgba(100, 150, 255, 0.5);
+}
+
+/* Calculator styling */
+.dark-theme .calculator-header h3 {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .calculator-header p {
+    color: rgba(200, 210, 255, 0.8);
+}
+
+/* Enhanced calculator form */
+.dark-theme .calculator-features {
+    background-color: rgba(10, 20, 40, 0.3);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.dark-theme .form-control,
+.dark-theme .form-select {
+    background-color: rgba(15, 25, 55, 0.6);
+    border: 1px solid rgba(100, 150, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.dark-theme .form-control:focus,
+.dark-theme .form-select:focus {
+    background-color: rgba(25, 40, 80, 0.7);
+    border-color: rgba(100, 150, 255, 0.4);
+    box-shadow: 0 0 0 3px rgba(100, 150, 255, 0.25), 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .form-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236af' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+}
+
+.dark-theme .form-label,
+.dark-theme .form-label-cc {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.dark-theme .form-control,
+.dark-theme .form-select {
+    background-color: rgba(25, 35, 65, 0.5);
+    border: 1px solid rgba(100, 150, 255, 0.2);
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.dark-theme .form-control:focus,
+.dark-theme .form-select:focus {
+    background-color: rgba(30, 40, 70, 0.6);
+    border-color: rgba(100, 150, 255, 0.5);
+    box-shadow: 0 0 0 3px rgba(100, 150, 255, 0.2);
+}
+
+.dark-theme .form-control::placeholder {
+    color: rgba(16, 18, 26, 0.5);
+}
+
+/* Features and cards */
+.dark-theme .feature {
+    color: rgba(200, 210, 255, 0.8);
+}
+
+.dark-theme .feature svg {
+    color: #6af;
+}
+
+.dark-theme .service-card {
+    background: rgba(20, 30, 60, 0.6) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(100, 150, 255, 0.2) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark-theme .service-card:hover {
+    background: rgba(25, 35, 65, 0.7) !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(100, 150, 255, 0.2) !important;
+    transform: translateY(-5px);
+}
+
+.dark-theme .service-card-title {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.dark-theme .service-card-description {
+    color: rgba(200, 210, 255, 0.85) !important;
+}
+
+.dark-theme .service-card-link {
+    color: #6af !important;
+    text-shadow: 0 0 5px rgba(100, 170, 255, 0.3);
+}
+
+/* Testimonial cards */
+.dark-theme .testimonial-card {
+    background: rgba(20, 30, 60, 0.6) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(100, 150, 255, 0.2) !important;
+}
+
+/* Buttons */
+.dark-theme .hero-cta .button {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    
+}
+
+.dark-theme .hero-cta .button:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(100, 150, 255, 0.3);
+}
+
+/* Hero section text enhancements */
+.dark-theme .hero-title {
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7), 0 0 30px rgba(100, 170, 255, 0.3) !important;
+}
+
+.dark-theme #scs {
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7), 0 0 30px rgba(100, 170, 255, 0.3) !important;
+}
+
+.dark-theme .hero-description {
+    background-color: rgba(15, 25, 50, 0.6) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(100, 150, 255, 0.15) !important;
+    color: rgba(220, 225, 255, 0.9) !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+    padding: 15px 20px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Subtle animations for cards */
+@keyframes subtlePulse {
+    0% {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    50% {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(100, 150, 255, 0.2);
+    }
+
+    100% {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+}
+
+.dark-theme .benefit-card,
+.dark-theme .service-card {
+    animation: subtlePulse 4s infinite alternate;
+    animation-delay: calc(var(--card-index, 0) * 0.5s);
+}

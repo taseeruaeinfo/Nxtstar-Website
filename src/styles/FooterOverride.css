@@ -1,0 +1,77 @@
+/* FooterOverride.css */
+/* This file ensures the footer works properly with the dark theme */
+
+/* 
+  The key issue is making the footer appear properly with the animated background.
+  This CSS applies proper z-indexing and styling to make the dark theme work in the footer.
+*/
+
+/* Make the footer appear above the animated background but keep dark theme */
+.footer {
+    position: relative;
+    z-index: 100 !important;
+    /* Higher z-index to ensure it's above animated background */
+    background-color: rgba(25, 30, 50, 0.9) !important;
+    /* Dark theme background that matches the site */
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border-top: 1px solid rgba(100, 150, 255, 0.2) !important;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Apply glassmorphism effect to footer */
+.dark-theme .footer {
+    background: rgba(20, 30, 60, 0.9) !important;
+    /* Match dark theme */
+}
+
+/* Enhanced styling for footer elements in dark theme */
+.dark-theme .footer-logo-text {
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5), 0 0 30px rgba(100, 170, 255, 0.3) !important;
+}
+
+.dark-theme .footer-heading {
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark-theme .footer-description {
+    color: rgba(200, 210, 255, 0.85) !important;
+}
+
+.dark-theme .footer-link a {
+    color: rgba(200, 210, 255, 0.8) !important;
+    transition: all 0.3s ease !important;
+}
+
+.dark-theme .footer-link a:hover {
+    color: rgba(255, 255, 255, 1) !important;
+    text-shadow: 0 0 8px rgba(100, 170, 255, 0.5) !important;
+    transform: translateX(3px);
+}
+
+.dark-theme .copyright {
+    color: rgba(180, 190, 220, 0.7) !important;
+    border-top: 1px solid rgba(100, 150, 255, 0.15) !important;
+}
+
+/* Enhanced social icons */
+.dark-theme .social-icon {
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-shadow: 0 0 10px rgba(100, 170, 255, 0.3) !important;
+}
+
+.dark-theme .social-icon:hover {
+    color: rgba(100, 170, 255, 1) !important;
+    text-shadow: 0 0 15px rgba(100, 170, 255, 0.7) !important;
+}
+
+/* Add a gradient transition div to connect content and footer */
+.animated-background-stopper {
+    position: relative;
+    height: 50px;
+    background: linear-gradient(to bottom, transparent, rgba(20, 30, 60, 0.9));
+    margin-top: -20px;
+    z-index: 99;
+}

@@ -7,7 +7,7 @@ import Threads from '../../assets/images/ThreadsLogo.png';
 
 const Footer = () => {
 
-   
+
 
 
 

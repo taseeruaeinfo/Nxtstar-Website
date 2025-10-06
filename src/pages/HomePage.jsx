@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBuilding, FaGlobe, FaShieldAlt, FaMoneyBillWave, FaChartLine, FaHandshake, FaCalculator, FaDollarSign, FaPercentage, FaCheck, FaTags } from 'react-icons/fa';
 import SEO from '../components/layout/SEO';
@@ -6,8 +6,11 @@ import ServiceCard from '../components/ui/ServiceCard';
 import TestimonialCard from '../components/ui/TestimonialCard';
 import Button from '../components/ui/Button';
 import { PopUp, PopUpBounce, RotatePopUp } from '../components/ui/Motion';
-import heroBackgroundImage from '../assets/images/homePage.png';
+import AnimatedBackground from '../components/ui/AnimatedBackground';
 import '../styles/HomePage.css';
+import '../styles/AnimatedBackground.css';
+import '../styles/DarkHomeTheme.css';
+import '../styles/FooterOverride.css';
 const backend_url = import.meta.env.VITE_BACKEND_URL;
 
 const HomePage = () => {
@@ -30,45 +33,45 @@ const HomePage = () => {
         e.preventDefault();
         // console.log('Form submitted');
         // console.log('Form data:', formData);
-        
+
         // Validate form data
         if (!formData.name.trim()) {
             alert('Please enter your name.');
             return;
         }
-        
+
         if (!formData.email.trim()) {
             alert('Please enter your email address.');
             return;
         }
-        
+
         // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(formData.email)) {
             alert('Please enter a valid email address.');
             return;
         }
-        
+
         if (!formData.phone.trim()) {
             alert('Please enter your phone number.');
             return;
         }
-        
+
         // Phone number validation (allowing international formats)
         const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
         if (!phoneRegex.test(formData.phone.replace(/[\s\-\(\)]/g, ''))) {
             alert('Please enter a valid phone number (e.g., +1234567890).');
             return;
         }
-        
+
         if (!formData.businessType) {
             alert('Please select a business type.');
             return;
         }
-        
+
         // Set loading state to true
         setIsLoading(true);
-        
+
         try {
             const res = await fetch(`${backend_url}/api/send-form`, {
                 method: "POST",
@@ -179,8 +182,16 @@ const HomePage = () => {
         }
     ];
 
+    // Apply index to cards for staggered animations
+    useEffect(() => {
+        const cards = document.querySelectorAll('.benefit-card, .service-card');
+        cards.forEach((card, index) => {
+            card.style.setProperty('--card-index', index);
+        });
+    }, []);
+
     return (
-        <>
+        <div className="dark-theme">
             <SEO
                 title="NXTStar | Start, Scale & Succeed in the UAE"
                 description="Your partner in UAE business setup. Comprehensive solutions for mainland, freezone, and offshore company formation in the UAE."
@@ -189,11 +200,8 @@ const HomePage = () => {
             />
 
             {/* Hero Section */}
-            <section className="hero-section" style={{
-                backgroundImage: `url(${heroBackgroundImage})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-            }}>
+            <section className="hero-section">
+                <AnimatedBackground />
                 <div className="hero-container">
                     <div className="hero-content-home">
                         <PopUp>
@@ -309,7 +317,7 @@ const HomePage = () => {
                                             <option value="offshore">Offshore</option>
                                         </select>
                                     </div>
-                                    <Button type="submit" block disabled={isLoading}>
+                                    <Button className="cost-calc-button" type="submit" block disabled={isLoading}>
                                         {isLoading ? (
                                             <>
                                                 <span className="spinner" style={{ marginRight: '8px' }}></span>
@@ -463,7 +471,10 @@ const HomePage = () => {
                     </PopUp>
                 </div>
             </section>
-        </>
+
+            {/* This div creates a smooth transition between content and footer */}
+            <div className="animated-background-stopper"></div>
+        </div>
     );
 };
 
