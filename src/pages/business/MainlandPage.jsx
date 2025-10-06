@@ -4,10 +4,7 @@ import '../../styles/pages/business/MainlandPage.css';
 
 const MainlandPage = () => {
     const benefits = [
-        {
-            title: '100% Foreign Ownership',
-            description: 'Foreign investors can own 100% of their mainland business without requiring a local sponsor.'
-        },
+        
         {
             title: 'Unrestricted Business Activities',
             description: 'Trade freely across the UAE local market, GCC region, and internationally without any restrictions.'
@@ -23,11 +20,8 @@ const MainlandPage = () => {
         {
             title: 'No Currency Restrictions',
             description: 'Freedom to repatriate capital, profits, and dividends without restrictions.'
-        },
-        {
-            title: 'Banking Facilities',
-            description: 'Access to comprehensive corporate banking services and credit facilities.'
         }
+        
     ];
 
     const steps = [
@@ -148,7 +142,7 @@ const MainlandPage = () => {
                     </div>
                 </section>
 
-                <section id="pricing" className="pricing-section">
+                {/* <section id="pricing" className="pricing-section">
                     <div className="section-content">
                         <h2>Our Mainland Setup Packages</h2>
                         <p className="section-intro">
@@ -239,7 +233,7 @@ const MainlandPage = () => {
                             <p>* Custom packages available for specific business requirements</p>
                         </div>
                     </div>
-                </section>
+                </section> */}
 
                 <section className="faq-section">
                     <div className="section-content">

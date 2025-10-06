@@ -118,7 +118,7 @@ const PRO = () => {
             ]}
         >
             <div className="pro-services-page">
-                <section className="hero-section">
+                {/* <section className="hero-section">
                     <div className="hero-content">
                         <h1>PRO Services in UAE</h1>
                         <p>Streamline your government transactions and administrative procedures with our professional PRO services.</p>
@@ -127,7 +127,7 @@ const PRO = () => {
                             <a href="/contact" className="secondary-btn">Get Free Consultation</a>
                         </div>
                     </div>
-                </section>
+                </section> */}
 
                 <section className="intro-section">
                     <div className="section-content">

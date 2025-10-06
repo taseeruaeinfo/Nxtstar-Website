@@ -27,13 +27,13 @@ const Navbar = () => {
             name: 'Services',
             path: '/services',
             dropdownItems: [
-                { name: 'Company Registration & Licenses', path: '/services/registration-licenses' },
-                { name: 'Residence Visa & PRO', path: '/services/visa-pro' },
-                { name: 'Golden Visa', path: '/services/golden-visa' },
-                { name: 'Corporate Structuring', path: '/services/corporate-structuring' },
-                { name: 'Taxation', path: '/services/taxation' },
-                { name: 'Trademark Registration', path: '/services/trademark' },
-                { name: 'Website Development', path: '/services/website' }
+                // { name: 'Company Registration & Licenses', path: '/services/registration-licenses' },
+                // { name: 'Residence Visa & PRO', path: '/services/visa-pro' },
+                // { name: 'Golden Visa', path: '/services/golden-visa' },
+                // { name: 'Corporate Structuring', path: '/services/corporate-structuring' },
+                // { name: 'Taxation', path: '/services/taxation' },
+                // { name: 'Trademark Registration', path: '/services/trademark' },
+                // { name: 'Website Development', path: '/services/website' }
             ]
         },
         { name: 'Blogs', path: '/blogs' },

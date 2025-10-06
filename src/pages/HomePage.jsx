@@ -8,6 +8,7 @@ import Button from '../components/ui/Button';
 import { PopUp, PopUpBounce, RotatePopUp } from '../components/ui/Motion';
 import heroBackgroundImage from '../assets/images/homePage.png';
 import '../styles/HomePage.css';
+const backend_url = import.meta.env.VITE_BACKEND_URL;
 
 const HomePage = () => {
     const [formData, setFormData] = useState({
@@ -16,6 +17,7 @@ const HomePage = () => {
         phone: '',
         businessType: '',
     });
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleChange = (e) => {
         setFormData({
@@ -24,11 +26,71 @@ const HomePage = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission logic here
-        console.log(formData);
-        alert('Form submitted! We will contact you soon.');
+        // console.log('Form submitted');
+        // console.log('Form data:', formData);
+        
+        // Validate form data
+        if (!formData.name.trim()) {
+            alert('Please enter your name.');
+            return;
+        }
+        
+        if (!formData.email.trim()) {
+            alert('Please enter your email address.');
+            return;
+        }
+        
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+        
+        if (!formData.phone.trim()) {
+            alert('Please enter your phone number.');
+            return;
+        }
+        
+        // Phone number validation (allowing international formats)
+        const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+        if (!phoneRegex.test(formData.phone.replace(/[\s\-\(\)]/g, ''))) {
+            alert('Please enter a valid phone number (e.g., +1234567890).');
+            return;
+        }
+        
+        if (!formData.businessType) {
+            alert('Please select a business type.');
+            return;
+        }
+        
+        // Set loading state to true
+        setIsLoading(true);
+        
+        try {
+            const res = await fetch(`${backend_url}/api/send-form`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await res.json();
+            console.log('Response:', data);
+            if (data.success) {
+                alert("✅ Our team will shortly get in touch with you..");
+                setFormData({ name: "", email: "", phone: "", businessType: "" });
+            } else {
+                alert("❌ Failed to send form: " + data.message);
+            }
+        } catch (err) {
+            console.error(err);
+            alert("⚠️ Something went wrong: " + err.message);
+        } finally {
+            // Set loading state to false regardless of success or failure
+            setIsLoading(false);
+        }
     };
 
     const services = [
@@ -55,25 +117,25 @@ const HomePage = () => {
     const benefits = [
         {
             icon: <FaMoneyBillWave />,
-            image: "https://images.unsplash.com/photo-1589561457421-7ff71a5001dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+            image: "https://images.unsplash.com/photo-1710132819209-f4d38bf5532d?q=80&w=747&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             title: 'Tax Benefits',
             description: 'The UAE offers significant tax advantages with no corporate tax in free zones, no personal income tax, and numerous double taxation agreements.'
         },
         {
             icon: <FaGlobe />,
-            image: "https://images.unsplash.com/photo-1573488584686-a042be5485ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+            image: "https://plus.unsplash.com/premium_photo-1683133974170-762dc561d292?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             title: 'Strategic Location',
             description: 'Located at the crossroads of Europe, Asia, and Africa, the UAE provides easy access to markets across the Middle East, Africa, and South Asia.'
         },
         {
             icon: <FaChartLine />,
-            image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+            image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             title: 'Strong Economy',
             description: 'The UAE boasts a diverse and robust economy, offering stability and growth opportunities across various sectors.'
         },
         {
             icon: <FaHandshake />,
-            image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+            image: "https://plus.unsplash.com/premium_photo-1661301087289-a9067c2f933f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             title: 'Business-Friendly Environment',
             description: 'With minimal bureaucracy, business-friendly regulations, and strong legal frameworks, the UAE makes it easy to establish and operate a business.'
         }
@@ -81,12 +143,12 @@ const HomePage = () => {
 
     const whyChooseUs = [
         {
-            image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+            image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             title: 'Expert Guidance',
             description: 'Our team of consultants has extensive experience in UAE business setup across various industries.'
         },
         {
-            image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+            image: "https://plus.unsplash.com/premium_photo-1681995453325-455f7084888d?q=80&w=1139&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             title: 'End-to-End Support',
             description: 'From initial consultation to post-setup services, we provide comprehensive support at every stage.'
         },
@@ -171,7 +233,7 @@ const HomePage = () => {
                                 </div>
                                 <div className="feature">
                                     <FaPercentage />
-                                    <span>Special Discounts</span>
+                                    <span>Fast Response</span>
                                 </div>
                                 <div className="feature">
                                     <FaCheck />
@@ -247,12 +309,22 @@ const HomePage = () => {
                                             <option value="offshore">Offshore</option>
                                         </select>
                                     </div>
-                                    <Button type="secondary" block>
-                                        <FaTags className="btn-icon" /> Calculate Your Business Setup Cost
+                                    <Button type="submit" block disabled={isLoading}>
+                                        {isLoading ? (
+                                            <>
+                                                <span className="spinner" style={{ marginRight: '8px' }}></span>
+                                                Sending...
+                                            </>
+                                        ) : (
+                                            <>
+                                                <FaTags className="btn-icon" /> Calculate Your Business Setup Cost
+                                            </>
+                                        )}
                                     </Button>
+
                                 </form>
                             </div>
-                            
+
                         </div>
                     </PopUpBounce>
                 </div>
@@ -261,14 +333,14 @@ const HomePage = () => {
             {/* Core Services Section */}
             <section className="section core-services-section">
                 <div className="section-container">
-                     
-                        <div className="section-header">
-                            <h2 className="section-title">Our Core Services</h2>
-                            <p className="section-description">
-                                We offer comprehensive business setup solutions tailored to your specific needs. Our expertise spans across mainland, freezone, and offshore company formation.
-                            </p>
-                        </div>
-                     
+
+                    <div className="section-header">
+                        <h2 className="section-title">Our Core Services</h2>
+                        <p className="section-description">
+                            We offer comprehensive business setup solutions tailored to your specific needs. Our expertise spans across mainland, freezone, and offshore company formation.
+                        </p>
+                    </div>
+
                     <div className="services-grid">
                         {services.map((service, index) => (
                             <PopUpBounce key={index} delay={0.1 * index}>
@@ -289,15 +361,15 @@ const HomePage = () => {
             {/* Why UAE Section */}
             <section className="section why-uae-section">
                 <div className="section-container">
-                     
-                        <div className="section-header">
-                            <h2 className="section-title">Why Start a Business in the UAE?</h2>
-                            <p className="section-description">
-                                The United Arab Emirates offers numerous advantages for entrepreneurs and businesses looking to establish their presence in the region.
-                            </p>
-                        </div>
-                     
-                    
+
+                    <div className="section-header">
+                        <h2 className="section-title">Why Start a Business in the UAE?</h2>
+                        <p className="section-description">
+                            The United Arab Emirates offers numerous advantages for entrepreneurs and businesses looking to establish their presence in the region.
+                        </p>
+                    </div>
+
+
                     {/* Grid Layout */}
                     <div className="benefits-grid">
                         {benefits.map((benefit, index) => (
@@ -318,14 +390,14 @@ const HomePage = () => {
             {/* Why Choose Us Section */}
             <section className="section why-us-section">
                 <div className="section-container">
-                     
-                        <div className="section-header">
-                            <h2 className="section-title">Why Choose NXTStar?</h2>
-                            <p className="section-description">
-                                We're committed to making your business setup journey in the UAE smooth and successful.
-                            </p>
-                        </div>
-                     
+
+                    <div className="section-header">
+                        <h2 className="section-title">Why Choose NXTStar?</h2>
+                        <p className="section-description">
+                            We're committed to making your business setup journey in the UAE smooth and successful.
+                        </p>
+                    </div>
+
                     <div className="benefits-grid">
                         {whyChooseUs.map((benefit, index) => (
                             <PopUpBounce key={index} delay={0.1 * index}>
@@ -382,7 +454,7 @@ const HomePage = () => {
                                     <Button to="/contact" type="primary" size="lg">
                                         Get Started
                                     </Button>
-                                    <Button href="https://calendly.com/nxtstar" type="outline" size="lg">
+                                    <Button href="https://calendly.com/nehajakhar401/30min" type="outline" size="lg">
                                         Book a Consultation
                                     </Button>
                                 </div>

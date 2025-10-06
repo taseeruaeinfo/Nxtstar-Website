@@ -5,10 +5,7 @@ import '../../../styles/pages/business/freezone/FreezoneOverview.css';
 
 const FreezoneOverview = () => {
     const benefits = [
-        {
-            title: '100% Foreign Ownership',
-            description: 'Full ownership of your business without the need for a local partner or sponsor.'
-        },
+        
         {
             title: 'Tax Advantages',
             description: '0% corporate and personal income tax with full repatriation of profits and capital.'
@@ -24,10 +21,6 @@ const FreezoneOverview = () => {
         {
             title: 'Industry-Specific Incentives',
             description: 'Many free zones offer additional benefits tailored to specific industries.'
-        },
-        {
-            title: 'Residence Visa Eligibility',
-            description: 'Obtain residence visas for yourself, family, and employees.'
         }
     ];
 
@@ -277,14 +270,14 @@ const FreezoneOverview = () => {
                                     <h3>Basic Package</h3>
                                     <div className="package-price">
                                         <span className="currency">From AED</span>
-                                        <span className="amount">16,500</span>
+                                        <span className="amount">4999</span>
                                     </div>
                                 </div>
                                 <div className="package-features">
                                     <ul>
                                         <li>Free Zone License</li>
                                         <li>Company Registration</li>
-                                        <li>1 Visa Eligibility</li>
+                                        <li>lease agreement </li>
                                         <li>Standard Processing</li>
                                         <li>Assistance with Documentation</li>
                                         <li>Basic Business Support</li>
@@ -301,15 +294,14 @@ const FreezoneOverview = () => {
                                     <h3>Standard Package</h3>
                                     <div className="package-price">
                                         <span className="currency">From AED</span>
-                                        <span className="amount">22,900</span>
+                                        <span className="amount">14,900</span>
                                     </div>
                                 </div>
                                 <div className="package-features">
                                     <ul>
                                         <li>Free Zone License</li>
                                         <li>Company Registration</li>
-                                        <li>3 Visa Eligibility</li>
-                                        <li>Priority Processing</li>
+                                        <li>1 Visa Eligibility</li>
                                         <li>Registered Office Address (1 Year)</li>
                                         <li>Corporate Bank Account Assistance</li>
                                         <li>Dedicated PRO Services</li>
@@ -333,7 +325,7 @@ const FreezoneOverview = () => {
                                     <ul>
                                         <li>Free Zone License</li>
                                         <li>Company Registration</li>
-                                        <li>6 Visa Eligibility</li>
+                                        <li>3 Visa Eligibility</li>
                                         <li>Express Processing</li>
                                         <li>Premium Office Address (1 Year)</li>
                                         <li>Priority Bank Account Setup</li>
