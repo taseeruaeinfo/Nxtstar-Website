@@ -26,6 +26,11 @@
     transform: rotate(30deg);
 }
 
+.reut{
+    font-size: 0.7rem !important;
+    text-transform: uppercase;
+    
+}
 .refer-hero-content {
     display: flex;
     flex-wrap: wrap;

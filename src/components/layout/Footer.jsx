@@ -2,8 +2,17 @@ import { Link } from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import '../../styles/Footer.css';
+import Threads from '../../assets/images/ThreadsLogo.png';
+
 
 const Footer = () => {
+
+   
+
+
+
+
+
     const currentYear = new Date().getFullYear();
 
     const footerVariants = {
@@ -62,7 +71,7 @@ const Footer = () => {
                                     <FaFacebookF />
                                 </motion.a>
                                 <motion.a
-                                    href="https://twitter.com/nxtstar"
+                                    href="https://www.threads.com/@nxtstar.ae?igshid=NTc4MTIwNjQ2YQ=="
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="social-icon"
@@ -70,7 +79,7 @@ const Footer = () => {
                                     whileHover={{ scale: 1.2, rotate: 5 }}
                                     whileTap={{ scale: 0.9 }}
                                 >
-                                    <FaTwitter />
+                                    <img src={Threads} alt="Threads" id='footerThreads' />
                                 </motion.a>
                                 <motion.a
                                     href="https://www.linkedin.com/company/nxtstar/"
@@ -164,10 +173,10 @@ const Footer = () => {
                         <motion.div className="footer-column" variants={itemVariants}>
                             <motion.h3 className="footer-heading" variants={itemVariants}>Contact Us</motion.h3>
                             <motion.ul className="footer-links" variants={itemVariants}>
-                                <motion.li className="footer-link" variants={itemVariants}>Palace tower, dubai silicom oasis</motion.li>
+                                <motion.li className="footer-link" variants={itemVariants}>Palace Tower, Dubai Silicon Oasis</motion.li>
                                 <motion.li className="footer-link" variants={itemVariants}>Dubai, United Arab Emirates</motion.li>
                                 <motion.li className="footer-link" variants={itemVariants}>Phone: +971 582594158</motion.li>
-                                <motion.li className="footer-link" variants={itemVariants}>nxtstar.business.setup@gmail.com</motion.li>
+                                <motion.li className="footer-link" id="footer-email" variants={itemVariants}>nxtstar.business.setup@gmail.com</motion.li>
                             </motion.ul>
                         </motion.div>
                     </motion.div>
@@ -179,7 +188,7 @@ const Footer = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5 }}
                     >
-                        &copy; {currentYear} NXTStar. All rights reserved.
+                        &copy; {currentYear} Impactlink for Marketing and PR. All rights reserved.
                     </motion.div>
                 </div>
             </motion.footer>

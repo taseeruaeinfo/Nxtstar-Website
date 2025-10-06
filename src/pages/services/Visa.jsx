@@ -149,10 +149,8 @@ const Visa = () => {
         <PageLayout
             title="Visa Services in UAE"
             description="Comprehensive visa services including new applications, renewals, and visa status amendments for all visa types in the UAE."
-            breadcrumbs={[
-                { label: 'Services', url: '/services' },
-                { label: 'Visa Services', url: '/services/visa' }
-            ]}
+            headerImage="https://images.unsplash.com/photo-1542744095-291d1f67b221?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+            headerOverlayColor="rgba(0, 0, 0, 0.7)"
         >
             <div className="visa-services-page">
                 <section className="hero-section">

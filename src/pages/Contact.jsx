@@ -72,10 +72,8 @@ const Contact = () => {
         <PageLayout
             title="Contact Us"
             description="Get in touch with NXTStar for all your UAE business setup needs. We're here to help you start, scale, and succeed in the UAE."
-            breadcrumbs={[
-                // { label: 'Home', url: '/' },
-                { label: 'Contact', url: '/contact' }
-            ]}
+            headerImage="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+            headerOverlayColor="rgba(0, 0, 0, 0.1)"
         >
             <div className="contact-page">
                 <div className="contact-form-image-row">

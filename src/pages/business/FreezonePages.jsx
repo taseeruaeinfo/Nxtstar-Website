@@ -13,11 +13,8 @@ const FreezonePages = () => {
                 <PageLayout
                     title="JAFZA Free Zone"
                     description="Set up your business in Jebel Ali Free Zone, one of Dubai's most established free zones."
-                    breadcrumbs={[
-                        { label: 'Business Setup', url: '/business' },
-                        { label: 'Free Zone', url: '/business/freezone' },
-                        { label: 'JAFZA', url: '/business/freezone/jafza' }
-                    ]}
+                    headerImage="https://images.unsplash.com/photo-1542744094-24638eff58bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                    headerOverlayColor="rgba(0, 0, 0, 0.7)"
                 >
                     <div className="freezone-detail-page">
                         <h2>JAFZA Free Zone Coming Soon</h2>
@@ -29,11 +26,8 @@ const FreezonePages = () => {
                 <PageLayout
                     title="DMCC Free Zone"
                     description="Set up your business in Dubai Multi Commodities Centre, perfect for trading companies."
-                    breadcrumbs={[
-                        { label: 'Business Setup', url: '/business' },
-                        { label: 'Free Zone', url: '/business/freezone' },
-                        { label: 'DMCC', url: '/business/freezone/dmcc' }
-                    ]}
+                    headerImage="https://images.unsplash.com/photo-1542744094-24638eff58bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                    headerOverlayColor="rgba(0, 0, 0, 0.7)"
                 >
                     <div className="freezone-detail-page">
                         <h2>DMCC Free Zone Coming Soon</h2>
@@ -45,11 +39,8 @@ const FreezonePages = () => {
                 <PageLayout
                     title="DWTC Free Zone"
                     description="Set up your business in Dubai World Trade Centre Free Zone, strategically located in the heart of Dubai."
-                    breadcrumbs={[
-                        { label: 'Business Setup', url: '/business' },
-                        { label: 'Free Zone', url: '/business/freezone' },
-                        { label: 'DWTC', url: '/business/freezone/dwtc' }
-                    ]}
+                    headerImage="https://images.unsplash.com/photo-1542744094-24638eff58bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                    headerOverlayColor="rgba(0, 0, 0, 0.7)"
                 >
                     <div className="freezone-detail-page">
                         <h2>DWTC Free Zone Coming Soon</h2>
@@ -61,10 +52,8 @@ const FreezonePages = () => {
                 <PageLayout
                     title="Free Zone Not Found"
                     description="The free zone you are looking for does not exist."
-                    breadcrumbs={[
-                        { label: 'Business Setup', url: '/business' },
-                        { label: 'Free Zone', url: '/business/freezone' }
-                    ]}
+                    headerImage="https://images.unsplash.com/photo-1542744094-24638eff58bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                    headerOverlayColor="rgba(0, 0, 0, 0.7)"
                 >
                     <div className="freezone-not-found">
                         <h2>Free Zone Not Found</h2>

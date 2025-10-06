@@ -63,21 +63,16 @@ const ReferAndEarnPage = () => {
     const steps = [
         {
             number: '01',
-            title: 'Share Your Link',
-            description: 'Share your unique referral link with friends and colleagues'
+            title: 'Refer your friend',
+            description: 'Get in touch and refer so we can connect with them and provide consultation'
         },
         {
             number: '02',
-            title: 'They Sign Up',
-            description: 'Your referral signs up using your link and mentions your name'
-        },
-        {
-            number: '03',
             title: 'They Setup Business',
             description: 'Your referral completes their business setup with us'
         },
         {
-            number: '04',
+            number: '03',
             title: 'You Earn Rewards',
             description: 'Receive your reward once their setup is complete'
         }
@@ -108,10 +103,8 @@ const ReferAndEarnPage = () => {
         <PageLayout
             title="Refer & Earn"
             description="Refer businesses to NXTStar and earn rewards for successful referrals. Share your unique link and start earning today."
-            breadcrumbs={[
-                // { label: 'Home', url: '/' },
-                { label: 'Refer & Earn', url: '/refer-earn' }
-            ]}
+            headerImage="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+            headerOverlayColor="rgba(0, 0, 0, 0.1)"
         >
             <div className="refer-earn-page">
                 {/* Hero Section */}
@@ -127,7 +120,7 @@ const ReferAndEarnPage = () => {
                             </p>
                             <div className="refer-stats">
                                 <div className="stat-item">
-                                    <span className="stat-number">AED 1,000</span>
+                                    <span className="stat-number">Up to AED 1,000</span>
                                     <span className="stat-label">Per Referral</span>
                                 </div>
                                 <div className="stat-item">
@@ -144,6 +137,7 @@ const ReferAndEarnPage = () => {
                             <div className="reward-badge">
                                 <FaGift className="reward-icon" />
                                 <span className="reward-text">AED 1,000</span>
+                                <span className="reward-text reut">Up to</span>
                             </div>
                         </div>
                     </div>
