@@ -9,8 +9,24 @@ dotenv.config();
 const frontendURL = process.env.FRONTEND_URL;
 const app = express();
 app.use(bodyParser.json());
+
+// Configure CORS to allow requests from your frontend domain
+const allowedOrigins = ['https://www.nxtstar.ae', 'https://nxtstar.ae', 'http://localhost:5173'];
+
 app.use(cors({
-  origin: frontendURL
+  origin: function(origin, callback) {
+    // Allow requests with no origin (like mobile apps, curl requests)
+    if (!origin) return callback(null, true);
+    
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = 'The CORS policy for this site does not allow access from the specified origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true,
+  optionsSuccessStatus: 204 // Some legacy browsers (IE11) choke on 204
 }));
 
 
