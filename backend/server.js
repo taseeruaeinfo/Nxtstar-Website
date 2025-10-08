@@ -3,10 +3,17 @@ import bodyParser from 'body-parser';
 import sgMail from '@sendgrid/mail';
 import cors from 'cors';
 import send_cost_calc_data from './Routes/costCalc.js';
+import dotenv from 'dotenv';
+dotenv.config();
 
+const frontendURL = process.env.FRONTEND_URL;
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+  origin: frontendURL
+}));
+
+
 app.use(express.json());
 app.use("/api", send_cost_calc_data);
 
