@@ -90,20 +90,20 @@ const Navbar = () => {
                                 key={index}
                                 className="nav-item"
                                 variants={itemVariants}
-                                whileHover={{ scale: 1.05 }}
+                                whileHover={link.name !== 'Services' ? { scale: 1.05 } : { scale: 1.05 }}
                             >
                                 <Link
                                     to={link.path}
                                     className="nav-link"
                                 >
                                     {link.name}
-                                    {link.dropdownItems && (
+                                    {link.dropdownItems && link.name !== 'Services' && (
                                         <FaChevronDown className="dropdown-icon" />
                                     )}
                                 </Link>
 
                                 {/* Dropdown for items with subitems */}
-                                {link.dropdownItems && (
+                                {link.dropdownItems && link.name !== 'Services' && (
                                     <motion.div
                                         className="dropdown-menu"
                                         initial={{ opacity: 0, y: -20 }}
@@ -196,16 +196,16 @@ const Navbar = () => {
                                         <Link
                                             to={link.path}
                                             className="nav-link"
-                                            onClick={() => !link.dropdownItems && setIsMenuOpen(false)}
+                                            onClick={() => !link.dropdownItems || link.name === 'Services' ? setIsMenuOpen(false) : null}
                                         >
                                             {link.name}
-                                            {link.dropdownItems && (
+                                            {link.dropdownItems && link.name !== 'Services' && (
                                                 <FaChevronDown className="dropdown-icon mobile-dropdown-icon" />
                                             )}
                                         </Link>
 
                                         {/* Mobile dropdown items */}
-                                        {link.dropdownItems && (
+                                        {link.dropdownItems && link.name !== 'Services' && (
                                             <motion.div
                                                 className="mobile-dropdown"
                                                 initial={{ opacity: 0 }}

@@ -176,7 +176,7 @@ const Footer = () => {
                                 <motion.li className="footer-link" variants={itemVariants}>Palace Tower, Dubai Silicon Oasis</motion.li>
                                 <motion.li className="footer-link" variants={itemVariants}>Dubai, United Arab Emirates</motion.li>
                                 <motion.li className="footer-link" variants={itemVariants}>Phone: +971 582594158</motion.li>
-                                <motion.li className="footer-link" id="footer-email" variants={itemVariants}>nxtstar.business.setup@gmail.com</motion.li>
+                                {/* <motion.li className="footer-link" id="footer-email" variants={itemVariants}>nxtstar.business.setup@gmail.com</motion.li> */}
                             </motion.ul>
                         </motion.div>
                     </motion.div>

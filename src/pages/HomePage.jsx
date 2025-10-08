@@ -11,6 +11,7 @@ import '../styles/HomePage.css';
 import '../styles/AnimatedBackground.css';
 import '../styles/DarkHomeTheme.css';
 import '../styles/FooterOverride.css';
+import '../styles/HeroThemeTransition.css';
 const backend_url = import.meta.env.VITE_BACKEND_URL;
 
 const HomePage = () => {
@@ -191,7 +192,7 @@ const HomePage = () => {
     }, []);
 
     return (
-        <div className="dark-theme">
+        <>
             <SEO
                 title="NXTStar | Start, Scale & Succeed in the UAE"
                 description="Your partner in UAE business setup. Comprehensive solutions for mainland, freezone, and offshore company formation in the UAE."
@@ -199,282 +200,286 @@ const HomePage = () => {
                 canonicalUrl="/"
             />
 
-            {/* Hero Section */}
-            <section className="hero-section">
-                <AnimatedBackground />
-                <div className="hero-container">
-                    <div className="hero-content-home">
-                        <PopUp>
-                            <h1 className="hero-title" id='hero-heading'>
-                                <h1 id='scs'>Start, Scale & Succeed </h1> in the <span>UAE</span> – Your Partner in Business Setup
-                            </h1>
-                        </PopUp>
-                        <PopUpBounce delay={0.2}>
-                            <p className="hero-description" id='hero-desc'>
-                                NXTStar provides comprehensive business setup services in UAE mainland, freezone, and offshore jurisdictions. Let us help you establish your business presence in one of the world's most dynamic markets.
-                            </p>
-                        </PopUpBounce>
-                        <PopUp delay={0.4}>
-                            <div className="hero-cta">
-                                {/* <Button to="/contact" type="primary" size="lg">
-                                    Get Started
-                                </Button>
-                                <Button href="https://calendly.com/nxtstar" type="outline" size="lg">
-                                    Book a Consultation
-                                </Button> */}
-                            </div>
-                        </PopUp>
-                    </div>
-                    <PopUpBounce delay={0.2}>
-                        <div className="hero-calculator">
-                            <div className="calculator-header">
-                                <div className="calculator-icon">
-                                    <FaCalculator />
-                                </div>
-                                <h3>Business Setup Cost Calculator</h3>
-                                <p>Get an instant estimate of your business setup costs in the UAE</p>
-                            </div>
-                            <div className="calculator-features">
-                                <div className="feature">
-                                    <FaDollarSign />
-                                    <span>No Hidden Costs</span>
-                                </div>
-                                <div className="feature">
-                                    <FaPercentage />
-                                    <span>Fast Response</span>
-                                </div>
-                                <div className="feature">
-                                    <FaCheck />
-                                    <span>Accurate Estimates</span>
-                                </div>
-                            </div>
-                            <div className="calculator-form">
-                                <form onSubmit={handleSubmit}>
-                                    <div className="form-group">
-                                        <label htmlFor="name" className="form-label-cc">
-                                            <span className="form-icon">👤</span>
-                                            Full Name
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="name"
-                                            name="name"
-                                            value={formData.name}
-                                            onChange={handleChange}
-                                            className="form-control"
-                                            placeholder="Enter your full name"
-                                            required
-                                        />
-                                    </div>
-                                    <div className="form-group">
-                                        <label htmlFor="email" className="form-label">
-                                            <span className="form-icon">✉️</span>
-                                            Email Address
-                                        </label>
-                                        <input
-                                            type="email"
-                                            id="email"
-                                            name="email"
-                                            value={formData.email}
-                                            onChange={handleChange}
-                                            className="form-control"
-                                            placeholder="Enter your email address"
-                                            required
-                                        />
-                                    </div>
-                                    <div className="form-group">
-                                        <label htmlFor="phone" className="form-label">
-                                            <span className="form-icon">📱</span>
-                                            Contact Number
-                                        </label>
-                                        <input
-                                            type="tel"
-                                            id="phone"
-                                            name="phone"
-                                            value={formData.phone}
-                                            onChange={handleChange}
-                                            className="form-control"
-                                            placeholder="Enter your contact number"
-                                            required
-                                        />
-                                    </div>
-                                    <div className="form-group">
-                                        <label htmlFor="businessType" className="form-label">
-                                            <span className="form-icon">🏢</span>
-                                            Business Type
-                                        </label>
-                                        <select
-                                            id="businessType"
-                                            name="businessType"
-                                            value={formData.businessType}
-                                            onChange={handleChange}
-                                            className="form-select"
-                                            required
-                                        >
-                                            <option value="">Select Business Type</option>
-                                            <option value="mainland">Mainland</option>
-                                            <option value="freezone">Freezone</option>
-                                            <option value="offshore">Offshore</option>
-                                        </select>
-                                    </div>
-                                    <Button className="cost-calc-button" type="submit" block disabled={isLoading}>
-                                        {isLoading ? (
-                                            <>
-                                                <span className="spinner" style={{ marginRight: '8px' }}></span>
-                                                Sending...
-                                            </>
-                                        ) : (
-                                            <>
-                                                <FaTags className="btn-icon" /> Calculate Your Business Setup Cost
-                                            </>
-                                        )}
-                                    </Button>
-
-                                </form>
-                            </div>
-
-                        </div>
-                    </PopUpBounce>
-                </div>
-            </section>
-
-            {/* Core Services Section */}
-            <section className="section core-services-section">
-                <div className="section-container">
-
-                    <div className="section-header">
-                        <h2 className="section-title">Our Core Services</h2>
-                        <p className="section-description">
-                            We offer comprehensive business setup solutions tailored to your specific needs. Our expertise spans across mainland, freezone, and offshore company formation.
-                        </p>
-                    </div>
-
-                    <div className="services-grid">
-                        {services.map((service, index) => (
-                            <PopUpBounce key={index} delay={0.1 * index}>
-                                <ServiceCard
-                                    image={service.image}
-                                    title={service.title}
-                                    description={service.description}
-                                    link={service.link}
-                                />
+            {/* Hero Section with Dark Theme */}
+            <div className="dark-theme">
+                <section className="hero-section">
+                    <AnimatedBackground />
+                    <div className="hero-container">
+                        <div className="hero-content-home">
+                            <PopUp>
+                                <h1 className="hero-title" id='hero-heading'>
+                                    <h1 id='scs'>Start, Scale & Succeed </h1> in the <span>UAE</span> – Your Partner in Business Setup
+                                </h1>
+                            </PopUp>
+                            <PopUpBounce delay={0.2}>
+                                <p className="hero-description" id='hero-desc'>
+                                    NXTStar provides comprehensive business setup services in UAE mainland, freezone, and offshore jurisdictions. Let us help you establish your business presence in one of the world's most dynamic markets.
+                                </p>
                             </PopUpBounce>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Cost Calculator section has been moved to the hero section */}
-
-            {/* Why UAE Section */}
-            <section className="section why-uae-section">
-                <div className="section-container">
-
-                    <div className="section-header">
-                        <h2 className="section-title">Why Start a Business in the UAE?</h2>
-                        <p className="section-description">
-                            The United Arab Emirates offers numerous advantages for entrepreneurs and businesses looking to establish their presence in the region.
-                        </p>
-                    </div>
-
-
-                    {/* Grid Layout */}
-                    <div className="benefits-grid">
-                        {benefits.map((benefit, index) => (
-                            <PopUpBounce key={index} delay={0.1 * index}>
-                                <div className="benefit-card">
-                                    <div className="benefit-image-container">
-                                        <img src={benefit.image} alt={benefit.title} className="benefit-image" />
-                                    </div>
-                                    <h3 className="benefit-title">{benefit.title}</h3>
-                                    <p className="benefit-description">{benefit.description}</p>
-                                </div>
-                            </PopUpBounce>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Why Choose Us Section */}
-            <section className="section why-us-section">
-                <div className="section-container">
-
-                    <div className="section-header">
-                        <h2 className="section-title">Why Choose NXTStar?</h2>
-                        <p className="section-description">
-                            We're committed to making your business setup journey in the UAE smooth and successful.
-                        </p>
-                    </div>
-
-                    <div className="benefits-grid">
-                        {whyChooseUs.map((benefit, index) => (
-                            <PopUpBounce key={index} delay={0.1 * index}>
-                                <div className="benefit-card">
-                                    <div className="benefit-image-container">
-                                        <img src={benefit.image} alt={benefit.title} className="benefit-image" />
-                                    </div>
-                                    <h3 className="benefit-title">{benefit.title}</h3>
-                                    <p className="benefit-description">{benefit.description}</p>
-                                </div>
-                            </PopUpBounce>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Testimonials Section */}
-            <section className="section testimonials-section">
-                <div className="section-container">
-                    <PopUp>
-                        <div className="section-header">
-                            <h2 className="section-title">What Our Clients Say</h2>
-                            <p className="section-description">
-                                Hear from businesses that have successfully established their presence in the UAE with our help.
-                            </p>
-                        </div>
-                    </PopUp>
-                    <div className="testimonials-slider">
-                        {testimonials.map((testimonial, index) => (
-                            <PopUpBounce key={index} delay={0.2 * index}>
-                                <TestimonialCard
-                                    content={testimonial.content}
-                                    author={testimonial.author}
-                                    position={testimonial.position}
-                                    rating={testimonial.rating}
-                                />
-                            </PopUpBounce>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* CTA Section */}
-            <section className="section">
-                <div className="section-container">
-                    <PopUp>
-                        <div className="section-header">
-                            <h2 className="section-title">Ready to Start Your Business in the UAE?</h2>
-                            <p className="section-description">
-                                Contact us today for a free consultation and let us help you navigate the business setup process.
-                            </p>
-                            <RotatePopUp delay={0.3}>
-                                <div className="hero-cta" style={{ justifyContent: 'center', marginTop: '2rem' }}>
-                                    <Button to="/contact" type="primary" size="lg">
+                            <PopUp delay={0.4}>
+                                <div className="hero-cta">
+                                    {/* <Button to="/contact" type="primary" size="lg">
                                         Get Started
                                     </Button>
-                                    <Button href="https://calendly.com/nehajakhar401/30min" type="outline" size="lg">
+                                    <Button href="https://calendly.com/nxtstar" type="outline" size="lg">
                                         Book a Consultation
-                                    </Button>
+                                    </Button> */}
                                 </div>
-                            </RotatePopUp>
+                            </PopUp>
                         </div>
-                    </PopUp>
-                </div>
-            </section>
+                        <PopUpBounce delay={0.2}>
+                            <div className="hero-calculator">
+                                <div className="calculator-header">
+                                    <div className="calculator-icon">
+                                        <FaCalculator />
+                                    </div>
+                                    <h3>Business Setup Cost Calculator</h3>
+                                    <p>Get an instant estimate of your business setup costs in the UAE</p>
+                                </div>
+                                <div className="calculator-features">
+                                    <div className="feature">
+                                        <FaDollarSign />
+                                        <span>No Hidden Costs</span>
+                                    </div>
+                                    <div className="feature">
+                                        <FaPercentage />
+                                        <span>Fast Response</span>
+                                    </div>
+                                    <div className="feature">
+                                        <FaCheck />
+                                        <span>Accurate Estimates</span>
+                                    </div>
+                                </div>
+                                <div className="calculator-form">
+                                    <form onSubmit={handleSubmit}>
+                                        <div className="form-group">
+                                            <label htmlFor="name" className="form-label-cc">
+                                                <span className="form-icon">👤</span>
+                                                Full Name
+                                            </label>
+                                            <input
+                                                type="text"
+                                                id="name"
+                                                name="name"
+                                                value={formData.name}
+                                                onChange={handleChange}
+                                                className="form-control"
+                                                placeholder="Enter your full name"
+                                                required
+                                            />
+                                        </div>
+                                        <div className="form-group">
+                                            <label htmlFor="email" className="form-label">
+                                                <span className="form-icon">✉️</span>
+                                                Email Address
+                                            </label>
+                                            <input
+                                                type="email"
+                                                id="email"
+                                                name="email"
+                                                value={formData.email}
+                                                onChange={handleChange}
+                                                className="form-control"
+                                                placeholder="Enter your email address"
+                                                required
+                                            />
+                                        </div>
+                                        <div className="form-group">
+                                            <label htmlFor="phone" className="form-label">
+                                                <span className="form-icon">📱</span>
+                                                Contact Number
+                                            </label>
+                                            <input
+                                                type="tel"
+                                                id="phone"
+                                                name="phone"
+                                                value={formData.phone}
+                                                onChange={handleChange}
+                                                className="form-control"
+                                                placeholder="Enter your contact number"
+                                                required
+                                            />
+                                        </div>
+                                        <div className="form-group">
+                                            <label htmlFor="businessType" className="form-label">
+                                                <span className="form-icon">🏢</span>
+                                                Business Type
+                                            </label>
+                                            <select
+                                                id="businessType"
+                                                name="businessType"
+                                                value={formData.businessType}
+                                                onChange={handleChange}
+                                                className="form-select"
+                                                required
+                                            >
+                                                <option value="">Select Business Type</option>
+                                                <option value="mainland">Mainland</option>
+                                                <option value="freezone">Freezone</option>
+                                                <option value="offshore">Offshore</option>
+                                            </select>
+                                        </div>
+                                        <Button className="cost-calc-button" type="submit" block disabled={isLoading}>
+                                            {isLoading ? (
+                                                <>
+                                                    <span className="spinner" style={{ marginRight: '8px' }}></span>
+                                                    Sending...
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <FaTags className="btn-icon" /> Calculate Your Business Setup Cost
+                                                </>
+                                            )}
+                                        </Button>
 
-            {/* This div creates a smooth transition between content and footer */}
-            <div className="animated-background-stopper"></div>
-        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </PopUpBounce>
+                    </div>
+                </section>
+                {/* Add a transition div between dark and light sections */}
+                <div className="theme-transition"></div>
+            </div>
+
+            {/* Regular Light Theme Content Starts Here */}
+            <div className="light-content">
+                {/* Core Services Section */}
+                <section className="section core-services-section">
+                    <div className="section-container">
+
+                        <div className="section-header">
+                            <h2 className="section-title">Our Core Services</h2>
+                            <p className="section-description">
+                                We offer comprehensive business setup solutions tailored to your specific needs. Our expertise spans across mainland, freezone, and offshore company formation.
+                            </p>
+                        </div>
+
+                        <div className="services-grid">
+                            {services.map((service, index) => (
+                                <PopUpBounce key={index} delay={0.1 * index}>
+                                    <ServiceCard
+                                        image={service.image}
+                                        title={service.title}
+                                        description={service.description}
+                                        link={service.link}
+                                    />
+                                </PopUpBounce>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Cost Calculator section has been moved to the hero section */}
+
+                {/* Why UAE Section */}
+                <section className="section why-uae-section">
+                    <div className="section-container">
+
+                        <div className="section-header">
+                            <h2 className="section-title">Why Start a Business in the UAE?</h2>
+                            <p className="section-description">
+                                The United Arab Emirates offers numerous advantages for entrepreneurs and businesses looking to establish their presence in the region.
+                            </p>
+                        </div>
+
+
+                        {/* Grid Layout */}
+                        <div className="benefits-grid">
+                            {benefits.map((benefit, index) => (
+                                <PopUpBounce key={index} delay={0.1 * index}>
+                                    <div className="benefit-card">
+                                        <div className="benefit-image-container">
+                                            <img src={benefit.image} alt={benefit.title} className="benefit-image" />
+                                        </div>
+                                        <h3 className="benefit-title">{benefit.title}</h3>
+                                        <p className="benefit-description">{benefit.description}</p>
+                                    </div>
+                                </PopUpBounce>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Why Choose Us Section */}
+                <section className="section why-us-section">
+                    <div className="section-container">
+
+                        <div className="section-header">
+                            <h2 className="section-title">Why Choose NXTStar?</h2>
+                            <p className="section-description">
+                                We're committed to making your business setup journey in the UAE smooth and successful.
+                            </p>
+                        </div>
+
+                        <div className="benefits-grid">
+                            {whyChooseUs.map((benefit, index) => (
+                                <PopUpBounce key={index} delay={0.1 * index}>
+                                    <div className="benefit-card">
+                                        <div className="benefit-image-container">
+                                            <img src={benefit.image} alt={benefit.title} className="benefit-image" />
+                                        </div>
+                                        <h3 className="benefit-title">{benefit.title}</h3>
+                                        <p className="benefit-description">{benefit.description}</p>
+                                    </div>
+                                </PopUpBounce>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Testimonials Section */}
+                <section className="section testimonials-section">
+                    <div className="section-container">
+                        <PopUp>
+                            <div className="section-header">
+                                <h2 className="section-title">What Our Clients Say</h2>
+                                <p className="section-description">
+                                    Hear from businesses that have successfully established their presence in the UAE with our help.
+                                </p>
+                            </div>
+                        </PopUp>
+                        <div className="testimonials-slider">
+                            {testimonials.map((testimonial, index) => (
+                                <PopUpBounce key={index} delay={0.2 * index}>
+                                    <TestimonialCard
+                                        content={testimonial.content}
+                                        author={testimonial.author}
+                                        position={testimonial.position}
+                                        rating={testimonial.rating}
+                                    />
+                                </PopUpBounce>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* CTA Section */}
+                <section className="section">
+                    <div className="section-container">
+                        <PopUp>
+                            <div className="section-header">
+                                <h2 className="section-title">Ready to Start Your Business in the UAE?</h2>
+                                <p className="section-description">
+                                    Contact us today for a free consultation and let us help you navigate the business setup process.
+                                </p>
+                                <RotatePopUp delay={0.3}>
+                                    <div className="hero-cta" style={{ justifyContent: 'center', marginTop: '2rem' }}>
+                                        <Button to="/contact" type="primary" size="lg">
+                                            Get Started
+                                        </Button>
+                                        <Button href="https://calendly.com/nehajakhar401/30min" type="outline" size="lg">
+                                            Book a Consultation
+                                        </Button>
+                                    </div>
+                                </RotatePopUp>
+                            </div>
+                        </PopUp>
+                    </div>
+                </section>
+            </div>
+        </>
     );
 };
 
