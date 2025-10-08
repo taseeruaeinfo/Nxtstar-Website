@@ -27,3 +27,5 @@ website-requirement.txt
 .env
 website-requirement.pdf
 website-requirement.pdf
+.env.development
+.env.production
