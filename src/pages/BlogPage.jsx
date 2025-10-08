@@ -87,7 +87,8 @@ const BlogPage = () => {
         <PageLayout
             title="Blogs & Resources"
             description="Latest insights, updates, and resources on UAE business setup and related topics."
-            breadcrumbs={[{ label: 'Blogs', url: '/blogs' }]}
+            headerImage="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+            headerOverlayColor="rgba(0, 0, 0, 0.1)"
         >
             <div className="blog-page">
                 {/* Search and Filter Section */}

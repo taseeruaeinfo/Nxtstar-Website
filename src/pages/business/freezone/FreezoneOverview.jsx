@@ -126,10 +126,8 @@ const FreezoneOverview = () => {
         <PageLayout
             title="Free Zone Business Setup in UAE"
             description="Set up your business in UAE free zones with 100% foreign ownership, tax exemptions, and simplified procedures."
-            breadcrumbs={[
-                { label: 'Business Setup', url: '/business' },
-                { label: 'Free Zone', url: '/business/freezone' }
-            ]}
+            headerImage="https://images.unsplash.com/photo-1542744094-24638eff58bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+            headerOverlayColor="rgba(0, 0, 0, 0.7)"
         >
             <div className="freezone-overview-page">
                 <section className="hero-section">

@@ -115,10 +115,8 @@ const OffshorePage = () => {
         <PageLayout
             title="Offshore Company Formation in UAE"
             description="Set up an offshore company in the UAE for privacy, asset protection, and tax efficiency with minimal reporting requirements."
-            breadcrumbs={[
-                { label: 'Business Setup', url: '/business' },
-                { label: 'Offshore', url: '/business/offshore' }
-            ]}
+            headerImage="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+            headerOverlayColor="rgba(0, 0, 0, 0.7)"
         >
             <div className="offshore-page">
                 <section className="hero-section">

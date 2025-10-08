@@ -153,10 +153,8 @@ const BlogPostPage = () => {
         return (
             <PageLayout
                 title="Loading..."
-                breadcrumbs={[
-                    { label: 'Blogs', url: '/blogs' },
-                    { label: 'Loading...' }
-                ]}
+                headerImage="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                headerOverlayColor="rgba(0, 0, 0, 0.1)"
             >
                 <div className="blog-post-loading">
                     <p>Loading blog post...</p>
@@ -169,10 +167,8 @@ const BlogPostPage = () => {
         return (
             <PageLayout
                 title="Blog Not Found"
-                breadcrumbs={[
-                    { label: 'Blogs', url: '/blogs' },
-                    { label: 'Not Found' }
-                ]}
+                headerImage="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                headerOverlayColor="rgba(0, 0, 0, 0.7)"
             >
                 <div className="blog-post-not-found">
                     <h2>Blog Post Not Found</h2>
@@ -186,10 +182,9 @@ const BlogPostPage = () => {
     return (
         <PageLayout
             title={blog.title}
-            breadcrumbs={[
-                { label: 'Blogs', url: '/blogs' },
-                { label: blog.title }
-            ]}
+            description={blog.excerpt}
+            headerImage={blog.image}
+            headerOverlayColor="rgba(0, 0, 0, 0.8)"
         >
             <div className="blog-post-page">
                 <div className="blog-post-header">

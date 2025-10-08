@@ -19,6 +19,14 @@
     margin-bottom: 2.5rem;
 }
 
+#footer-email {
+    word-break: break-all;
+}
+
+#footerThreads {
+    filter: invert(1);
+}
+
 .footer-column {
     flex: 1;
     min-width: 160px;

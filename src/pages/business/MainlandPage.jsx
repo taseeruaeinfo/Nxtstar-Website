@@ -84,10 +84,8 @@ const MainlandPage = () => {
         <PageLayout
             title="Mainland Business Setup in UAE"
             description="Set up a mainland company in the UAE with 100% ownership and freedom to trade anywhere in the local market."
-            breadcrumbs={[
-                { label: 'Business Setup', url: '/business' },
-                { label: 'Mainland', url: '/business/mainland' }
-            ]}
+            headerImage="https://images.unsplash.com/photo-1542744095-291d1f67b221?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+            headerOverlayColor="rgba(0, 0, 0, 0.7)"
         >
             <div className="mainland-page">
                 <section className="hero-section">

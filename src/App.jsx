@@ -13,6 +13,9 @@ import ReferAndEarnPage from './pages/ReferAndEarnPage';
 import { AnimatePresence } from 'framer-motion';
 import MotionWrapper from './components/ui/MotionWrapper';
 import './styles/index.css';
+import ScrollToTop from './context/ScrollToTop';
+
+
 
 // AnimationLayout component to handle location-based animations
 function AnimationLayout() {
@@ -20,6 +23,7 @@ function AnimationLayout() {
 
   return (
     <AnimatePresence mode="wait">
+      <ScrollToTop />
       <Routes location={location} key={location.pathname}>
         {/* Home Page */}
         <Route path="/" element={

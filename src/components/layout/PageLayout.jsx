@@ -6,29 +6,19 @@ const PageLayout = ({
     description,
     breadcrumbs = [],
     children,
-    showHeader = true
+    showHeader = true,
+    headerImage = null,
+    headerOverlayColor = 'rgba(0, 0, 0, 0.8)'
 }) => {
     return (
         <div className="page-container">
             {showHeader && (
-                <header className="page-header">
+                <header className="page-header" style={headerImage ? {
+                    backgroundImage: `linear-gradient(${headerOverlayColor}, ${headerOverlayColor}), url(${headerImage})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                } : {}}>
                     <div className="page-header-container">
-                        {breadcrumbs.length > 0 && (
-                            <nav className="breadcrumbs">
-                                <span className="breadcrumb-item">
-                                    <Link to="/" className="breadcrumb-link">Home</Link>
-                                </span>
-                                {breadcrumbs.map((breadcrumb, index) => (
-                                    <span key={index} className="breadcrumb-item">
-                                        {index === breadcrumbs.length - 1 ? (
-                                            <span className="breadcrumb-active">{breadcrumb.label}</span>
-                                        ) : (
-                                            <Link to={breadcrumb.url} className="breadcrumb-link">{breadcrumb.label}</Link>
-                                        )}
-                                    </span>
-                                ))}
-                            </nav>
-                        )}
                         <h1 className="page-title">{title}</h1>
                         {description && <p className="page-description">{description}</p>}
                     </div>

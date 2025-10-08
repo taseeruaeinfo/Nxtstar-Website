@@ -76,10 +76,8 @@ const FAQ = () => {
         <PageLayout
             title="Frequently Asked Questions"
             description="Find answers to common questions about UAE business setup, licensing, visas, and our services."
-            breadcrumbs={[
-                { label: 'Home', url: '/' },
-                { label: 'FAQs', url: '/faqs' }
-            ]}
+            headerImage="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+            headerOverlayColor="rgba(0, 0, 0, 0.1)"
         >
             <div className="faq-page">
                 <h2 className="faq-title">Frequently Asked Questions</h2>

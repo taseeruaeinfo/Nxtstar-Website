@@ -60,7 +60,8 @@ const ServicesPage = () => {
                     <PageLayout
                         title="Our Services"
                         description="Comprehensive business support services to help you establish and grow your presence in the UAE."
-                        breadcrumbs={[{ label: 'Services', url: '/services' }]}
+                        headerImage="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                        headerOverlayColor="rgba(0, 0, 0, 0.1)"
                     >
                         <div className="services-overview-page">
                             <section className="hero-section">
@@ -136,10 +137,8 @@ const ServicesPage = () => {
                 <PageLayout
                     title="Corporate Banking Services"
                     description="Navigate the UAE banking landscape with ease. We assist in opening corporate bank accounts for all types of business entities."
-                    breadcrumbs={[
-                        { label: 'Services', url: '/services' },
-                        { label: 'Banking', url: '/services/banking' }
-                    ]}
+                    headerImage="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                    headerOverlayColor="rgba(0, 0, 0, 0.7)"
                 >
                     <div className="service-detail-page">
                         <h2>Corporate Banking Services Coming Soon</h2>
@@ -151,10 +150,8 @@ const ServicesPage = () => {
                 <PageLayout
                     title="Trademark Registration Services"
                     description="Protect your brand identity in the UAE and GCC region with our comprehensive trademark registration services."
-                    breadcrumbs={[
-                        { label: 'Services', url: '/services' },
-                        { label: 'Trademark', url: '/services/trademark' }
-                    ]}
+                    headerImage="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                    headerOverlayColor="rgba(0, 0, 0, 0.7)"
                 >
                     <div className="service-detail-page">
                         <h2>Trademark Registration Services Coming Soon</h2>
@@ -166,10 +163,8 @@ const ServicesPage = () => {
                 <PageLayout
                     title="Document Clearing Services"
                     description="Fast and reliable document attestation, legalization, and translation services for all your business needs."
-                    breadcrumbs={[
-                        { label: 'Services', url: '/services' },
-                        { label: 'Documents', url: '/services/documents' }
-                    ]}
+                    headerImage="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                    headerOverlayColor="rgba(0, 0, 0, 0.7)"
                 >
                     <div className="service-detail-page">
                         <h2>Document Clearing Services Coming Soon</h2>
@@ -181,9 +176,8 @@ const ServicesPage = () => {
                 <PageLayout
                     title="Service Not Found"
                     description="The service you are looking for does not exist."
-                    breadcrumbs={[
-                        { label: 'Services', url: '/services' }
-                    ]}
+                    headerImage="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                    headerOverlayColor="rgba(0, 0, 0, 0.7)"
                 >
                     <div className="service-not-found">
                         <h2>Service Not Found</h2>

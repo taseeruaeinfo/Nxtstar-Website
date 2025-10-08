@@ -26,6 +26,11 @@
     transform: rotate(30deg);
 }
 
+.reut{
+    font-size: 0.7rem !important;
+    text-transform: uppercase;
+    
+}
 .refer-hero-content {
     display: flex;
     flex-wrap: wrap;
@@ -265,7 +270,7 @@
 }
 
 .benefit-card {
-    background: white;
+    background: white !important;
     border-radius: 1rem;
     padding: 2rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
