@@ -3,6 +3,25 @@ import '../../styles/AnimatedBackground.css';
 
 const AnimatedBackground = () => {
     const [particles, setParticles] = useState([]);
+    const [heroHeight, setHeroHeight] = useState(0);
+
+    // Add effect to measure hero section height
+    useEffect(() => {
+        const updateHeroHeight = () => {
+            const heroSection = document.querySelector('.hero-section');
+            if (heroSection) {
+                setHeroHeight(heroSection.offsetHeight);
+            }
+        };
+
+        // Initial measurement
+        updateHeroHeight();
+
+        // Update on resize
+        window.addEventListener('resize', updateHeroHeight);
+
+        return () => window.removeEventListener('resize', updateHeroHeight);
+    }, []);
 
     useEffect(() => {
         // Create particles
@@ -127,7 +146,14 @@ const AnimatedBackground = () => {
     }, []);
 
     return (
-        <div className="animated-background">
+        <div
+            className="animated-background"
+            style={{
+                height: heroHeight > 0 ? `${heroHeight}px` : '100vh',
+                position: 'absolute', // Change from fixed to absolute
+                clipPath: `polygon(0 0, 100% 0, 100% ${heroHeight}px, 0 ${heroHeight}px)`
+            }}
+        >
             <div className="gradient-animation"></div>
             <div className="particles">
                 {particles.map(particle => {
