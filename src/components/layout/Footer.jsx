@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import '../../styles/Footer.css';
-import Threads from '../../assets/images/ThreadsLogo.png';
+import Threads from '../../assets/images/threadsLogo.png';
 
 
 const Footer = () => {
