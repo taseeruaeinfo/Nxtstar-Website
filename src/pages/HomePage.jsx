@@ -7,6 +7,8 @@ import TestimonialCard from '../components/ui/TestimonialCard';
 import Button from '../components/ui/Button';
 import { PopUp, PopUpBounce, RotatePopUp } from '../components/ui/Motion';
 import AnimatedBackground from '../components/ui/AnimatedBackground';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 import '../styles/HomePage.css';
 import '../styles/AnimatedBackground.css';
 import '../styles/DarkHomeTheme.css';
@@ -53,15 +55,8 @@ const HomePage = () => {
             return;
         }
 
-        if (!formData.phone.trim()) {
-            alert('Please enter your phone number.');
-            return;
-        }
-
-        // Phone number validation (allowing international formats)
-        const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
-        if (!phoneRegex.test(formData.phone.replace(/[\s\-\(\)]/g, ''))) {
-            alert('Please enter a valid phone number (e.g., +1234567890).');
+        if (!formData.phone || formData.phone.length < 6) {
+            alert('Please enter a valid phone number.');
             return;
         }
 
@@ -289,15 +284,18 @@ const HomePage = () => {
                                                 <span className="form-icon">📱</span>
                                                 Contact Number
                                             </label>
-                                            <input
-                                                type="tel"
-                                                id="phone"
-                                                name="phone"
+                                            <PhoneInput
+                                                country={'ae'}
                                                 value={formData.phone}
-                                                onChange={handleChange}
-                                                className="form-control"
-                                                placeholder="Enter your contact number"
-                                                required
+                                                onChange={phone => setFormData({ ...formData, phone })}
+                                                inputProps={{
+                                                    name: 'phone',
+                                                    required: true,
+                                                    className: 'form-control'
+                                                }}
+                                                containerClass="phone-input-container"
+                                                buttonClass="country-dropdown"
+                                                dropdownClass="country-dropdown-list"
                                             />
                                         </div>
                                         <div className="form-group">
@@ -429,7 +427,33 @@ const HomePage = () => {
                     </div>
                 </section>
 
-                {/* Testimonials Section */}
+                
+                                <section className="section partners-section">
+                                    <div className="section-container">
+                                        <PopUp>
+                                            <div className="section-header">
+                                                <h2 className="section-title">
+                                                    <span className="title-dark">UAE Government</span> <span className="title-accent">Authorities</span>
+                                                </h2>
+                                                <p className="section-description">
+                                                    Our Trusted Channel Partners in your Progress
+                                                </p>
+                                            </div>
+                                        </PopUp>
+
+                                        <div className="partners-grid">
+                                            {[...Array(18)].map((_, idx) => (
+                                                <div className="partner-logo-container" key={idx}>
+                                                    <img
+                                                        src={`src/assets/images/partners/${idx + 1}.jpg`}
+                                                        alt={`Partner ${idx + 1}`}
+                                                        className="partner-logo"
+                                                    />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </section>
                 <section className="section testimonials-section">
                     <div className="section-container">
                         <PopUp>

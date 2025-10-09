@@ -102,20 +102,21 @@
 
 .dark-theme .form-control,
 .dark-theme .form-select {
-    background-color: rgba(25, 35, 65, 0.5);
+    background-color: rgba(255, 255, 255, 0.9) !important;
     border: 1px solid rgba(100, 150, 255, 0.2);
-    color: rgba(0, 0, 0, 0.9);
+    color: #000000 !important;
 }
 
 .dark-theme .form-control:focus,
 .dark-theme .form-select:focus {
-    background-color: rgba(30, 40, 70, 0.6);
+    background-color: #ffffff !important;
     border-color: rgba(100, 150, 255, 0.5);
     box-shadow: 0 0 0 3px rgba(100, 150, 255, 0.2);
+    color: #000000 !important;
 }
 
 .dark-theme .form-control::placeholder {
-    color: rgba(16, 18, 26, 0.5);
+    color: rgba(0, 0, 0, 0.5);
 }
 
 /* Features and cards */
@@ -165,7 +166,7 @@
 /* Buttons */
 .dark-theme .hero-cta .button {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    
+
 }
 
 .dark-theme .hero-cta .button:hover {
@@ -214,4 +215,46 @@
 .dark-theme .service-card {
     animation: subtlePulse 4s infinite alternate;
     animation-delay: calc(var(--card-index, 0) * 0.5s);
+}
+
+/* Phone input dark theme overrides */
+.dark-theme .phone-input-container .form-control {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    color: #000000 !important;
+    border: 1px solid rgba(100, 150, 255, 0.2);
+}
+
+.dark-theme .phone-input-container .form-control:focus {
+    background-color: #ffffff !important;
+    border-color: rgba(100, 150, 255, 0.5);
+    box-shadow: 0 0 0 3px rgba(100, 150, 255, 0.2);
+}
+
+.dark-theme .country-dropdown {
+    background-color: rgba(20, 30, 60, 0.6);
+    border-color: rgba(100, 150, 255, 0.2);
+}
+
+.dark-theme .react-tel-input .selected-flag:hover,
+.dark-theme .react-tel-input .selected-flag:focus {
+    background-color: rgba(30, 40, 70, 0.8);
+}
+
+.dark-theme .react-tel-input .country-list {
+    background-color: rgba(20, 30, 60, 0.95);
+    border: 1px solid rgba(100, 150, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.dark-theme .react-tel-input .country-list .country {
+    background-color: transparent;
+}
+
+.dark-theme .react-tel-input .country-list .country:hover {
+    background-color: rgba(40, 60, 100, 0.6);
+}
+
+.dark-theme .react-tel-input .country-list .country .country-name,
+.dark-theme .react-tel-input .country-list .country .dial-code {
+    color: rgba(255, 255, 255, 0.9);
 }

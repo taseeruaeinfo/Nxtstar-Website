@@ -125,7 +125,9 @@
 .hero-calculator {
     flex: 0 0 45%;
     max-width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: #f0f4ff !important;
+    background-image: linear-gradient(135deg, #e6f0ff 0%, #f0f4ff 100%) !important;
+    color: black !important;
     border-radius: 0.75rem;
     padding: 1.25rem;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
@@ -175,6 +177,7 @@
     margin-bottom: 0.75rem;
     text-align: center;
     position: relative;
+
 }
 
 .calculator-icon {
@@ -209,12 +212,12 @@
 .calculator-header h3 {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #0056b3;
+    color: #000000 !important;
     margin-bottom: 0.35rem;
 }
 
 .calculator-header p {
-    color: #6c757d;
+    color: #000000 !important;
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
 }
@@ -231,12 +234,12 @@
     display: flex;
     align-items: center;
     font-size: 0.8rem;
-    color: #555;
+    color: #000000 !important;
 }
 
 .feature svg {
     margin-right: 4px;
-    color: #0056b3;
+    color: #0066ff !important;
     font-size: 0.9rem;
 }
 
@@ -580,7 +583,8 @@
     font-size: 0.9rem;
     border: 2px solid #e0e6ed;
     border-radius: 0.5rem;
-    background-color: #f8f9fa;
+    background-color: #ffffff !important;
+    color: #000000 !important;
     transition: all 0.3s ease;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
@@ -657,7 +661,7 @@
     margin-right: 8px;
     font-size: 1rem;
     vertical-align: middle;
-    
+
 }
 
 #hero-heading,
@@ -672,17 +676,17 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
-    
+
     .benefits-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
         max-width: 1100px;
     }
-    
+
     .benefit-card {
         padding: 2rem;
     }
-    
+
     .benefit-image-container {
         height: 200px;
     }
@@ -692,28 +696,28 @@
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .benefits-grid {
         grid-template-columns: 1fr;
         max-width: 650px;
     }
-    
+
     .benefit-card {
         padding: 2rem;
     }
-    
+
     .benefit-image-container {
         height: 180px;
     }
-    
+
     .why-us-section {
         padding: 4rem 0;
     }
-    
+
     .benefit-card {
         padding: 1.5rem;
     }
-    
+
     .benefit-image-container {
         height: 160px;
     }
@@ -724,19 +728,19 @@
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
     .benefit-card {
         padding: 1.75rem;
     }
-    
+
     .benefit-image-container {
         height: 160px;
     }
-    
+
     .benefit-title {
         font-size: 1.5rem;
     }
-    
+
     .benefit-description {
         font-size: 1.05rem;
     }
@@ -838,7 +842,150 @@
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Phone input styling */
+.phone-input-container {
+    width: 100%;
+    position: relative;
+}
+
+.phone-input-container .form-control {
+    width: 100%;
+    padding-left: 52px !important;
+    height: 40px;
+    font-size: 0.9rem;
+    color: #000000;
+}
+
+.country-dropdown {
+    background-color: #f8f9fa;
+    border: 2px solid #e0e6ed;
+    border-right: none;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    height: 40px !important;
+}
+
+.dark-theme .country-dropdown {
+    background-color: rgba(25, 35, 65, 0.5);
+    border: 1px solid rgba(100, 150, 255, 0.2);
+}
+
+.country-dropdown-list {
+    background-color: #ffffff;
+    border: 1px solid #e0e6ed;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-height: 250px !important;
+}
+
+.dark-theme .country-dropdown-list {
+    background-color: rgba(30, 40, 70, 0.95);
+    border: 1px solid rgba(100, 150, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.country-dropdown-list .country:hover {
+    background-color: #f0f4ff;
+}
+
+.dark-theme .country-dropdown-list .country:hover {
+    background-color: rgba(100, 150, 255, 0.2);
+}
+
+.dark-theme .country-dropdown-list .country-name,
+.dark-theme .country-dropdown-list .dial-code {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Partners Section Styling */
+.partners-section {
+    background-color: #ffffff;
+    padding: 4rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.partners-section .section-header {
+    margin-bottom: 3rem;
+}
+
+.title-dark {
+    color: #333333;
+}
+
+.title-accent {
+    color: #e65100;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partner-logo-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.partner-logo-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.partner-logo {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+}
+
+.partner-logo-container:hover .partner-logo {
+    filter: grayscale(0%);
+}
+
+/* Responsive styles for Partners Section */
+@media (max-width: 992px) {
+    .partners-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .partner-logo-container {
+        height: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .partner-logo-container {
+        height: 80px;
+        padding: 15px;
+    }
 }
 
 /* Ensure the button maintains consistent height when loading */

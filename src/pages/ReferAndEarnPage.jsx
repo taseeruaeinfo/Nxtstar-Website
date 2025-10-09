@@ -41,7 +41,7 @@ const ReferAndEarnPage = () => {
         {
             icon: <FaGift />,
             title: 'Attractive Rewards',
-            description: 'Earn up to AED 1,000 for each successful referral'
+            description: 'Earn up to AED 2,000 for each successful referral'
         },
         {
             icon: <FaUsers />,
@@ -115,12 +115,12 @@ const ReferAndEarnPage = () => {
                                 <span className="highlight">Refer Friends,</span> Earn Rewards
                             </h1>
                             <p className="refer-hero-description">
-                                Share NXTStar with your network and earn up to AED 1,000 for each successful business setup referral.
+                                Share NXTStar with your network and earn up to AED 2,000 for each successful business setup referral.
                                 The more you refer, the more you earn!
                             </p>
                             <div className="refer-stats">
                                 <div className="stat-item">
-                                    <span className="stat-number">Up to AED 1,000</span>
+                                    <span className="stat-number">Up to AED 2,000</span>
                                     <span className="stat-label">Per Referral</span>
                                 </div>
                                 <div className="stat-item">
@@ -136,7 +136,7 @@ const ReferAndEarnPage = () => {
                         <div className="refer-hero-image">
                             <div className="reward-badge">
                                 <FaGift className="reward-icon" />
-                                <span className="reward-text">AED 1,000</span>
+                                <span className="reward-text">AED 2,000</span>
                                 <span className="reward-text reut">Up to</span>
                             </div>
                         </div>
