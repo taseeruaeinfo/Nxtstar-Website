@@ -9,12 +9,52 @@ import { PopUp, PopUpBounce, RotatePopUp } from '../components/ui/Motion';
 import AnimatedBackground from '../components/ui/AnimatedBackground';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
+
+// Import partner logos
+import img1 from '../assets/images/partners/1.jpg';
+import img2 from '../assets/images/partners/2.jpg';
+import img3 from '../assets/images/partners/3.jpg';
+import img4 from '../assets/images/partners/4.jpg';
+import img5 from '../assets/images/partners/5.jpg';
+import img6 from '../assets/images/partners/6.jpg';
+import img7 from '../assets/images/partners/7.jpg';
+import img8 from '../assets/images/partners/8.jpg';
+import img9 from '../assets/images/partners/9.jpg';
+import img10 from '../assets/images/partners/10.jpg';
+import img11 from '../assets/images/partners/11.jpg';
+import img12 from '../assets/images/partners/12.jpg';
+import img13 from '../assets/images/partners/13.jpg';
+import img14 from '../assets/images/partners/14.jpg';
+import img15 from '../assets/images/partners/15.jpg';
+import img16 from '../assets/images/partners/16.jpg';
+import img17 from '../assets/images/partners/17.jpg';
+import img18 from '../assets/images/partners/18.jpg';
 import '../styles/HomePage.css';
 import '../styles/AnimatedBackground.css';
 import '../styles/DarkHomeTheme.css';
 import '../styles/FooterOverride.css';
 import '../styles/HeroThemeTransition.css';
 const backend_url = import.meta.env.VITE_BACKEND_URL;
+// import img1 from '../assets/images/partners/1.jpg';
+// import img2 from '../assets/images/partners/2.jpg';
+// import img3 from '../assets/images/partners/3.jpg';
+// import img4 from '../assets/images/partners/4.jpg';
+// import img5 from '../assets/images/partners/5.jpg';
+// import img6 from '../assets/images/partners/6.jpg';
+// import img7 from '../assets/images/partners/7.jpg';
+// import img8 from '../assets/images/partners/8.jpg';
+// import img9 from '../assets/images/partners/9.jpg';
+// import img10 from '../assets/images/partners/10.jpg';
+// import img11 from '../assets/images/partners/11.jpg';
+// import img12 from '../assets/images/partners/12.jpg';
+// import img13 from '../assets/images/partners/13.jpg';
+// import img14 from '../assets/images/partners/14.jpg';
+// import img15 from '../assets/images/partners/15.jpg';
+// import img16 from '../assets/images/partners/16.jpg';
+// import img17 from '../assets/images/partners/17.jpg';
+// import img18 from '../assets/images/partners/18.jpg';
+
+
 
 const HomePage = () => {
     const [formData, setFormData] = useState({
@@ -427,33 +467,78 @@ const HomePage = () => {
                     </div>
                 </section>
 
-                
-                                <section className="section partners-section">
-                                    <div className="section-container">
-                                        <PopUp>
-                                            <div className="section-header">
-                                                <h2 className="section-title">
-                                                    <span className="title-dark">UAE Government</span> <span className="title-accent">Authorities</span>
-                                                </h2>
-                                                <p className="section-description">
-                                                    Our Trusted Channel Partners in your Progress
-                                                </p>
-                                            </div>
-                                        </PopUp>
 
-                                        <div className="partners-grid">
-                                            {[...Array(18)].map((_, idx) => (
-                                                <div className="partner-logo-container" key={idx}>
-                                                    <img
-                                                        src={`src/assets/images/partners/${idx + 1}.jpg`}
-                                                        alt={`Partner ${idx + 1}`}
-                                                        className="partner-logo"
-                                                    />
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </section>
+                <section className="section partners-section">
+                    <div className="section-container">
+                        <PopUp>
+                            <div className="section-header">
+                                <h2 className="section-title">
+                                    <span className="title-dark">UAE Government</span> <span className="title-accent">Authorities</span>
+                                </h2>
+                                <p className="section-description">
+                                    Our Trusted Channel Partners in your Progress
+                                </p>
+                            </div>
+                        </PopUp>
+
+                        <div className="partners-grid">
+                            <div className="partner-logo-container">
+                                <img src={img1} alt="Partner 1" className="partner-logo" />
+                            </div>
+                            <div className="partner-logo-container">
+                                <img src={img2} alt="Partner 2" className="partner-logo" />
+                            </div>
+                            <div className="partner-logo-container">
+                                <img src={img3} alt="Partner 3" className="partner-logo" />
+                            </div>
+                            <div className="partner-logo-container">
+                                <img src={img4} alt="Partner 4" className="partner-logo" />
+                            </div>
+                            <div className="partner-logo-container">
+                                <img src={img5} alt="Partner 5" className="partner-logo" />
+                            </div>
+                            <div className="partner-logo-container">
+                                <img src={img6} alt="Partner 6" className="partner-logo" />
+                            </div>
+                            <div className="partner-logo-container">
+                                <img src={img7} alt="Partner 7" className="partner-logo" />
+                            </div>
+                            <div className="partner-logo-container">
+                                <img src={img8} alt="Partner 8" className="partner-logo" />
+                            </div>
+                            <div className="partner-logo-container">
+                                <img src={img9} alt="Partner 9" className="partner-logo" />
+                            </div>
+                            <div className="partner-logo-container">
+                                <img src={img10} alt="Partner 10" className="partner-logo" />
+                            </div>
+                            <div className="partner-logo-container">
+                                <img src={img11} alt="Partner 11" className="partner-logo" />
+                            </div>
+                            <div className="partner-logo-container">
+                                <img src={img12} alt="Partner 12" className="partner-logo" />
+                            </div>
+                            <div className="partner-logo-container">
+                                <img src={img13} alt="Partner 13" className="partner-logo" />
+                            </div>
+                            <div className="partner-logo-container">
+                                <img src={img14} alt="Partner 14" className="partner-logo" />
+                            </div>
+                            <div className="partner-logo-container">
+                                <img src={img15} alt="Partner 15" className="partner-logo" />
+                            </div>
+                            <div className="partner-logo-container">
+                                <img src={img16} alt="Partner 16" className="partner-logo" />
+                            </div>
+                            <div className="partner-logo-container">
+                                <img src={img17} alt="Partner 17" className="partner-logo" />
+                            </div>
+                            <div className="partner-logo-container">
+                                <img src={img18} alt="Partner 18" className="partner-logo" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section className="section testimonials-section">
                     <div className="section-container">
                         <PopUp>

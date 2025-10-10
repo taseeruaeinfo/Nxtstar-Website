@@ -923,20 +923,20 @@
 
 .partners-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    max-width: 1200px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 25px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
 .partner-logo-container {
     background-color: #ffffff;
     border-radius: 10px;
-    padding: 20px;
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 120px;
+    height: 100px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     border: 1px solid rgba(0, 0, 0, 0.05);
@@ -960,6 +960,12 @@
 }
 
 /* Responsive styles for Partners Section */
+@media (max-width: 1200px) {
+    .partners-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 @media (max-width: 992px) {
     .partners-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -969,22 +975,23 @@
 @media (max-width: 768px) {
     .partners-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .partner-logo-container {
-        height: 100px;
+        height: 90px;
     }
 }
 
 @media (max-width: 576px) {
     .partners-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 15px;
     }
 
     .partner-logo-container {
         height: 80px;
-        padding: 15px;
+        padding: 12px;
     }
 }
 
