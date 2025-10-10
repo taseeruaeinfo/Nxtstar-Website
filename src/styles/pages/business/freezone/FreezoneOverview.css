@@ -30,7 +30,7 @@
 }
 
 /* Hero Section */
-.hero-section {
+.hero-section-freezone {
     background-color: #e6f0fd;
     background-image: linear-gradient(135deg, #e6f0ff 0%, #f0f4ff 100%);
     padding: 5rem 0;
@@ -245,6 +245,7 @@
 
 .process-step {
     display: flex;
+    align-items: flex-start;
     gap: 1.5rem;
     margin-bottom: 2rem;
     padding-bottom: 2rem;
@@ -269,6 +270,13 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .step-content h3 {

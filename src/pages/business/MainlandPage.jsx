@@ -45,16 +45,16 @@ const MainlandPage = () => {
             title: 'License Application',
             description: 'Prepare and submit all necessary documentation for your business license.'
         },
-        {
-            number: '05',
-            title: 'License Issuance',
-            description: 'Receive your DED license and establishment card to start operations.'
-        },
-        {
-            number: '06',
-            title: 'Bank Account & Visas',
-            description: 'Open a corporate bank account and process residence visas for stakeholders.'
-        }
+        // {
+        //     number: '05',
+        //     title: 'License Issuance',
+        //     description: 'Receive your DED license and establishment card to start operations.'
+        // },
+        // {
+        //     number: '06',
+        //     title: 'Bank Account & Visas',
+        //     description: 'Open a corporate bank account and process residence visas for stakeholders.'
+        // }
     ];
 
     const faqs = [
@@ -88,12 +88,11 @@ const MainlandPage = () => {
             headerOverlayColor="rgba(0, 0, 0, 0.7)"
         >
             <div className="mainland-page">
-                <section className="hero-section">
+                <section className="hero-section-Mainland">
                     <div className="hero-content">
                         <h1>Mainland Business Setup in UAE</h1>
                         <p>Establish a mainland company with 100% ownership and full access to the UAE's lucrative market.</p>
                         <div className="hero-buttons">
-                            <a href="#pricing" className="primary-btn">View Packages</a>
                             <a href="/contact" className="secondary-btn">Get Free Consultation</a>
                         </div>
                     </div>

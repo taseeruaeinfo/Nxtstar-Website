@@ -76,16 +76,16 @@ const OffshorePage = () => {
             title: 'Submission & Registration',
             description: 'Documents are submitted to the relevant offshore registry for processing.'
         },
-        {
-            number: '05',
-            title: 'Company Incorporation',
-            description: 'Your offshore company is officially registered and incorporation documents issued.'
-        },
-        {
-            number: '06',
-            title: 'Bank Account Setup',
-            description: 'We assist with opening an offshore bank account for your new company.'
-        }
+        // {
+        //     number: '05',
+        //     title: 'Company Incorporation',
+        //     description: 'Your offshore company is officially registered and incorporation documents issued.'
+        // },
+        // {
+        //     number: '06',
+        //     title: 'Bank Account Setup',
+        //     description: 'We assist with opening an offshore bank account for your new company.'
+        // }
     ];
 
     const faqs = [
@@ -119,12 +119,11 @@ const OffshorePage = () => {
             headerOverlayColor="rgba(0, 0, 0, 0.7)"
         >
             <div className="offshore-page">
-                <section className="hero-section">
+                <section className="hero-section-offshore">
                     <div className="hero-content">
                         <h1>Offshore Company Formation in UAE</h1>
                         <p>Establish an offshore company for privacy, asset protection, and tax efficiency with our expert guidance.</p>
                         <div className="hero-buttons">
-                            <a href="#jurisdictions" className="primary-btn">Explore Jurisdictions</a>
                             <a href="/contact" className="secondary-btn">Free Consultation</a>
                         </div>
                     </div>

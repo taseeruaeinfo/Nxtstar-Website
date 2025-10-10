@@ -76,6 +76,39 @@ const Contact = () => {
             headerOverlayColor="rgba(0, 0, 0, 0.1)"
         >
             <div className="contact-page">
+                {/* Company Contact Details Section */}
+                <div className="company-contact-details">
+                    <h2>Get in Touch</h2>
+                    <p className="contact-intro">Have questions about our services? Reach out to us using any of the contact methods below:</p>
+
+                    <div className="contact-cards-container">
+                        <div className="contact-card">
+                            <div className="contact-icon">
+                                <FaPhoneAlt />
+                            </div>
+                            <h3>Call Us</h3>
+                            <p>+971 58 259 4158</p>
+                        </div>
+
+                        <div className="contact-card">
+                            <div className="contact-icon">
+                                <FaEnvelope />
+                            </div>
+                            <h3>Email Us</h3>
+                            <p>nxtstar.business.setup@gmail.com</p>
+                        </div>
+
+                        <div className="contact-card">
+                            <div className="contact-icon">
+                                <FaRegBuilding />
+                            </div>
+                            <h3>Visit Us</h3>
+                            <p>Palace Tower, Dubai Silicon Oasis Dubai,</p>
+                            <p>United Arab Emirates</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div className="contact-form-image-row">
                     <div className="contact-image-col">
                         <img
@@ -85,7 +118,7 @@ const Contact = () => {
                         />
                     </div>
                     <div className="contact-form-wrapper">
-                        <h2>Contact Us</h2>
+                        <h2>Send us a Message</h2>
                         {submitSuccess ? (
                             <div className="success-message">
                                 <FaCheckCircle className="success-icon" />
@@ -109,15 +142,15 @@ const Contact = () => {
                                     />
                                     {errors.name && <div className="error-message">{errors.name}</div>}
                                 </div>
-                                
+
                                 <div className="form-row">
                                     <div className="form-group phone-group">
                                         <label htmlFor="mobile">
                                             <FaPhoneAlt className="input-icon" /> Mobile Number <span className="required">*</span>
                                         </label>
                                         <div className="phone-input-wrapper">
-                                            <div 
-                                                className="country-flag" 
+                                            <div
+                                                className="country-flag"
                                                 style={getFlagStyle(formData.countryCode)}
                                             ></div>
                                             <select
@@ -146,7 +179,7 @@ const Contact = () => {
                                         {errors.mobile && <div className="error-message">{errors.mobile}</div>}
                                     </div>
                                 </div>
-                                
+
                                 <div className="form-group">
                                     <label htmlFor="email">
                                         <FaEnvelope className="input-icon" /> Email Address <span className="required">*</span>
@@ -162,7 +195,7 @@ const Contact = () => {
                                     />
                                     {errors.email && <div className="error-message">{errors.email}</div>}
                                 </div>
-                                
+
                                 <div className="form-group">
                                     <label htmlFor="details">
                                         <FaRegBuilding className="input-icon" /> Business Details <span className="required">*</span>
@@ -178,7 +211,7 @@ const Contact = () => {
                                     ></textarea>
                                     {errors.details && <div className="error-message">{errors.details}</div>}
                                 </div>
-                                
+
                                 <div className="form-submit">
                                     <Button type="submit" size="lg" disabled={isSubmitting}>
                                         {isSubmitting ? 'Sending Message...' : 'Send Message'}

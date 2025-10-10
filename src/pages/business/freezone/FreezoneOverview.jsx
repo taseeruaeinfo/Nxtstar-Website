@@ -50,6 +50,30 @@ const FreezoneOverview = () => {
             link: '/business/freezone/dwtc'
         },
         {
+            id: 'rakez',
+            name: 'RAKEZ',
+            location: 'Ras Al Khaimah',
+            description: 'Cost-effective free zone with options for industrial, trading, and service companies.',
+            idealFor: ['Manufacturing', 'Trading', 'Professional Services', 'SMEs'],
+            link: '/business/freezone/rakez'
+        },
+        {
+            id: 'shams',
+            name: 'Sharjah Media City (Shams)',
+            location: 'Sharjah',
+            description: 'Affordable free zone focused on creative, media, and service businesses.',
+            idealFor: ['Media', 'Creative Industries', 'Consultancy', 'Freelancers'],
+            link: '/business/freezone/shams'
+        },
+        {
+            id: 'afz',
+            name: 'Ajman Free Zone',
+            location: 'Ajman',
+            description: 'Cost-effective option with competitive packages for startups and small businesses.',
+            idealFor: ['Trading', 'Services', 'Light Manufacturing', 'SMEs'],
+            link: '/business/freezone/afz'
+        },
+        {
             id: 'diac',
             name: 'Dubai Internet City',
             location: 'Dubai',
@@ -73,30 +97,7 @@ const FreezoneOverview = () => {
             idealFor: ['Education', 'Training', 'HR Services', 'Consulting'],
             link: '/business/freezone/dkp'
         },
-        {
-            id: 'rakez',
-            name: 'RAKEZ',
-            location: 'Ras Al Khaimah',
-            description: 'Cost-effective free zone with options for industrial, trading, and service companies.',
-            idealFor: ['Manufacturing', 'Trading', 'Professional Services', 'SMEs'],
-            link: '/business/freezone/rakez'
-        },
-        {
-            id: 'shams',
-            name: 'Sharjah Media City (Shams)',
-            location: 'Sharjah',
-            description: 'Affordable free zone focused on creative, media, and service businesses.',
-            idealFor: ['Media', 'Creative Industries', 'Consultancy', 'Freelancers'],
-            link: '/business/freezone/shams'
-        },
-        {
-            id: 'afz',
-            name: 'Ajman Free Zone',
-            location: 'Ajman',
-            description: 'Cost-effective option with competitive packages for startups and small businesses.',
-            idealFor: ['Trading', 'Services', 'Light Manufacturing', 'SMEs'],
-            link: '/business/freezone/afz'
-        }
+        
     ];
 
     const faqs = [
@@ -130,12 +131,11 @@ const FreezoneOverview = () => {
             headerOverlayColor="rgba(0, 0, 0, 0.7)"
         >
             <div className="freezone-overview-page">
-                <section className="hero-section">
+                <section className="hero-section-freezone">
                     <div className="hero-content">
                         <h1>Free Zone Business Setup in UAE</h1>
                         <p>Establish your business in one of the UAE's specialized economic zones with 100% ownership and significant tax advantages.</p>
                         <div className="hero-buttons">
-                            <a href="#compare-freezones" className="primary-btn">Compare Free Zones</a>
                             <a href="/contact" className="secondary-btn">Free Consultation</a>
                         </div>
                     </div>
