@@ -115,11 +115,15 @@ const BlogPage = () => {
                     </div>
                 </div>
 
-                {/* Blog Grid */}
                 {filteredBlogs.length > 0 ? (
                     <div className="blog-grid">
                         {filteredBlogs.map(blog => (
-                            <div key={blog.id} className="blog-card">
+                            <Link
+                                key={blog.id}
+                                to={`/blog/${blog.id}`}
+                                className="blog-card"
+                                style={{ textDecoration: 'none', color: 'inherit' }}
+                            >
                                 <div className="blog-image">
                                     <img src={blog.image} alt={blog.title} />
                                 </div>
@@ -128,16 +132,14 @@ const BlogPage = () => {
                                         <span className="blog-category">{blog.category}</span>
                                         <span className="blog-date">{blog.date}</span>
                                     </div>
-                                    <h3 className="blog-title">
-                                        <Link to={`/blog/${blog.id}`}>{blog.title}</Link>
-                                    </h3>
+                                    <h3 className="blog-title">{blog.title}</h3>
                                     <p className="blog-excerpt">{blog.excerpt}</p>
                                     <div className="blog-footer">
                                         <span className="blog-author">By {blog.author}</span>
                                         <span className="blog-read-time">{blog.readTime}</span>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 ) : (
@@ -146,8 +148,6 @@ const BlogPage = () => {
                         <p>Try adjusting your search or filter criteria</p>
                     </div>
                 )}
-
-                {/* Load More Button */}
                 <div className="load-more-container">
                     <Button type="outline">Load More Articles</Button>
                 </div>
