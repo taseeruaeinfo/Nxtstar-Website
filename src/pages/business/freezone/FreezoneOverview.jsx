@@ -97,6 +97,30 @@ const FreezoneOverview = () => {
             idealFor: ['Education', 'Training', 'HR Services', 'Consulting'],
             link: '/business/freezone/dkp'
         },
+        {
+            id: 'difc',
+            name: 'Dubai International Financial Centre (DIFC)',
+            location: 'Dubai',
+            description: 'Leading global financial hub in MEASA, operating under independent common law with a transparent, regulated environment for international investors.',
+            idealFor: ['Financial Services', 'FinTech', 'Legal', 'Professional Services'],
+            link: '/business/freezone/difc'
+        },
+        {
+            id: 'masdar',
+            name: 'Masdar City Free Zone',
+            location: 'Abu Dhabi',
+            description: 'Global model for sustainable urban development, providing an ecosystem for clean tech, green energy, AI, and circular economy companies.',
+            idealFor: ['Sustainability', 'Clean Energy', 'Tech', 'R&D'],
+            link: '/business/freezone/masdar'
+        },
+        {
+            id: 'srtip',
+            name: 'Sharjah Research Technology and Innovation Park (SRTIP)',
+            location: 'Sharjah',
+            description: 'University-linked innovation ecosystem driving research commercialization and technology transfer in advanced manufacturing and technology.',
+            idealFor: ['Research', 'Innovation', 'Technology', 'Advanced Manufacturing'],
+            link: '/business/freezone/srtip'
+        }
         
     ];
 

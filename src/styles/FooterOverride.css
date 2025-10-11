@@ -41,12 +41,12 @@
 }
 
 .dark-theme .footer-link a {
-    color: rgba(200, 210, 255, 0.8) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
     transition: all 0.3s ease !important;
 }
 
 .dark-theme .footer-link a:hover {
-    color: rgba(255, 255, 255, 1) !important;
+    color: rgb(136, 125, 125) !important;
     text-shadow: 0 0 8px rgba(100, 170, 255, 0.5) !important;
     transform: translateX(3px);
 }
