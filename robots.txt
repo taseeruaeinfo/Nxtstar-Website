@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nxtstar.ae/sitemap.xml
+
+# Prevent crawling of coming soon pages
+Disallow: /*/coming-soon
