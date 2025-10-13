@@ -258,3 +258,29 @@
 .dark-theme .react-tel-input .country-list .country .dial-code {
     color: rgba(255, 255, 255, 0.9);
 }
+
+/* Additional phone input dark theme overrides */
+.dark-theme .phone-input-container .form-control {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    color: #000000 !important;
+    border: 1px solid rgba(100, 150, 255, 0.2);
+}
+
+.dark-theme .phone-input-container .form-control:focus {
+    background-color: #ffffff !important;
+    border-color: rgba(100, 150, 255, 0.5);
+    box-shadow: 0 0 0 3px rgba(100, 150, 255, 0.2);
+}
+
+.dark-theme .phone-input-container .selected-flag {
+    border-right: 1px solid rgba(100, 150, 255, 0.2);
+}
+
+.dark-theme .phone-input-container .country-dropdown {
+    background-color: rgba(20, 30, 60, 0.6);
+    border-color: rgba(100, 150, 255, 0.2);
+}
+
+.dark-theme .phone-input-container .country-dropdown:hover {
+    background-color: rgba(30, 40, 70, 0.8);
+}
