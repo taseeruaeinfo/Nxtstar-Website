@@ -137,6 +137,8 @@
     overflow: hidden;
     z-index: 3;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-calculator:hover {
@@ -631,6 +633,55 @@
     outline: none;
 }
 
+/* Phone input styles */
+.phone-input-container {
+    width: 100%;
+    position: relative;
+}
+
+.phone-input-container .form-control {
+    width: 100%;
+    padding: 0.6rem 0.8rem 0.6rem 52px;
+    font-size: 0.9rem;
+    border: 2px solid #e0e6ed;
+    border-radius: 0.5rem;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    height: auto;
+}
+
+.phone-input-container .form-control:focus {
+    border-color: #0056b3;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.15);
+    outline: none;
+}
+
+.phone-input-container .selected-flag {
+    background-color: transparent;
+    border-radius: 0.5rem 0 0 0.5rem;
+    border-right: 2px solid #e0e6ed;
+    padding: 0 0 0 14px;
+}
+
+.phone-input-container .country-dropdown {
+    border: 2px solid #e0e6ed;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.phone-input-container .country-dropdown:hover {
+    background-color: #f8f9fa;
+}
+
+.phone-input-container .flag-dropdown {
+    background-color: transparent;
+    border: none;
+}
+
 .calculator-form {
     position: relative;
     padding: 0.75rem;
@@ -746,20 +797,15 @@
     }
 }
 
-@media (max-width: 480px){
-    .hero-calculator {
-        margin-top: 1rem;
-        max-width: 550px;
-        margin-left: auto;
-        margin-right: 2.5rem;
-        padding: 1.5rem;
-    }
-}
-
 @media (max-width: 991.98px) {
     .hero-section {
         padding: 5rem 0;
         min-height: auto;
+    }
+
+    .hero-container {
+        padding: 0 1.5rem;
+        justify-content: center;
     }
 
     .hero-content-home,
@@ -790,8 +836,9 @@
         margin-top: 1rem;
         max-width: 550px;
         margin-left: auto;
-        margin-right: 2.5rem;
+        margin-right: auto;
         padding: 1.5rem;
+        bottom: 0;
     }
 
     .hero-image {
@@ -805,11 +852,19 @@
     .benefits-grid {
         grid-template-columns: 1fr;
     }
+    
+    .calculator-form {
+        padding: 1rem;
+    }
 }
 
 @media (max-width: 767.98px) {
     .services-grid {
         grid-template-columns: 1fr;
+    }
+
+    .hero-container {
+        padding: 0 1rem;
     }
 
     .hero-title {
@@ -832,181 +887,15 @@
     .hero-section {
         padding: 4rem 0;
     }
-}
-
-
-.cost-calc-button {
-    background-color: rgb(17, 27, 46);
-    color: #ffffff;
-}
-
-/* Add spinner styles */
-.spinner {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    border-top-color: #fff;
-    animation: spin 1s ease-in-out infinite;
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
+    
+    .calculator-form {
+        padding: 0.75rem;
     }
-}
-
-/* Phone input styling */
-.phone-input-container {
-    width: 100%;
-    position: relative;
-}
-
-.phone-input-container .form-control {
-    width: 100%;
-    padding-left: 52px !important;
-    height: 40px;
-    font-size: 0.9rem;
-    color: #000000;
-}
-
-.country-dropdown {
-    background-color: #f8f9fa;
-    border: 2px solid #e0e6ed;
-    border-right: none;
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-    height: 40px !important;
-}
-
-.dark-theme .country-dropdown {
-    background-color: rgba(25, 35, 65, 0.5);
-    border: 1px solid rgba(100, 150, 255, 0.2);
-}
-
-.country-dropdown-list {
-    background-color: #ffffff;
-    border: 1px solid #e0e6ed;
-    border-radius: 0.5rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    max-height: 250px !important;
-}
-
-.dark-theme .country-dropdown-list {
-    background-color: rgba(30, 40, 70, 0.95);
-    border: 1px solid rgba(100, 150, 255, 0.3);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.country-dropdown-list .country:hover {
-    background-color: #f0f4ff;
-}
-
-.dark-theme .country-dropdown-list .country:hover {
-    background-color: rgba(100, 150, 255, 0.2);
-}
-
-.dark-theme .country-dropdown-list .country-name,
-.dark-theme .country-dropdown-list .dial-code {
-    color: rgba(255, 255, 255, 0.9);
-}
-
-/* Partners Section Styling */
-.partners-section {
-    background-color: #ffffff;
-    padding: 4rem 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.partners-section .section-header {
-    margin-bottom: 3rem;
-}
-
-.title-dark {
-    color: #333333;
-}
-
-.title-accent {
-    color: #e65100;
-}
-
-.partners-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 25px;
-    max-width: 1300px;
-    margin: 0 auto;
-}
-
-.partner-logo-container {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.partner-logo-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.partner-logo {
-    max-width: 80%;
-    max-height: 80%;
-    object-fit: contain;
-    filter: grayscale(20%);
-    transition: filter 0.3s ease;
-}
-
-.partner-logo-container:hover .partner-logo {
-    filter: grayscale(0%);
-}
-
-/* Responsive styles for Partners Section */
-@media (max-width: 1200px) {
-    .partners-grid {
-        grid-template-columns: repeat(4, 1fr);
+    
+    .hero-calculator {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+        bottom: 0;
     }
-}
-
-@media (max-width: 992px) {
-    .partners-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .partners-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .partner-logo-container {
-        height: 90px;
-    }
-}
-
-@media (max-width: 576px) {
-    .partners-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-    .partner-logo-container {
-        height: 80px;
-        padding: 12px;
-    }
-}
-
-/* Ensure the button maintains consistent height when loading */
-.button:disabled {
-    cursor: not-allowed;
-    opacity: 0.7;
 }
