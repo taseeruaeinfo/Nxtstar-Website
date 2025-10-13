@@ -663,7 +663,7 @@
     background-color: transparent;
     border-radius: 0.5rem 0 0 0.5rem;
     border-right: 2px solid #e0e6ed;
-    padding: 0 0 0 14px;
+    /* padding: 0 0 0 14px; */
 }
 
 .phone-input-container .country-dropdown {
