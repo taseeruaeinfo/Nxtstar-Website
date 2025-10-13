@@ -746,6 +746,16 @@
     }
 }
 
+@media (max-width: 480px){
+    .hero-calculator {
+        margin-top: 1rem;
+        max-width: 550px;
+        margin-left: auto;
+        margin-right: 2.5rem;
+        padding: 1.5rem;
+    }
+}
+
 @media (max-width: 991.98px) {
     .hero-section {
         padding: 5rem 0;
