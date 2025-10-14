@@ -987,5 +987,54 @@
         margin-right: auto;
         max-width: 90%;
         bottom: 0;
+        width: 100%;
+    }
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .hero-calculator {
+        max-width: 95%;
+        padding: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .calculator-form {
+        padding: 0.5rem;
+    }
+    
+    .calculator-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .calculator-header p {
+        font-size: 0.8rem;
+    }
+    
+    .feature {
+        font-size: 0.7rem;
+    }
+    
+    .form-label-cc, .form-label {
+        font-size: 0.8rem;
+    }
+    
+    .form-control, .calculator-form select.form-select {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.85rem;
+    }
+    
+    .phone-input-container .form-control {
+        padding: 0.5rem 0.7rem 0.5rem 55px;
+    }
+    
+    .phone-input-container .selected-flag {
+        min-width: 50px;
+        padding: 0 0 0 10px;
+    }
+    
+    .phone-input-container .flag-dropdown {
+        min-width: 50px;
     }
 }
