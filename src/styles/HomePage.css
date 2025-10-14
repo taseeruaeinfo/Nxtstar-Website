@@ -560,6 +560,13 @@
 
 .form-group {
     margin-bottom: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group > label {
+    align-self: flex-start;
 }
 
 .form-label-cc {
@@ -713,11 +720,14 @@
 .phone-input-container {
     width: 100%;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align to the left */
 }
 
 .phone-input-container .form-control {
     width: 100%;
-    padding: 0.6rem 0.8rem 0.6rem 52px;
+    padding: 0.6rem 0.8rem 0.6rem 65px; /* Increased left padding to shift country code right */
     font-size: 0.9rem;
     border: 2px solid #e0e6ed;
     border-radius: 0.5rem;
@@ -726,6 +736,7 @@
     transition: all 0.3s ease;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     height: auto;
+    box-sizing: border-box;
 }
 
 .phone-input-container .form-control:focus {
@@ -739,7 +750,8 @@
     background-color: transparent;
     border-radius: 0.5rem 0 0 0.5rem;
     border-right: 2px solid #e0e6ed;
-    /* padding: 0 0 0 14px; */
+    padding: 0 0 0 14px;
+    min-width: 60px; /* Increased width to prevent overlap */
 }
 
 .phone-input-container .country-dropdown {
@@ -756,6 +768,8 @@
 .phone-input-container .flag-dropdown {
     background-color: transparent;
     border: none;
+    height: 100%;
+    min-width: 60px; /* Increased width to prevent overlap */
 }
 
 .calculator-form {

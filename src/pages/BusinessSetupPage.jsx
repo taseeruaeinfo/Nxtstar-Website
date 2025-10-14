@@ -77,8 +77,27 @@ const BusinessSetupPage = () => {
                                                 whileHover={{ scale: 1.05 }}
                                                 transition={{ type: "spring", stiffness: 400 }}
                                             >
-                                                {/* Replace with actual images when available */}
-                                                <div className="placeholder-image">{type.id.charAt(0).toUpperCase() + type.id.slice(1)}</div>
+                                                {type.id === 'mainland' && (
+                                                    <img
+                                                        src="https://plus.unsplash.com/premium_photo-1694475218266-b93569487419?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070"
+                                                        alt="Mainland Business Setup"
+                                                        className="business-image"
+                                                    />
+                                                )}
+                                                {type.id === 'freezone' && (
+                                                    <img
+                                                        src="https://images.unsplash.com/photo-1594005204555-823f0d266f79?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
+                                                        alt="Free Zone Business Setup"
+                                                        className="business-image"
+                                                    />
+                                                )}
+                                                {type.id === 'offshore' && (
+                                                    <img
+                                                        src="https://images.unsplash.com/photo-1721974301263-5a328fe7a9a9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
+                                                        alt="Offshore Company Formation"
+                                                        className="business-image"
+                                                    />
+                                                )}
                                             </motion.div>
                                             <div className="card-content">
                                                 <h3>{type.title}</h3>

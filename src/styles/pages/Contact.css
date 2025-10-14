@@ -214,6 +214,13 @@
 .form-group {
   margin-bottom: 1.5rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group > label {
+  align-self: flex-start;
 }
 
 .form-group label {
@@ -273,75 +280,113 @@
   width: 100%;
 }
 
-.phone-input-wrapper {
+/* Phone input styles for react-phone-input-2 */
+.phone-input-container {
+  width: 100%;
   display: flex;
   align-items: center;
-  position: relative;
+  justify-content: flex-start; /* Align to the left */
 }
 
-.country-flag {
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 15px;
-  border-radius: 2px;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-  z-index: 2;
-}
-
-.country-code-select {
-  padding: 12px 16px 12px 40px;
+.phone-input-container .form-control {
+  width: 100%;
+  padding: 12px 16px 12px 65px; /* Increased left padding to shift country code right */
   border: 2px solid #e2e8f0;
-  border-radius: 10px 0 0 10px;
-  background: #f8fafc;
-  font-size: 1rem;
-  color: #0f172a;
-  min-width: 120px;
-  appearance: none;
-  transition: all 0.3s ease;
-  font-weight: 500;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236b7280' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 0.8rem center;
-  background-size: 12px 8px;
-  cursor: pointer;
-  border-right: none;
-}
-
-.country-code-select:focus {
-  border-color: #0056b3;
-  background: #ffffff;
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.2);
-  border-right: none;
-}
-
-.phone-input {
-  flex: 1;
-  padding: 12px 16px 12px 16px;
-  border: 2px solid #e2e8f0;
-  border-radius: 0 10px 10px 0;
+  border-radius: 10px;
   background: #f8fafc;
   font-size: 1rem;
   color: #0f172a;
   transition: all 0.3s ease;
   font-weight: 500;
+  height: auto;
+  box-sizing: border-box;
 }
 
-.phone-input:focus {
+.phone-input-container .form-control:focus {
   border-color: #0056b3;
   background: #ffffff;
   outline: none;
   box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.2);
 }
 
-.country-code-select.error,
-.phone-input.error {
+.phone-input-container .form-control.error {
   border-color: #dc2626;
+  box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.2);
+}
+
+.phone-input-container .selected-flag {
+  background-color: transparent;
+  border-radius: 10px 0 0 10px;
+  border-right: 2px solid #e2e8f0;
+  padding: 0 0 0 14px;
+  min-width: 60px; /* Increased width to prevent overlap */
+}
+
+.phone-input-container .country-dropdown {
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.phone-input-container .country-dropdown:hover {
+  background-color: #ffffff;
+}
+
+.phone-input-container .flag-dropdown {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  min-width: 60px; /* Increased width to prevent overlap */
+}
+
+/* Dark theme overrides for phone input */
+.dark-theme .phone-input-container .form-control {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  color: #000000 !important;
+  border: 1px solid rgba(100, 150, 255, 0.2);
+}
+
+.dark-theme .phone-input-container .form-control:focus {
+  background-color: #ffffff !important;
+  border-color: rgba(100, 150, 255, 0.5);
+  box-shadow: 0 0 0 3px rgba(100, 150, 255, 0.2);
+}
+
+.dark-theme .phone-input-container .selected-flag {
+  border-right: 1px solid rgba(100, 150, 255, 0.2);
+}
+
+.dark-theme .phone-input-container .country-dropdown {
+  background-color: rgba(20, 30, 60, 0.6);
+  border-color: rgba(100, 150, 255, 0.2);
+}
+
+.dark-theme .phone-input-container .country-dropdown:hover {
+  background-color: rgba(30, 40, 70, 0.8);
+}
+
+.dark-theme .react-tel-input .selected-flag:hover,
+.dark-theme .react-tel-input .selected-flag:focus {
+  background-color: rgba(30, 40, 70, 0.8);
+}
+
+.dark-theme .react-tel-input .country-list {
+  background-color: rgba(20, 30, 60, 0.95);
+  border: 1px solid rgba(100, 150, 255, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.dark-theme .react-tel-input .country-list .country {
+  background-color: transparent;
+}
+
+.dark-theme .react-tel-input .country-list .country:hover {
+  background-color: rgba(40, 60, 100, 0.6);
+}
+
+.dark-theme .react-tel-input .country-list .country .country-name,
+.dark-theme .react-tel-input .country-list .country .dial-code {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* Error messages */

@@ -49,6 +49,15 @@
 .card-image {
     height: 200px;
     overflow: hidden;
+    position: relative;
+}
+
+.business-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
 }
 
 .placeholder-image {

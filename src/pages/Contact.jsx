@@ -3,13 +3,16 @@ import { useState } from 'react';
 import PageLayout from '../components/layout/PageLayout';
 import Button from '../components/ui/Button';
 import { FaUser, FaPhoneAlt, FaEnvelope, FaRegBuilding, FaCheckCircle } from 'react-icons/fa';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 import '../styles/pages/Contact.css';
 import contactimg from '../assets/images/contact.jpg';
+
+const backend_url = import.meta.env.VITE_BACKEND_URL;
 
 const Contact = () => {
     const [formData, setFormData] = useState({
         name: '',
-        countryCode: '+971',
         mobile: '',
         email: '',
         details: '',
@@ -24,48 +27,68 @@ const Contact = () => {
         if (errors[name]) setErrors({ ...errors, [name]: '' });
     };
 
+    const handlePhoneChange = (value) => {
+        setFormData({ ...formData, mobile: value });
+        if (errors.mobile) setErrors({ ...errors, mobile: '' });
+    };
+
     const validateForm = () => {
         const newErrors = {};
         if (!formData.name.trim()) newErrors.name = 'Name is required';
-        if (!formData.mobile.trim()) newErrors.mobile = 'Mobile is required';
-        if (!formData.countryCode.trim()) newErrors.countryCode = 'Country code required';
+        if (!formData.mobile || formData.mobile.length < 6) newErrors.mobile = 'Mobile is required';
         if (!formData.email.trim()) newErrors.email = 'Email is required';
         else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid';
         if (!formData.details.trim()) newErrors.details = 'Business details required';
         return newErrors;
     };
 
-    const getFlagStyle = (code) => {
-        const flags = {
-            '+971': 'url(https://flagcdn.com/16x12/ae.png)',
-            '+91': 'url(https://flagcdn.com/16x12/in.png)',
-            '+44': 'url(https://flagcdn.com/16x12/gb.png)',
-            '+1': 'url(https://flagcdn.com/16x12/us.png)',
-            '+92': 'url(https://flagcdn.com/16x12/pk.png)',
-        };
-        return {
-            backgroundImage: flags[code] || 'none',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-        };
-    };
-
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const validationErrors = validateForm();
         if (Object.keys(validationErrors).length > 0) {
             setErrors(validationErrors);
             return;
         }
+        
         setIsSubmitting(true);
-        // Simulate API call
-        setTimeout(() => {
+        
+        // Prepare the data for submission
+        const contactData = {
+            name: formData.name,
+            phone: formData.mobile, // Already includes country code from react-phone-input-2
+            email: formData.email,
+            message: formData.details
+        };
+        
+        try {
+            const res = await fetch(`${backend_url}/api/contact`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(contactData),
+            });
+
+            const data = await res.json();
+            console.log('Response:', data);
+            
+            if (data.success) {
+                setSubmitSuccess(true);
+                setFormData({ 
+                    name: '', 
+                    mobile: '', 
+                    email: '', 
+                    details: '' 
+                });
+                // Reset success message after 5 seconds
+                setTimeout(() => setSubmitSuccess(false), 5000);
+            } else {
+                alert("❌ Failed to send message: " + data.message);
+            }
+        } catch (err) {
+            console.error(err);
+            alert("⚠️ Something went wrong: " + err.message);
+        } finally {
             setIsSubmitting(false);
-            setSubmitSuccess(true);
-            setFormData({ name: '', mobile: '', email: '', details: '' });
-            // Reset success message after 5 seconds
-            setTimeout(() => setSubmitSuccess(false), 5000);
-        }, 1500);
+        }
     };
 
     return (
@@ -148,34 +171,19 @@ const Contact = () => {
                                         <label htmlFor="mobile">
                                             <FaPhoneAlt className="input-icon" /> Mobile Number <span className="required">*</span>
                                         </label>
-                                        <div className="phone-input-wrapper">
-                                            <div
-                                                className="country-flag"
-                                                style={getFlagStyle(formData.countryCode)}
-                                            ></div>
-                                            <select
-                                                name="countryCode"
-                                                value={formData.countryCode}
-                                                onChange={handleInputChange}
-                                                className={errors.countryCode ? 'error country-code-select' : 'country-code-select'}
-                                            >
-                                                <option value="+971">+971 (UAE)</option>
-                                                <option value="+91">+91 (India)</option>
-                                                <option value="+44">+44 (UK)</option>
-                                                <option value="+1">+1 (USA)</option>
-                                                <option value="+92">+92 (Pakistan)</option>
-                                            </select>
-                                            <input
-                                                type="tel"
-                                                id="mobile"
-                                                name="mobile"
-                                                value={formData.mobile}
-                                                onChange={handleInputChange}
-                                                className={errors.mobile ? 'error phone-input' : 'phone-input'}
-                                                placeholder="Enter mobile number"
-                                            />
-                                        </div>
-                                        {errors.countryCode && <div className="error-message">{errors.countryCode}</div>}
+                                        <PhoneInput
+                                            country={'ae'}
+                                            value={formData.mobile}
+                                            onChange={handlePhoneChange}
+                                            inputProps={{
+                                                name: 'mobile',
+                                                required: true,
+                                                className: `form-control ${errors.mobile ? 'error' : ''}`
+                                            }}
+                                            containerClass="phone-input-container"
+                                            buttonClass="country-dropdown"
+                                            dropdownClass="country-dropdown-list"
+                                        />
                                         {errors.mobile && <div className="error-message">{errors.mobile}</div>}
                                     </div>
                                 </div>

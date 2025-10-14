@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import PageLayout from '../components/layout/PageLayout';
 import Button from '../components/ui/Button';
 import { FaGift, FaUsers, FaChartLine, FaHandHoldingUsd, FaShareAlt, FaCheckCircle, FaMedal, FaTrophy } from 'react-icons/fa';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 import '../styles/pages/ReferAndEarnPage.css';
+
+const backend_url = import.meta.env.VITE_BACKEND_URL;
 
 const ReferAndEarnPage = () => {
     const [formData, setFormData] = useState({
@@ -13,28 +17,112 @@ const ReferAndEarnPage = () => {
         friendEmail: '',
         friendPhone: ''
     });
+    
+    const [errors, setErrors] = useState({});
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitSuccess, setSubmitSuccess] = useState(false);
 
     const handleChange = (e) => {
+        const { name, value } = e.target;
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value
+            [name]: value
         });
+        
+        // Clear error for this field when user starts typing
+        if (errors[name]) {
+            setErrors({
+                ...errors,
+                [name]: ''
+            });
+        }
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle form submission logic here
-        console.log('Form submitted:', formData);
-        alert('Thank you! Your referral has been submitted. We will contact you soon.');
-        // Reset form
+    const handlePhoneChange = (value, name) => {
         setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            friendName: '',
-            friendEmail: '',
-            friendPhone: ''
+            ...formData,
+            [name]: value
         });
+        
+        // Clear error for this field when user starts typing
+        if (errors[name]) {
+            setErrors({
+                ...errors,
+                [name]: ''
+            });
+        }
+    };
+
+    const validateForm = () => {
+        const newErrors = {};
+        
+        // Validate referrer fields
+        if (!formData.name.trim()) newErrors.name = 'Your name is required';
+        if (!formData.email.trim()) newErrors.email = 'Your email is required';
+        else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Your email is invalid';
+        if (!formData.phone || formData.phone.length < 6) newErrors.phone = 'Your phone number is required';
+        
+        // Validate friend fields
+        if (!formData.friendName.trim()) newErrors.friendName = 'Friend\'s name is required';
+        if (!formData.friendEmail.trim()) newErrors.friendEmail = 'Friend\'s email is required';
+        else if (!/\S+@\S+\.\S+/.test(formData.friendEmail)) newErrors.friendEmail = 'Friend\'s email is invalid';
+        if (!formData.friendPhone || formData.friendPhone.length < 6) newErrors.friendPhone = 'Friend\'s phone number is required';
+        
+        return newErrors;
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        
+        const validationErrors = validateForm();
+        if (Object.keys(validationErrors).length > 0) {
+            setErrors(validationErrors);
+            return;
+        }
+        
+        setIsSubmitting(true);
+        
+        // Prepare the data for submission with full phone numbers
+        const referralData = {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone, // Already includes country code from react-phone-input-2
+            friendName: formData.friendName,
+            friendEmail: formData.friendEmail,
+            friendPhone: formData.friendPhone // Already includes country code from react-phone-input-2
+        };
+        
+        try {
+            const res = await fetch(`${backend_url}/api/refer`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(referralData),
+            });
+
+            const data = await res.json();
+            console.log('Response:', data);
+            
+            if (data.success) {
+                setSubmitSuccess(true);
+                setFormData({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    friendName: '',
+                    friendEmail: '',
+                    friendPhone: ''
+                });
+                // Reset success message after 5 seconds
+                setTimeout(() => setSubmitSuccess(false), 5000);
+            } else {
+                alert("❌ Failed to submit referral: " + data.message);
+            }
+        } catch (err) {
+            console.error(err);
+            alert("⚠️ Something went wrong: " + err.message);
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const benefits = [
@@ -192,84 +280,125 @@ const ReferAndEarnPage = () => {
                         </p>
                     </div>
                     <div className="refer-form-container">
-                        <form className="refer-form" onSubmit={handleSubmit}>
-                            <div className="form-row">
-                                <div className="form-group">
-                                    <label htmlFor="name">Your Name *</label>
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        name="name"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        required
-                                    />
+                        {submitSuccess ? (
+                            <div className="success-message">
+                                <FaCheckCircle className="success-icon" />
+                                <h3>Thank You!</h3>
+                                <p>Your referral has been submitted successfully. We'll contact you soon.</p>
+                            </div>
+                        ) : (
+                            <form className="refer-form" onSubmit={handleSubmit}>
+                                <div className="form-row">
+                                    <div className="form-group">
+                                        <label htmlFor="name">Your Name *</label>
+                                        <input
+                                            type="text"
+                                            id="name"
+                                            name="name"
+                                            value={formData.name}
+                                            onChange={handleChange}
+                                            className={errors.name ? 'error' : ''}
+                                            required
+                                        />
+                                        {errors.name && <div className="error-message">{errors.name}</div>}
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="email">Your Email *</label>
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            className={errors.email ? 'error' : ''}
+                                            required
+                                        />
+                                        {errors.email && <div className="error-message">{errors.email}</div>}
+                                    </div>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="email">Your Email *</label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        required
+                                    <label htmlFor="phone">Your Phone Number *</label>
+                                    <PhoneInput
+                                        country={'ae'}
+                                        value={formData.phone}
+                                        onChange={phone => handlePhoneChange(phone, 'phone')}
+                                        inputProps={{
+                                            name: 'phone',
+                                            required: true,
+                                            className: `form-control ${errors.phone ? 'error' : ''}`
+                                        }}
+                                        containerClass="phone-input-container"
+                                        buttonClass="country-dropdown"
+                                        dropdownClass="country-dropdown-list"
                                     />
+                                    {errors.phone && <div className="error-message">{errors.phone}</div>}
                                 </div>
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="phone">Your Phone Number *</label>
-                                <input
-                                    type="tel"
-                                    id="phone"
-                                    name="phone"
-                                    value={formData.phone}
-                                    onChange={handleChange}
-                                    required
-                                />
-                            </div>
-                            <div className="form-divider">
-                                <span>Friend's Details</span>
-                            </div>
-                            <div className="form-row">
+                                
+                                <div className="form-divider">
+                                    <span>Friend's Details</span>
+                                </div>
+                                
+                                <div className="form-row">
+                                    <div className="form-group">
+                                        <label htmlFor="friendName">Friend's Name *</label>
+                                        <input
+                                            type="text"
+                                            id="friendName"
+                                            name="friendName"
+                                            value={formData.friendName}
+                                            onChange={handleChange}
+                                            className={errors.friendName ? 'error' : ''}
+                                            required
+                                        />
+                                        {errors.friendName && <div className="error-message">{errors.friendName}</div>}
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="friendEmail">Friend's Email *</label>
+                                        <input
+                                            type="email"
+                                            id="friendEmail"
+                                            name="friendEmail"
+                                            value={formData.friendEmail}
+                                            onChange={handleChange}
+                                            className={errors.friendEmail ? 'error' : ''}
+                                            required
+                                        />
+                                        {errors.friendEmail && <div className="error-message">{errors.friendEmail}</div>}
+                                    </div>
+                                </div>
+                                
                                 <div className="form-group">
-                                    <label htmlFor="friendName">Friend's Name *</label>
-                                    <input
-                                        type="text"
-                                        id="friendName"
-                                        name="friendName"
-                                        value={formData.friendName}
-                                        onChange={handleChange}
-                                        required
+                                    <label htmlFor="friendPhone">Friend's Phone Number *</label>
+                                    <PhoneInput
+                                        country={'ae'}
+                                        value={formData.friendPhone}
+                                        onChange={phone => handlePhoneChange(phone, 'friendPhone')}
+                                        inputProps={{
+                                            name: 'friendPhone',
+                                            required: true,
+                                            className: `form-control ${errors.friendPhone ? 'error' : ''}`
+                                        }}
+                                        containerClass="phone-input-container"
+                                        buttonClass="country-dropdown"
+                                        dropdownClass="country-dropdown-list"
                                     />
+                                    {errors.friendPhone && <div className="error-message">{errors.friendPhone}</div>}
                                 </div>
-                                <div className="form-group">
-                                    <label htmlFor="friendEmail">Friend's Email *</label>
-                                    <input
-                                        type="email"
-                                        id="friendEmail"
-                                        name="friendEmail"
-                                        value={formData.friendEmail}
-                                        onChange={handleChange}
-                                        required
-                                    />
-                                </div>
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="friendPhone">Friend's Phone Number *</label>
-                                <input
-                                    type="tel"
-                                    id="friendPhone"
-                                    name="friendPhone"
-                                    value={formData.friendPhone}
-                                    onChange={handleChange}
-                                    required
-                                />
-                            </div>
-                            <Button type="submit" className="submit-btn">
-                                <FaShareAlt className="btn-icon" /> Submit Referral
-                            </Button>
-                        </form>
+                                
+                                <Button type="submit" className="submit-btn" disabled={isSubmitting}>
+                                    {isSubmitting ? (
+                                        <>
+                                            <span className="spinner" style={{ marginRight: '8px' }}></span>
+                                            Submitting...
+                                        </>
+                                    ) : (
+                                        <>
+                                            <FaShareAlt className="btn-icon" /> Submit Referral
+                                        </>
+                                    )}
+                                </Button>
+                            </form>
+                        )}
                     </div>
                 </section>
 
