@@ -60,7 +60,7 @@ const Footer = () => {
                             </motion.p>
                             <motion.div className="social-links" variants={itemVariants}>
                                 <motion.a
-                                    href="https://facebook.com/nxtstar"
+                                    href="https://www.facebook.com/share/17T2TpUYsG/?mibextid=wwXIfr"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="social-icon"
