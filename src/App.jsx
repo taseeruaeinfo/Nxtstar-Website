@@ -31,6 +31,11 @@ function AnimationLayout() {
             <HomePage />
           </MotionWrapper>
         } />
+        <Route path="/home" element={
+          <MotionWrapper>
+            <HomePage />
+          </MotionWrapper>
+        } />
 
         {/* Business Setup Pages */}
         <Route path="/business/*" element={
