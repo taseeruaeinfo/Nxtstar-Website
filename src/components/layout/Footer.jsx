@@ -3,6 +3,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaWhatsapp } from 'r
 import { motion } from 'framer-motion';
 import '../../styles/Footer.css';
 import Threads from '../../assets/images/threadsLogo.png';
+import Tiktok from '../../assets/images/tiktok.png';
 
 
 const Footer = () => {
@@ -80,6 +81,17 @@ const Footer = () => {
                                     whileTap={{ scale: 0.9 }}
                                 >
                                     <img src={Threads} alt="Threads" id='footerThreads' />
+                                </motion.a>
+                                <motion.a
+                                    href="https://www.tiktok.com/@nxtstar.ae"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="social-icon"
+                                    variants={socialIconVariants}
+                                    whileHover={{ scale: 1.2, rotate: 5 }}
+                                    whileTap={{ scale: 0.9 }}
+                                >
+                                    <img src={Tiktok} alt="Tiktok" id='footerTiktok' />
                                 </motion.a>
                                 <motion.a
                                     href="https://www.linkedin.com/company/nxtstar/"
