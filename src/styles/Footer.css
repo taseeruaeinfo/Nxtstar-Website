@@ -27,10 +27,18 @@
     filter: invert(1);
 }
 
+#footerTiktok {
+    /* filter: invert(1);
+     */
+    width: 54px;
+    height: 54px;
+}
+
 .footer-column {
     flex: 1;
     min-width: 160px;
 }
+
 
 .footer-logo {
     display: flex;
