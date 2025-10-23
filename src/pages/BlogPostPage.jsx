@@ -5,7 +5,7 @@ import Button from '../components/ui/Button';
 import '../styles/pages/BlogPostPage.css';
 
 const BlogPostPage = () => {
-    const { id } = useParams();
+    const { slug } = useParams();
     const [blog, setBlog] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -14,6 +14,7 @@ const BlogPostPage = () => {
         {
             id: 1,
             title: "Guide to Starting a Business in UAE Mainland",
+            slug: "guide-to-starting-a-business-in-uae-mainland",
             excerpt: "Learn the step-by-step process of establishing your business in UAE mainland with 100% ownership.",
             date: "2025-09-15",
             author: "NXTStar Team",
@@ -72,6 +73,7 @@ const BlogPostPage = () => {
         {
             id: 2,
             title: "Benefits of Freezone Company Formation in Dubai",
+            slug: "benefits-of-freezone-company-formation-in-dubai",
             excerpt: "Discover why freezone companies are becoming the preferred choice for international businesses in Dubai.",
             date: "2025-08-22",
             author: "NXTStar Team",
@@ -137,17 +139,411 @@ const BlogPostPage = () => {
                 <h2>Conclusion</h2>
                 <p>Dubai's freezones offer a compelling proposition for businesses looking to establish a presence in the UAE and the broader region. With their combination of tax benefits, operational flexibility, and strategic location, they continue to attract businesses from around the world. Partnering with experts like NXTStar can help you navigate the selection and setup process to find the best fit for your business needs.</p>
             `
+        },
+        {
+            id: 3,
+            title: "Understanding UAE Tax Regulations for Foreign Businesses",
+            slug: "understanding-uae-tax-regulations-for-foreign-businesses",
+            excerpt: "A comprehensive guide to UAE tax laws and how they affect foreign business owners.",
+            date: "2025-07-30",
+            author: "NXTStar Team",
+            category: "Taxation",
+            readTime: "6 min read",
+            image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+            content: `
+                <h2>Introduction</h2>
+                <p>The UAE has established itself as a tax-efficient jurisdiction for businesses, making it an attractive destination for foreign investors. This guide provides an overview of the UAE's tax regulations and how they impact foreign businesses operating in the country.</p>
+                
+                <h2>Corporate Tax Framework</h2>
+                <p>Historically, the UAE was known for having no corporate income tax. However, with the introduction of Federal Decree-Law No. (47) of 2022 on the Taxation of Corporations and Businesses, a new corporate tax regime has been implemented starting from June 1, 2023.</p>
+                
+                <h3>Key Features of UAE Corporate Tax:</h3>
+                <ul>
+                    <li><strong>Standard Rate:</strong> 9% on taxable income exceeding AED 375,000</li>
+                    <li><strong>Exemption:</strong> 0% on taxable income up to AED 375,000</li>
+                    <li><strong>Freezone Companies:</strong> Continue to benefit from 0% tax rate if they meet certain conditions</li>
+                    <li><strong>Offshore Companies:</strong> Generally exempt from corporate tax</li>
+                </ul>
+                
+                <h2>VAT (Value Added Tax)</h2>
+                <p>The UAE implemented VAT at a standard rate of 5% on most goods and services from January 1, 2018. Businesses with annual turnover exceeding AED 375,000 are required to register for VAT.</p>
+                
+                <h3>VAT Registration Thresholds:</h3>
+                <ul>
+                    <li><strong>Mandatory Registration:</strong> AED 375,000 annual turnover</li>
+                    <li><strong>Voluntary Registration:</strong> AED 187,500 annual turnover</li>
+                </ul>
+                
+                <h2>Excise Tax</h2>
+                <p>Excise tax is applied to specific goods deemed harmful to health or the environment. The current excise tax rates are:
+                    <ul>
+                        <li>Tobacco products: 100%</li>
+                        <li>Carbonated drinks: 50%</li>
+                        <li>Energy drinks: 100%</li>
+                        <li>Electronic smoking devices and liquids: 100%</li>
+                    </ul>
+                </p>
+                
+                <h2>Withholding Tax</h2>
+                <p>The UAE generally does not impose withholding tax on dividends, interest, or royalties paid to foreign entities. This makes the UAE an attractive jurisdiction for international businesses.</p>
+                
+                <h2>Customs Duties</h2>
+                <p>Customs duties are applied to imported goods at varying rates depending on the type of goods. However, goods imported into freezones are generally exempt from customs duties until they are released into the mainland market.</p>
+                
+                <h2>Tax Compliance Requirements</h2>
+                <p>Businesses subject to corporate tax must maintain proper accounting records and file annual tax returns. The Federal Tax Authority (FTA) has established specific compliance requirements that businesses must adhere to.</p>
+                
+                <h3>Key Compliance Obligations:</h3>
+                <ul>
+                    <li>Maintaining accurate financial records</li>
+                    <li>Registering for tax when required</li>
+                    <li>Filing periodic VAT returns</li>
+                    <li>Submitting annual corporate tax returns</li>
+                    <li>Cooperating with FTA audits and investigations</li>
+                </ul>
+                
+                <h2>Tax Incentives and Exemptions</h2>
+                <p>The UAE offers various tax incentives to attract foreign investment, particularly in freezones. These include:
+                    <ul>
+                        <li>100% foreign ownership</li>
+                        <li>0% corporate tax (in most freezones)</li>
+                        <li>0% personal income tax</li>
+                        <li>Repatriation of capital and profits</li>
+                        <li>No restrictions on currency exchange</li>
+                    </ul>
+                </p>
+                
+                <h2>Conclusion</h2>
+                <p>While the UAE's tax environment has evolved with the introduction of corporate tax, it remains one of the most business-friendly jurisdictions globally. Foreign businesses can still benefit from significant tax advantages, particularly when operating in freezones. Understanding the current tax regulations and compliance requirements is essential for optimizing your business structure and ensuring legal compliance. For personalized advice on tax planning and compliance, consider consulting with experts like NXTStar who understand the nuances of UAE tax laws.</p>
+            `
+        },
+        {
+            id: 4,
+            title: "How to Choose the Right Business Activity for Your UAE Company",
+            slug: "how-to-choose-the-right-business-activity-for-your-uae-company",
+            excerpt: "Tips and guidance on selecting the most suitable business activities for your UAE company license.",
+            date: "2025-07-10",
+            author: "NXTStar Team",
+            category: "Business Setup",
+            readTime: "4 min read",
+            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+            content: `
+                <h2>Introduction</h2>
+                <p>Selecting the right business activities for your UAE company is a critical decision that affects your licensing requirements, operational scope, and future growth potential. This guide will help you understand how to choose business activities that align with your business objectives.</p>
+                
+                <h2>Understanding Business Activities</h2>
+                <p>Business activities are specific descriptions of the services or products your company will offer. These activities determine the nature of your business license and must be approved by the relevant licensing authority.</p>
+                
+                <h2>Factors to Consider When Choosing Business Activities</h2>
+                <h3>1. Core Business Objectives</h3>
+                <p>Start by identifying your primary business objectives. What products or services will you offer? What are your short-term and long-term goals? Your business activities should directly support these objectives.</p>
+                
+                <h3>2. Industry Regulations</h3>
+                <p>Different business activities are subject to varying regulations and requirements. Some activities may require special approvals, professional qualifications, or specific infrastructure. Research the regulatory landscape for your intended activities.</p>
+                
+                <h3>3. Licensing Authority Requirements</h3>
+                <p>Each licensing authority in the UAE has its own list of approved business activities. Ensure that your chosen activities are available under your selected licensing jurisdiction (mainland, freezone, or offshore).</p>
+                
+                <h3>4. Future Expansion Plans</h3>
+                <p>Consider your future growth plans when selecting business activities. Choose activities that provide flexibility for expansion while avoiding unnecessary restrictions.</p>
+                
+                <h3>5. Market Demand and Competition</h3>
+                <p>Research the market demand for your intended business activities and analyze the competitive landscape. This will help you identify opportunities and potential challenges.</p>
+                
+                <h2>Common Business Activity Categories</h2>
+                <h3>Trading Activities</h3>
+                <p>These include buying, selling, and distributing goods. Examples:
+                    <ul>
+                        <li>General trading</li>
+                        <li>Import and export</li>
+                        <li>Retail and wholesale</li>
+                    </ul>
+                </p>
+                
+                <h3>Service Activities</h3>
+                <p>These involve providing professional services. Examples:
+                    <ul>
+                        <li>Consulting services</li>
+                        <li>Marketing and advertising</li>
+                        <li>IT services</li>
+                    </ul>
+                </p>
+                
+                <h3>Industrial Activities</h3>
+                <p>These involve manufacturing and production. Examples:
+                    <ul>
+                        <li>Manufacturing</li>
+                        <li>Packaging</li>
+                        <li>Assembly</li>
+                    </ul>
+                </p>
+                
+                <h2>Multi-Activity Licenses</h2>
+                <p>Most UAE companies can include multiple business activities under a single license, providing operational flexibility. However, ensure that the activities are compatible and don't conflict with each other.</p>
+                
+                <h2>Avoiding Common Mistakes</h2>
+                <ul>
+                    <li><strong>Being Too Broad:</strong> Avoid selecting overly broad activities that may attract unnecessary scrutiny</li>
+                    <li><strong>Being Too Narrow:</strong> Don't limit yourself to activities that restrict future growth</li>
+                    <li><strong>Ignoring Regulations:</strong> Always verify regulatory requirements for each activity</li>
+                    <li><strong>Not Planning for Growth:</strong> Consider how activities will support future expansion</li>
+                </ul>
+                
+                <h2>Changing Business Activities</h2>
+                <p>If your business needs change, you can modify your business activities by amending your license. This typically involves submitting an application to your licensing authority and paying applicable fees.</p>
+                
+                <h2>Conclusion</h2>
+                <p>Choosing the right business activities is a foundational decision for your UAE company. By carefully considering your objectives, industry regulations, and growth plans, you can select activities that support your business success. When in doubt, consult with experienced business setup consultants like NXTStar who can guide you through the process and help you make informed decisions.</p>
+            `
+        },
+        {
+            id: 5,
+            title: "Top 5 Freezones for Tech Startups in UAE",
+            slug: "top-5-freezones-for-tech-startups-in-uae",
+            excerpt: "Explore the best freezones in UAE for technology startups and their unique advantages.",
+            date: "2025-06-18",
+            author: "NXTStar Team",
+            category: "Freezone",
+            readTime: "5 min read",
+            image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+            content: `
+                <h2>Introduction</h2>
+                <p>The UAE has emerged as a leading destination for tech startups, offering a supportive ecosystem and world-class infrastructure. This article explores the top 5 freezones that provide exceptional opportunities for technology startups.</p>
+                
+                <h2>1. Dubai Internet City</h2>
+                <p>Dubai Internet City is a dedicated technology hub that houses some of the world's leading tech companies. It offers a comprehensive ecosystem for startups with:
+                    <ul>
+                        <li>State-of-the-art infrastructure</li>
+                        <li>Access to global tech giants</li>
+                        <li>Networking opportunities with industry leaders</li>
+                        <li>Support for various tech sectors including AI, blockchain, and cybersecurity</li>
+                    </ul>
+                </p>
+                
+                <h2>2. Dubai Silicon Oasis</h2>
+                <p>Dubai Silicon Oasis is an integrated technology park that combines living, working, and leisure facilities. Key benefits include:
+                    <ul>
+                        <li>100% foreign ownership</li>
+                        <li>No personal or corporate income tax</li>
+                        <li>Dedicated incubation centers for startups</li>
+                        <li>Advanced telecommunications infrastructure</li>
+                    </ul>
+                </p>
+                
+                <h2>3. Abu Dhabi Global Market (ADGM)</h2>
+                <p>ADGM is a leading international financial center that also supports fintech and other technology startups. Its advantages include:
+                    <ul>
+                        <li>Common law legal framework</li>
+                        <li>Robust regulatory environment</li>
+                        <li>Access to venture capital and investment funds</li>
+                        <li>Proximity to government institutions</li>
+                    </ul>
+                </p>
+                
+                <h2>4. Ras Al Khaimah Technology Park (RAK TP)</h2>
+                <p>RAK TP offers cost-effective solutions for tech startups with a focus on innovation. Features include:
+                    <ul>
+                        <li>Lower setup costs compared to Dubai and Abu Dhabi</li>
+                        <li>Government incentives for tech companies</li>
+                        <li>Specialized support for ICT and electronics startups</li>
+                        <li>Strategic location with access to global markets</li>
+                    </ul>
+                </p>
+                
+                <h2>5. twofour54</h2>
+                <p>Located in Abu Dhabi, twofour54 is a media and technology freezone that provides specialized support for digital media and tech companies. Benefits include:
+                    <ul>
+                        <li>Dedicated media and tech ecosystem</li>
+                        <li>Access to regional and international markets</li>
+                        <li>Training and development programs</li>
+                        <li>Shared facilities and resources</li>
+                    </ul>
+                </p>
+                
+                <h2>Key Factors to Consider</h2>
+                <p>When choosing a freezone for your tech startup, consider:
+                    <ul>
+                        <li><strong>Industry Focus:</strong> Does the freezone specialize in your technology sector?</li>
+                        <li><strong>Cost Structure:</strong> Compare setup fees, license costs, and ongoing charges</li>
+                        <li><strong>Infrastructure:</strong> Evaluate the quality of office spaces and technology infrastructure</li>
+                        <li><strong>Support Services:</strong> Look for incubation programs, mentorship, and networking opportunities</li>
+                        <li><strong>Location:</strong> Consider proximity to clients, partners, and talent pools</li>
+                    </ul>
+                </p>
+                
+                <h2>Government Initiatives</h2>
+                <p>The UAE government actively supports tech startups through various initiatives:
+                    <ul>
+                        <li>UAE Innovation Strategy</li>
+                        <li>Startup Act</li>
+                        <li>Investment funds and grants</li>
+                        <li>Visa programs for entrepreneurs and investors</li>
+                    </ul>
+                </p>
+                
+                <h2>Conclusion</h2>
+                <p>The UAE offers an exceptional environment for tech startups with world-class freezones that provide the infrastructure, support, and incentives needed for growth. By selecting the right freezone for your specific needs, you can position your startup for success in this dynamic market. For personalized guidance on choosing the best freezone for your tech startup, consider consulting with experts like NXTStar who understand the unique requirements of technology companies.</p>
+            `
+        },
+        {
+            id: 6,
+            title: "Offshore vs Mainland: Which is Right for Your Business?",
+            slug: "offshore-vs-mainland-which-is-right-for-your-business",
+            excerpt: "A detailed comparison between offshore and mainland company setups in UAE.",
+            date: "2025-05-25",
+            author: "NXTStar Team",
+            category: "Business Setup",
+            readTime: "7 min read",
+            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+            content: `
+                <h2>Introduction</h2>
+                <p>Choosing between an offshore and mainland company setup in the UAE is a critical decision that depends on your business objectives, operational requirements, and growth plans. This comprehensive comparison will help you understand the key differences and make an informed decision.</p>
+                
+                <h2>Understanding Offshore Companies</h2>
+                <p>Offshore companies are registered in designated offshore jurisdictions within the UAE and are primarily designed for international trading and investment activities.</p>
+                
+                <h3>Key Characteristics:</h3>
+                <ul>
+                    <li>100% foreign ownership</li>
+                    <li>Cannot conduct business within the UAE mainland</li>
+                    <li>Exempt from most taxes</li>
+                    <li>High level of privacy and confidentiality</li>
+                </ul>
+                
+                <h2>Understanding Mainland Companies</h2>
+                <p>Mainland companies operate within the UAE's domestic market and can conduct business throughout the country, subject to licensing requirements.</p>
+                
+                <h3>Key Characteristics:</h3>
+                <ul>
+                    <li>Access to the entire UAE market</li>
+                    <li>Can work with government entities</li>
+                    <li>Require local sponsorship (unless 100% foreign ownership applies)</li>
+                    <li>Subject to UAE tax regulations</li>
+                </ul>
+                
+                <h2>Ownership Structure</h2>
+                <h3>Offshore Companies</h3>
+                <p>Offshore companies offer complete foreign ownership with no requirement for local partners. This provides full control over business decisions and operations.</p>
+                
+                <h3>Mainland Companies</h3>
+                <p>Traditionally, mainland companies required a local Emirati sponsor holding 51% of shares. However, recent regulatory changes have enabled 100% foreign ownership in many sectors.</p>
+                
+                <h2>Tax Implications</h2>
+                <h3>Offshore Companies</h3>
+                <p>Offshore companies enjoy significant tax advantages:
+                    <ul>
+                        <li>Zero corporate tax</li>
+                        <li>Zero personal income tax</li>
+                        <li>Zero import/export duties</li>
+                        <li>Full repatriation of capital and profits</li>
+                    </ul>
+                </p>
+                
+                <h3>Mainland Companies</h3>
+                <p>Mainland companies are subject to the UAE's new corporate tax regime:
+                    <ul>
+                        <li>0% tax on income up to AED 375,000</li>
+                        <li>9% tax on income exceeding AED 375,000</li>
+                        <li>VAT registration requirements for businesses exceeding thresholds</li>
+                    </ul>
+                </p>
+                
+                <h2>Business Activities</h2>
+                <h3>Offshore Companies</h3>
+                <p>Offshore companies are restricted to international activities and cannot:
+                    <ul>
+                        <li>Conduct business within the UAE mainland</li>
+                        <li>Open a local bank account in UAE</li>
+                        <li>Obtain UAE residency visas</li>
+                    </ul>
+                </p>
+                
+                <h3>Mainland Companies</h3>
+                <p>Mainland companies can:
+                    <ul>
+                        <li>Operate throughout the UAE</li>
+                        <li>Work with government entities</li>
+                        <li>Open local bank accounts</li>
+                        <li>Sponsor residency visas for owners and employees</li>
+                    </ul>
+                </p>
+                
+                <h2>Compliance Requirements</h2>
+                <h3>Offshore Companies</h3>
+                <p>Offshore companies have minimal compliance requirements:
+                    <ul>
+                        <li>Annual license renewal</li>
+                        <li>Maintenance of registered office</li>
+                        <li>Simple reporting requirements</li>
+                    </ul>
+                </p>
+                
+                <h3>Mainland Companies</h3>
+                <p>Mainland companies have more extensive compliance obligations:
+                    <ul>
+                        <li>Annual license renewal</li>
+                        <li>Trade license fee payment</li>
+                        <li>Establishment card renewal</li>
+                        <li>Employee visa renewals</li>
+                        <li>Tax compliance (if applicable)</li>
+                    </ul>
+                </p>
+                
+                <h2>Cost Considerations</h2>
+                <h3>Offshore Companies</h3>
+                <p>Setup and operational costs for offshore companies are generally lower:
+                    <ul>
+                        <li>Lower initial setup fees</li>
+                        <li>No requirement for physical office space</li>
+                        <li>Minimal ongoing compliance costs</li>
+                    </ul>
+                </p>
+                
+                <h3>Mainland Companies</h3>
+                <p>Mainland companies typically involve higher costs:
+                    <ul>
+                        <li>Higher setup fees</li>
+                        <li>Requirement for physical office space</li>
+                        <li>Higher compliance and renewal costs</li>
+                    </ul>
+                </p>
+                
+                <h2>When to Choose Offshore</h2>
+                <p>Offshore setup is ideal for:
+                    <ul>
+                        <li>International trading companies</li>
+                        <li>Investment holding companies</li>
+                        <li>Businesses seeking asset protection</li>
+                        <li>Companies requiring maximum privacy</li>
+                        <li>Entities not planning to operate in UAE</li>
+                    </ul>
+                </p>
+                
+                <h2>When to Choose Mainland</h2>
+                <p>Mainland setup is ideal for:
+                    <ul>
+                        <li>Businesses planning to operate in UAE</li>
+                        <li>Companies requiring UAE residency visas</li>
+                        <li>Entities working with UAE government</li>
+                        <li>Businesses needing local bank accounts</li>
+                        <li>Companies planning physical presence in UAE</li>
+                    </ul>
+                </p>
+                
+                <h2>Conclusion</h2>
+                <p>The choice between offshore and mainland company setup depends on your specific business requirements and objectives. Offshore companies offer simplicity, privacy, and tax advantages for international activities, while mainland companies provide access to the UAE market and residency benefits. Consider your operational needs, growth plans, and compliance capacity when making this decision. For expert guidance on choosing the right structure for your business, consult with professionals like NXTStar who can assess your requirements and recommend the optimal solution.</p>
+            `
         }
     ];
 
     useEffect(() => {
         // Simulate API call
         setTimeout(() => {
-            const foundBlog = sampleBlogs.find(blog => blog.id === parseInt(id));
+            const foundBlog = sampleBlogs.find(blog => blog.slug === slug);
             setBlog(foundBlog);
             setLoading(false);
         }, 500);
-    }, [id]);
+    }, [slug]);
 
     if (loading) {
         return (

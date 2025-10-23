@@ -59,7 +59,7 @@ function AnimationLayout() {
         } />
 
         {/* Individual Blog Post Page */}
-        <Route path="/blog/:id" element={
+        <Route path="/blog/:slug" element={
           <MotionWrapper>
             <BlogPostPage />
           </MotionWrapper>
