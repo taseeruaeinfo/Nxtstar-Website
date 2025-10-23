@@ -5,7 +5,7 @@ import Button from '../components/ui/Button';
 import '../styles/pages/BlogPostPage.css';
 
 const BlogPostPage = () => {
-    const { id } = useParams();
+    const { slug } = useParams();
     const [blog, setBlog] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -13,6 +13,7 @@ const BlogPostPage = () => {
     const sampleBlogs = [
         {
             id: 1,
+            slug: "guide-to-starting-a-business-in-uae-mainland",
             title: "Guide to Starting a Business in UAE Mainland",
             excerpt: "Learn the step-by-step process of establishing your business in UAE mainland with 100% ownership.",
             date: "2025-09-15",
@@ -71,6 +72,7 @@ const BlogPostPage = () => {
         },
         {
             id: 2,
+            slug: "benefits-of-freezone-company-formation-in-dubai",
             title: "Benefits of Freezone Company Formation in Dubai",
             excerpt: "Discover why freezone companies are becoming the preferred choice for international businesses in Dubai.",
             date: "2025-08-22",
@@ -143,11 +145,11 @@ const BlogPostPage = () => {
     useEffect(() => {
         // Simulate API call
         setTimeout(() => {
-            const foundBlog = sampleBlogs.find(blog => blog.id === parseInt(id));
+            const foundBlog = sampleBlogs.find(blog => blog.slug === slug);
             setBlog(foundBlog);
             setLoading(false);
         }, 500);
-    }, [id]);
+    }, [slug]);
 
     if (loading) {
         return (

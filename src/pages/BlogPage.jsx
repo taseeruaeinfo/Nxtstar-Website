@@ -4,12 +4,22 @@ import PageLayout from '../components/layout/PageLayout';
 import Button from '../components/ui/Button';
 import '../styles/pages/BlogPage.css';
 
+// Helper function to create slugs from titles
+const createSlug = (title) => {
+    return title
+        .toLowerCase()
+        .replace(/[^\w\s-]/g, '')  // Remove special characters
+        .replace(/\s+/g, '-')      // Replace spaces with hyphens
+        .replace(/-+/g, '-');      // Replace multiple hyphens with single hyphen
+};
+
 const BlogPage = () => {
     // Sample blog data - in a real application, this would come from an API
     const [blogs] = useState([
         {
             id: 1,
             title: "Guide to Starting a Business in UAE Mainland",
+            slug: "guide-to-starting-a-business-in-uae-mainland",
             excerpt: "Learn the step-by-step process of establishing your business in UAE mainland with 100% ownership.",
             date: "2025-09-15",
             author: "NXTStar Team",
@@ -20,6 +30,7 @@ const BlogPage = () => {
         {
             id: 2,
             title: "Benefits of Freezone Company Formation in Dubai",
+            slug: "benefits-of-freezone-company-formation-in-dubai",
             excerpt: "Discover why freezone companies are becoming the preferred choice for international businesses in Dubai.",
             date: "2025-08-22",
             author: "NXTStar Team",
@@ -30,6 +41,7 @@ const BlogPage = () => {
         {
             id: 3,
             title: "Understanding UAE Tax Regulations for Foreign Businesses",
+            slug: "understanding-uae-tax-regulations-for-foreign-businesses",
             excerpt: "A comprehensive guide to UAE tax laws and how they affect foreign business owners.",
             date: "2025-07-30",
             author: "NXTStar Team",
@@ -40,6 +52,7 @@ const BlogPage = () => {
         {
             id: 4,
             title: "How to Choose the Right Business Activity for Your UAE Company",
+            slug: "how-to-choose-the-right-business-activity-for-your-uae-company",
             excerpt: "Tips and guidance on selecting the most suitable business activities for your UAE company license.",
             date: "2025-07-10",
             author: "NXTStar Team",
@@ -50,6 +63,7 @@ const BlogPage = () => {
         {
             id: 5,
             title: "Top 5 Freezones for Tech Startups in UAE",
+            slug: "top-5-freezones-for-tech-startups-in-uae",
             excerpt: "Explore the best freezones in UAE for technology startups and their unique advantages.",
             date: "2025-06-18",
             author: "NXTStar Team",
@@ -60,6 +74,7 @@ const BlogPage = () => {
         {
             id: 6,
             title: "Offshore vs Mainland: Which is Right for Your Business?",
+            slug: "offshore-vs-mainland-which-is-right-for-your-business",
             excerpt: "A detailed comparison between offshore and mainland company setups in UAE.",
             date: "2025-05-25",
             author: "NXTStar Team",
@@ -77,8 +92,8 @@ const BlogPage = () => {
 
     // Filter blogs based on search and category
     const filteredBlogs = blogs.filter(blog => {
-        const matchesSearch = blog.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                             blog.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesSearch = blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            blog.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesCategory = selectedCategory === 'All' || blog.category === selectedCategory;
         return matchesSearch && matchesCategory;
     });
@@ -120,7 +135,7 @@ const BlogPage = () => {
                         {filteredBlogs.map(blog => (
                             <Link
                                 key={blog.id}
-                                to={`/blog/${blog.id}`}
+                                to={`/blog/${blog.slug}`}
                                 className="blog-card"
                                 style={{ textDecoration: 'none', color: 'inherit' }}
                             >
