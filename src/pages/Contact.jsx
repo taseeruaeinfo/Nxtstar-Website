@@ -49,9 +49,9 @@ const Contact = () => {
             setErrors(validationErrors);
             return;
         }
-        
+
         setIsSubmitting(true);
-        
+
         // Prepare the data for submission
         const contactData = {
             name: formData.name,
@@ -59,7 +59,7 @@ const Contact = () => {
             email: formData.email,
             message: formData.details
         };
-        
+
         try {
             const res = await fetch(`${backend_url}/api/contact`, {
                 method: "POST",
@@ -69,14 +69,14 @@ const Contact = () => {
 
             const data = await res.json();
             console.log('Response:', data);
-            
+
             if (data.success) {
                 setSubmitSuccess(true);
-                setFormData({ 
-                    name: '', 
-                    mobile: '', 
-                    email: '', 
-                    details: '' 
+                setFormData({
+                    name: '',
+                    mobile: '',
+                    email: '',
+                    details: ''
                 });
                 // Reset success message after 5 seconds
                 setTimeout(() => setSubmitSuccess(false), 5000);
@@ -129,6 +129,22 @@ const Contact = () => {
                             <p>Palace Tower, Dubai Silicon Oasis Dubai,</p>
                             <p>United Arab Emirates</p>
                         </div>
+                    </div>
+
+                    {/* Google Rating Link */}
+                    <div className="google-rating-section">
+                        <a href="https://maps.app.goo.gl/zoJvcKyd4VKpY6tt8?g_st=ipc"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="google-rating-link">
+                            <div className="google-rating-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="#4285F4" d="M12 11h8.29c.11.63.18 1.28.18 1.95 0 5.52-3.73 9.41-9 9.41-5.27 0-9.56-4.22-9.56-9.48C1.91 7.63 6.2 3.4 11.47 3.4c2.5 0 4.74 1.03 6.36 2.64l-2.58 2.58c-.71-.68-1.97-1.47-3.78-1.47-3.24 0-5.88 2.69-5.88 5.91s2.64 5.91 5.88 5.91c3.75 0 5.16-2.69 5.38-4.07H12v-3.9z" />
+                                </svg>
+                            </div>
+                            <span>Drop Your Review on Google</span>
+                            <span className="rating-stars">★★★★★</span>
+                        </a>
                     </div>
                 </div>
 
