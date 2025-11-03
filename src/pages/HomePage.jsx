@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBuilding, FaGlobe, FaShieldAlt, FaMoneyBillWave, FaChartLine, FaHandshake, FaCalculator, FaDollarSign, FaPercentage, FaCheck, FaTags } from 'react-icons/fa';
 import SEO from '../components/layout/SEO';
@@ -9,6 +9,7 @@ import { PopUp, PopUpBounce, RotatePopUp } from '../components/ui/Motion';
 import AnimatedBackground from '../components/ui/AnimatedBackground';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 // Import partner logos
 import img1 from '../assets/images/partners/1.jpg';
@@ -34,7 +35,9 @@ import '../styles/AnimatedBackground.css';
 import '../styles/DarkHomeTheme.css';
 import '../styles/FooterOverride.css';
 import '../styles/HeroThemeTransition.css';
+
 const backend_url = import.meta.env.VITE_BACKEND_URL;
+const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 // import img1 from '../assets/images/partners/1.jpg';
 // import img2 from '../assets/images/partners/2.jpg';
 // import img3 from '../assets/images/partners/3.jpg';
@@ -64,12 +67,18 @@ const HomePage = () => {
         businessType: '',
     });
     const [isLoading, setIsLoading] = useState(false);
+    const [recaptchaToken, setRecaptchaToken] = useState(null);
+    const recaptchaRef = useRef(null);
 
     const handleChange = (e) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
         });
+    };
+
+    const onRecaptchaChange = (token) => {
+        setRecaptchaToken(token);
     };
 
     const handleSubmit = async (e) => {
@@ -105,6 +114,12 @@ const HomePage = () => {
             return;
         }
 
+        // Validate reCAPTCHA
+        if (!recaptchaToken) {
+            alert('Please complete the reCAPTCHA verification.');
+            return;
+        }
+
         // Set loading state to true
         setIsLoading(true);
 
@@ -112,7 +127,10 @@ const HomePage = () => {
             const res = await fetch(`${backend_url}/api/send-form`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({
+                    ...formData,
+                    recaptchaToken: recaptchaToken
+                }),
             });
 
             const data = await res.json();
@@ -120,6 +138,11 @@ const HomePage = () => {
             if (data.success) {
                 alert("✅ Our team will shortly get in touch with you..");
                 setFormData({ name: "", email: "", phone: "", businessType: "" });
+                setRecaptchaToken(null);
+                // Reset reCAPTCHA
+                if (recaptchaRef.current) {
+                    recaptchaRef.current.reset();
+                }
             } else {
                 alert("❌ Failed to send form: " + data.message);
             }
@@ -356,6 +379,14 @@ const HomePage = () => {
                                                 <option value="freezone">Freezone</option>
                                                 <option value="offshore">Offshore</option>
                                             </select>
+                                        </div>
+                                        <div className="form-group recaptcha-container">
+                                            <ReCAPTCHA
+                                                ref={recaptchaRef}
+                                                sitekey={recaptchaSiteKey}
+                                                onChange={onRecaptchaChange}
+                                                theme="dark"
+                                            />
                                         </div>
                                         <Button className="cost-calc-button" type="submit" block disabled={isLoading}>
                                             {isLoading ? (
