@@ -6,6 +6,7 @@ import Threads from '../../assets/images/threadsLogo.png';
 import Tiktok from '../../assets/images/tiktok.png';
 
 
+
 const Footer = () => {
 
 
@@ -177,6 +178,9 @@ const Footer = () => {
                                 </motion.li>
                                 <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
                                     <Link to="/refer-earn">Refer & Earn</Link>
+                                </motion.li>
+                                <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
+                                    <Link to="/privacy-policy">Privacy Policy</Link>
                                 </motion.li>
                             </motion.ul>
                         </motion.div>

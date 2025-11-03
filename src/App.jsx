@@ -14,8 +14,7 @@ import { AnimatePresence } from 'framer-motion';
 import MotionWrapper from './components/ui/MotionWrapper';
 import './styles/index.css';
 import ScrollToTop from './context/ScrollToTop';
-
-
+import PrivacyPolicy from './pages/PrivacyPage';
 
 // AnimationLayout component to handle location-based animations
 function AnimationLayout() {
@@ -85,6 +84,13 @@ function AnimationLayout() {
             <ReferAndEarnPage />
           </MotionWrapper>
         } />
+        {/* Sys Page */}
+        <Route path="/privacy-policy" element={
+          <MotionWrapper>
+            <PrivacyPolicy />
+          </MotionWrapper>
+        } />
+        
 
         {/* 404 Page */}
         <Route path="*" element={

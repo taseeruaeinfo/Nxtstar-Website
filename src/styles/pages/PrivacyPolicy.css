@@ -1,0 +1,261 @@
+/* Privacy Policy Page Styles */
+
+.privacy-policy-page {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.privacy-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.last-updated {
+    font-size: 0.95rem;
+    color: #64748b;
+    font-style: italic;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.policy-intro {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border-left: 4px solid #0056b3;
+    border-radius: 8px;
+}
+
+.policy-intro p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: #334155;
+    font-size: 1.05rem;
+}
+
+.policy-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.key-points-section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.key-points-section h2 {
+    color: #0056b3;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.key-points-list {
+    list-style: none;
+    padding: 0;
+}
+
+.key-points-list li {
+    padding: 12px 0 12px 30px;
+    position: relative;
+    line-height: 1.7;
+    color: #475569;
+    font-size: 1.05rem;
+}
+
+.key-points-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #0056b3;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.table-of-contents {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: linear-gradient(135deg, #fefce8 0%, #fef3c7 100%);
+    border-radius: 12px;
+    border: 1px solid #fcd34d;
+}
+
+.table-of-contents h2 {
+    color: #92400e;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.table-of-contents ol {
+    padding-left: 25px;
+    counter-reset: item;
+}
+
+.table-of-contents ol li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.table-of-contents a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.table-of-contents a:hover {
+    color: #0077cc;
+    text-decoration: underline;
+}
+
+.policy-section {
+    margin-bottom: 50px;
+    scroll-margin-top: 100px;
+}
+
+.policy-section h2 {
+    color: #0f172a;
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #0056b3;
+}
+
+.policy-section h3 {
+    color: #334155;
+    font-size: 1.3rem;
+    margin: 25px 0 15px;
+    font-weight: 600;
+}
+
+.policy-section p {
+    line-height: 1.8;
+    color: #475569;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+.policy-section ul {
+    margin: 15px 0;
+    padding-left: 30px;
+}
+
+.policy-section ul li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+    color: #475569;
+}
+
+.policy-section a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.policy-section a:hover {
+    color: #0077cc;
+    text-decoration: underline;
+}
+
+.contact-box {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #0056b3;
+    margin-top: 20px;
+}
+
+.contact-box p {
+    margin-bottom: 10px;
+    color: #334155;
+}
+
+.contact-box p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-box strong {
+    color: #0056b3;
+    font-weight: 700;
+}
+
+.contact-box a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .privacy-content {
+        padding: 30px 20px;
+    }
+
+    .policy-intro {
+        padding: 20px;
+    }
+
+    .key-points-section {
+        padding: 20px;
+    }
+
+    .table-of-contents {
+        padding: 20px;
+    }
+
+    .policy-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .policy-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .policy-section p,
+    .policy-intro p,
+    .key-points-list li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .privacy-policy-page {
+        padding: 20px 10px;
+    }
+
+    .privacy-content {
+        padding: 20px 15px;
+    }
+
+    .policy-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .key-points-section h2,
+    .table-of-contents h2 {
+        font-size: 1.4rem;
+    }
+
+    .key-points-list li {
+        font-size: 0.95rem;
+        padding-left: 25px;
+    }
+
+    .table-of-contents ol {
+        padding-left: 20px;
+    }
+}
