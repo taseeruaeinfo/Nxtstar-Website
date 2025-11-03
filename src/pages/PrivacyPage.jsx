@@ -31,7 +31,7 @@ const PrivacyPolicy = () => {
                             <li><strong>How we use your data:</strong> To communicate with you, provide consultation, improve our website and services, and comply with UAE laws.</li>
                             <li><strong>Data sharing:</strong> We do not sell your data. We only share it with trusted service providers or government authorities where required.</li>
                             <li><strong>Data protection:</strong> We use appropriate security and encryption measures to protect your information.</li>
-                            <li><strong>Your rights:</strong> You can access, update, or request deletion of your data at any time by contacting us at <a href="mailto:nehajakhar@nxtar.ae">nehajakhar@nxtar.ae</a>.</li>
+                            <li><strong>Your rights:</strong> You can access, update, or request deletion of your data at any time by contacting us at <a href="mailto:nehajakhar@nxtstar.ae">nehajakhar@nxtstar.ae</a>.</li>
                         </ul>
                     </div>
 
@@ -163,7 +163,7 @@ const PrivacyPolicy = () => {
                             <li>Request correction or deletion of your data</li>
                             <li>Withdraw consent for communications</li>
                         </ul>
-                        <p>To exercise these rights, email <a href="mailto:nehajakhar@nxtar.ae">nehajakhar@nxtar.ae</a>.</p>
+                        <p>To exercise these rights, email <a href="mailto:nehajakhar@nxtstar.ae">nehajakhar@nxtstar.ae</a>.</p>
                         <p>We will process your request in accordance with <strong>UAE Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data (PDPL)</strong>.</p>
                     </section>
 
@@ -195,13 +195,13 @@ const PrivacyPolicy = () => {
                             <p><strong>NxtStar Management Consultancy</strong></p>
                             <p>📍 Dubai, United Arab Emirates</p>
                             <p>🌐 <a href="https://www.nxtstar.ae">www.nxtstar.ae</a></p>
-                            <p>📧 <a href="mailto:nehajakhar@nxtar.ae">nehajakhar@nxtar.ae</a></p>
+                            <p>📧 <a href="mailto:nehajakhar@nxtstar.ae">nehajakhar@nxtstar.ae</a></p>
                         </div>
                     </section>
 
                     <section id="section-14" className="policy-section">
                         <h2>14. How Can You Review, Update, or Delete the Data We Collect From You?</h2>
-                        <p>You may request to review, update, or delete your personal information by contacting us at <a href="mailto:nehajakhar@nxtar.ae">nehajakhar@nxtar.ae</a>. We will act on your request in line with applicable UAE and international data protection laws.</p>
+                        <p>You may request to review, update, or delete your personal information by contacting us at <a href="mailto:nehajakhar@nxtstar.ae">nehajakhar@nxtstar.ae</a>. We will act on your request in line with applicable UAE and international data protection laws.</p>
                     </section>
                 </div>
             </div>
