@@ -5,7 +5,7 @@ import '../../../styles/pages/business/freezone/FreezoneOverview.css';
 
 const FreezoneOverview = () => {
     const benefits = [
-        
+
         {
             title: 'Tax Advantages',
             description: '0% corporate and personal income tax with full repatriation of profits and capital.'
@@ -34,6 +34,22 @@ const FreezoneOverview = () => {
             link: '/business/freezone/jafza'
         },
         {
+            id: 'ifza',
+            name: 'IFZA (International Free Zone Authority)',
+            location: 'Dubai',
+            description: 'Affordable and flexible Dubai free zone based in Dubai Silicon Oasis, ideal for SMEs and startups.',
+            idealFor: ['Startups', 'Consultancy', 'E‑commerce', 'Tech'],
+            link: '/business/freezone/ifza'
+        },
+        {
+            id: 'meydan',
+            name: 'Meydan Free Zone',
+            location: 'Dubai',
+            description: 'Prestigious Dubai free zone with strong banking acceptance and fast incorporation.',
+            idealFor: ['Consultancy', 'E‑commerce', 'Trading', 'Luxury & Lifestyle'],
+            link: '/business/freezone/meydan'
+        },
+        {
             id: 'dmcc',
             name: 'DMCC',
             location: 'Dubai',
@@ -56,6 +72,14 @@ const FreezoneOverview = () => {
             description: 'Cost-effective free zone with options for industrial, trading, and service companies.',
             idealFor: ['Manufacturing', 'Trading', 'Professional Services', 'SMEs'],
             link: '/business/freezone/rakez'
+        },
+        {
+            id: 'spc',
+            name: 'Sharjah Publishing City (SPC)',
+            location: 'Sharjah',
+            description: 'Flexible, multi-industry free zone with fast setup and multi-activity licenses.',
+            idealFor: ['Publishing', 'Consultancy', 'E‑commerce', 'Startups'],
+            link: '/business/freezone/spc'
         },
         {
             id: 'shams',
@@ -120,8 +144,16 @@ const FreezoneOverview = () => {
             description: 'University-linked innovation ecosystem driving research commercialization and technology transfer in advanced manufacturing and technology.',
             idealFor: ['Research', 'Innovation', 'Technology', 'Advanced Manufacturing'],
             link: '/business/freezone/srtip'
+        },
+        {
+            id: 'others',
+            name: 'Other Free Zones (DMCC, DIC, DMC, and more)',
+            location: 'UAE',
+            description: 'Explore 40+ specialized free zones across the UAE. We match your activity and budget to the best option.',
+            idealFor: ['Media', 'Tech', 'Finance', 'Trading'],
+            link: '/business/freezone/others'
         }
-        
+
     ];
 
     const faqs = [

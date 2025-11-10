@@ -81,7 +81,51 @@ const BlogPage = () => {
             category: "Business Setup",
             readTime: "7 min read",
             image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-        }
+		},
+		{
+			id: 7,
+			title: "How to Set Up a Foundation in the UAE: Step-by-Step Guide (2025)",
+			slug: "how-to-set-up-a-foundation-in-the-uae-2025",
+			excerpt: "A practical walkthrough for establishing a foundation in the UAE in 2025.",
+			date: "2025-11-10",
+			author: "NXTStar Team",
+			category: "Business Setup",
+			readTime: "6 min read",
+			image: "https://images.unsplash.com/photo-1528702748617-c64d49f918af?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687"
+		},
+		{
+			id: 8,
+			title: "Registering a Special Purpose Vehicle (SPV) in DIFC: Benefits & Process",
+			slug: "registering-a-special-purpose-vehicle-spv-in-difc",
+			excerpt: "Why and how to register a DIFC SPV, with steps and requirements.",
+			date: "2025-11-10",
+			author: "NXTStar Team",
+			category: "Legal",
+			readTime: "5 min read",
+			image: "https://images.unsplash.com/photo-1517817748493-49ec54a32465?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
+		},
+		{
+			id: 9,
+			title: "E-Trader License: What It Is and How to Get It in Dubai (2025)",
+			slug: "e-trader-license-dubai-2025",
+			excerpt: "Understand the Dubai E-Trader License and the 2025 application process.",
+			date: "2025-11-10",
+			author: "NXTStar Team",
+			category: "Licensing",
+			readTime: "4 min read",
+			image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+		},
+		{
+			id: 10,
+			title: "UAE Media Council Approval for Content Creators in 2025",
+			slug: "uae-media-council-approval-content-creators-2025",
+			excerpt: "Requirements and steps to obtain UAE Media Council approval in 2025.",
+			date: "2025-11-10",
+			author: "NXTStar Team",
+			category: "Regulatory",
+			readTime: "4 min read",
+			image: "https://images.unsplash.com/photo-1647427017067-8f33ccbae493?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
+		}
     ]);
 
     const [searchTerm, setSearchTerm] = useState('');
