@@ -533,6 +533,213 @@ const BlogPostPage = () => {
                 <h2>Conclusion</h2>
                 <p>The choice between offshore and mainland company setup depends on your specific business requirements and objectives. Offshore companies offer simplicity, privacy, and tax advantages for international activities, while mainland companies provide access to the UAE market and residency benefits. Consider your operational needs, growth plans, and compliance capacity when making this decision. For expert guidance on choosing the right structure for your business, consult with professionals like NXTStar who can assess your requirements and recommend the optimal solution.</p>
             `
+        },
+        {
+            id: 7,
+            title: "How to Set Up a Foundation in the UAE: Step-by-Step Guide (2025)",
+            slug: "how-to-set-up-a-foundation-in-the-uae-2025",
+            excerpt: "A practical walkthrough for establishing a foundation in the UAE in 2025.",
+            date: "2025-11-10",
+            author: "NXTStar Team",
+            category: "Business Setup",
+            readTime: "6 min read",
+            image: "https://images.unsplash.com/photo-1528702748617-c64d49f918af?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687",
+            content: `
+				<h2>What is a UAE Foundation?</h2>
+				<p>A UAE foundation is a separate legal entity commonly used for asset protection, succession planning, and philanthropy. It is typically established in jurisdictions like ADGM or DIFC with a <em>founder</em>, <em>council</em>, and optional <em>guardian</em>, and it holds assets for the benefit of specified purposes or beneficiaries.</p>
+
+				<h2>Key Benefits</h2>
+				<ul>
+					<li>Strong asset protection and ring-fencing</li>
+					<li>Flexible succession planning without forced heirship</li>
+					<li>Independent legal personality</li>
+					<li>Perpetual existence (no shareholders)</li>
+					<li>Ability to set clear distribution rules in the charter/bylaws</li>
+				</ul>
+
+				<h2>Pre-Setup Decisions</h2>
+				<ol>
+					<li><strong>Choose Jurisdiction:</strong> ADGM vs DIFC. Consider common law framework, fees, processing timelines, and ongoing compliance.</li>
+					<li><strong>Define Purpose:</strong> Private wealth, family governance, philanthropy, or business holding.</li>
+					<li><strong>Name the Foundation:</strong> Confirm naming rules and availability.</li>
+					<li><strong>Identify Roles:</strong> Founder(s), Foundation Council (minimum members per jurisdiction rules), Guardian (if required), and Registered Agent.</li>
+					<li><strong>Asset Plan:</strong> Determine which assets to contribute (cash, shares, real property, IP) and timing (on establishment vs later).</li>
+				</ol>
+
+				<h2>Core Documents</h2>
+				<ul>
+					<li><strong>Charter:</strong> Sets name, objects, registered office, governance, and powers.</li>
+					<li><strong>Bylaws/Regulations:</strong> Internal rules for council meetings, distributions, conflicts, and reporting.</li>
+					<li><strong>KYC/AML Pack:</strong> For founder, council, and guardian.</li>
+					<li><strong>Asset Schedule:</strong> Details of initial endowment (if any).</li>
+				</ul>
+
+				<h2>Step-by-Step Setup</h2>
+				<ol>
+					<li><strong>Engage a Registered Service Provider:</strong> Appoint a registered agent in ADGM/DIFC.</li>
+					<li><strong>Draft Charter and Bylaws:</strong> Align with your purpose and governance model.</li>
+					<li><strong>Prepare KYC and Source-of-Funds:</strong> Collect notarized IDs, proofs of address, and wealth documentation.</li>
+					<li><strong>Submit Application:</strong> File to the registrar with prescribed forms and fees.</li>
+					<li><strong>Regulatory Review:</strong> Address registrar queries or clarifications.</li>
+					<li><strong>Obtain Certificate of Establishment:</strong> Foundation becomes a legal entity.</li>
+					<li><strong>Asset Endowment:</strong> Transfer assets per the Charter and local requirements (e.g., property transfer approvals).</li>
+					<li><strong>Open Bank/Investment Accounts:</strong> Provide Charter, bylaws, and council resolutions to banks.</li>
+				</ol>
+
+				<h2>Governance and Ongoing Obligations</h2>
+				<ul>
+					<li>Maintain registered office and agent</li>
+					<li>Hold council meetings and keep minutes</li>
+					<li>Maintain accounting records; file any required returns</li>
+					<li>Update registrar on changes to council/guardian or Charter amendments</li>
+				</ul>
+
+				<h2>Typical Timelines and Costs</h2>
+				<p>Standard foundations can be established in 2–4 weeks depending on document readiness and registrar workload. Costs vary by jurisdiction and service provider; budget for setup fees, government fees, and annual renewals.</p>
+
+				<h3>Reference</h3>
+				<p><a href="https://medium.com/@nxtstar.business.setup/how-to-set-up-a-foundation-in-the-uae-step-by-step-guide-2025-53d840b8c7e5" target="_blank" rel="noopener noreferrer">How to Set Up a Foundation in the UAE (2025)</a></p>
+			`
+        },
+        {
+            id: 8,
+            title: "Registering a Special Purpose Vehicle (SPV) in DIFC: Benefits & Process",
+            slug: "registering-a-special-purpose-vehicle-spv-in-difc",
+            excerpt: "Why and how to register a DIFC SPV, with steps and requirements.",
+            date: "2025-11-10",
+            author: "NXTStar Team",
+            category: "Legal",
+            readTime: "5 min read",
+            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+            content: `
+				<h2>Why a DIFC SPV?</h2>
+				<ul>
+					<li>Efficient holding structure for shares, IP, and investments</li>
+					<li>Common law framework and recognized courts</li>
+					<li>Ease of corporate actions and investor onboarding</li>
+					<li>Attractive for regional and cross-border structuring</li>
+				</ul>
+
+				<h2>Eligibility and Use Cases</h2>
+				<ul>
+					<li>Holding operating companies in the UAE or abroad</li>
+					<li>Isolating risk for specific projects or assets</li>
+					<li>Ownership of IP and licensing arrangements</li>
+					<li>Financing structures and cap table management</li>
+				</ul>
+
+				<h2>Registration Steps</h2>
+				<ol>
+					<li><strong>Define Structure:</strong> Shareholder(s), director(s), UBO, and registered office in DIFC.</li>
+					<li><strong>Reserve Name:</strong> Ensure compliance with DIFC naming rules.</li>
+					<li><strong>Prepare Incorporation Documents:</strong> Articles, resolutions, KYC/AML for stakeholders.</li>
+					<li><strong>Submit Application via DIFC Portal:</strong> Provide business plan/purpose, ownership, and governance details.</li>
+					<li><strong>Pay Fees and Respond to Queries:</strong> DIFC Registrar may request clarifications.</li>
+					<li><strong>Receive Incorporation Certificate:</strong> SPV becomes active; proceed to open bank accounts.</li>
+				</ol>
+
+				<h2>Post-Registration</h2>
+				<ul>
+					<li>Maintain registers and records</li>
+					<li>File updates upon changes to directors/shareholders</li>
+					<li>Renew annual license and registered office services</li>
+				</ul>
+
+				<h3>Reference</h3>
+				<p><a href="https://medium.com/@nxtstar.business.setup/benefits-and-process-of-registering-a-special-purpose-vehicle-spv-in-difc-e1fe464a563b" target="_blank" rel="noopener noreferrer">Benefits and Process of Registering an SPV in DIFC</a></p>
+			`
+        },
+        {
+            id: 9,
+            title: "E-Trader License: What It Is and How to Get It in Dubai (2025)",
+            slug: "e-trader-license-dubai-2025",
+            excerpt: "Understand the Dubai E-Trader License and the 2025 application process.",
+            date: "2025-11-10",
+            author: "NXTStar Team",
+            category: "Licensing",
+            readTime: "4 min read",
+            image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+            content: `
+				<h2>What is the E‑Trader License?</h2>
+				<p>The Dubai E‑Trader License enables individuals to sell products and services online, primarily through social media and e‑commerce. It’s ideal for home-based entrepreneurs and small online sellers.</p>
+
+				<h2>Eligibility</h2>
+				<ul>
+					<li>Applicant must meet Dubai residency/ID requirements</li>
+					<li>Activities limited to approved categories (no regulated/prohibited goods)</li>
+					<li>Primarily for online trading and services; physical retail may be restricted</li>
+				</ul>
+
+				<h2>Documents Required</h2>
+				<ul>
+					<li>Valid Emirates ID and passport copy (as applicable)</li>
+					<li>Applicant contact details and address</li>
+					<li>Trade name options</li>
+					<li>Links/handles to social media or e‑commerce profiles</li>
+				</ul>
+
+				<h2>Application Steps</h2>
+				<ol>
+					<li><strong>Choose Trade Name:</strong> Ensure it complies with naming rules.</li>
+					<li><strong>Select Business Activity:</strong> Pick the activity class aligned with your products/services.</li>
+					<li><strong>Submit Online Application:</strong> Provide ID details and online shop/social links.</li>
+					<li><strong>Pay Fees:</strong> Settle initial license issuance fees.</li>
+					<li><strong>Receive E‑Trader License:</strong> Start operating and invoicing customers.</li>
+				</ol>
+
+				<h2>After Approval</h2>
+				<ul>
+					<li>Comply with consumer protection and advertising standards</li>
+					<li>Renew license annually</li>
+					<li>Register for VAT if turnover crosses thresholds</li>
+				</ul>
+
+				<h3>Reference</h3>
+				<p><a href="https://docs.google.com/document/d/1rIphMaea0kzz4H4vRHXhhN_IXnkVFnmCqqEvSRCD6nw/edit?usp=sharing" target="_blank" rel="noopener noreferrer">What is an E‑Trader License and How to Get It in Dubai 2025</a></p>
+			`
+        },
+        {
+            id: 10,
+            title: "UAE Media Council Approval for Content Creators in 2025",
+            slug: "uae-media-council-approval-content-creators-2025",
+            excerpt: "Requirements and steps to obtain UAE Media Council approval in 2025.",
+            date: "2025-11-10",
+            author: "NXTStar Team",
+            category: "Regulatory",
+            readTime: "4 min read",
+            image: "https://images.unsplash.com/photo-1542744095-291d1f67b221?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+            content: `
+				<h2>Who Needs Approval?</h2>
+				<p>Content creators and media platforms operating in the UAE that monetize or regularly publish content in regulated categories require approval from the UAE Media Council.</p>
+
+				<h2>Key Requirements</h2>
+				<ul>
+					<li>Clear description of content type and channels (YouTube, Instagram, podcasts, etc.)</li>
+					<li>Compliance with UAE content standards and advertising rules</li>
+					<li>Valid ID and contact details</li>
+					<li>Trade license or freelancer permit as applicable</li>
+				</ul>
+
+				<h2>Application Process</h2>
+				<ol>
+					<li><strong>Prepare Portfolio:</strong> Gather sample links and channel analytics if available.</li>
+					<li><strong>Submit Online Form:</strong> Provide personal details, content categories, and intended monetization.</li>
+					<li><strong>Pay Fees:</strong> Settle application and approval fees.</li>
+					<li><strong>Compliance Review:</strong> Address any requests for edits or clarifications on your content plan.</li>
+					<li><strong>Approval Issued:</strong> Receive permit/approval with conditions and duration.</li>
+				</ol>
+
+				<h2>Best Practices</h2>
+				<ul>
+					<li>Label sponsored content transparently</li>
+					<li>Respect privacy, intellectual property, and cultural sensitivities</li>
+					<li>Retain editorial policies and moderation guidelines</li>
+					<li>Renew approvals and update authorities on material changes</li>
+				</ul>
+
+				<h3>Reference</h3>
+				<p><a href="https://medium.com/@nxtstar.business.setup/how-to-get-uae-media-council-approval-for-content-creators-in-2025-56fc02531101" target="_blank" rel="noopener noreferrer">How to Get UAE Media Council Approval for Content Creators (2025)</a></p>
+			`
         }
     ];
 
