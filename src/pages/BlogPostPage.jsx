@@ -808,6 +808,15 @@ const BlogPostPage = () => {
                     <div dangerouslySetInnerHTML={{ __html: blog.content }} />
                 </div>
 
+                {/* CTA Section */}
+                <div className="blog-cta-section">
+                    <div className="blog-cta-content">
+                        <h2>Ready to Start Your Business Journey?</h2>
+                        <p>Let NxtStar guide you through every step of your business setup in the UAE. Our expert team is here to help you make informed decisions and ensure a smooth setup process.</p>
+                        <Button to="/contact" type="primary">Get in Touch with NxtStar</Button>
+                    </div>
+                </div>
+
                 <div className="blog-post-navigation">
                     <Button to="/blogs" type="outline">← Back to Blogs</Button>
                 </div>
