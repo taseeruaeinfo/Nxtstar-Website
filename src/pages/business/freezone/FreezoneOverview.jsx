@@ -159,7 +159,7 @@ const FreezoneOverview = () => {
 			location: 'Ajman',
 			description: 'New, dynamic hub offering cost-effective licensing and flexible options for innovators and SMEs.',
 			idealFor: ['Startups', 'Freelancers', 'E‑commerce', 'Consultancy'],
-			link: '/business/freezone/ajman-nuventures'
+			link: '/business/freezone/nuventures'
 		},
 		{
 			id: 'others',
