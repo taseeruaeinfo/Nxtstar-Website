@@ -1,0 +1,166 @@
+/* Base styles with media-focused modifications */
+.freezone-detail-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section-content {
+    margin-bottom: 4rem;
+}
+
+.section-content h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Features Section with creative styling */
+.features-grid,
+.benefits-grid,
+.setup-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-card,
+.benefit-card,
+.setup-card {
+    background: #fff;
+    padding: 1.75rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card:hover,
+.benefit-card:hover,
+.setup-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border-color: #e91e63;
+}
+
+.feature-icon,
+.benefit-icon,
+.setup-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+    display: inline-block;
+    background: linear-gradient(135deg, #e91e63, #9c27b0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Cards styling for creative theme */
+.feature-card h3,
+.benefit-card h3,
+.setup-card h3 {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+    color: #e91e63;
+    font-weight: 600;
+}
+
+.feature-card p,
+.benefit-card p,
+.setup-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* Cost Section */
+.cost-info {
+    background: linear-gradient(135deg, rgba(233, 30, 99, 0.05), rgba(156, 39, 176, 0.05));
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(233, 30, 99, 0.1);
+}
+
+.cost-info p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #e91e63, #9c27b0);
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 12px;
+    margin-top: 4rem;
+}
+
+.cta-content {
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 2.25rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: white;
+    color: #e91e63;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cta-btn:hover {
+    background: #f5f5f5;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .freezone-detail-page {
+        padding: 1rem;
+    }
+
+    .features-grid,
+    .benefits-grid,
+    .setup-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .section-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .feature-card,
+    .benefit-card,
+    .setup-card {
+        margin-bottom: 1rem;
+    }
+
+    .cta-content h2 {
+        font-size: 1.75rem;
+    }
+}

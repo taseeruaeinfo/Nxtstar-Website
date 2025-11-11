@@ -1,0 +1,141 @@
+.freezone-detail-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.section-content {
+    margin-bottom: 3rem;
+}
+
+.section-content h2 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Intro Section */
+.intro-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+/* Features Grid */
+.features-grid,
+.benefits-grid,
+.setup-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-card,
+.benefit-card,
+.setup-card {
+    background: var(--background-secondary);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.feature-card:hover,
+.benefit-card:hover,
+.setup-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon,
+.benefit-icon,
+.setup-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3,
+.benefit-card h3,
+.setup-card h3 {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.feature-card p,
+.benefit-card p,
+.setup-card p {
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: var(--primary-color-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .freezone-detail-page {
+        padding: 1rem;
+    }
+
+    .section-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .features-grid,
+    .benefits-grid,
+    .setup-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .feature-card,
+    .benefit-card,
+    .setup-card {
+        padding: 1.25rem;
+    }
+
+    .cta-section {
+        padding: 2rem 0;
+    }
+
+    .cta-content h2 {
+        font-size: 1.75rem;
+    }
+}
