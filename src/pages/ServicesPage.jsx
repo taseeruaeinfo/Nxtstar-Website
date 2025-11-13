@@ -298,7 +298,7 @@ const ServicesPage = () => {
             <Route path="/startups" element={
                 <PageLayout
                     title="Startups & Entrepreneurs"
-                    description="End-to-end company formation, Approvals, Visas, Legal, tax, and launch readiness."
+                    description="End-to-end Company formation, Government Approvals, Visa Processes, Legal & Tax Advisory."
                     headerImage="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     headerOverlayColor="rgba(0, 0, 0, 0.7)"
                 >
@@ -320,13 +320,13 @@ const ServicesPage = () => {
                                 <h2>Startup Essentials</h2>
                                 <div className="services-grid">
                                     <div className="service-card"><div className="service-icon">🏢</div><h3>Company Formation</h3><p>Mainland, Free Zone, or offshore — jurisdiction selection and setup.</p></div>
-                                    <div className="service-card"><div className="service-icon">✅</div><h3>Approvals</h3><p>DET, Municipality, and sector approvals for compliance.</p></div>
-                                    <div className="service-card"><div className="service-icon">™️</div><h3>Trademark</h3><p>Searches, filings, and renewals to protect IP.</p></div>
-                                    <div className="service-card"><div className="service-icon">🛂</div><h3>Visas</h3><p>Investor/Partner and Employee visas end‑to‑end.</p></div>
-                                    <div className="service-card"><div className="service-icon">🏗️</div><h3>Structuring</h3><p>Efficient structures for scale and investment.</p></div>
-                                    <div className="service-card"><div className="service-icon">📑</div><h3>PRO Services</h3><p>Streamlined liaison across authorities.</p></div>
-                                    <div className="service-card"><div className="service-icon">📊</div><h3>Tax & Accounting</h3><p>Corporate tax, VAT, bookkeeping, reporting.</p></div>
-                                    <div className="service-card"><div className="service-icon">⚖️</div><h3>Legal Agreements</h3><p>MOAs, partnership and investment agreements.</p></div>
+                                    <div className="service-card"><div className="service-icon">✅</div><h3>Government Approvals</h3><p>DET, Municipality, and sector specific government approvals for compliance.</p></div>
+                                    <div className="service-card"><div className="service-icon">™️</div><h3>Trademark Registration</h3><p>We manage searches, filings, and renewals to protect IP.</p></div>
+                                    <div className="service-card"><div className="service-icon">🛂</div><h3>Residency Visas</h3><p>Processing of Investor/Partner and Employee visas end‑to‑end.</p></div>
+                                    <div className="service-card"><div className="service-icon">🏗️</div><h3>Corporate Structuring</h3><p>Efficient corporate structures for your business for scale and investment readiness.</p></div>
+                                    <div className="service-card"><div className="service-icon">📑</div><h3>PRO Services</h3><p>Document processing and liaison services across various UAE government bodies.</p></div>
+                                    <div className="service-card"><div className="service-icon">📊</div><h3>Tax Advisory</h3><p>Expert guidance on corporate tax, VAT, bookkeeping and reporting.</p></div>
+                                    <div className="service-card"><div className="service-icon">⚖️</div><h3>Contracting</h3><p>Preparation of MOAs, partnership MOU's and investment agreements as per UAE legal standards.</p></div>
                                 </div>
                             </div>
                         </section>
@@ -343,7 +343,7 @@ const ServicesPage = () => {
             <Route path="/investors" element={
                 <PageLayout
                     title="Foreign Investors & Expats"
-                    description="Investor visas, Golden Visa, holding/SPV structures, wealth and tax residency advisory."
+                    description="Investor Visas, Golden Visa, Holding/Prescribed company structures along with wealth and tax residency advisory."
                     headerImage="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     headerOverlayColor="rgba(0, 0, 0, 0.7)"
                 >
@@ -364,14 +364,14 @@ const ServicesPage = () => {
                             <div className="section-content">
                                 <h2>Investor Services</h2>
                                 <div className="services-grid">
-                                    <div className="service-card"><div className="service-icon">🛂</div><h3>Investor Residency</h3><p>Tailored to your investment profile and goals.</p></div>
-                                    <div className="service-card"><div className="service-icon">🏅</div><h3>Golden Visa</h3><p>Eligibility and processing for 10‑year residency.</p></div>
+                                    <div className="service-card"><div className="service-icon">🛂</div><h3>Residency Visas</h3><p>Investor Visa tailored to your investment profile and goals.</p></div>
+                                    <div className="service-card"><div className="service-icon">🏅</div><h3>Golden Visa</h3><p>Eligibility and processing for 10‑year UAE residency.</p></div>
                                     <div className="service-card"><div className="service-icon">👨‍👩‍👧</div><h3>Family Visas</h3><p>Dependents processing and ongoing support.</p></div>
-                                    <div className="service-card"><div className="service-icon">🏢</div><h3>Holding & SPVs</h3><p>Asset protection, tax‑optimized structures.</p></div>
-                                    <div className="service-card"><div className="service-icon">🏛️</div><h3>Foundations</h3><p>Family/wealth foundations for succession.</p></div>
-                                    <div className="service-card"><div className="service-icon">💼</div><h3>Wealth Structuring</h3><p>Estate planning, trusts, and optimization.</p></div>
-                                    <div className="service-card"><div className="service-icon">📜</div><h3>TRC & Legal</h3><p>Tax residency certificates and legal setup.</p></div>
-                                    <div className="service-card"><div className="service-icon">🧭</div><h3>Concierge</h3><p>Market entry, banking, relocation support.</p></div>
+                                    <div className="service-card"><div className="service-icon">🏢</div><h3>Company Formation</h3><p>UAE-based entity setup and structuring designed for your needs.</p></div>
+                                    <div className="service-card"><div className="service-icon">🏛️</div><h3>Foundation Setup</h3><p>Assistance in Establishment of Foundations for wealth managament, asset protection and legacy planning.</p></div>
+                                    <div className="service-card"><div className="service-icon">💼</div><h3>Wealth Management & Structuring Advisory</h3><p>Adviosy for Estate planning, trusts, and assest structuring.</p></div>
+                                    <div className="service-card"><div className="service-icon">📜</div><h3>Tax Residency Consultation</h3><p>Assistance on tax residency certificates and legal structuring.</p></div>
+                                    <div className="service-card"><div className="service-icon">🧭</div><h3>Concierge Services</h3><p>Comprehensive relocation assistance, banking setup, and settlement support.</p></div>
                                 </div>
                             </div>
                         </section>
@@ -388,7 +388,7 @@ const ServicesPage = () => {
             <Route path="/residents" element={
                 <PageLayout
                     title="UAE Residents"
-                    description="Dependent sponsorship, Golden Visa help, and tailored insurance/attestation support."
+                    description="Dependent Visa Advisory, Golden Visa Assiatnce, and Tailored Insurance Solutions"
                     headerImage="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     headerOverlayColor="rgba(0, 0, 0, 0.7)"
                 >
@@ -409,10 +409,10 @@ const ServicesPage = () => {
                             <div className="section-content">
                                 <h2>Resident Services</h2>
                                 <div className="services-grid">
-                                    <div className="service-card"><div className="service-icon">👨‍👩‍👧</div><h3>Dependent Sponsorship</h3><p>Family and domestic worker visa processing and approvals.</p></div>
-                                    <div className="service-card"><div className="service-icon">🏅</div><h3>Golden Visa</h3><p>Eligibility checks and end‑to‑end application.</p></div>
-                                    <div className="service-card"><div className="service-icon">🛡️</div><h3>Insurance</h3><p>Health, business, and personal coverage options.</p></div>
-                                    <div className="service-card"><div className="service-icon">📄</div><h3>Attestation</h3><p>Attestation, legalization, and translation support.</p></div>
+                                    <div className="service-card"><div className="service-icon">👨‍👩‍👧</div><h3>Family Visas</h3><p>Assitance with family visa and domestic worker visa processing and approvals.</p></div>
+                                    <div className="service-card"><div className="service-icon">🏅</div><h3>Golden Visa</h3><p>Eligibility checks and end‑to‑end application for 10 year UAE residency.</p></div>
+                                    <div className="service-card"><div className="service-icon">🛡️</div><h3>Insurance Solutions</h3><p>Comprehensive coverage options for health, business, or personal needs.</p></div>
+                                    <div className="service-card"><div className="service-icon">📄</div><h3>Document Attestation Solutions</h3><p>Fast & reliable document attestation assistance.</p></div>
                                 </div>
                             </div>
                         </section>
