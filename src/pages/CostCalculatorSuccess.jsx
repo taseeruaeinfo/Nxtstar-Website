@@ -55,15 +55,15 @@ const CostCalculatorSuccess = () => {
                         <p>Our team is available to answer any questions you may have.</p>
 
                         <div className="contact-methods">
-                            <a href="tel:+971501234567" className="contact-method">
+                            <a href="tel:+971 582594158" className="contact-method">
                                 <FaPhone />
                                 <span>Call Us</span>
                             </a>
-                            <a href="mailto:info@nxtstar.ae" className="contact-method">
+                            <a href="mailto:nxtstar.business.setup@gmail.com" className="contact-method">
                                 <FaEnvelope />
                                 <span>Email Us</span>
                             </a>
-                            <a href="https://wa.me/971501234567" target="_blank" rel="noopener noreferrer" className="contact-method whatsapp">
+                            <a href="https://wa.me/+971582594158" target="_blank" rel="noopener noreferrer" className="contact-method whatsapp">
                                 <FaWhatsapp />
                                 <span>WhatsApp</span>
                             </a>
