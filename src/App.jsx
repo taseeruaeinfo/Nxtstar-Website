@@ -10,6 +10,7 @@ import FAQ from './pages/FAQ';
 import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
 import ReferAndEarnPage from './pages/ReferAndEarnPage';
+import CostCalculatorSuccess from './pages/CostCalculatorSuccess';
 import { AnimatePresence } from 'framer-motion';
 import MotionWrapper from './components/ui/MotionWrapper';
 import './styles/index.css';
@@ -84,13 +85,21 @@ function AnimationLayout() {
             <ReferAndEarnPage />
           </MotionWrapper>
         } />
+
+        {/* Cost Calculator Success Page */}
+        <Route path="/cost-calculator-success" element={
+          <MotionWrapper>
+            <CostCalculatorSuccess />
+          </MotionWrapper>
+        } />
+
         {/* Sys Page */}
         <Route path="/privacy-policy" element={
           <MotionWrapper>
             <PrivacyPolicy />
           </MotionWrapper>
         } />
-        
+
 
         {/* 404 Page */}
         <Route path="*" element={

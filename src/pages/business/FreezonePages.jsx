@@ -19,6 +19,7 @@ import MasdarPage from './freezone/details/MasdarPage';
 import SRTIPPage from './freezone/details/SRTIPPage';
 import DAFZAPage from './freezone/details/DAFZAPage';
 import NuventuresPage from './freezone/details/NuventuresPage';
+import RAKICCPage from './freezone/details/RAKICCPage';
 import '../../styles/pages/business/FreezonePages.css';
 
 const FreezonePages = () => {
@@ -42,6 +43,7 @@ const FreezonePages = () => {
 			<Route path="/srtip" element={<SRTIPPage />} />
 			<Route path="/dafza" element={<DAFZAPage />} />
 			<Route path="/nuventures" element={<NuventuresPage />} />
+			<Route path="/rakicc" element={<RAKICCPage />} />
 
 			{/* Keep other existing routes */}
 

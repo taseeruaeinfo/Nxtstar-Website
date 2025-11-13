@@ -549,6 +549,11 @@
     min-width: 300px;
 }
 
+.cost-calc-button{
+    background-color: #4790dd;
+    height: 3rem;
+}
+
 .calculator-form {
     flex: 1;
     min-width: 300px;
@@ -614,11 +619,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem 0;
+    /* margin: 1rem 0; */
 }
 
 .recaptcha-container>div {
-    transform: scale(0.9);
+    transform: scale(0.7);
     transform-origin: center;
 }
 

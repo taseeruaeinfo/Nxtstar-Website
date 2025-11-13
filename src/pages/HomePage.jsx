@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaBuilding, FaGlobe, FaShieldAlt, FaMoneyBillWave, FaChartLine, FaHandshake, FaCalculator, FaDollarSign, FaPercentage, FaCheck, FaTags } from 'react-icons/fa';
 import SEO from '../components/layout/SEO';
 import ServiceCard from '../components/ui/ServiceCard';
@@ -60,6 +60,7 @@ const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
 
 const HomePage = () => {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -136,13 +137,15 @@ const HomePage = () => {
             const data = await res.json();
             console.log('Response:', data);
             if (data.success) {
-                alert("✅ Our team will shortly get in touch with you..");
+                // Clear form data
                 setFormData({ name: "", email: "", phone: "", businessType: "" });
                 setRecaptchaToken(null);
                 // Reset reCAPTCHA
                 if (recaptchaRef.current) {
                     recaptchaRef.current.reset();
                 }
+                // Navigate to success page
+                navigate('/cost-calculator-success');
             } else {
                 alert("❌ Failed to send form: " + data.message);
             }
