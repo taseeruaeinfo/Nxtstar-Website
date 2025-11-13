@@ -83,7 +83,7 @@ const FreezoneOverview = () => {
         },
         {
             id: 'shams',
-            name: 'Sharjah Media City (Shams)',
+            name: 'Sharjah Media City (SHAMS)',
             location: 'Sharjah',
             description: 'Affordable free zone focused on creative, media, and service businesses.',
             idealFor: ['Media', 'Creative Industries', 'Consultancy', 'Freelancers'],
@@ -137,38 +137,38 @@ const FreezoneOverview = () => {
             idealFor: ['Sustainability', 'Clean Energy', 'Tech', 'R&D'],
             link: '/business/freezone/masdar'
         },
-		{
-			id: 'srtip',
-			name: 'Sharjah Research Technology and Innovation Park (SRTIP)',
-			location: 'Sharjah',
-			description: 'University-linked innovation ecosystem driving research commercialization and technology transfer in advanced manufacturing and technology.',
-			idealFor: ['Research', 'Innovation', 'Technology', 'Advanced Manufacturing'],
-			link: '/business/freezone/srtip'
-		},
-		{
-			id: 'dafza',
-			name: 'Dubai Airport Free Zone (DAFZA)',
-			location: 'Dubai',
-			description: 'Prestigious free zone adjacent to DXB Airport with world-class logistics and connectivity.',
-			idealFor: ['Trading', 'Logistics', 'Aviation', 'Technology'],
-			link: '/business/freezone/dafza'
-		},
-		{
-			id: 'ajman-nuventures',
-			name: 'Ajman Nuventures Centre Free Zone',
-			location: 'Ajman',
-			description: 'New, dynamic hub offering cost-effective licensing and flexible options for innovators and SMEs.',
-			idealFor: ['Startups', 'Freelancers', 'E‑commerce', 'Consultancy'],
-			link: '/business/freezone/nuventures'
-		},
-		{
-			id: 'others',
-			name: 'Other Free Zones (DMCC, DIC, DMC, and more)',
-			location: 'UAE',
-			description: 'Explore 40+ specialized free zones across the UAE. We match your activity and budget to the best option.',
-			idealFor: ['Media', 'Tech', 'Finance', 'Trading'],
-			link: '/business/freezone/others'
-		}
+        {
+            id: 'srtip',
+            name: 'Sharjah Research Technology and Innovation Park (SRTIP)',
+            location: 'Sharjah',
+            description: 'University-linked innovation ecosystem driving research commercialization and technology transfer in advanced manufacturing and technology.',
+            idealFor: ['Research', 'Innovation', 'Technology', 'Advanced Manufacturing'],
+            link: '/business/freezone/srtip'
+        },
+        {
+            id: 'dafza',
+            name: 'Dubai Airport Free Zone (DAFZA)',
+            location: 'Dubai',
+            description: 'Prestigious free zone adjacent to DXB Airport with world-class logistics and connectivity.',
+            idealFor: ['Trading', 'Logistics', 'Aviation', 'Technology'],
+            link: '/business/freezone/dafza'
+        },
+        {
+            id: 'ajman-nuventures',
+            name: 'Ajman Nuventures Centre Free Zone',
+            location: 'Ajman',
+            description: 'New, dynamic hub offering cost-effective licensing and flexible options for innovators and SMEs.',
+            idealFor: ['Startups', 'Freelancers', 'E‑commerce', 'Consultancy'],
+            link: '/business/freezone/nuventures'
+        },
+        {
+            id: 'rakicc',
+            name: 'RAKICC - The Smart Offshore Choice in the UAE',
+            location: 'Ras Al Khaimah',
+            description: 'One of the UAE\'s most established offshore jurisdictions offering global credibility, cost-effectiveness, and flexible regulations for international trading, asset protection, and wealth management.',
+            idealFor: ['Offshore Trading', 'Asset Protection', 'Investment Holding', 'Wealth Management'],
+            link: '/business/freezone/rakicc'
+        }
 
     ];
 

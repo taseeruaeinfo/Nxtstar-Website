@@ -26,31 +26,19 @@ const OffshorePage = () => {
         {
             name: 'JAFZA Offshore',
             features: [
-                "Part of Dubai's Jebel Ali Free Zone",
-                "Strong legal framework based on common law",
-                "Prestigious UAE address",
-                "No requirement for physical office",
-                "Quick and efficient setup process"
+                'Operates under Jebel Ali Free Zone Authority (Dubai) – a highly reputable jurisdiction',
+                'Strong legal framework aligned with international standards and common law principles',
+                'Streamlined incorporation process with efficient setup',
+                'Ideal for holding companies, property ownership in Dubai, international investments, and asset protection'
             ]
         },
         {
             name: 'RAK ICC',
             features: [
-                'Located in Ras Al Khaimah',
-                'Cost-effective formation and maintenance',
-                'Based on English Common Law',
-                'Wide network of double taxation treaties',
-                'Option for apostille and document legalization'
-            ]
-        },
-        {
-            name: 'ADGM',
-            features: [
-                'Abu Dhabi Global Market jurisdiction',
-                'Direct application of English common law',
-                'Sophisticated regulatory framework',
-                'High level of international recognition',
-                'Ideal for financial services and holding structures'
+                'Based in Ras Al Khaimah, offering cost-effective formation and maintenance',
+                'Governed by English Common Law, ensuring global compatibility and flexibility',
+                'Access to the UAE\'s extensive network of double taxation treaties (when combined with UAE substance)',
+                'Ideal for holding, investment, and asset protection structures'
             ]
         }
     ];
