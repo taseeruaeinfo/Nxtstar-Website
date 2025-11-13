@@ -210,7 +210,7 @@ const ServicesPage = () => {
             <Route path="/creators" element={
                 <PageLayout
                     title="Digital Creators & Influencers"
-                    description="Licensing, UAE Media Council approvals, visas, banking and compliant structures for creators."
+                    description="Licensing, UAE Media Council Approvals, Visa Processing, Banking Solutions and Compliant Structures for creators."
                     headerImage="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     headerOverlayColor="rgba(0, 0, 0, 0.7)"
                 >
@@ -231,14 +231,14 @@ const ServicesPage = () => {
                             <div className="section-content">
                                 <h2>Services for Creators</h2>
                                 <div className="services-grid">
-                                    <div className="service-card"><div className="service-icon">🎯</div><h3>Trade License</h3><p>Freelance, e‑trader, or freezone licenses tailored for creators.</p></div>
-                                    <div className="service-card"><div className="service-icon">🪪</div><h3>Media Council Permits</h3><p>Influencer/Advertiser approvals with full submission support.</p></div>
-                                    <div className="service-card"><div className="service-icon">🌍</div><h3>Foreign Creator Approvals</h3><p>Specialized support for visiting international creators.</p></div>
-                                    <div className="service-card"><div className="service-icon">🛂</div><h3>Residency Visas</h3><p>End‑to‑end influencer/freelancer visa handling and renewals.</p></div>
-                                    <div className="service-card"><div className="service-icon">🏦</div><h3>Bank Accounts</h3><p>Business and personal banking for monetization.</p></div>
+                                    <div className="service-card"><div className="service-icon">🎯</div><h3>Company Formation</h3><p>Customized trade license solutions for creators to stay fully compliant to monetize your content.</p></div>
+                                    <div className="service-card"><div className="service-icon">🪪</div><h3>UAE Media Council Permits</h3><p>Influencer/Advertiser approvals assistance with full submission support.</p></div>
+                                    <div className="service-card"><div className="service-icon">🌍</div><h3>Foreign Creator Work Permits</h3><p>Specialized support for visiting international creators to legally collabrate and record content.</p></div>
+                                    <div className="service-card"><div className="service-icon">🛂</div><h3>Residency Visas</h3><p>End‑to‑end residence visa processing services.</p></div>
+                                    <div className="service-card"><div className="service-icon">🏦</div><h3>Bank Account Assistance</h3><p>Assistance with Business and Personal Banking solutions.</p></div>
                                     <div className="service-card"><div className="service-icon">🏅</div><h3>Golden Visa</h3><p>Eligibility assessment and application support.</p></div>
-                                    <div className="service-card"><div className="service-icon">📄</div><h3>Agreements</h3><p>Sponsorship and collaboration contract drafting/review.</p></div>
-                                    <div className="service-card"><div className="service-icon">💡</div><h3>Monetization</h3><p>Strategies for brand deals, products, and subscriptions.</p></div>
+                                    <div className="service-card"><div className="service-icon">📄</div><h3>Contracting</h3><p>Sponsorship and collaboration contract drafting/review.</p></div>
+                                    <div className="service-card"><div className="service-icon">💡</div><h3>Monetization Consulting</h3><p>Growth strategy consultation for brand deals, products, and subscriptions.</p></div>
                                 </div>
                             </div>
                         </section>
@@ -255,7 +255,7 @@ const ServicesPage = () => {
             <Route path="/freelancers" element={
                 <PageLayout
                     title="Freelancers & Consultants"
-                    description="Freelance permits, visas, tax/VAT setup, banking, contracts, and branding support."
+                    description="Freelance Permits, Visas, Tax Registrations, Banking Services, Legal Contracts, and Branding support."
                     headerImage="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     headerOverlayColor="rgba(0, 0, 0, 0.7)"
                 >
@@ -276,12 +276,12 @@ const ServicesPage = () => {
                             <div className="section-content">
                                 <h2>Our Services</h2>
                                 <div className="services-grid">
-                                    <div className="service-card"><div className="service-icon">🪪</div><h3>Freelance Licenses</h3><p>IFZA, RAKEZ, SPC or mainland permits aligned to your activity.</p></div>
-                                    <div className="service-card"><div className="service-icon">🛂</div><h3>Residency & Visas</h3><p>Medicals, biometrics, stamping, and dependents.</p></div>
-                                    <div className="service-card"><div className="service-icon">💳</div><h3>Tax & Banking</h3><p>VAT registration/reporting and bank account opening.</p></div>
-                                    <div className="service-card"><div className="service-icon">🏅</div><h3>Golden Visa</h3><p>Eligibility assessment and 10‑year residency processing.</p></div>
-                                    <div className="service-card"><div className="service-icon">🌐</div><h3>Brand & Portfolio</h3><p>Websites, branding strategy, and digital portfolios.</p></div>
-                                    <div className="service-card"><div className="service-icon">📄</div><h3>Contracts & Legal</h3><p>Drafting/reviewing client and sponsorship agreements.</p></div>
+                                    <div className="service-card"><div className="service-icon">🪪</div><h3>Freelance Licenses</h3><p>Assistance in obtaining the right freelance license.</p></div>
+                                    <div className="service-card"><div className="service-icon">🛂</div><h3>Residency Visas</h3><p>Medicals, biometrics, stamping, and dependents.</p></div>
+                                    <div className="service-card"><div className="service-icon">💳</div><h3>Tax Advisory</h3><p>Assistance & Advisory with Tax Obligations</p></div>
+                                    <div className="service-card"><div className="service-icon">🏅</div><h3>Golden Visa</h3><p>Eligibility assessment and 10‑year residency visa processing.</p></div>
+                                    <div className="service-card"><div className="service-icon">🌐</div><h3>Branding</h3><p>Assitance with strong personal brand presence and digital portfolios.</p></div>
+                                    <div className="service-card"><div className="service-icon">📄</div><h3>Contracting</h3><p>Drafting/reviewing client and legal compliance agreements.</p></div>
                                 </div>
                             </div>
                         </section>
@@ -298,7 +298,7 @@ const ServicesPage = () => {
             <Route path="/startups" element={
                 <PageLayout
                     title="Startups & Entrepreneurs"
-                    description="End-to-end company formation, approvals, visas, legal, tax, and launch readiness."
+                    description="End-to-end company formation, Approvals, Visas, Legal, tax, and launch readiness."
                     headerImage="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     headerOverlayColor="rgba(0, 0, 0, 0.7)"
                 >
