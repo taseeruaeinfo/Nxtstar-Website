@@ -1,1 +1,1 @@
-NxtStar Website By Aman Sharma
+NxtStar Website
