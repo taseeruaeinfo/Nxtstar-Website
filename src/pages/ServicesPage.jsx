@@ -54,8 +54,8 @@ const ServicesPage = () => {
             description: 'Fast and reliable document attestation, legalization, and translation services for all your business needs.',
             icon: '📄',
             link: '/services/documents'
-        },
-        {
+        }, /*
+        { 
             id: 'digital-creators',
             title: 'Digital Creators & Influencers',
             description: 'Licensing, UAE Media Council approvals, visas, banking and compliant structures for creators.',
@@ -89,7 +89,7 @@ const ServicesPage = () => {
             description: 'Dependent sponsorship, Golden Visa help, and tailored insurance/attestation support.',
             icon: '🏠',
             link: '/services/residents'
-        }
+        } */
     ];
 
     return (
