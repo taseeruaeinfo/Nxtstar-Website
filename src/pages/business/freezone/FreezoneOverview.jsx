@@ -163,7 +163,7 @@ const FreezoneOverview = () => {
         },
         {
             id: 'rakicc',
-            name: 'RAKICC - The Smart Offshore Choice in the UAE',
+            name: 'RAKICC',
             location: 'Ras Al Khaimah',
             description: 'One of the UAE\'s most established offshore jurisdictions offering global credibility, cost-effectiveness, and flexible regulations for international trading, asset protection, and wealth management.',
             idealFor: ['Offshore Trading', 'Asset Protection', 'Investment Holding', 'Wealth Management'],
@@ -347,7 +347,7 @@ const FreezoneOverview = () => {
                                     <ul>
                                         <li>Free Zone License</li>
                                         <li>Company Registration</li>
-                                        <li>lease agreement </li>
+                                        <li>Registered Office Address (1 Year) </li>
                                         <li>Standard Processing</li>
                                         <li>Assistance with Documentation</li>
                                         <li>Basic Business Support</li>
@@ -396,14 +396,9 @@ const FreezoneOverview = () => {
                                         <li>Free Zone License</li>
                                         <li>Company Registration</li>
                                         <li>3 Visa Eligibility</li>
-                                        <li>Express Processing</li>
-                                        <li>Premium Office Address (1 Year)</li>
-                                        <li>Priority Bank Account Setup</li>
-                                        <li>VIP PRO Services</li>
-                                        <li>Company Stamp & Documentation</li>
-                                        <li>Tax Registration</li>
-                                        <li>Business Development Support</li>
-                                        <li>1-Year Business Consulting</li>
+                                        <li>Express Processing & PRO Services</li>
+                                        <li>Registered Office Address (1 Year)</li>
+                                        <li> Bank Account Setup and Tax Registration</li>
                                     </ul>
                                 </div>
                                 <div className="package-footer">

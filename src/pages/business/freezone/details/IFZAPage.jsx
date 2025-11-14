@@ -96,7 +96,7 @@ const IFZAPage = () => {
                     <h2>Cost Overview</h2>
                     <div className="cost-info">
                         <p>Starting from AED 18,000, IFZA offers various packages tailored to different business needs. Costs typically include:</p>
-                        <ul>
+                        <ul id='cost-info-ifza'>
                             <li>License fee</li>
                             <li>Registration charges</li>
                             <li>Establishment card</li>

@@ -27,13 +27,11 @@ const Navbar = () => {
             name: 'Services',
             path: '/services',
             dropdownItems: [
-                // { name: 'Company Registration & Licenses', path: '/services/registration-licenses' },
-                // { name: 'Residence Visa & PRO', path: '/services/visa-pro' },
-                // { name: 'Golden Visa', path: '/services/golden-visa' },
-                // { name: 'Corporate Structuring', path: '/services/corporate-structuring' },
-                // { name: 'Taxation', path: '/services/taxation' },
-                // { name: 'Trademark Registration', path: '/services/trademark' },
-                // { name: 'Website Development', path: '/services/website' }
+                { name: 'Startups & Entrepreneurs', path: '/services/startups' },
+                { name: 'Freelancers & Consultants', path: '/services/freelancers' },
+                { name: 'Foreign Investors & Expats', path: '/services/investors' },
+                { name: 'Digital Creators & Influencers', path: '/services/creators' },
+                { name: 'UAE Residents', path: '/services/residents' }
             ]
         },
         { name: 'Blogs', path: '/blogs' },
@@ -97,13 +95,13 @@ const Navbar = () => {
                                     className="nav-link"
                                 >
                                     {link.name}
-                                    {link.dropdownItems && link.name !== 'Services' && (
+                                    {link.dropdownItems && (
                                         <FaChevronDown className="dropdown-icon" />
                                     )}
                                 </Link>
 
                                 {/* Dropdown for items with subitems */}
-                                {link.dropdownItems && link.name !== 'Services' && (
+                                {link.dropdownItems && (
                                     <motion.div
                                         className="dropdown-menu"
                                         initial={{ opacity: 0, y: -20 }}
@@ -196,16 +194,16 @@ const Navbar = () => {
                                         <Link
                                             to={link.path}
                                             className="nav-link"
-                                            onClick={() => !link.dropdownItems || link.name === 'Services' ? setIsMenuOpen(false) : null}
+                                            onClick={() => !link.dropdownItems ? setIsMenuOpen(false) : null}
                                         >
                                             {link.name}
-                                            {link.dropdownItems && link.name !== 'Services' && (
+                                            {link.dropdownItems && (
                                                 <FaChevronDown className="dropdown-icon mobile-dropdown-icon" />
                                             )}
                                         </Link>
 
                                         {/* Mobile dropdown items */}
-                                        {link.dropdownItems && link.name !== 'Services' && (
+                                        {link.dropdownItems && (
                                             <motion.div
                                                 className="mobile-dropdown"
                                                 initial={{ opacity: 0 }}
