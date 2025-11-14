@@ -274,7 +274,7 @@ const HomePage = () => {
                             </PopUp>
                             <PopUpBounce delay={0.2}>
                                 <p className="hero-description" id='hero-desc'>
-                                    NXTStar provides assistance with business setup consulting services in UAE mainland, freezone, and offshore jurisdictions. We manage the entire process on behalf of our clients - from documentation to approvals — working directly with the relevant government authorities to ensure a smooth and hassle-free business establishment.
+                                    NXTStar provides assistance with business setup consulting services in UAE mainland, freezone, and offshore jurisdictions. We manage the entire process end to end on behalf of our clients to ensure a smooth and hassle-free business establishment.
                                 </p>
                             </PopUpBounce>
                             <PopUp delay={0.4}>
