@@ -16,7 +16,7 @@ import MotionWrapper from './components/ui/MotionWrapper';
 import './styles/index.css';
 import ScrollToTop from './context/ScrollToTop';
 import PrivacyPolicy from './pages/PrivacyPage';
-import BookCall from './pages/BookCall';
+//import BookCall from './pages/BookCall';
 
 // AnimationLayout component to handle location-based animations
 function AnimationLayout() {
@@ -46,11 +46,11 @@ function AnimationLayout() {
         } />
 
         {/* Book Call Page */}
-        <Route path="/book-call" element={
+        {/*<Route path="/book-call" element={
           <MotionWrapper>
             <BookCall />
           </MotionWrapper>
-        } />
+        } /> */}
 
         {/* Services Pages */}
         <Route path="/services/*" element={
