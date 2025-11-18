@@ -139,9 +139,12 @@ const Navbar = () => {
                             </Link>
                         </motion.div>
                         <motion.div whileHover={{ scale: 1.05 }}>
-                            <a href="https://calendly.com/nehajakhar401/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                    {/*     <a href="https://calendly.com/nehajakhar401/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                                 Book a Call
-                            </a>
+                            </a> */}
+                            <Link to="/book-a-consultation-call-with-nxtstar" className="btn btn-outline">
+                                Book a Call
+                            </Link>
                         </motion.div>
                     </motion.div>
 
@@ -245,9 +248,12 @@ const Navbar = () => {
                                         </Link>
                                     </motion.div>
                                     <motion.div whileTap={{ scale: 0.97 }}>
-                                        <a href="https://calendly.com/nxtstar" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                                        {/*  <a href="https://calendly.com/nxtstar" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                                             Book a Call
-                                        </a>
+                                        </a> */}                                        
+                                        <Link to="/book-a-consultation-call-with-nxtstar" className="btn btn-outline">
+                                            Book a Call
+                                        </Link>
                                     </motion.div>
                                 </motion.div>
                             </motion.div>
