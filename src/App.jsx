@@ -16,6 +16,7 @@ import MotionWrapper from './components/ui/MotionWrapper';
 import './styles/index.css';
 import ScrollToTop from './context/ScrollToTop';
 import PrivacyPolicy from './pages/PrivacyPage';
+import BookCall from './pages/BookCall';
 
 // AnimationLayout component to handle location-based animations
 function AnimationLayout() {
@@ -41,6 +42,13 @@ function AnimationLayout() {
         <Route path="/business/*" element={
           <MotionWrapper>
             <BusinessSetupPage />
+          </MotionWrapper>
+        } />
+
+        {/* Book Call Page */}
+        <Route path="/book-call" element={
+          <MotionWrapper>
+            <BookCall />
           </MotionWrapper>
         } />
 
