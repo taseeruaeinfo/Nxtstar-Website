@@ -126,7 +126,7 @@ const Contact = () => {
                                 <FaRegBuilding />
                             </div>
                             <h3>Visit Us</h3>
-                            <p>Palace Tower, Dubai Silicon Oasis Dubai,</p>
+                            <p>Palace Towers, Dubai Silicon Oasis, Dubai,</p>
                             <p>United Arab Emirates</p>
                         </div>
                     </div>
