@@ -142,7 +142,7 @@ const Navbar = () => {
                     {/*     <a href="https://calendly.com/nehajakhar401/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                                 Book a Call
                             </a> */}
-                            <Link to="/book-a-consultation-call-with-nxtstar" className="btn btn-outline">
+                            <Link to="/book-call" className="btn btn-outline">
                                 Book a Call
                             </Link>
                         </motion.div>
@@ -251,7 +251,7 @@ const Navbar = () => {
                                         {/*  <a href="https://calendly.com/nxtstar" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                                             Book a Call
                                         </a> */}                                        
-                                        <Link to="/book-a-consultation-call-with-nxtstar" className="btn btn-outline">
+                                        <Link to="/book-call" className="btn btn-outline">
                                             Book a Call
                                         </Link>
                                     </motion.div>
