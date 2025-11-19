@@ -170,19 +170,19 @@ const ReferAndEarnPage = () => {
         {
             name: 'Sarah Johnson',
             role: 'Business Owner',
-            reward: 'AED 3,000',
+            reward: 'AED 2,000',
             content: 'The referral program is fantastic! I\'ve earned over AED 3,000 by referring my network to NXTStar.'
         },
         {
             name: 'Mohammed Al Qasim',
             role: 'Entrepreneur',
-            reward: 'AED 2,500',
+            reward: 'AED 1,500',
             content: 'I love how simple it is to refer clients and earn rewards. The process is transparent and efficient.'
         },
         {
             name: 'Priya Sharma',
             role: 'Consultant',
-            reward: 'AED 4,200',
+            reward: 'AED 1,200',
             content: 'As a consultant, I\'ve been able to earn extra income by referring clients to NXTStar. Highly recommended!'
         }
     ];
