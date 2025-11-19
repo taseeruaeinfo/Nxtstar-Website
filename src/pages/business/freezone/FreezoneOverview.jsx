@@ -59,7 +59,7 @@ const FreezoneOverview = () => {
         },
         {
             id: 'dwtc',
-            name: 'Dubai World Trade Centre',
+            name: 'Dubai World Trade Centre(DWTC)',
             location: 'Dubai',
             description: 'Located in the heart of Dubai\'s business district, suitable for events, technology, and services.',
             idealFor: ['Events Management', 'Technology', 'Media', 'Consultancy'],
@@ -83,7 +83,7 @@ const FreezoneOverview = () => {
         },
         {
             id: 'shams',
-            name: 'Sharjah Media City (SHAMS)',
+            name: 'SHAMS Free Zone',
             location: 'Sharjah',
             description: 'Affordable free zone focused on creative, media, and service businesses.',
             idealFor: ['Media', 'Creative Industries', 'Consultancy', 'Freelancers'],
