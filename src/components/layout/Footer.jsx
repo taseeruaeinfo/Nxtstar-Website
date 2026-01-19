@@ -189,7 +189,7 @@ const Footer = () => {
                         <motion.div className="footer-column" variants={itemVariants}>
                             <motion.h3 className="footer-heading" variants={itemVariants}>Contact Us</motion.h3>
                             <motion.ul className="footer-links" variants={itemVariants}>
-                                <motion.li className="footer-link" variants={itemVariants}>Palace Tower, Dubai Silicon Oasis</motion.li>
+                                <motion.li className="footer-link" variants={itemVariants}>Bay Square, Business Bay</motion.li>
                                 <motion.li className="footer-link" variants={itemVariants}>Dubai, United Arab Emirates</motion.li>
                                 <motion.li className="footer-link" variants={itemVariants}>Phone: +971 582594158</motion.li>
                                 {/* <motion.li className="footer-link" id="footer-email" variants={itemVariants}>nxtstar.business.setup@gmail.com</motion.li> */}
