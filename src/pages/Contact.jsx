@@ -126,8 +126,8 @@ const Contact = () => {
                                 <FaRegBuilding />
                             </div>
                             <h3>Visit Us</h3>
-                            <p>Bay Sqaure, Business Bay, Dubai,</p>
-                            <p>United Arab Emirates</p>
+                            <p>Bay Sqaure, Business Bay, </p>
+                            <p>Dubai, United Arab Emirates</p>
                         </div>
                     </div>
 
