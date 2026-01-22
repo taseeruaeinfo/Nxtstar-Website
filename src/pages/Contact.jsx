@@ -133,7 +133,7 @@ const Contact = () => {
 
                     {/* Google Rating Link */}
                     <div className="google-rating-section">
-                        <a href="https://g.page/r/CfH-m2147vEREBI/review"
+                        <a href="https://g.page/r/CZBw1DFKOx4oEAE/review"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="google-rating-link">
