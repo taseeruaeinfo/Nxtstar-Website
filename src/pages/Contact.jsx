@@ -133,7 +133,7 @@ const Contact = () => {
 
                     {/* Google Rating Link */}
                     <div className="google-rating-section">
-                        <a href="https://g.page/r/CZBw1DFKOx4oEAE/review"
+                        <a href="https://g.page/r/CdAxwQ8LlWgtEBI/review"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="google-rating-link">
@@ -250,7 +250,7 @@ const Contact = () => {
                 <h3>Our Location in Dubai</h3>
                 <div className="map-container">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14439.951609602107!2d55.27547811491486!3d25.18599433959108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f682829c85c07%3A0xa5eda9fb3c93b69d!2sBusiness%20Bay%20-%20Dubai!5e0!3m2!1sen!2sae!4v1695076964609!5m2!1sen!2sae"
+                        src="https://g.page/r/CdAxwQ8LlWgtEBI/review"
                         width="100%"
                         height="320"
                         style={{ border: 0, display: 'block', margin: '0 auto' }}
