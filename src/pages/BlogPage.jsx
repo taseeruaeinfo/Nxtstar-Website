@@ -22,7 +22,7 @@ const BlogPage = () => {
             slug: "guide-to-starting-a-business-in-uae-mainland",
             excerpt: "Learn the step-by-step process of establishing your business in UAE mainland with 100% ownership.",
             date: "2025-09-15",
-            author: "NXTStar Team",
+            author: "Nxtstar Team",
             category: "Business Setup",
             readTime: "5 min read",
             image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
@@ -33,7 +33,7 @@ const BlogPage = () => {
             slug: "benefits-of-freezone-company-formation-in-dubai",
             excerpt: "Discover why freezone companies are becoming the preferred choice for international businesses in Dubai.",
             date: "2025-08-22",
-            author: "NXTStar Team",
+            author: "Nxtstar Team",
             category: "Freezone",
             readTime: "4 min read",
             image: "https://images.unsplash.com/photo-1542744095-291d1f67b221?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
@@ -44,7 +44,7 @@ const BlogPage = () => {
             slug: "understanding-uae-tax-regulations-for-foreign-businesses",
             excerpt: "A comprehensive guide to UAE tax laws and how they affect foreign business owners.",
             date: "2025-07-30",
-            author: "NXTStar Team",
+            author: "Nxtstar Team",
             category: "Taxation",
             readTime: "6 min read",
             image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
@@ -55,7 +55,7 @@ const BlogPage = () => {
             slug: "how-to-choose-the-right-business-activity-for-your-uae-company",
             excerpt: "Tips and guidance on selecting the most suitable business activities for your UAE company license.",
             date: "2025-07-10",
-            author: "NXTStar Team",
+            author: "Nxtstar Team",
             category: "Business Setup",
             readTime: "4 min read",
             image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
@@ -66,7 +66,7 @@ const BlogPage = () => {
             slug: "top-5-freezones-for-tech-startups-in-uae",
             excerpt: "Explore the best freezones in UAE for technology startups and their unique advantages.",
             date: "2025-06-18",
-            author: "NXTStar Team",
+            author: "Nxtstar Team",
             category: "Freezone",
             readTime: "5 min read",
             image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
@@ -77,7 +77,7 @@ const BlogPage = () => {
             slug: "offshore-vs-mainland-which-is-right-for-your-business",
             excerpt: "A detailed comparison between offshore and mainland company setups in UAE.",
             date: "2025-05-25",
-            author: "NXTStar Team",
+            author: "Nxtstar Team",
             category: "Business Setup",
             readTime: "7 min read",
             image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
@@ -88,7 +88,7 @@ const BlogPage = () => {
 			slug: "how-to-set-up-a-foundation-in-the-uae-2025",
 			excerpt: "A practical walkthrough for establishing a foundation in the UAE in 2025.",
 			date: "2025-11-10",
-			author: "NXTStar Team",
+			author: "Nxtstar Team",
 			category: "Business Setup",
 			readTime: "6 min read",
 			image: "https://images.unsplash.com/photo-1528702748617-c64d49f918af?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687"
@@ -99,8 +99,8 @@ const BlogPage = () => {
 			slug: "registering-a-special-purpose-vehicle-spv-in-difc",
 			excerpt: "Why and how to register a DIFC SPV, with steps and requirements.",
 			date: "2025-11-10",
-			author: "NXTStar Team",
-			category: "Legal",
+			author: "Nxtstar Team",
+			category: "Business Setup",
 			readTime: "5 min read",
 			image: "https://images.unsplash.com/photo-1517817748493-49ec54a32465?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
 		},
@@ -110,8 +110,8 @@ const BlogPage = () => {
 			slug: "e-trader-license-dubai-2025",
 			excerpt: "Understand the Dubai E-Trader License and the 2025 application process.",
 			date: "2025-11-10",
-			author: "NXTStar Team",
-			category: "Licensing",
+			author: "Nxtstar Team",
+			category: "Business Setup",
 			readTime: "4 min read",
 			image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
 		},
@@ -121,8 +121,8 @@ const BlogPage = () => {
 			slug: "uae-media-council-approval-content-creators-2025",
 			excerpt: "Requirements and steps to obtain UAE Media Council approval in 2025.",
 			date: "2025-11-10",
-			author: "NXTStar Team",
-			category: "Regulatory",
+			author: "Nxtstar Team",
+			category: "Advertiser Permit",
 			readTime: "4 min read",
 			image: "https://images.unsplash.com/photo-1647427017067-8f33ccbae493?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
 		},
@@ -132,7 +132,7 @@ const BlogPage = () => {
 			slug: "golden-visa-for-content-creators",
 			excerpt: "Golden visa process and steps for UAE Content Creators.",
 			date: "2026-04-02",
-			author: "NXTStar Team",
+			author: "Neha Jakhar",
 			category: "Golden Visa",
 			readTime: "3 min read",
 			image: "https://plus.unsplash.com/premium_photo-1679362664450-4b2f9aa69841?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -151,6 +151,7 @@ const BlogPage = () => {
       //      blog.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
       //  const matchesCategory = selectedCategory === 'All' || blog.category === selectedCategory;
       //  return matchesSearch && matchesCategory;
+	//code swap done to bring latest blogs first
 	const filteredBlogs = blogs
     .filter(blog => {
         const matchesSearch = blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
