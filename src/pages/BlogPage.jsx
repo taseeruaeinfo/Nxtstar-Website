@@ -125,7 +125,18 @@ const BlogPage = () => {
 			category: "Regulatory",
 			readTime: "4 min read",
 			image: "https://images.unsplash.com/photo-1647427017067-8f33ccbae493?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
-		}
+		},
+		{
+			id: 11,
+			title: "Golden Visa for Dubai Creators: How to Get it in 2026",
+			slug: "golden-visa-for-content-creators",
+			excerpt: "Golden visa process and steps for UAE Content Creators.",
+			date: "2026-04-02",
+			author: "NXTStar Team",
+			category: "Golden Visa",
+			readTime: "3 min read",
+			image: "https://plus.unsplash.com/premium_photo-1679362664450-4b2f9aa69841?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+		},
     ]);
 
     const [searchTerm, setSearchTerm] = useState('');
