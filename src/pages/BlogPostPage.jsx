@@ -744,7 +744,7 @@ const BlogPostPage = () => {
         {
             id: 11,
             title: "Golden Visa for Dubai Creators: How to Get it in 2026",
-            slug: "golden-visa-dubai-content-creators-2026",
+            slug: "golden-visa-for-content-creators",
             excerpt: "Requirements and steps to obtain UAE Golden Visa for Content Creators.",
             date: "2026-04-02",
             author: "Neha Jakhar",
