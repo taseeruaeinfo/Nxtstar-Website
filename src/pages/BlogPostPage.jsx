@@ -771,24 +771,24 @@ const BlogPostPage = () => {
 
 				<h2>Who Can Apply?</h2>
 				<p>Golden Visa eligibility for creators typically depends on your professional achievements, influence, or contribution to the creative sector. This may include:</p>
-				<ol>
+				<ul>
 					<li>Content creators.</li>
 					<li>Social media influencers.</li>
 					<li>Filmmakers and video producers.</li>
 					<li>Photographers and visual artists.</li>
 					<li>Writers, journalists, and media professionals.</li>
 					<li>Designers and other creative specialists.</li>
-				</ol>
+				</ul>
 				<p>In many cases, applicants are expected to show proof of their work, achievements, audience reach, portfolio, or industry recognition.</p>	
 
 				<h2>How to Get the Golden Visa as a Creator (Step-by-Step)</h2>
-				<ol>
+				<ul>
 					<li>Join Creators HQ Memebership (AED 1,699/year) to establish your presence in the UAE creator ecosystem.</li>
 					<li>Prepare documents including portfolio, achievements, professional background, ID, and supporting materials.</li>
 					<li>Apply through Creators HQ for initial approval based on your profile and accomplishments.</li>
 					<li>Complete required medical fitness test and biometrics after approval.</li>
 					<li>Receive your 10-year Golden Visa and Emirates ID upon final approval.</li>
-				</ol>
+				</ul>
 				
 				
 				<h2>Why Work with Nxtstar</h2>
