@@ -751,7 +751,7 @@ const BlogPostPage = () => {
             category: "Golden Visa",
             readTime: "3 min read",
             image: "https://plus.unsplash.com/premium_photo-1679362664450-4b2f9aa69841?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            content: `
+            content:
 
 				<p>The UAE Golden Visa has become one of the most attractive long-term residency options for creators, artists, and digital talent who want to build their careers in the region. If you are a content creator, filmmaker, designer, writer, or digital entrepreneur, this visa can give you stability, freedom, and the chance to grow in one of the world’s most dynamic hubs.</p>
 				
