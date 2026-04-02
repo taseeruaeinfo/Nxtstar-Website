@@ -146,12 +146,20 @@ const BlogPage = () => {
     const categories = ['All', ...new Set(blogs.map(blog => blog.category))];
 
     // Filter blogs based on search and category
-    const filteredBlogs = blogs.filter(blog => {
+   // const filteredBlogs = blogs.filter(blog => {
+     //   const matchesSearch = blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      //      blog.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+      //  const matchesCategory = selectedCategory === 'All' || blog.category === selectedCategory;
+      //  return matchesSearch && matchesCategory;
+	const filteredBlogs = blogs
+    .filter(blog => {
         const matchesSearch = blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             blog.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesCategory = selectedCategory === 'All' || blog.category === selectedCategory;
         return matchesSearch && matchesCategory;
-    });
+    })
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
+   // });
 
     return (
         <PageLayout
