@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "about": "O nas",
+    "services": "Usługi",
+    "contact": "Kontakt",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title": "Znajdź swojego następnego gwiazdora",
+    "subtitle": "Połącz się z najlepszymi talentami na świecie. NxtStar pomaga rekrutować mądrzej i szybciej.",
+    "cta": "Zacznij teraz"
+  },
+  "services": {
+    "title": "Nasze usługi",
+    "subtitle": "Wszystko czego potrzebujesz, aby znaleźć odpowiednie talenty"
+  },
+  "contact": {
+    "title": "Skontaktuj się z nami",
+    "name": "Twoje imię",
+    "email": "Adres e-mail",
+    "message": "Twoja wiadomość",
+    "send": "Wyślij wiadomość"
+  },
+  "footer": {
+    "rights": "Wszelkie prawa zastrzeżone"
+  },
+  "meta": {
+    "title": "NxtStar — Globalna rekrutacja talentów | Dubaj, ZEA",
+    "description": "NxtStar łączy firmy z najlepszymi globalnymi talentami. Znajdź swojego następnego gwiazdora już dziś."
+  }
+}
