@@ -156,9 +156,9 @@ const BlogPage = () => {
 		  	date: "2026-05-07",
 		    author: "Team Nxtstar",
 		    category: "Investor Visa,
-		    readTime: "3 min read",
+			readTime: "3 min read",
 		    image: "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/619a2484-9aaa-5599-94c4-c13af07ad92b/c03a2367-3351-52a6-ba0a-6f3aaa026694.jpg"
-		  }			 
+		}			 
     ]);
 
     const [searchTerm, setSearchTerm] = useState('');
