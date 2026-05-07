@@ -4,9 +4,42 @@ import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../../styles/Navbar.css';
 import logo from '../../assets/images/logo.png';
+import { FaBars, FaTimes, FaChevronDown, FaGlobe } from 'react-icons/fa';
+
+//change for language - step 1 starts
+
+const LANGUAGES = [
+  { code: 'en', label: 'English',  flag: '🇬🇧' },
+  { code: 'de', label: 'Deutsch',  flag: '🇩🇪' },
+  { code: 'hi', label: 'हिन्दी',    flag: '🇮🇳' },
+  { code: 'fr', label: 'Français', flag: '🇫🇷' },
+  { code: 'pl', label: 'Polski',   flag: '🇵🇱' },
+  { code: 'ru', label: 'Русский',  flag: '🇷🇺' },
+  { code: 'ar', label: 'العربية',  flag: '🇦🇪' },
+];
+
+const switchLanguage = (code) => {
+  if (code === 'en') {
+    document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + window.location.hostname;
+  } else {
+    document.cookie = `googtrans=/auto/${code}`;
+    document.cookie = `googtrans=/auto/${code}; domain=${window.location.hostname}`;
+  }
+  window.location.reload();
+};
+
+//change for language - step 1 ends
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    //language step 2 - starts
+
+    const [langOpen, setLangOpen] = useState(false);
+    const [activeLang, setActiveLang] = useState('en');
+
+    //language step 2 - ends
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -133,6 +166,61 @@ const Navbar = () => {
                         className="navbar-cta"
                         variants={itemVariants}
                     >
+                        // langauge step 3 - starts
+
+                        {/* Language Switcher */}
+                        <div style={{ position: 'relative' }}>
+                          <motion.button
+                            onClick={() => setLangOpen(!langOpen)}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            style={{
+                              display: 'flex', alignItems: 'center', gap: '6px',
+                              padding: '7px 12px', border: '1.5px solid #ccc',
+                              borderRadius: '8px', background: 'transparent',
+                              cursor: 'pointer', fontSize: '13px', fontWeight: '500'
+                            }}
+                          >
+                            <FaGlobe size={14} />
+                            {LANGUAGES.find(l => l.code === activeLang).flag} {LANGUAGES.find(l => l.code === activeLang).label}
+                            <FaChevronDown size={11} style={{ transform: langOpen ? 'rotate(180deg)' : 'rotate(0)', transition: 'transform 0.2s' }} />
+                          </motion.button>
+                        
+                          <AnimatePresence>
+                            {langOpen && (
+                              <motion.div
+                                initial={{ opacity: 0, y: -8 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -8 }}
+                                style={{
+                                  position: 'absolute', top: '110%', right: 0,
+                                  background: 'white', border: '1px solid #e5e7eb',
+                                  borderRadius: '10px', boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
+                                  zIndex: 9999, minWidth: '160px', overflow: 'hidden'
+                                }}
+                              >
+                                {LANGUAGES.map((lang) => (
+                                  <button
+                                    key={lang.code}
+                                    onClick={() => { setActiveLang(lang.code); setLangOpen(false); switchLanguage(lang.code); }}
+                                    style={{
+                                      display: 'flex', alignItems: 'center', gap: '10px',
+                                      width: '100%', padding: '9px 16px', border: 'none',
+                                      background: activeLang === lang.code ? '#f3f4f6' : 'transparent',
+                                      cursor: 'pointer', fontSize: '13px', textAlign: 'left',
+                                      fontWeight: activeLang === lang.code ? '600' : '400'
+                                    }}
+                                  >
+                                    <span style={{ fontSize: '16px' }}>{lang.flag}</span>
+                                    <span>{lang.label}</span>
+                                  </button>
+                                ))}
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+
+                        // language step 3 - ends
                         <motion.div whileHover={{ scale: 1.05 }}>
                             <Link to="/refer-earn" className="btn btn-outline">
                                 Refer & Earn
