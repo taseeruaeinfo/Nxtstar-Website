@@ -804,6 +804,124 @@ const BlogPostPage = () => {
 				<p><a href="https://medium.com/@nxtstar.business.setup/how-to-get-uae-media-council-approval-for-content-creators-in-2025-56fc02531101" target="_blank" rel="noopener noreferrer">How to Get UAE Media Council Approval for Content Creators (2025)</a></p>
 			`			
         }
+		{
+		    id: 12,
+		    title: "World Trade Centre Business Setup in Dubai: A Smart Free Zone Choice for Growing Companies",
+		    slug: "world-trade-centre-business-setup-dubai",
+		    excerpt: "Explore DWTC Free Zone business setup options, license types, office solutions, and company formation benefits in Dubai.",
+		    date: "2026-05-07",
+		    author: "NxtStar Management Consultancy",
+		    category: "Business Setup",
+		    readTime: "3 min read",
+		    image: "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/b19ff560-6abe-5c14-8038-d597a9b5b701/cafc8026-fef8-58d0-ad2a-6e0e152efba3.jpg",
+		    content: `
+		
+		        <p>If you are looking for a premium Dubai location with a strong business reputation, World Trade Centre business setup through Dubai World Trade Centre Authority (DWTC Authority) is one of the most attractive options in the city. DWTC Free Zone is positioned in Dubai’s central business district and offers 100% foreign ownership, flexible office solutions, visa support, and access to more than 1,200 licensed business activities.</p>
+		
+		        <p>For startups, SMEs, consultants, trading firms, and international companies, DWTC offers a practical balance between prestige and flexibility. It is a future-focused free zone that supports new company formation with streamlined online setup services and a well-regulated business environment.</p>
+		
+		        <h2>Why Choose DWTC Free Zone</h2>
+		
+		        <p>DWTC Free Zone is designed for companies that want a strong commercial address in the heart of Dubai. The zone stretches from Sheikh Rashid Tower to One Central, placing businesses close to major commercial and financial hubs.</p>
+		
+		        <p>Here are some of the main advantages:</p>
+		
+		        <ul>
+		            <li>100% foreign ownership.</li>
+		            <li>100% capital and profit repatriation.</li>
+		            <li>0% personal income tax.</li>
+		            <li>More than 1,200 licensed business activities.</li>
+		            <li>Flexible office solutions, including co-working, flexi-desk, and dedicated office options.</li>
+		        </ul>
+		
+		        <p>This makes DWTC especially appealing for companies that want a premium Dubai presence without the complexity of mainland setup.</p>
+		
+		        <h2>DWTC Business Setup Packages</h2>
+		
+		        <p>Nxtstar can help you set up in DWTC Authority using a package structure that suits your company size and visa requirements. One of the strongest options is the Executive Package, which includes a license, establishment card, dedicated office, and 3 visa quota.</p>
+		
+		        <h3>Executive Package Overview</h3>
+		
+		        <ul>
+		            <li>Registration: AED 2,000.</li>
+		            <li>License: AED 8,000 in year 1, AED 10,000 on renewal.</li>
+		            <li>Establishment card: AED 2,300 in year 1 and renewal.</li>
+		            <li>Dedicated office with 3 visa quota: AED 32,025.</li>
+		            <li>Refundable security deposit: AED 1,200.</li>
+		            <li>Innovation and knowledge fee: AED 20.</li>
+		        </ul>
+		
+		        <p>This package is suitable for businesses that need a professional workspace, a strong address, and visa allocation for key staff or shareholders.</p>
+		
+		        <h2>License Types and Activities</h2>
+		
+		        <p>DWTC Free Zone supports a wide range of business models, and companies can typically combine multiple activities under one license when they fall under the same parent category.</p>
+		
+		        <p>From the package details, the permitted license types include:</p>
+		
+		        <ul>
+		            <li>Events Management License.</li>
+		            <li>E-commerce License.</li>
+		            <li>Professional License.</li>
+		            <li>Commercial License.</li>
+		            <li>General Trading License.</li>
+		        </ul>
+		
+		        <p>This flexibility makes DWTC attractive for consultants, digital businesses, trading firms, and service providers entering the UAE market.</p>
+		
+		        <h2>Visa and Office Options</h2>
+		
+		        <p>Visa quota in DWTC is linked to the office solution chosen. Companies can select from co-working spaces, flexi-desks, or dedicated offices depending on their operational needs and team size.</p>
+		
+		        <p>For visa processing, applicants inside and outside the UAE may have different medical and visa cost structures, and all applications remain subject to immigration approval.</p>
+		
+		        <h2>How to Set Up in DWTC</h2>
+		
+		        <p>The DWTC setup process is straightforward and largely online. A typical company formation process includes:</p>
+		
+		        <ul>
+		            <li>Choose the legal structure.</li>
+		            <li>Select the business activity and license type.</li>
+		            <li>Pick the office or workspace option.</li>
+		            <li>Submit documents and application forms.</li>
+		            <li>Receive approval and sign the lease.</li>
+		            <li>Obtain incorporation documents and start business operations.</li>
+		        </ul>
+		
+		        <p>This process makes DWTC attractive for entrepreneurs who want an efficient and streamlined company setup journey in Dubai.</p>
+		
+		        <h2>Who Should Choose DWTC</h2>
+		
+		        <p>DWTC is a strong fit for businesses that want a premium address, visa flexibility, and access to Dubai’s central business ecosystem.</p>
+		
+		        <p>It is especially suitable for:</p>
+		
+		        <ul>
+		            <li>Consultants and professional service firms.</li>
+		            <li>Trading and general trading companies.</li>
+		            <li>E-commerce businesses.</li>
+		            <li>Event management companies.</li>
+		            <li>International brands entering the UAE market.</li>
+		        </ul>
+		
+		        <p>It is also a good option for companies looking for office-backed licenses and flexible activity combinations.</p>
+		
+		        <h2>Why Set Up with Nxtstar</h2>
+		
+		        <p>Nxtstar can help investors compare package options, choose the right license, and handle the setup process from start to finish.</p>
+		
+		        <p>Whether you are launching a startup, opening a branch, or relocating your business to Dubai, the Nxtstar team can simplify the process and help you get started quickly.</p>
+		
+		        <h2>Contact Details</h2>
+		
+		        <p>You can reach out to the Nxtstar team at <a href="https://www.nxtstar.ae" target="_blank" rel="noopener noreferrer">www.nxtstar.ae</a> or email sales@nxtstar.ae.</p>
+		
+		        <h3></h3>
+		
+		        <p>#DWTC #DWTCFreeZone #DubaiWorldTradeCentre #BusinessSetupDubai #DubaiBusinessSetup #DubaiCompanyFormation #FreeZoneCompanySetup #DubaiFreeZone #TradeLicenseDubai #DubaiInvestorVisa #StartupDubai #SMEBusinessDubai #Nxtstar #NxtstarUAE #NxtstarBusinessSetup</p>
+		
+		    `
+		}
     ];
 
     useEffect(() => {
