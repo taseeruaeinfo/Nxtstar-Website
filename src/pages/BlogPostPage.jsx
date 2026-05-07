@@ -810,7 +810,7 @@ const BlogPostPage = () => {
 		    slug: "world-trade-centre-business-setup-dubai",
 		    excerpt: "Explore DWTC Free Zone business setup options, license types, office solutions, and company formation benefits in Dubai.",
 		    date: "2026-05-07",
-		    author: "By Team Nxtstar",
+		    author: "Team Nxtstar",
 		    category: "Business Setup",
 		    readTime: "3 min read",
 		    image: "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/b19ff560-6abe-5c14-8038-d597a9b5b701/cafc8026-fef8-58d0-ad2a-6e0e152efba3.jpg",
