@@ -157,7 +157,7 @@ id: 13,
 		    author: "Team Nxtstar",
 		    category: "Investor Visa",
 		    readTime: "3 min read",
-		    image: "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/b19ff560-6abe-5c14-8038-d597a9b5b701/cafc8026-fef8-58d0-ad2a-6e0e152efba3.jpg"
+		    image: "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/619a2484-9aaa-5599-94c4-c13af07ad92b/c03a2367-3351-52a6-ba0a-6f3aaa026694.jpg"
 		}	 
     ]);
 
