@@ -921,6 +921,74 @@ const BlogPostPage = () => {
 		        <p>#DWTC #DWTCFreeZone #DubaiWorldTradeCentre #BusinessSetupDubai #DubaiBusinessSetup #DubaiCompanyFormation #FreeZoneCompanySetup #DubaiFreeZone #TradeLicenseDubai #DubaiInvestorVisa #StartupDubai #SMEBusinessDubai #Nxtstar #NxtstarUAE #NxtstarBusinessSetup</p>
 		
 		    `
+		}, 
+		{
+		  id: 13,
+		  title: "Dubai Investor Visa Updates in 2026: New Rules, Limits, and What Investors Should Know",
+		  slug: "dubai-investor-visa-updates-2026",
+		  excerpt: "Understand the latest Dubai investor visa updates in 2026, including new property ownership rules, eligibility changes, and residency requirements for investors.",
+		  date: "2026-05-07",
+		  author: "NxtStar Management Consultancy",
+		  category: "Investor Visa",
+		  readTime: "2 min read",
+		  image: "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/619a2484-9aaa-5599-94c4-c13af07ad92b/c03a2367-3351-52a6-ba0a-6f3aaa026694.jpg",
+		  content: `
+		
+		    <p>Dubai has recently updated its investor visa rules, making it easier for more buyers and investors to qualify for residency. The biggest change is that the minimum property value for a 2-year investor visa has been removed for sole owners, while joint owners now need at least AED 400,000 per investor share to qualify.</p>
+		
+		    <p>These updates are important for anyone planning property investment or business expansion in Dubai. They also show how the UAE continues to attract investors by making residency pathways more flexible and accessible.</p>
+		
+		    <h2>What Changed in the New Investor Visa Rules</h2>
+		
+		    <p>The most notable update is the removal of the former AED 750,000 minimum property value requirement for individual property owners applying for a 2-year residency visa. Under the revised rule, a sole owner can now qualify regardless of property value, as long as the property is completed and registered.</p>
+		
+		    <p>For joint ownership, the rule is different. Each investor must hold a share worth at least AED 400,000 to be eligible for the investor visa, even if the property is split between co-owners.</p>
+		
+		    <h2>New Investor Visa Limits</h2>
+		
+		    <p>The updated limits can be summarized as follows:</p>
+		
+		    <ul>
+		      <li>Sole owners: No minimum property value required (property must be completed and registered).</li>
+		      <li>Joint owners: Minimum AED 400,000 ownership share per investor.</li>
+		    </ul>
+		
+		    <p>These changes reflect Dubai’s effort to widen access while keeping the system structured and compliant.</p>
+		
+		    <h2>Who Qualifies Now</h2>
+		
+		    <p>The new rules are most favorable for:</p>
+		
+		    <ul>
+		      <li>Solo property buyers in Dubai.</li>
+		      <li>Joint investors with sufficient ownership share.</li>
+		      <li>Buyers of completed and registered properties.</li>
+		      <li>Investors looking for a simpler path to residency.</li>
+		    </ul>
+		
+		    <p>However, off-plan properties usually do not qualify until completion and registration. The visa is tied to approved ownership status, so documentation remains essential.</p>
+		
+		    <h2>Why This Matters for Investors</h2>
+		
+		    <p>These changes reduce the entry barrier for smaller investors and first-time buyers. For solo owners, the removal of the old property-value threshold means more flexibility to enter the market.</p>
+		
+		    <p>For joint investors, the AED 400,000 share requirement still gives a clear benchmark. That makes the visa route more predictable while still supporting mid-market investment.</p>
+		
+		    <h2>Dubai Investor Visa vs Business Setup Visa</h2>
+		
+		    <p>It is important to differentiate between property investor visas and company investor visas. Property visas are linked to real estate ownership, while business visas are tied to company ownership, shareholding, or free zone formation.</p>
+		
+		    <p>If your goal is business setup, free zone investor visas may have different capital and office requirements depending on the authority. If your goal is residency through property, the new Dubai investor visa update is the more relevant route.</p>
+		
+		    <h2>Contact Details</h2>
+		
+		    <p>For assistance with the process, you can reach the Nxtstar team at <a href="https://www.nxtstar.ae" target="_blank" rel="noopener noreferrer">www.nxtstar.ae</a> or email sales@nxtstar.ae.</p>
+		
+		    <h3></h3>
+		
+		    <p>#DubaiInvestorVisa #DubaiVisaUpdate #UAEInvestorVisa #DubaiRealEstate #PropertyInvestmentDubai #DubaiResidencyVisa #InvestorVisaUAE #DubaiImmigration #Nxtstar #NxtstarUAE</p>
+		
+		  `
 		}
     ];
 
