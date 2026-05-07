@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Dienstleistungen",
+    "contact": "Kontakt",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title": "Finden Sie Ihren nächsten Star",
+    "subtitle": "Verbinden Sie sich mit den besten Talenten weltweit. NxtStar hilft Ihnen, schneller und smarter einzustellen.",
+    "cta": "Jetzt starten"
+  },
+  "services": {
+    "title": "Unsere Dienstleistungen",
+    "subtitle": "Alles was Sie brauchen, um die richtigen Talente zu finden"
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "name": "Ihr Name",
+    "email": "E-Mail-Adresse",
+    "message": "Ihre Nachricht",
+    "send": "Nachricht senden"
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten"
+  },
+  "meta": {
+    "title": "NxtStar — Globale Talentgewinnung | Dubai, VAE",
+    "description": "NxtStar verbindet Unternehmen mit den besten globalen Talenten. Finden Sie noch heute Ihren nächsten Star."
+  }
+}
