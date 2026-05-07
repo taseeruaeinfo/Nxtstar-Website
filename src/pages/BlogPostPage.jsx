@@ -803,7 +803,7 @@ const BlogPostPage = () => {
 				<h3></h3>
 				<p><a href="https://medium.com/@nxtstar.business.setup/how-to-get-uae-media-council-approval-for-content-creators-in-2025-56fc02531101" target="_blank" rel="noopener noreferrer">How to Get UAE Media Council Approval for Content Creators (2025)</a></p>
 			`			
-        }
+        },
 		{
 			id: 12,
 		    title: "World Trade Centre Business Setup in Dubai: A Smart Free Zone Choice for Growing Companies",
