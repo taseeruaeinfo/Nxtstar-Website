@@ -25,20 +25,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- Google Langauge translate-->
 
-  <!-- <div id="google_translate_element"></div> -->
-  <div id="google_translate_element" style="display:none"></div>
-
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'ar,de,fr,hi,pl,ru',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      autoDisplay: false
-    }, 'google_translate_element');
-  }
-</script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <!-- Google Translate -->
+  <div id="google_translate_element" style="display:none;visibility:hidden;width:0;height:0;overflow:hidden"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'ar,de,fr,hi,pl,ru',
+        autoDisplay: false,
+        gaTrack: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <style>
+    .goog-te-banner-frame { display: none !important; }
+    .goog-te-menu-frame { display: none !important; }
+    body { top: 0 !important; }
+    #google_translate_element { display: none !important; }
+  </style>
 
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54N4PN29"
