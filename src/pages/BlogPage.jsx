@@ -137,6 +137,17 @@ const BlogPage = () => {
 			readTime: "3 min read",
 			image: "https://plus.unsplash.com/premium_photo-1679362664450-4b2f9aa69841?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 		},
+		{
+		    id: 12,
+		    title: "World Trade Centre Business Setup in Dubai: A Smart Free Zone Choice for Growing Companies",
+		    slug: "world-trade-centre-business-setup-dubai",
+		    excerpt: "Learn about DWTC Free Zone company setup, license types, office solutions, visa options, and why Dubai World Trade Centre is a smart choice for growing businesses.",
+		    date: "2026-05-07",
+		    author: "NxtStar Management Consultancy",
+		    category: "Business Setup",
+		    readTime: "3 min read",
+		    image: "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/b19ff560-6abe-5c14-8038-d597a9b5b701/cafc8026-fef8-58d0-ad2a-6e0e152efba3.jpg"
+		},
     ]);
 
     const [searchTerm, setSearchTerm] = useState('');
