@@ -109,7 +109,9 @@
 }
 
 .navbar-cta {
-    display: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .btn {
