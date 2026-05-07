@@ -250,7 +250,7 @@ const Contact = () => {
                 <h3>Our Location in Dubai</h3>
                 <div className="map-container">
                     <iframe
-                        src="https://g.page/r/CdAxwQ8LlWgtEBI/review"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.5041297285643!2d55.2798281!3d25.1862161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f683013d4d43d%3A0x4ba3a4edcb72c9ae!2sDoubleTree%20by%20Hilton%20Dubai%20-%20Business%20Bay!5e0!3m2!1sen!2sae!4v1778163087290!5m2!1sen!2sae"
                         width="100%"
                         height="320"
                         style={{ border: 0, display: 'block', margin: '0 auto' }}
