@@ -118,7 +118,7 @@ const Contact = () => {
                                 <FaEnvelope />
                             </div>
                             <h3>Email Us</h3>
-                            <p>nehajakhar@nxtstar.ae</p>
+                            <p>sales@nxtstar.ae</p>
                         </div>
 
                         <div className="contact-card">
