@@ -12,7 +12,7 @@ const BlogPostPage = () => {
     // Sample blog data - in a real application, this would come from an API
     const sampleBlogs = [
         {
-            id: 1,
+        	id: 1,
             title: "Guide to Starting a Business in UAE Mainland",
             slug: "guide-to-starting-a-business-in-uae-mainland",
             excerpt: "Learn the step-by-step process of establishing your business in UAE mainland with 100% ownership.",
@@ -805,7 +805,7 @@ const BlogPostPage = () => {
 			`			
         }
 		{
-		    id: 12,
+			id: 12,
 		    title: "World Trade Centre Business Setup in Dubai: A Smart Free Zone Choice for Growing Companies",
 		    slug: "world-trade-centre-business-setup-dubai",
 		    excerpt: "Explore DWTC Free Zone business setup options, license types, office solutions, and company formation benefits in Dubai.",
