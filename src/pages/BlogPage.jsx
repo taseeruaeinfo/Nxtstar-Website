@@ -179,7 +179,7 @@ const BlogPage = () => {
 		    author: "Nxtstar Team",
 		    category: "Business Setup",
 		    readTime: "6 min read",
-		    image: "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/619a2484-9aaa-5599-94c4-c13af07ad92b/c03a2367-3351-52a6-ba0a-6f3aaa026694.jpg"
+		    image: "https://media.istockphoto.com/id/1174513035/photo/books-of-compliance-and-regulations-in-front-grey-wall.webp?a=1&b=1&s=612x612&w=0&k=20&c=r1fWNL0eN5I3ksmoxmBMql9Xw5rtUbg53cPGOqsJxnQ="
 		},
 		{
 			id: 16,
@@ -190,7 +190,7 @@ const BlogPage = () => {
 		    author: "Nxtsar Team",
 		    category: "Business Setup",
 		    readTime: "9 min read",
-		    image: "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/619a2484-9aaa-5599-94c4-c13af07ad92b/c03a2367-3351-52a6-ba0a-6f3aaa026694.jpg"
+		    image: "https://plus.unsplash.com/premium_photo-1661963643994-71bd551d73c1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZHViYWklMjBvZmZpY2V8ZW58MHx8MHx8fDA%3D"
 		},
 		{
 			id: 17,
@@ -201,7 +201,7 @@ const BlogPage = () => {
 		    author: "Nxtstar Team",
 		    category: "Business Setup",
 		    readTime: "5 min read",
-		    image: "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/619a2484-9aaa-5599-94c4-c13af07ad92b/c03a2367-3351-52a6-ba0a-6f3aaa026694.jpg"
+		    image: "https://media.istockphoto.com/id/2134854857/photo/health-insurance-concept-human-holding-virtual-insurance-and-healthcare-medical-icon-doctor.webp?a=1&b=1&s=612x612&w=0&k=20&c=dW9yjVIOikmPQqN076KSDNO-JoupWuhkvGAahJXsp9g="
 		}		
     ]);
 
