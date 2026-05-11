@@ -158,7 +158,51 @@ const BlogPage = () => {
 		    category: "Investor Visa",
 		    readTime: "3 min read",
 		    image: "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/619a2484-9aaa-5599-94c4-c13af07ad92b/c03a2367-3351-52a6-ba0a-6f3aaa026694.jpg"
-		}	 
+		},
+		{
+			id: 14,
+			title: "Special Tech Licences in DIFC and ADGM for AI Startups",
+		    slug: "special-tech-licences-difc-adgm-ai-startups",
+		    excerpt: "Explore the special startup-friendly tech licences available in DIFC and ADGM for AI startups in the UAE.",
+		    date: "2026-05-18",
+		    author: "Nxtstar Team",
+		    category: "Business Setup",
+		    readTime: "7 min read",
+		    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1200",
+		},
+		{
+			id: 15,
+		    title: "National Media Authority Permit in the UAE for Publishing and Media Businesses",
+		    slug: "national-media-authority-permit-uae-publishing-media-businesses",
+		    excerpt: "A practical guide to the National Media Authority permit requirements for publishing, media, and digital content businesses in the UAE.",
+		    date: "2026-02-18",
+		    author: "Nxtstar Team",
+		    category: "Business Setup",
+		    readTime: "6 min read",
+		    image: "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/619a2484-9aaa-5599-94c4-c13af07ad92b/c03a2367-3351-52a6-ba0a-6f3aaa026694.jpg"
+		},
+		{
+			id: 16,
+		    title: "Office Options in Dubai Explained: Best Area for Office in Dubai for Business Owners",
+		    slug: "office-options-dubai-best-area-office-business-owners",
+		    excerpt: "A practical guide to choosing the right office type and business location in Dubai based on your business model and licensing needs.",
+		    date: "2026-01-22",
+		    author: "Nxtsar Team",
+		    category: "Business Setup",
+		    readTime: "9 min read",
+		    image: "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/619a2484-9aaa-5599-94c4-c13af07ad92b/c03a2367-3351-52a6-ba0a-6f3aaa026694.jpg"
+		},
+		{
+			id: 17,
+		    title: "DIFC PropTech Licence: Subsidised Startup Package Starting from USD 1,500",
+		    slug: "difc-proptech-licence-subsidised-startup-package",
+		    excerpt: "Discover how the DIFC PropTech Licence offers an affordable and premium setup option for real estate technology startups in Dubai.",
+		    date: "2026-04-14",
+		    author: "Nxtstar Team",
+		    category: "Business Setup",
+		    readTime: "5 min read",
+		    image: "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/619a2484-9aaa-5599-94c4-c13af07ad92b/c03a2367-3351-52a6-ba0a-6f3aaa026694.jpg"
+		}		
     ]);
 
     const [searchTerm, setSearchTerm] = useState('');
