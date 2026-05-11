@@ -995,8 +995,8 @@ const BlogPostPage = () => {
 		    title: "Special Tech Licences in DIFC and ADGM for AI Startups",
 		    slug: "special-tech-licences-difc-adgm-ai-startups",
 		    excerpt: "Explore the special startup-friendly tech licences available in DIFC and ADGM for AI startups in the UAE.",
-		    date: "2025-11-18",
-		    author: "NXTStar Team",
+		    date: "2026-05-18",
+		    author: "Nxtstar Team",
 		    category: "Business Setup",
 		    readTime: "7 min read",
 		    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1200",
@@ -1080,8 +1080,8 @@ const BlogPostPage = () => {
 		    title: "National Media Authority Permit in the UAE for Publishing and Media Businesses",
 		    slug: "national-media-authority-permit-uae-publishing-media-businesses",
 		    excerpt: "A practical guide to the National Media Authority permit requirements for publishing, media, and digital content businesses in the UAE.",
-		    date: "2025-02-18",
-		    author: "NXTStar Team",
+		    date: "2026-02-18",
+		    author: "Nxtsar Team",
 		    category: "Business Setup",
 		    readTime: "6 min read",
 		    image: "https://images.unsplash.com/photo-1495020689067-958852a7765e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1200",
@@ -1170,104 +1170,11 @@ const BlogPostPage = () => {
 		},
 		{
 		    id: 16,
-		    title: "National Media Authority Permit in the UAE for Publishing and Media Businesses",
-		    slug: "national-media-authority-permit-uae-publishing-media-businesses",
-		    excerpt: "A practical guide to the National Media Authority permit requirements for publishing, media, and digital content businesses in the UAE.",
-		    date: "2025-02-18",
-		    author: "NXTStar Team",
-		    category: "Business Setup",
-		    readTime: "6 min read",
-		    image: "https://images.unsplash.com/photo-1495020689067-958852a7765e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1200",
-		    content: `
-		        <h2>What is the National Media Authority (NMA)?</h2>
-		        <p>The National Media Authority (NMA), previously known to many as the UAE Media Council, is the key authority for media-related approvals and permits in the UAE. It oversees a wide range of services connected to publishing, advertising, digital content, filming, and other media activities.</p>
-		
-		        <p>If your business creates or publishes media content, the NMA Permit is an important compliance step. For companies and individuals working in publishing, online media, advertising, or content creation, this permit helps ensure that operations remain aligned with UAE media regulations.</p>
-		
-		        <h2>What the NMA Permit Covers</h2>
-		        <p>The NMA provides services for a broad range of media activities, including commercial media licensing, advertising permits, filming approvals, artistic work approvals, and newspaper or magazine distribution permits.</p>
-		
-		        <p>For publishing and digital media businesses, the most relevant services include:</p>
-		
-		        <ul>
-		            <li>Media licenses of a commercial nature</li>
-		            <li>Advertising permits for social media and digital platforms</li>
-		            <li>Newspaper and magazine distribution permits</li>
-		            <li>Filming and media content approvals</li>
-		            <li>Artworks approval permits</li>
-		            <li>Licensing for radio and television broadcasting activities</li>
-		        </ul>
-		
-		        <h2>Who Needs This Permit?</h2>
-		        <p>This permit is relevant for businesses and professionals involved in:</p>
-		
-		        <ul>
-		            <li>Publishing</li>
-		            <li>Digital content creation</li>
-		            <li>Advertising</li>
-		            <li>Social media marketing</li>
-		            <li>Media production</li>
-		            <li>Online media platforms</li>
-		            <li>Magazine and newspaper-related activities</li>
-		            <li>Sponsored or branded content</li>
-		        </ul>
-		
-		        <p>It is especially important for entities that produce or distribute media content in the UAE and need formal approval before operating.</p>
-		
-		        <h2>Annual Fee and Processing Time</h2>
-		        <p>For media and publishing-related activities, the permit can be positioned as:</p>
-		
-		        <ul>
-		            <li><strong>Annual fee:</strong> AED 5,000</li>
-		            <li><strong>Processing time:</strong> 10 to 15 working days</li>
-		            <li><strong>Validity:</strong> Renewable every year</li>
-		        </ul>
-		
-		        <p>This makes the permit a straightforward annual compliance requirement for many media businesses.</p>
-		
-		        <h2>Similar Activities That May Need Approval</h2>
-		        <p>If you are involved in any of the following, the NMA framework may also apply:</p>
-		
-		        <ul>
-		            <li>Advertising content on social media</li>
-		            <li>Visiting influencers or creators providing promotional media content</li>
-		            <li>Online publishing and editorial content</li>
-		            <li>Printed publication distribution</li>
-		            <li>Filming and photography activities</li>
-		            <li>Script or artwork approval</li>
-		            <li>Broadcast-related media activities</li>
-		        </ul>
-		
-		        <p>Because media activity categories can vary, it is important to match your business activity with the correct permit type before submitting an application.</p>
-		
-		        <h2>Why It Matters for Your Business</h2>
-		        <p>Operating with the right media permit helps protect your business from compliance issues and gives your brand more credibility in the UAE market.</p>
-		
-		        <p>It also helps you work within the country's formal media framework, which is especially important for businesses creating public-facing or commercial content.</p>
-		
-		        <p>For companies in publishing or digital media, this is not just an administrative step — it is part of building a trustworthy, legally compliant operation.</p>
-		
-		        <h2>How Nxtstar Can Help</h2>
-		        <p>Nxtstar can help you determine whether your activity needs an NMA Permit, prepare the right documents, and guide you through the application process from start to finish.</p>
-		
-		        <p>That is especially useful for new businesses, content creators, publishers, and agencies that want a fast and simple setup.</p>
-		
-		        <p>If your business includes publishing, media, advertising, or online content, Nxtstar can help you choose the right path and avoid delays.</p>
-		
-		        <h2>Contact Details</h2>
-		        <p>For assistance with the process, contact the Nxtstar team at <a href="https://www.nxtstar.ae" target="_blank" rel="noopener noreferrer">www.nxtstar.ae</a> or email <a href="mailto:sales@nxtstar.ae">sales@nxtstar.ae</a>.</p>
-		
-		        <h3>Reference</h3>
-		        <p><a href="https://u.ae/en/information-and-services/business/licensing-and-registration/media-licenses" target="_blank" rel="noopener noreferrer">UAE Media Licensing Information</a></p>
-		    `
-		},
-		{
-		    id: 17,
 		    title: "Office Options in Dubai Explained: Best Area for Office in Dubai for Business Owners",
 		    slug: "office-options-dubai-best-area-office-business-owners",
 		    excerpt: "A practical guide to choosing the right office type and business location in Dubai based on your business model and licensing needs.",
-		    date: "2025-01-22",
-		    author: "NXTStar Team",
+		    date: "2026-01-22",
+		    author: "Nxtstar Team",
 		    category: "Business Setup",
 		    readTime: "9 min read",
 		    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1200",
@@ -1388,12 +1295,12 @@ const BlogPostPage = () => {
 		    `
 		},
 		{
-		    id: 18,
+		    id: 17,
 		    title: "DIFC PropTech Licence: Subsidised Startup Package Starting from USD 1,500",
 		    slug: "difc-proptech-licence-subsidised-startup-package",
 		    excerpt: "Discover how the DIFC PropTech Licence offers an affordable and premium setup option for real estate technology startups in Dubai.",
-		    date: "2025-04-14",
-		    author: "NXTStar Team",
+		    date: "2026-04-14",
+		    author: "Nxtstar Team",
 		    category: "Business Setup",
 		    readTime: "5 min read",
 		    image: "https://images.unsplash.com/photo-1460317442991-0ec209397118?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1200",
