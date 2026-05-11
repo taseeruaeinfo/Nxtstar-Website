@@ -1084,7 +1084,7 @@ const BlogPostPage = () => {
 		    author: "Nxtsar Team",
 		    category: "Business Setup",
 		    readTime: "6 min read",
-		    image: "https://images.unsplash.com/photo-1495020689067-958852a7765e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1200",
+		    image: "https://media.istockphoto.com/id/1174513035/photo/books-of-compliance-and-regulations-in-front-grey-wall.webp?a=1&b=1&s=612x612&w=0&k=20&c=r1fWNL0eN5I3ksmoxmBMql9Xw5rtUbg53cPGOqsJxnQ=",
 		    content: `
 		        <h2>What is the National Media Authority (NMA)?</h2>
 		        <p>The National Media Authority (NMA), previously known to many as the UAE Media Council, is the key authority for media-related approvals and permits in the UAE. It oversees a wide range of services connected to publishing, advertising, digital content, filming, and other media activities.</p>
@@ -1177,7 +1177,7 @@ const BlogPostPage = () => {
 		    author: "Nxtstar Team",
 		    category: "Business Setup",
 		    readTime: "9 min read",
-		    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1200",
+		    image: "https://plus.unsplash.com/premium_photo-1661963643994-71bd551d73c1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZHViYWklMjBvZmZpY2V8ZW58MHx8MHx8fDA%3D",
 		    content: `
 		        <h2>Choosing the Right Office in Dubai</h2>
 		        <p>Launching in Dubai is exciting — until you are stuck in the same loop as many founders: should you pick your office first, apply for the license, or choose the location and hope everything else fits around it.</p>
@@ -1303,7 +1303,7 @@ const BlogPostPage = () => {
 		    author: "Nxtstar Team",
 		    category: "Business Setup",
 		    readTime: "5 min read",
-		    image: "https://images.unsplash.com/photo-1460317442991-0ec209397118?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1200",
+		    image: "https://media.istockphoto.com/id/2134854857/photo/health-insurance-concept-human-holding-virtual-insurance-and-healthcare-medical-icon-doctor.webp?a=1&b=1&s=612x612&w=0&k=20&c=dW9yjVIOikmPQqN076KSDNO-JoupWuhkvGAahJXsp9g=",
 		    content: `
 		        <h2>DIFC PropTech Licence for Startups</h2>
 		        <p>DIFC now offers a subsidised PropTech licence package starting from only USD 1,500, making it one of the most attractive entry points for real estate technology startups in Dubai.</p>
