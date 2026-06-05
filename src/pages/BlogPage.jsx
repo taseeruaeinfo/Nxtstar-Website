@@ -202,6 +202,17 @@ const BlogPage = () => {
 		    category: "Business Setup",
 		    readTime: "5 min read",
 		    image: "https://media.istockphoto.com/id/2134854857/photo/health-insurance-concept-human-holding-virtual-insurance-and-healthcare-medical-icon-doctor.webp?a=1&b=1&s=612x612&w=0&k=20&c=dW9yjVIOikmPQqN076KSDNO-JoupWuhkvGAahJXsp9g="
+		},
+		{
+			id: 18,
+		    title: "How UAE Businesses Can Increase Their AI Presence and Get More Clients (Nxtstar x Prezlo)",
+		    slug: "get-business-in-ai-search-results",
+		    excerpt: "UAE businesses can grow faster by using AI to improve visibility, automate customer engagement, and attract better-quality leads. In a competitive market like the UAE, the businesses that combine smart automation with strong branding and consistent content are the ones most likely to stand out and convert interest into clients.",
+		    date: "2026-05-05",
+		    author: "Neha Jakhar",
+		    category: "Business Growth",
+		    readTime: "3 min read",
+		    image: "https://images.unsplash.com/photo-1745674684463-62f62cb88d4c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YWklMjBzZWFyY2h8ZW58MHx8MHx8fDA%3D"
 		}		
     ]);
 
