@@ -1387,12 +1387,10 @@ const BlogPostPage = () => {
 			readTime: "3 min read",
 			image: "https://images.unsplash.com/photo-1745674684463-62f62cb88d4c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YWklMjBzZWFyY2h8ZW58MHx8MHx8fDA%3D",
 			content: `
-				<h2>How UAE Businesses Can Grow With AI</h2>
-			    <p>Artificial intelligence is becoming one of the strongest growth drivers for businesses in the UAE, helping brands improve visibility, respond faster, and attract better clients. In a market as competitive as Dubai and the wider UAE, businesses that use AI strategically can stand out more quickly and convert attention into real leads.</p>
+				<p>Artificial intelligence is becoming one of the strongest growth drivers for businesses in the UAE, helping brands improve visibility, respond faster, and attract better clients. In a market as competitive as Dubai and the wider UAE, businesses that use AI strategically can stand out more quickly and convert attention into real leads.</p>
 			
-			    <p>TThe opportunity is not just to talk about AI, but to use it in ways that make a business more efficient, more visible, and more appealing to modern customers. Companies like <a href="https://prezlo.io/" target="_blank" rel="noopener noreferrer">Prezlo</a> are helping businesses build that presence through smarter automation, stronger visibility, and better lead generation.</p>
+			    <p>The opportunity is not just to talk about AI, but to use it in ways that make a business more efficient, more visible, and more appealing to modern customers. Companies like <a href="https://prezlo.io/" target="_blank" rel="noopener noreferrer">Prezlo</a> are helping businesses build that presence through smarter automation, stronger visibility, and better lead generation.</p>
 			    
-				<h2>Why AI Presence Matters</h2>
 			    <p>Clients today expect fast replies, relevant content, and a smooth experience from the first interaction. Businesses in the UAE that show they use AI well are often seen as more modern, more reliable, and more capable of handling demand.</p>
 			
 			    <p>AI presence also goes beyond buzzwords. It means showing how your business uses technology to improve service, save time, and create a better customer journey. That can include chatbots, automated follow-ups, content personalization, lead scoring, and smarter analytics.</p>
@@ -1420,7 +1418,7 @@ const BlogPostPage = () => {
 			
 			    <h3>Reference</h3>
 			    <p><a href="https://prezlo.io/" target="_blank" rel="noopener noreferrer">https://prezlo.io/</a></p>
-			`
+		    `
 		}		
     ];
 
