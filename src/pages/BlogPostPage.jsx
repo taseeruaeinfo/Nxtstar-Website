@@ -22,7 +22,7 @@ const BlogPostPage = () => {
             readTime: "5 min read",
             image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
             content: `
-                <h2>Introduction</h2>
+            	<h2>Introduction</h2>
                 <p>Setting up a business in UAE mainland offers unique advantages for entrepreneurs looking to establish a presence in the UAE with full operational flexibility. This comprehensive guide will walk you through the essential steps and requirements for establishing your business in UAE mainland with 100% ownership.</p>
                 
                 <h2>Understanding UAE Mainland Companies</h2>
@@ -30,7 +30,7 @@ const BlogPostPage = () => {
                 
                 <h2>Key Requirements for Mainland Company Setup</h2>
                 <ul>
-                    <li>Trade Name Approval</li>
+                	<li>Trade Name Approval</li>
                     <li>Memorandum of Association (MOA)</li>
                     <li>Local Sponsor or Service Agent</li>
                     <li>Initial Approval Certificate</li>
@@ -1402,7 +1402,7 @@ const BlogPostPage = () => {
 			
 			    <p>Another important step is keeping your website and social profiles active with messaging that reflects your value clearly. Businesses should focus on being visible across LinkedIn, Instagram, Google search, and their own websites so potential clients can easily find and trust them.</p>
 			
-			    <p>AI tools can help with content ideas, posting, lead capture, and customer follow-up, but the message still needs to feel human and local. In the UAE, the businesses that win are usually the ones that combine smart automation with a strong understanding of what their audience actually needs.</p>
+				<p>AI tools can help with content ideas, posting, lead capture, and customer follow-up, but the message still needs to feel human and local. In the UAE, the businesses that win are usually the ones that combine smart automation with a strong understanding of what their audience actually needs.</p>
 			
 			    <h2>How To Get More Clients</h2>
 			    <p>To attract more clients, businesses should move from random marketing to a structured growth strategy. Instead of posting occasionally or running generic campaigns, they should use AI to identify the right audience, personalize the message, and follow up at the right time.</p>
@@ -1416,11 +1416,11 @@ const BlogPostPage = () => {
 			    
 				<p>This kind of collaboration works well because it gives UAE businesses a practical entry point into AI presence and lead generation without commitment. It is a strong way to show value, build trust, and start a longer-term relationship with potential clients.</p>
 			
-			     <p>For businesses across the UAE, the real advantage is not just using AI, but showing the market that they use it to work smarter, respond faster, and serve clients better. That combination builds visibility, improves trust, and creates more opportunities for growth. Learn more at <a href="https://prezlo.io/" target="_blank" rel="noopener noreferrer">Prezlo</a>.</p>
+			    <p>For businesses across the UAE, the real advantage is not just using AI, but showing the market that they use it to work smarter, respond faster, and serve clients better. That combination builds visibility, improves trust, and creates more opportunities for growth. Learn more at <a href="https://prezlo.io/" target="_blank" rel="noopener noreferrer">Prezlo</a>.</p>
 			
 			    <h3>Reference</h3>
 			    <p><a href="https://prezlo.io/" target="_blank" rel="noopener noreferrer">https://prezlo.io/</a></p>
-			  `
+			`
 		}		
     ];
 
