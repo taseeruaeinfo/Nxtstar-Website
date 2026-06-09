@@ -208,7 +208,7 @@ const BlogPage = () => {
 		    title: "How UAE Businesses Can Increase Their AI Presence and Get More Clients (Nxtstar x Prezlo)",
 		    slug: "get-business-in-ai-search-results",
 		    excerpt: "UAE businesses can grow faster by using AI to improve visibility, automate customer engagement, and attract better-quality leads. In a competitive market like the UAE, the businesses that combine smart automation with strong branding and consistent content are the ones most likely to stand out and convert interest into clients.",
-		    date: "2026-05-05",
+		    date: "2026-06-09",
 		    author: "Neha Jakhar",
 		    category: "Business Growth",
 		    readTime: "3 min read",
