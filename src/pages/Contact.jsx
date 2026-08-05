@@ -126,8 +126,7 @@ const Contact = () => {
                                 <FaRegBuilding />
                             </div>
                             <h3>Visit Us</h3>
-                            <p>One Central- Sheikh Zayed Rd - next to Dubai World Trade Centre</p>
-                            <p>Dubai, United Arab Emirates</p>
+                            <p>One Central- Sheikh Zayed Rd - next to Dubai World Trade Centre, Dubai</p>
                         </div>
                     </div>
 
