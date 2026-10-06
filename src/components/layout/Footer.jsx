@@ -42,7 +42,7 @@ const Footer = () => {
         <>
             <motion.footer
                 className="footer"
-                initial="hidden"
+                initial={false}
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.1 }}
                 variants={footerVariants}
@@ -58,7 +58,7 @@ const Footer = () => {
                                 className="footer-description"
                                 variants={itemVariants}
                             >
-                                Your trusted partner for business setup in the UAE. We provide comprehensive solutions for mainland, freezone, and offshore company formation.
+                                UAE business setup and licensing consultancy based in Dubai.
                             </motion.p>
                             <motion.div className="social-links" variants={itemVariants}>
                                 <motion.a
@@ -81,7 +81,7 @@ const Footer = () => {
                                     whileHover={{ scale: 1.2, rotate: 5 }}
                                     whileTap={{ scale: 0.9 }}
                                 >
-                                    <img src={Threads} alt="Threads" id='footerThreads' />
+                                    <img src={Threads} alt="NXTSTAR on Threads" id='footerThreads' loading="lazy" />
                                 </motion.a>
                                 <motion.a
                                     href="https://www.tiktok.com/@nxtstar.ae"
@@ -92,7 +92,7 @@ const Footer = () => {
                                     whileHover={{ scale: 1.2, rotate: 5 }}
                                     whileTap={{ scale: 0.9 }}
                                 >
-                                    <img src={Tiktok} alt="Tiktok" id='footerTiktok' />
+                                    <img src={Tiktok} alt="NXTSTAR on TikTok" id='footerTiktok' loading="lazy" />
                                 </motion.a>
                                 <motion.a
                                     href="https://www.linkedin.com/company/nxtstar/"
@@ -140,25 +140,25 @@ const Footer = () => {
                             <motion.h3 className="footer-heading" variants={itemVariants}>Services</motion.h3>
                             <motion.ul className="footer-links" variants={itemVariants}>
                                 <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
-                                    <Link to="/services/registration-licenses">Registration & Licenses</Link>
+                                    <Link to="/services/advertiser-permit">Advertiser Permit for Creators</Link>
                                 </motion.li>
                                 <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
-                                    <Link to="/services/visa-pro">Residence Visa & PRO</Link>
+                                    <Link to="/services/difc-ai-licence">DIFC AI & Innovation Licence</Link>
                                 </motion.li>
                                 <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
-                                    <Link to="/services/golden-visa">Golden Visa</Link>
+                                    <Link to="/business/freezone/ifza">IFZA Company Setup</Link>
                                 </motion.li>
                                 <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
-                                    <Link to="/services/taxation">Taxation</Link>
+                                    <Link to="/services/pro">PRO Services</Link>
                                 </motion.li>
                                 <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
-                                    <Link to="/services/corporate-structuring">Corporate Structuring</Link>
+                                    <Link to="/services/visa">Visa Services</Link>
                                 </motion.li>
                                 <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
-                                    <Link to="/services/trademark">Trademark Registration</Link>
+                                    <Link to="/services/accounting">Accounting & Tax</Link>
                                 </motion.li>
                                 <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
-                                    <Link to="/services/website">Website Development</Link>
+                                    <Link to="/services">All Services</Link>
                                 </motion.li>
                             </motion.ul>
                         </motion.div>
@@ -211,7 +211,7 @@ const Footer = () => {
 
             {/* WhatsApp Button */}
             <motion.a
-                href="https://wa.me/+971582594158"
+                href="https://wa.me/971582594158"
                 className="whatsapp-icon"
                 target="_blank"
                 rel="noopener noreferrer"

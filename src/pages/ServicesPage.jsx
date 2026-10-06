@@ -4,15 +4,38 @@ import PageLayout from '../components/layout/PageLayout';
 import PRO from './services/PRO';
 import Visa from './services/Visa';
 import Accounting from './services/Accounting';
-import Creators from './services/Creators';
+import AdvertiserPermit from './services/AdvertiserPermit';
+import DifcAiLicence from './services/DifcAiLicence';
 import Freelancers from './services/Freelancers';
 import Startups from './services/Startups';
 import Investors from './services/Investors';
 import Residents from './services/Residents';
+import NotFound from './NotFound';
 import '../styles/pages/ServicesPage.css';
 
 const ServicesPage = () => {
     const services = [
+        {
+            id: 'advertiser-permit',
+            title: 'Advertiser Permit for Creators',
+            description: 'Trade licence setup and UAE Media Council advertiser permit applications for content creators and influencers.',
+            icon: '🎥',
+            link: '/services/advertiser-permit'
+        },
+        {
+            id: 'difc-ai-licence',
+            title: 'DIFC AI and Innovation Licence',
+            description: 'Company setup in the Dubai International Financial Centre for AI and technology businesses.',
+            icon: '🤖',
+            link: '/services/difc-ai-licence'
+        },
+        {
+            id: 'ifza-setup',
+            title: 'IFZA Company Setup',
+            description: 'Free zone company formation with the International Free Zone Authority in Dubai.',
+            icon: '🏢',
+            link: '/business/freezone/ifza'
+        },
         {
             id: 'pro-services',
             title: 'PRO Services',
@@ -106,7 +129,7 @@ const ServicesPage = () => {
                         <div className="services-overview-page">
                             <section className="hero-section">
                                 <div className="hero-content">
-                                    <h1>Business Support Services in UAE</h1>
+                                    <h2>Business Support Services in UAE</h2>
                                     <p>Beyond business setup, we offer a comprehensive range of support services to help your business thrive in the UAE.</p>
                                 </div>
                             </section>
@@ -139,7 +162,7 @@ const ServicesPage = () => {
                                             <img
                                                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=400&auto=format&fit=crop"
                                                 alt="Experienced Team"
-                                                className="benefit-image"
+                                                className="benefit-image" loading="lazy" decoding="async"
                                             />
                                             <h3>Experienced Team</h3>
                                             <p>Our professionals bring years of expertise in UAE business regulations and processes.</p>
@@ -148,7 +171,7 @@ const ServicesPage = () => {
                                             <img
                                                 src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=400&auto=format&fit=crop"
                                                 alt="Personalized Approach"
-                                                className="benefit-image"
+                                                className="benefit-image" loading="lazy" decoding="async"
                                             />
                                             <h3>Personalized Approach</h3>
                                             <p>We tailor our services to meet your unique business requirements and objectives.</p>
@@ -157,7 +180,7 @@ const ServicesPage = () => {
                                             <img
                                                 src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=400&auto=format&fit=crop"
                                                 alt="Time Efficiency"
-                                                className="benefit-image"
+                                                className="benefit-image" loading="lazy" decoding="async"
                                             />
                                             <h3>Time Efficiency</h3>
                                             <p>We handle time-consuming tasks so you can focus on growing your business.</p>
@@ -166,7 +189,7 @@ const ServicesPage = () => {
                                             <img
                                                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=400&auto=format&fit=crop"
                                                 alt="Cost-Effective"
-                                                className="benefit-image"
+                                                className="benefit-image" loading="lazy" decoding="async"
                                             />
                                             <h3>Cost-Effective</h3>
                                             <p>Our services help reduce operational costs while ensuring compliance and efficiency.</p>
@@ -186,12 +209,13 @@ const ServicesPage = () => {
                     </PageLayout>
                 }
             />
-            <Route path="/pro/*" element={<PRO />} />
-            <Route path="/visa/*" element={<Visa />} />
-            <Route path="/accounting/*" element={<Accounting />} />
+            <Route path="/pro" element={<PRO />} />
+            <Route path="/visa" element={<Visa />} />
+            <Route path="/accounting" element={<Accounting />} />
             <Route path="/banking" element={
                 <PageLayout
                     title="Corporate Banking Services"
+                    noindex
                     description="Navigate the UAE banking landscape with ease. We assist in opening corporate bank accounts for all types of business entities."
                     headerImage="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
                     headerOverlayColor="rgba(0, 0, 0, 0.7)"
@@ -205,6 +229,7 @@ const ServicesPage = () => {
             <Route path="/trademark" element={
                 <PageLayout
                     title="Trademark Registration Services"
+                    noindex
                     description="Protect your brand identity in the UAE and GCC region with our comprehensive trademark registration services."
                     headerImage="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
                     headerOverlayColor="rgba(0, 0, 0, 0.7)"
@@ -218,6 +243,7 @@ const ServicesPage = () => {
             <Route path="/documents" element={
                 <PageLayout
                     title="Document Clearing Services"
+                    noindex
                     description="Fast and reliable document attestation, legalization, and translation services for all your business needs."
                     headerImage="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
                     headerOverlayColor="rgba(0, 0, 0, 0.7)"
@@ -228,26 +254,13 @@ const ServicesPage = () => {
                     </div>
                 </PageLayout>
             } />
-            <Route path="/creators" element={<Creators />} />
+            <Route path="/advertiser-permit" element={<AdvertiserPermit />} />
+            <Route path="/difc-ai-licence" element={<DifcAiLicence />} />
             <Route path="/freelancers" element={<Freelancers />} />
             <Route path="/startups" element={<Startups />} />
             <Route path="/investors" element={<Investors />} />
             <Route path="/residents" element={<Residents />} />
-            <Route path="*" element={
-                <PageLayout
-                    title="Service Not Found"
-                    description="The service you are looking for does not exist."
-                    headerImage="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-                    headerOverlayColor="rgba(0, 0, 0, 0.7)"
-                >
-                    <div className="service-not-found">
-                        <h2>Service Not Found</h2>
-                        <p>The service you are looking for does not exist or has been moved.</p>
-                        <Link to="/services" className="back-link">Back to Services</Link>
-                        
-                    </div>
-                </PageLayout>
-            } />
+            <Route path="*" element={<NotFound />} />
         </Routes>
     );
 };

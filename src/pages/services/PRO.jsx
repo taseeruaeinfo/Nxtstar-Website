@@ -40,7 +40,6 @@ const PRO = () => {
     const packages = [
         {
             title: 'Basic PRO Package',
-            price: '2,500',
             features: [
                 'Trade License Renewal',
                 '2 Visa Renewals/Applications',
@@ -53,7 +52,6 @@ const PRO = () => {
         },
         {
             title: 'Business PRO Package',
-            price: '5,000',
             features: [
                 'Trade License Renewal',
                 '5 Visa Renewals/Applications',
@@ -68,7 +66,6 @@ const PRO = () => {
         },
         {
             title: 'Corporate PRO Package',
-            price: '8,500',
             features: [
                 'Trade License Renewal',
                 '10 Visa Renewals/Applications',
@@ -118,7 +115,7 @@ const PRO = () => {
             <div className="pro-services-page">
                 {/* <section className="hero-section">
                     <div className="hero-content">
-                        <h1>PRO Services in UAE</h1>
+                        <h2>PRO Services in UAE</h2>
                         <p>Streamline your government transactions and administrative procedures with our professional PRO services.</p>
                         <div className="hero-buttons">
                             <a href="#packages" className="primary-btn">View Packages</a>
@@ -174,11 +171,6 @@ const PRO = () => {
                                     {pkg.recommended && <div className="recommended-tag">Recommended</div>}
                                     <div className="package-header">
                                         <h3>{pkg.title}</h3>
-                                        <div className="package-price">
-                                            <span className="currency">AED</span>
-                                            <span className="amount">{pkg.price}</span>
-                                            <span className="period">/year</span>
-                                        </div>
                                     </div>
                                     <div className="package-features">
                                         <ul>

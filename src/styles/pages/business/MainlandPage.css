@@ -43,7 +43,8 @@
     padding: 0 1.5rem;
 }
 
-.hero-content h1 {
+.hero-content h1,
+.hero-content h2 {
     font-size: 2.8rem;
     color: #1a365d;
     margin-bottom: 1.5rem;
@@ -381,7 +382,8 @@
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .hero-content h1 {
+    .hero-content h1,
+    .hero-content h2 {
         font-size: 2.2rem;
     }
 
@@ -418,7 +420,8 @@
 }
 
 @media (max-width: 480px) {
-    .hero-content h1 {
+    .hero-content h1,
+    .hero-content h2 {
         font-size: 1.8rem;
     }
 

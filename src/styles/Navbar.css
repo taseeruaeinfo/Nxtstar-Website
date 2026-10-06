@@ -36,6 +36,7 @@
 
 .navbar-logo img {
     height: 150px;
+    width: auto;
 }
 
 .navbar-nav {

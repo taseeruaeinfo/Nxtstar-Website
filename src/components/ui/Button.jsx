@@ -30,7 +30,7 @@ const Button = ({
         whileHover: { scale: 1.05 },
         whileTap: { scale: 0.98 },
         transition: {
-            type: "spring",
+            type: /** @type {const} */ ("spring"),
             stiffness: 400,
             damping: 17
         }

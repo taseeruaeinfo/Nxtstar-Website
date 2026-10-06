@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import PageLayout from '../../components/layout/PageLayout';
+import NotFound from '../NotFound';
 import FreezoneOverview from './freezone/FreezoneOverview';
 import DMCCPage from './freezone/details/DMCCPage';
 import JAFZAPage from './freezone/details/JAFZAPage';
@@ -45,7 +45,7 @@ const FreezonePages = () => {
 			<Route path="/nuventures" element={<NuventuresPage />} />
 			<Route path="/rakicc" element={<RAKICCPage />} />
 
-			{/* Keep other existing routes */}
+			<Route path="*" element={<NotFound />} />
 
 		</Routes>
 	);

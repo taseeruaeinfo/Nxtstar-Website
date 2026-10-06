@@ -90,7 +90,7 @@ const MainlandPage = () => {
             <div className="mainland-page">
                 <section className="hero-section-Mainland">
                     <div className="hero-content">
-                        <h1>Mainland Business Setup in UAE</h1>
+                        <h2>Mainland Business Setup in UAE</h2>
                         <p>Establish a mainland company with 100% ownership and full access to the UAE's lucrative market.</p>
                         <div className="hero-buttons">
                             <a href="/contact" className="secondary-btn">Get Free Consultation</a>

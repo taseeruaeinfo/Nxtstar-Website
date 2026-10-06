@@ -40,8 +40,6 @@ const Accounting = () => {
     const packages = [
         {
             title: 'Starter Package',
-            price: '1,500',
-            frequency: 'per month',
             features: [
                 'Basic Bookkeeping (up to 100 transactions)',
                 'Monthly Financial Statements',
@@ -54,8 +52,6 @@ const Accounting = () => {
         },
         {
             title: 'Business Package',
-            price: '3,000',
-            frequency: 'per month',
             features: [
                 'Comprehensive Bookkeeping (up to 300 transactions)',
                 'Monthly Financial Statements',
@@ -70,8 +66,6 @@ const Accounting = () => {
         },
         {
             title: 'Enterprise Package',
-            price: '5,000',
-            frequency: 'per month',
             features: [
                 'Advanced Bookkeeping (unlimited transactions)',
                 'Weekly Financial Updates',
@@ -148,7 +142,7 @@ const Accounting = () => {
             <div className="accounting-services-page">
                 <section className="hero-section">
                     <div className="hero-content">
-                        <h1>Accounting & Tax Services</h1>
+                        <h2>Accounting & Tax Services</h2>
                         <p>Professional financial management solutions to keep your business compliant and financially organized.</p>
                         <div className="hero-buttons">
                             <a href="#packages" className="primary-btn">View Packages</a>
@@ -219,11 +213,6 @@ const Accounting = () => {
                                     {pkg.recommended && <div className="recommended-tag">Popular</div>}
                                     <div className="package-header">
                                         <h3>{pkg.title}</h3>
-                                        <div className="package-price">
-                                            <span className="currency">AED</span>
-                                            <span className="amount">{pkg.price}</span>
-                                            <span className="frequency">{pkg.frequency}</span>
-                                        </div>
                                         <div className="package-suitable">{pkg.suitable}</div>
                                     </div>
                                     <div className="package-features">
@@ -242,8 +231,6 @@ const Accounting = () => {
 
                         <div className="pricing-note">
                             <p>* All packages can be customized based on specific business requirements</p>
-                            <p>* Additional services available at competitive rates</p>
-                            <p>* Annual payment discounts available</p>
                         </div>
                     </div>
                 </section>

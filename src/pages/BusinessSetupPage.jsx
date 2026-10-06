@@ -5,6 +5,7 @@ import PageLayout from '../components/layout/PageLayout';
 import MainlandPage from './business/MainlandPage';
 import FreezonePages from './business/FreezonePages';
 import OffshorePage from './business/OffshorePage';
+import NotFound from './NotFound';
 import { PopUp, PopUpBounce, RotatePopUp } from '../components/ui/Motion';
 import '../styles/pages/BusinessSetupPage.css';
 
@@ -81,21 +82,21 @@ const BusinessSetupPage = () => {
                                                     <img
                                                         src="https://plus.unsplash.com/premium_photo-1694475218266-b93569487419?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070"
                                                         alt="Mainland Business Setup"
-                                                        className="business-image"
+                                                        className="business-image" loading="lazy" decoding="async"
                                                     />
                                                 )}
                                                 {type.id === 'freezone' && (
                                                     <img
                                                         src="https://images.unsplash.com/photo-1594005204555-823f0d266f79?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
                                                         alt="Free Zone Business Setup"
-                                                        className="business-image"
+                                                        className="business-image" loading="lazy" decoding="async"
                                                     />
                                                 )}
                                                 {type.id === 'offshore' && (
                                                     <img
                                                         src="https://images.unsplash.com/photo-1721974301263-5a328fe7a9a9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
                                                         alt="Offshore Company Formation"
-                                                        className="business-image"
+                                                        className="business-image" loading="lazy" decoding="async"
                                                     />
                                                 )}
                                             </motion.div>
@@ -154,7 +155,7 @@ const BusinessSetupPage = () => {
                                                     <div className="benefit-icon">✓</div>
                                                 </RotatePopUp>
                                                 <h4>Transparent Pricing</h4>
-                                                <p>No hidden fees - we provide clear, all-inclusive packages tailored to your needs.</p>
+                                                <p>We give you a written cost breakdown before you commit.</p>
                                             </motion.div>
                                         </PopUpBounce>
                                         <PopUpBounce delay={0.4}>
@@ -194,9 +195,10 @@ const BusinessSetupPage = () => {
                     </PageLayout>
                 }
             />
-            <Route path="/mainland/*" element={<MainlandPage />} />
+            <Route path="/mainland" element={<MainlandPage />} />
             <Route path="/freezone/*" element={<FreezonePages />} />
-            <Route path="/offshore/*" element={<OffshorePage />} />
+            <Route path="/offshore" element={<OffshorePage />} />
+            <Route path="*" element={<NotFound />} />
         </Routes>
     );
 };

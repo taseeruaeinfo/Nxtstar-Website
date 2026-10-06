@@ -131,14 +131,6 @@ const DKPPage = () => {
                     </div>
                 </section>
 
-                <section className="cost-section">
-                    <div className="section-content">
-                        <h2>Cost of DKP & DIAC Business Setup</h2>
-                        <div className="cost-info">
-                            <p>Setup costs generally start from AED 15,000, depending on activity type, space requirements, and regulatory approvals.</p>
-                        </div>
-                    </div>
-                </section>
 
                 <section className="cta-section">
                     <div className="cta-content">

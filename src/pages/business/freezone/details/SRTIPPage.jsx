@@ -109,13 +109,6 @@ const SRTIPPage = () => {
                     </div>
                 </section>
 
-                {/* Cost */}
-                <section className="section-content">
-                    <h2>Cost of SRTIP Business Setup</h2>
-                    <div className="cost-info">
-                        <p>Licenses start from around AED 6,000–8,000, making SRTIP one of the most cost‑effective innovation free zones in the UAE.</p>
-                    </div>
-                </section>
 
                 {/* CTA */}
                 <section className="cta-section">

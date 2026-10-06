@@ -8,7 +8,7 @@ const AnimatedBackground = () => {
     // Add effect to measure hero section height
     useEffect(() => {
         const updateHeroHeight = () => {
-            const heroSection = document.querySelector('.hero-section');
+            const heroSection = /** @type {HTMLElement | null} */ (document.querySelector('.hero-section'));
             if (heroSection) {
                 setHeroHeight(heroSection.offsetHeight);
             }

@@ -31,19 +31,19 @@ export const animations = {
     popUp: {
         initial: { opacity: 0, scale: 0.5 },
         animate: { opacity: 1, scale: 1 },
-        transition: { type: "spring", stiffness: 300, damping: 15 }
+        transition: { type: /** @type {const} */ ("spring"), stiffness: 300, damping: 15 }
     },
     // Pop-up with bounce for more dynamic elements
     popUpBounce: {
         initial: { opacity: 0, scale: 0.5, y: 50 },
         animate: { opacity: 1, scale: 1, y: 0 },
-        transition: { type: "spring", stiffness: 400, damping: 8 }
+        transition: { type: /** @type {const} */ ("spring"), stiffness: 400, damping: 8 }
     },
     // Rotate and pop-up for attention-grabbing elements
     rotatePopUp: {
         initial: { opacity: 0, scale: 0.5, rotate: -10 },
         animate: { opacity: 1, scale: 1, rotate: 0 },
-        transition: { type: "spring", stiffness: 300, damping: 10 }
+        transition: { type: /** @type {const} */ ("spring"), stiffness: 300, damping: 10 }
     }
 };
 

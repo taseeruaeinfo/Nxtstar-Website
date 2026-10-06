@@ -42,7 +42,8 @@
     padding: 0 1.5rem;
 }
 
-.pro-services-page .hero-content h1 {
+.pro-services-page .hero-content h1,
+.pro-services-page .hero-content h2 {
     font-size: 2.8rem;
     color: #1a365d;
     margin-bottom: 1.5rem;
@@ -509,7 +510,8 @@
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .pro-services-page .hero-content h1 {
+    .pro-services-page .hero-content h1,
+    .pro-services-page .hero-content h2 {
         font-size: 2.2rem;
     }
 
@@ -560,7 +562,8 @@
 }
 
 @media (max-width: 480px) {
-    .pro-services-page .hero-content h1 {
+    .pro-services-page .hero-content h1,
+    .pro-services-page .hero-content h2 {
         font-size: 1.8rem;
     }
 

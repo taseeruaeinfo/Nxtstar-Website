@@ -126,15 +126,6 @@ const DICPage = () => {
                     </div>
                 </section>
 
-                <section className="cost-section">
-                    <div className="section-content">
-                        <h2>Cost of DIC Business Setup</h2>
-                        <div className="cost-info">
-                            <p>Typical setup costs range from AED 15,000–25,000 depending on license type and office space.</p>
-                            <p>Freelancer and startup packages are available with flexible payment options.</p>
-                        </div>
-                    </div>
-                </section>
 
                 <section className="cta-section">
                     <div className="cta-content">

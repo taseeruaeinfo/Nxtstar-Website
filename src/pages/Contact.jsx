@@ -6,7 +6,7 @@ import { FaUser, FaPhoneAlt, FaEnvelope, FaRegBuilding, FaCheckCircle } from 're
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import '../styles/pages/Contact.css';
-import contactimg from '../assets/images/contact.jpg';
+import contactimg from '../assets/images/contact.webp';
 
 const backend_url = import.meta.env.VITE_BACKEND_URL;
 
@@ -17,7 +17,7 @@ const Contact = () => {
         email: '',
         details: '',
     });
-    const [errors, setErrors] = useState({});
+    const [errors, setErrors] = useState(/** @type {Record<string, string>} */ ({}));
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitSuccess, setSubmitSuccess] = useState(false);
 
@@ -151,8 +151,10 @@ const Contact = () => {
                     <div className="contact-image-col">
                         <img
                             src={contactimg}
-                            alt="Contact Illustration"
-                            className="contact-side-image"
+                            alt="Business people shaking hands outside an office building"
+                            width="1200"
+                            height="800"
+                            className="contact-side-image" loading="lazy" decoding="async"
                         />
                     </div>
                     <div className="contact-form-wrapper">
@@ -253,7 +255,7 @@ const Contact = () => {
                         width="100%"
                         height="320"
                         style={{ border: 0, display: 'block', margin: '0 auto' }}
-                        allowFullScreen=""
+                        allowFullScreen
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
                         title="NXTStar Location"

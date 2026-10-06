@@ -1,10 +1,10 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
 import BusinessSetupPage from './pages/BusinessSetupPage';
 import ServicesPage from './pages/ServicesPage';
-import PageLayout from './components/layout/PageLayout';
+import NotFound from './pages/NotFound';
 import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 import BlogPage from './pages/BlogPage';
@@ -16,23 +16,18 @@ import MotionWrapper from './components/ui/MotionWrapper';
 import './styles/index.css';
 import ScrollToTop from './context/ScrollToTop';
 import PrivacyPolicy from './pages/PrivacyPage';
-//import BookCall from './pages/BookCall';
 
 // AnimationLayout component to handle location-based animations
 function AnimationLayout() {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="wait">
+    <>
       <ScrollToTop />
+      <AnimatePresence mode="wait" initial={false}>
       <Routes location={location} key={location.pathname}>
         {/* Home Page */}
         <Route path="/" element={
-          <MotionWrapper>
-            <HomePage />
-          </MotionWrapper>
-        } />
-        <Route path="/home" element={
           <MotionWrapper>
             <HomePage />
           </MotionWrapper>
@@ -44,13 +39,6 @@ function AnimationLayout() {
             <BusinessSetupPage />
           </MotionWrapper>
         } />
-
-        {/* Book Call Page */}
-        {/*<Route path="/book-call" element={
-          <MotionWrapper>
-            <BookCall />
-          </MotionWrapper>
-        } /> */}
 
         {/* Services Pages */}
         <Route path="/services/*" element={
@@ -112,27 +100,24 @@ function AnimationLayout() {
         {/* 404 Page */}
         <Route path="*" element={
           <MotionWrapper>
-            <PageLayout
-              title="Page Not Found"
-              description="The page you are looking for does not exist or has been moved."
-              showHeader={true}
-            >
-              <div>404 - Page Not Found</div>
-            </PageLayout>
+            <NotFound />
           </MotionWrapper>
         } />
       </Routes>
-    </AnimatePresence>
+      </AnimatePresence>
+    </>
   );
 }
 
+// The router is supplied by the entry file: BrowserRouter in the browser,
+// StaticRouter when prerendering.
 function App() {
   return (
-    <Router>
+    <>
       <Navbar />
       <AnimationLayout />
       <Footer />
-    </Router>
+    </>
   );
 }
 

@@ -126,15 +126,6 @@ const DWTCPage = () => {
                     </div>
                 </section>
 
-                <section className="cost-section">
-                    <div className="section-content">
-                        <h2>Cost of DWTC Business Setup</h2>
-                        <div className="cost-info">
-                            <p>Setup packages start around AED 15,000–18,000, depending on activity type and office space.</p>
-                            <p>Flexi-desk and visa-inclusive options are also available.</p>
-                        </div>
-                    </div>
-                </section>
 
                 <section className="cta-section">
                     <div className="cta-content">

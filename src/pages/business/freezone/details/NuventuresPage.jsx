@@ -101,13 +101,6 @@ const NuventuresPage = () => {
                     </div>
                 </section>
 
-                {/* Cost */}
-                <section className="section-content">
-                    <h2>Cost of Ajman Nuventures Business Setup</h2>
-                    <div className="cost-info">
-                        <p>Packages start from AED 4,888, with options for visa and non‑visa setups. Virtual office packages make it one of the UAE’s most affordable choices.</p>
-                    </div>
-                </section>
 
                 {/* CTA */}
                 <section className="cta-section">

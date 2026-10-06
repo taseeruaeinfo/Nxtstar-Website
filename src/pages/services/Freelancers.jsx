@@ -20,7 +20,7 @@ const Freelancers = () => {
                                 <p>Set up a compliant freelance business and focus on delivery — we handle the permits, visas, and compliance.</p>
                             </div>
                             <div className="intro-image">
-                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=500&auto=format&fit=crop" alt="Freelancer" />
+                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=500&auto=format&fit=crop" alt="Freelancer" loading="lazy" decoding="async" />
                             </div>
                         </div>
                         <div className="highlights-grid">

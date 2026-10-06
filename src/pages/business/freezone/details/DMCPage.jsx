@@ -125,15 +125,6 @@ const DMCPage = () => {
                     </div>
                 </section>
 
-                <section className="cost-section">
-                    <div className="section-content">
-                        <h2>Cost of DMC Business Setup</h2>
-                        <div className="cost-info">
-                            <p>Setup starts around AED 15,000–20,000, depending on activity and space requirements.</p>
-                            <p>Freelancer and flexi-office packages are available for smaller teams.</p>
-                        </div>
-                    </div>
-                </section>
 
                 <section className="cta-section">
                     <div className="cta-content">

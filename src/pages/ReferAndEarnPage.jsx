@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PageLayout from '../components/layout/PageLayout';
 import Button from '../components/ui/Button';
-import { FaGift, FaUsers, FaChartLine, FaHandHoldingUsd, FaShareAlt, FaCheckCircle, FaMedal, FaTrophy } from 'react-icons/fa';
+import { FaGift, FaUsers, FaHandHoldingUsd, FaShareAlt, FaCheckCircle } from 'react-icons/fa';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import '../styles/pages/ReferAndEarnPage.css';
@@ -18,7 +18,7 @@ const ReferAndEarnPage = () => {
         friendPhone: ''
     });
     
-    const [errors, setErrors] = useState({});
+    const [errors, setErrors] = useState(/** @type {Record<string, string>} */ ({}));
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitSuccess, setSubmitSuccess] = useState(false);
 
@@ -129,23 +129,13 @@ const ReferAndEarnPage = () => {
         {
             icon: <FaGift />,
             title: 'Attractive Rewards',
-            description: 'Earn up to AED 2,000 for each successful referral'
+            description: 'Earn a reward for each successful referral'
         },
         {
             icon: <FaUsers />,
             title: 'Unlimited Referrals',
             description: 'Refer as many friends and colleagues as you want'
         },
-        {
-            icon: <FaChartLine />,
-            title: 'Track Your Progress',
-            description: 'Monitor your referrals and earnings in real-time'
-        },
-        {
-            icon: <FaHandHoldingUsd />,
-            title: 'Fast Payouts',
-            description: 'Receive your rewards within 30 days of successful setup'
-        }
     ];
 
     const steps = [
@@ -166,31 +156,10 @@ const ReferAndEarnPage = () => {
         }
     ];
 
-    const testimonials = [
-        {
-            name: 'Sarah Johnson',
-            role: 'Business Owner',
-            reward: 'AED 2,000',
-            content: 'The referral program is fantastic! I\'ve earned over AED 3,000 by referring my network to NXTStar.'
-        },
-        {
-            name: 'Mohammed Al Qasim',
-            role: 'Entrepreneur',
-            reward: 'AED 1,500',
-            content: 'I love how simple it is to refer clients and earn rewards. The process is transparent and efficient.'
-        },
-        {
-            name: 'Priya Sharma',
-            role: 'Consultant',
-            reward: 'AED 1,200',
-            content: 'As a consultant, I\'ve been able to earn extra income by referring clients to NXTStar. Highly recommended!'
-        }
-    ];
-
     return (
         <PageLayout
             title="Refer & Earn"
-            description="Refer businesses to NXTStar and earn rewards for successful referrals. Share your unique link and start earning today."
+            description="Refer a business to NXTSTAR and earn a reward when their company setup is completed with us."
             headerImage="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
             headerOverlayColor="rgba(0, 0, 0, 0.1)"
         >
@@ -199,33 +168,17 @@ const ReferAndEarnPage = () => {
                 <section className="refer-hero">
                     <div className="refer-hero-content">
                         <div className="refer-hero-text">
-                            <h1 className="refer-hero-title">
+                            <h2 className="refer-hero-title">
                                 <span className="highlight">Refer Friends,</span> Earn Rewards
-                            </h1>
+                            </h2>
                             <p className="refer-hero-description">
-                                Share NXTStar with your network and earn up to AED 2,000 for each successful business setup referral.
-                                The more you refer, the more you earn!
+                                Share NXTSTAR with your network and earn a reward for each successful business setup referral. Ask us for the current referral terms.
                             </p>
-                            <div className="refer-stats">
-                                <div className="stat-item">
-                                    <span className="stat-number">Up to AED 2,000</span>
-                                    <span className="stat-label">Per Referral</span>
-                                </div>
-                                <div className="stat-item">
-                                    <span className="stat-number">Unlimited</span>
-                                    <span className="stat-label">Referrals</span>
-                                </div>
-                                <div className="stat-item">
-                                    <span className="stat-number">30 Days</span>
-                                    <span className="stat-label">Payout</span>
-                                </div>
-                            </div>
                         </div>
                         <div className="refer-hero-image">
                             <div className="reward-badge">
                                 <FaGift className="reward-icon" />
-                                <span className="reward-text">AED 2,000</span>
-                                <span className="reward-text reut">Up to</span>
+                                <span className="reward-text">Rewards</span>
                             </div>
                         </div>
                     </div>
@@ -236,7 +189,7 @@ const ReferAndEarnPage = () => {
                     <div className="section-header">
                         <h2 className="section-title">How It Works</h2>
                         <p className="section-description">
-                            Earn rewards in just four simple steps
+                            Earn rewards in three steps
                         </p>
                     </div>
                     <div className="steps-container">
@@ -399,36 +352,6 @@ const ReferAndEarnPage = () => {
                                 </Button>
                             </form>
                         )}
-                    </div>
-                </section>
-
-                {/* Testimonials */}
-                <section className="refer-section testimonials-section">
-                    <div className="section-header">
-                        <h2 className="section-title">Success Stories</h2>
-                        <p className="section-description">
-                            Hear from our top referrers
-                        </p>
-                    </div>
-                    <div className="testimonials-grid">
-                        {testimonials.map((testimonial, index) => (
-                            <div className="testimonial-card" key={index}>
-                                <div className="testimonial-header">
-                                    <div className="testimonial-avatar">
-                                        <FaMedal className="avatar-icon" />
-                                    </div>
-                                    <div className="testimonial-info">
-                                        <h3 className="testimonial-name">{testimonial.name}</h3>
-                                        <p className="testimonial-role">{testimonial.role}</p>
-                                    </div>
-                                    <div className="testimonial-reward">
-                                        <FaTrophy className="reward-trophy" />
-                                        <span className="reward-amount">{testimonial.reward}</span>
-                                    </div>
-                                </div>
-                                <p className="testimonial-content">"{testimonial.content}"</p>
-                            </div>
-                        ))}
                     </div>
                 </section>
 

@@ -42,7 +42,8 @@
     padding: 0 1.5rem;
 }
 
-.visa-services-page .hero-content h1 {
+.visa-services-page .hero-content h1,
+.visa-services-page .hero-content h2 {
     font-size: 2.8rem;
     color: #1a365d;
     margin-bottom: 1.5rem;
@@ -516,7 +517,8 @@
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .visa-services-page .hero-content h1 {
+    .visa-services-page .hero-content h1,
+    .visa-services-page .hero-content h2 {
         font-size: 2.2rem;
     }
 
@@ -542,7 +544,8 @@
 }
 
 @media (max-width: 480px) {
-    .visa-services-page .hero-content h1 {
+    .visa-services-page .hero-content h1,
+    .visa-services-page .hero-content h2 {
         font-size: 1.8rem;
     }
 

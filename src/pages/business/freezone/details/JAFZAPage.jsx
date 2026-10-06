@@ -131,15 +131,6 @@ const JAFZAPage = () => {
                     </div>
                 </section>
 
-                <section className="cost-section">
-                    <div className="section-content">
-                        <h2>Cost of JAFZA Business Setup</h2>
-                        <div className="cost-info">
-                            <p>Packages start from around AED 15,000 depending on facility type and visa needs.</p>
-                            <p>Warehouse and industrial setups are priced based on space and utilities required.</p>
-                        </div>
-                    </div>
-                </section>
 
                 <section className="cta-section">
                     <div className="cta-content">

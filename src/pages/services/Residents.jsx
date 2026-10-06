@@ -20,7 +20,7 @@ const Residents = () => {
                                 <p>Simplify sponsorships, Golden Visas, insurance, and attestations with expert help.</p>
                             </div>
                             <div className="intro-image">
-                                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=500&auto=format&fit=crop" alt="UAE Residents" />
+                                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=500&auto=format&fit=crop" alt="UAE Residents" loading="lazy" decoding="async" />
                             </div>
                         </div>
                         <div className="highlights-grid">

@@ -79,7 +79,6 @@ const Visa = () => {
     const visaPackages = [
         {
             title: 'Employment Visa Package',
-            price: '3,500',
             features: [
                 'Entry Permit Issuance',
                 'Status Change (if required)',
@@ -93,7 +92,6 @@ const Visa = () => {
         },
         {
             title: 'Investor Visa Package',
-            price: '5,000',
             features: [
                 'Entry Permit Issuance',
                 'Status Change (if required)',
@@ -108,7 +106,6 @@ const Visa = () => {
         },
         {
             title: 'Family Visa Package',
-            price: '3,000',
             features: [
                 'Entry Permit Issuance',
                 'Status Change (if required)',
@@ -125,7 +122,7 @@ const Visa = () => {
     const faqs = [
         {
             question: 'What are the eligibility criteria for obtaining a UAE residence visa?',
-            answer: 'Eligibility criteria vary based on visa type. For employment visas, you need a valid job offer from a UAE company. For investor visas, you must have ownership in a UAE company. For family visas, you must meet minimum salary requirements (typically AED 4,000-10,000 depending on family size) and have appropriate housing.'
+            answer: 'Eligibility criteria vary based on visa type. For employment visas, you need a valid job offer from a UAE company. For investor visas, you must have ownership in a UAE company. For family visas, you must meet the minimum salary and housing requirements set by the authorities.'
         },
         {
             question: 'How long does the visa process take?',
@@ -141,7 +138,7 @@ const Visa = () => {
         },
         {
             question: 'What happens if my visa application is rejected?',
-            answer: 'While rejection rates are low when working with our experienced team, if a rejection occurs, we analyze the reason, address any deficiencies in the application, and resubmit with corrections. Our success rate for resubmissions is over 95%.'
+            answer: 'If a rejection occurs, we analyze the reason, address any deficiencies in the application, and resubmit with corrections. Approval is always decided by the authorities.'
         }
     ];
 
@@ -155,7 +152,7 @@ const Visa = () => {
             <div className="visa-services-page">
                 <section className="hero-section">
                     <div className="hero-content">
-                        <h1>UAE Visa Services</h1>
+                        <h2>UAE Visa Services</h2>
                         <p>Comprehensive visa solutions for investors, entrepreneurs, professionals, and their families.</p>
                         <div className="hero-buttons">
                             <a href="#packages" className="primary-btn">View Packages</a>
@@ -225,7 +222,7 @@ const Visa = () => {
                     <div className="section-content">
                         <h2>Visa Service Packages</h2>
                         <p className="section-intro">
-                            Our visa packages include all government fees and service charges for a transparent and hassle-free experience.
+                            Each visa package covers the steps listed below. Contact us for a written quote for your case.
                         </p>
 
                         <div className="packages-grid">
@@ -234,10 +231,6 @@ const Visa = () => {
                                     {pkg.recommended && <div className="recommended-tag">Popular</div>}
                                     <div className="package-header">
                                         <h3>{pkg.title}</h3>
-                                        <div className="package-price">
-                                            <span className="currency">AED</span>
-                                            <span className="amount">{pkg.price}</span>
-                                        </div>
                                         <div className="package-note">{pkg.note}</div>
                                     </div>
                                     <div className="package-features">
@@ -255,7 +248,7 @@ const Visa = () => {
                         </div>
 
                         <div className="pricing-note">
-                            <p>* Government fees are included in the package prices and subject to change</p>
+                            <p>* Government fees are set by the authorities and subject to change</p>
                             <p>* Medical testing fees may vary based on testing center and requirements</p>
                             <p>* Additional services available upon request</p>
                         </div>

@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import PageLayout from '../components/layout/PageLayout';
 import Button from '../components/ui/Button';
 import { FaCheckCircle, FaPhone, FaEnvelope, FaWhatsapp, FaCalculator } from 'react-icons/fa';
 import '../styles/pages/CostCalculatorSuccess.css';
 
 const CostCalculatorSuccess = () => {
-    const navigate = useNavigate();
 
     useEffect(() => {
         // Scroll to top when component mounts
@@ -16,6 +14,7 @@ const CostCalculatorSuccess = () => {
     return (
         <PageLayout
             title="Request Submitted Successfully!"
+            noindex
             description="Thank you for using our Business Setup Cost Calculator. Our team will contact you shortly."
             headerImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop"
             headerOverlayColor="rgba(0, 0, 0, 0.65)"
@@ -28,7 +27,7 @@ const CostCalculatorSuccess = () => {
                     </div>
 
                     {/* Main Message */}
-                    <h1 className="success-title">Thank You for Your Interest!</h1>
+                    <h2 className="success-title">Thank You for Your Interest!</h2>
                     <p className="success-subtitle">
                         Your business setup cost calculation request has been received successfully.
                     </p>

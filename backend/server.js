@@ -1,6 +1,5 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import sgMail from '@sendgrid/mail';
 import cors from 'cors';
 import send_cost_calc_data from './Routes/costCalc.js';
 import contact_route from './Routes/contactRoute.js';
@@ -8,7 +7,6 @@ import refer_route from './Routes/referRoute.js';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const frontendURL = process.env.FRONTEND_URL;
 const app = express();
 app.use(bodyParser.json());
 

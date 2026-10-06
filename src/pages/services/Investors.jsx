@@ -20,7 +20,7 @@ const Investors = () => {
                                 <p>We streamline investor residency, company formation, banking, and wealth structures.</p>
                             </div>
                             <div className="intro-image">
-                                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=500&auto=format&fit=crop" alt="Investment" />
+                                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=500&auto=format&fit=crop" alt="Investment" loading="lazy" decoding="async" />
                             </div>
                         </div>
                         <div className="highlights-grid">

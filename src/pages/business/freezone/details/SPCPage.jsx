@@ -105,13 +105,6 @@ const SPCPage = () => {
                     </div>
                 </section>
 
-                {/* Cost */}
-                <section className="section-content">
-                    <h2>Cost of SPC Business Setup</h2>
-                    <div className="cost-info">
-                        <p>SPC is one of the UAE’s most affordable free zones. Licenses start from AED 4,999. Multi‑activity and visa‑inclusive packages are available at competitive rates. Virtual office solutions can reduce costs further while maintaining visa and banking eligibility.</p>
-                    </div>
-                </section>
 
                 {/* CTA */}
                 <section className="cta-section">

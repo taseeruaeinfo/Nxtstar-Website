@@ -105,13 +105,6 @@ const DAFZAPage = () => {
                     </div>
                 </section>
 
-                {/* Cost */}
-                <section className="section-content">
-                    <h2>Cost of DAFZA Business Setup</h2>
-                    <div className="cost-info">
-                        <p>Licenses start from approximately AED 15,000–18,000 depending on business activity and office requirements.</p>
-                    </div>
-                </section>
 
                 {/* CTA */}
                 <section className="cta-section">

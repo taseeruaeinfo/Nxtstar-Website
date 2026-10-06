@@ -29,7 +29,9 @@ const Navbar = () => {
                 { name: 'Startups & Entrepreneurs', path: '/services/startups' },
                 { name: 'Freelancers & Consultants', path: '/services/freelancers' },
                 { name: 'Foreign Investors & Expats', path: '/services/investors' },
-                { name: 'Digital Creators & Influencers', path: '/services/creators' },
+                { name: 'Advertiser Permit for Creators', path: '/services/advertiser-permit' },
+                { name: 'DIFC AI & Innovation Licence', path: '/services/difc-ai-licence' },
+                { name: 'IFZA Company Setup', path: '/business/freezone/ifza' },
                 { name: 'UAE Residents', path: '/services/residents' }
             ]
         },
@@ -64,7 +66,7 @@ const Navbar = () => {
     return (
         <motion.nav
             className="navbar"
-            initial="hidden"
+            initial={false}
             animate="visible"
             variants={navbarVariants}
         >
@@ -75,7 +77,7 @@ const Navbar = () => {
                     <motion.div variants={logoVariants}>
                         <Link to="/" className="navbar-logo">
                             <span className="logo-text"></span>
-                            <img src={logo} alt="NXTStar Logo" />
+                            <img src={logo} alt="NXTSTAR" width="500" height="500" />
                         </Link>
                     </motion.div>
 

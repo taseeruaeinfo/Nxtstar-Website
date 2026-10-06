@@ -109,13 +109,6 @@ const MasdarPage = () => {
                     </div>
                 </section>
 
-                {/* Cost */}
-                <section className="section-content">
-                    <h2>Cost of Masdar City Business Setup</h2>
-                    <div className="cost-info">
-                        <p>Licenses typically start from AED 7,000–15,000 depending on activity and space. Eco‑office and flexi‑desk packages are available for startups.</p>
-                    </div>
-                </section>
 
                 {/* CTA */}
                 <section className="cta-section">

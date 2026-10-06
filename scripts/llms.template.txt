@@ -1,0 +1,33 @@
+# NXTSTAR
+
+> NXTSTAR is a UAE business setup and licensing consultancy based in Dubai. It helps founders, content creators and companies choose a licence, prepare the application and complete company setup in the UAE.
+
+Website: https://www.nxtstar.ae/
+Phone and WhatsApp: +971 58 259 4158
+Email: sales@nxtstar.ae
+
+NXTSTAR does not publish prices on this site. Fees depend on the licence, the authority and the number of visas, and are quoted in writing for each case. Government and free zone fees are set by the authorities and can change.
+
+## Services
+
+- [Advertiser permit for content creators and influencers](https://www.nxtstar.ae/services/advertiser-permit): trade licence setup and UAE Media Council advertiser permit applications.
+- [DIFC AI Licence and Innovation Licence company setup](https://www.nxtstar.ae/services/difc-ai-licence): setup in the Dubai International Financial Centre for AI and technology companies.
+- [IFZA company setup](https://www.nxtstar.ae/business/freezone/ifza): free zone company setup with the International Free Zone Authority.
+- [Free zone company setup](https://www.nxtstar.ae/business/freezone)
+- [Mainland company setup](https://www.nxtstar.ae/business/mainland)
+- [Offshore company formation](https://www.nxtstar.ae/business/offshore)
+- [PRO services](https://www.nxtstar.ae/services/pro)
+- [Visa services](https://www.nxtstar.ae/services/visa)
+- [Accounting and tax](https://www.nxtstar.ae/services/accounting)
+
+## Key pages
+
+- [Home](https://www.nxtstar.ae/)
+- [All services](https://www.nxtstar.ae/services)
+- [Frequently asked questions](https://www.nxtstar.ae/faqs)
+- [Contact](https://www.nxtstar.ae/contact)
+- [Articles](https://www.nxtstar.ae/blogs)
+
+## Articles
+
+{{BLOG_POSTS}}

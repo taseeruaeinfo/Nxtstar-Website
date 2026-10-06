@@ -117,6 +117,11 @@ const DIFCPage = () => {
                 </section>
 
                 {/* CTA Section */}
+                <section className="section-content">
+                    <h2>AI and technology companies</h2>
+                    <p>DIFC has two subsidised licences for non-financial technology businesses. See <a href="/services/difc-ai-licence">how the DIFC AI Licence and Innovation Licence work</a>.</p>
+                </section>
+
                 <section className="cta-section">
                     <div className="cta-content">
                         <h2>Start Your Business in DIFC with NxtStar</h2>

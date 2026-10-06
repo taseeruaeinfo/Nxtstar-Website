@@ -29,3 +29,6 @@ website-requirement.pdf
 website-requirement.pdf
 .env.development
 .env.production
+
+# Local tooling
+.claude/

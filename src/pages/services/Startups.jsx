@@ -20,7 +20,7 @@ const Startups = () => {
                                 <p>We guide founders through formation, visas, legal, tax, and launch — creating solid foundations for growth.</p>
                             </div>
                             <div className="intro-image">
-                                <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=500&auto=format&fit=crop" alt="Startup Team" />
+                                <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=500&auto=format&fit=crop" alt="Startup Team" loading="lazy" decoding="async" />
                             </div>
                         </div>
                         <div className="highlights-grid">

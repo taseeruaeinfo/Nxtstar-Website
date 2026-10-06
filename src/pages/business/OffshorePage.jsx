@@ -109,7 +109,7 @@ const OffshorePage = () => {
             <div className="offshore-page">
                 <section className="hero-section-offshore">
                     <div className="hero-content">
-                        <h1>Offshore Company Formation in UAE</h1>
+                        <h2>Offshore Company Formation in UAE</h2>
                         <p>Establish an offshore company for privacy, asset protection, and tax efficiency with our expert guidance.</p>
                         <div className="hero-buttons">
                             <a href="/contact" className="secondary-btn">Free Consultation</a>

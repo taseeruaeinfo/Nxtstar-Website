@@ -205,7 +205,7 @@ const FreezoneOverview = () => {
             <div className="freezone-overview-page">
                 <section className="hero-section-freezone">
                     <div className="hero-content">
-                        <h1>Free Zone Business Setup in UAE</h1>
+                        <h2>Free Zone Business Setup in UAE</h2>
                         <p>Establish your business in one of the UAE's specialized economic zones with 100% ownership and significant tax advantages.</p>
                         <div className="hero-buttons">
                             <a href="/contact" className="secondary-btn">Free Consultation</a>
@@ -331,23 +331,19 @@ const FreezoneOverview = () => {
                     <div className="section-content">
                         <h2>Free Zone Setup Packages</h2>
                         <p className="section-intro">
-                            Choose from our range of tailored packages designed to meet different business needs and budgets.
+                            Choose from our range of tailored packages designed to meet different business needs.
                         </p>
 
                         <div className="packages-grid">
                             <div className="package-card starter">
                                 <div className="package-header">
                                     <h3>Basic Package</h3>
-                                    <div className="package-price">
-                                        <span className="currency">From AED</span>
-                                        <span className="amount">4999</span>
-                                    </div>
                                 </div>
                                 <div className="package-features">
                                     <ul>
                                         <li>Free Zone License</li>
                                         <li>Company Registration</li>
-                                        <li>Registered Office Address (1 Year) </li>
+                                        <li>Registered Office Address (1 Year) </li>
                                         <li>Standard Processing</li>
                                         <li>Assistance with Documentation</li>
                                         <li>Basic Business Support</li>
@@ -362,10 +358,6 @@ const FreezoneOverview = () => {
                                 <div className="recommended-tag">Recommended</div>
                                 <div className="package-header">
                                     <h3>Standard Package</h3>
-                                    <div className="package-price">
-                                        <span className="currency">From AED</span>
-                                        <span className="amount">14,900</span>
-                                    </div>
                                 </div>
                                 <div className="package-features">
                                     <ul>
@@ -386,10 +378,6 @@ const FreezoneOverview = () => {
                             <div className="package-card premium">
                                 <div className="package-header">
                                     <h3>Premium Package</h3>
-                                    <div className="package-price">
-                                        <span className="currency">From AED</span>
-                                        <span className="amount">29,500</span>
-                                    </div>
                                 </div>
                                 <div className="package-features">
                                     <ul>
@@ -408,7 +396,6 @@ const FreezoneOverview = () => {
                         </div>
 
                         <div className="pricing-note">
-                            <p>* Prices vary based on free zone selection and specific requirements</p>
                             <p>* Government fees are additional and subject to change</p>
                             <p>* Custom packages available for specific business needs</p>
                         </div>

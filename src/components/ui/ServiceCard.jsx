@@ -3,6 +3,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import '../../styles/ServiceCard.css';
 
+/** @param {Record<string, any>} props */
 const ServiceCard = ({ icon, image, title, description, link }) => {
     return (
         <motion.div
@@ -26,7 +27,7 @@ const ServiceCard = ({ icon, image, title, description, link }) => {
                 transition={{ delay: 0.2 }}
             >
                 {image ? (
-                    <img src={image} alt={title} className="service-card-image" />
+                    <img src={image} alt={title} className="service-card-image" loading="lazy" decoding="async" />
                 ) : (
                     <div className="service-card-icon">
                         {icon}

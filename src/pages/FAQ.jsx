@@ -17,7 +17,7 @@ const faqData = [
     },
     {
         question: 'What is the cost of starting a business in the UAE?',
-        answer: 'Business setup costs start from as low as AED 4,999 (basic free zone package) and can go up depending on the jurisdiction, number of visas, and activity type. We provide a customized cost breakdown upfront.'
+        answer: 'The cost depends on the jurisdiction, the number of visas, and the activity type. We provide a customized cost breakdown upfront.'
     },
     {
         question: 'Can a foreigner own 100% of their company?',

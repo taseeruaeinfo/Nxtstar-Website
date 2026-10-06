@@ -115,13 +115,6 @@ const AFZPage = () => {
                     </div>
                 </section>
 
-                {/* Cost */}
-                <section className="section-content">
-                    <h2>Cost of Setting Up in Ajman Free Zone</h2>
-                    <div className="cost-info">
-                        <p>AFZ is known for budget‑friendly packages. Entry‑level licenses start around AED 13,131 annually. Visa‑inclusive and multi‑activity packages are available at competitive rates, with virtual office options to reduce costs further.</p>
-                    </div>
-                </section>
 
                 {/* CTA */}
                 <section className="cta-section">
