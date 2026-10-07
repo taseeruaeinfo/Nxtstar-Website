@@ -6,6 +6,9 @@ import MainlandPage from './business/MainlandPage';
 import FreezonePages from './business/FreezonePages';
 import OffshorePage from './business/OffshorePage';
 import NotFound from './NotFound';
+import ServiceGuide from '../components/layout/ServiceGuide';
+import mainlandGuides from '../data/mainlandGuides';
+import businessGuides from '../data/businessGuides';
 import { PopUp, PopUpBounce, RotatePopUp } from '../components/ui/Motion';
 import '../styles/pages/BusinessSetupPage.css';
 
@@ -174,6 +177,15 @@ const BusinessSetupPage = () => {
                                     </div>
                                 </div>
 
+                                <div className="guides-section">
+                                    <h3>Guides by type of business</h3>
+                                    <ul className="guide-links">
+                                        {businessGuides.map((guide) => (
+                                            <li key={guide.path}><Link to={guide.path}>{guide.h1}</Link></li>
+                                        ))}
+                                    </ul>
+                                </div>
+
                                 <div className="cta-section">
                                     <PopUp>
                                         <h3>Ready to Start Your Business in the UAE?</h3>
@@ -196,8 +208,14 @@ const BusinessSetupPage = () => {
                 }
             />
             <Route path="/mainland" element={<MainlandPage />} />
+            {mainlandGuides.map((guide) => (
+                <Route key={guide.path} path={guide.path.replace('/business', '')} element={<ServiceGuide guide={guide} />} />
+            ))}
             <Route path="/freezone/*" element={<FreezonePages />} />
             <Route path="/offshore" element={<OffshorePage />} />
+            {businessGuides.map((guide) => (
+                <Route key={guide.path} path={guide.path.replace('/business', '')} element={<ServiceGuide guide={guide} />} />
+            ))}
             <Route path="*" element={<NotFound />} />
         </Routes>
     );

@@ -1,0 +1,885 @@
+// One page per free zone. Facts come from each authority's own website (see `sources`).
+// No prices, no capital figures, no partner claims. Timelines are quoted only where the
+// authority publishes one, and are attributed to it.
+
+const parent = { name: 'Free zone setup', path: '/business/freezone' };
+const headerImage = 'https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&w=1200&q=80';
+const reviewed = '2026-10-07';
+const contact = { name: 'Contact NXTSTAR', path: '/contact' };
+const allZones = { name: 'Compare all free zones', path: parent.path };
+
+const zones = [
+    {
+        slug: 'jafza',
+        name: 'Jafza',
+        fullName: 'Jebel Ali Free Zone (Jafza)',
+        description: 'How company setup works in Jebel Ali Free Zone: the four formation types, trading, industrial and logistics licences, documents and Jafza\'s stated timeline.',
+        answer: [
+            'You choose a formation type and a licence type, then submit the documents that Jafza lists for that combination. Jafza offers a single-shareholder establishment (FZE), a multi-shareholder company (FZCO), a public listed company and a branch of an existing company.',
+            'Jafza says setup is completed in 3 to 14 business days once all required documents are submitted. NXTSTAR prepares the application and the facility request with you.',
+        ],
+        suits: 'Jafza is built around trade and industry. It fits importers and exporters, distributors, logistics operators and manufacturers that need warehouses, plots or light industrial units next to Jebel Ali Port.',
+        notSuits: 'A solo consultant or online business that only needs a desk will usually find a lighter free zone a better fit.',
+        entities: [
+            'Free Zone Establishment (FZE): one shareholder, who can be an individual or a company.',
+            'Free Zone Company (FZCO): two to fifty shareholders, individuals or companies.',
+            'Public Listed Company (PLC): two or more shareholders, able to list its shares.',
+            'Branch: a legal extension of a parent company established outside Jafza.',
+        ],
+        licences: [
+            'Trading licence, the most common type, for buying and selling products.',
+            'Service licence, for service businesses.',
+            'Industrial licence, for manufacturing, assembly and related sales and support.',
+            'Logistics licence, for storage, transport, distribution, forwarding and clearing.',
+        ],
+        documents: [
+            'Jafza application form',
+            'Environment, health and safety application form',
+            'Project summary or business plan',
+            'Know-your-customer form',
+            'Passport copy of the shareholder, manager and secretary',
+            'For a branch: the parent company\'s attested trade licence and memorandum, and a board resolution to open the branch',
+        ],
+        steps: [
+            'Decide the formation type and the licence type together, because the document list depends on both.',
+            'Choose the facility: office, warehouse or plot.',
+            'Submit the application and documents.',
+            'Receive the licence and move on to visas and bank account.',
+        ],
+        special: {
+            heading: 'What is particular to Jafza',
+            text: 'Every application includes an environment, health and safety form, because many Jafza businesses handle goods. Expect questions about what you will store or make, and plan the facility before you apply.',
+        },
+        faqs: [
+            { question: 'How long does Jafza setup take?', answer: 'Jafza estimates 3 to 14 business days from the time all required documents are submitted, depending on the formation type, licence and business category.' },
+            { question: 'Can one person own a Jafza company?', answer: 'Yes. An FZE has a single shareholder, who can be an individual or a company.' },
+            { question: 'Can my overseas company open in Jafza without a new company?', answer: 'Yes, as a branch. Jafza treats a branch as a legal entity of its parent and asks for the parent\'s attested documents.' },
+        ],
+        sources: [
+            { name: 'Jafza: Company formation', url: 'https://www.jafza.ae/business-setup/company-formation/' },
+            { name: 'Jafza: Business licence', url: 'https://www.jafza.ae/business-setup/business-license/' },
+            { name: 'Jafza: New company formation guide', url: 'https://www.jafza.ae/resource-centre/guides/new-company-formation/' },
+        ],
+    },
+    {
+        slug: 'meydan',
+        name: 'Meydan Free Zone',
+        fullName: 'Meydan Free Zone',
+        description: 'How company setup works in Meydan Free Zone, Dubai: online application, activity groups, shareholders and directors, documents and what you receive.',
+        answer: [
+            'You apply online: choose your business activities, give up to three trade name options, upload a passport copy for each shareholder and pay through the portal. Meydan Free Zone says registration is fully online.',
+            'One licence can hold up to three activity groups from a list of more than 2,500 activities. NXTSTAR helps you choose the activities correctly and handles visas and banking afterwards.',
+        ],
+        suits: 'Meydan suits founders who want a Dubai free zone company quickly and remotely: consultants, agencies, online businesses and small trading companies, including teams with several shareholders.',
+        notSuits: 'It is not designed for businesses that need warehouses or industrial space.',
+        entities: [
+            'Up to 50 shareholders on one licence.',
+            'Up to 4 directors on one licence.',
+            'Shareholders can be individuals or companies.',
+        ],
+        licences: [
+            'Activities are grouped. You can select up to three groups under one licence.',
+            'The list covers professional, commercial and industrial activities.',
+            'A general trading licence is available for trading a wide range of goods.',
+        ],
+        documents: [
+            'Valid passport copy of each shareholder or partner',
+            'Your selected business activities',
+            'A proposed trade name with up to three options',
+            'For a corporate shareholder: certificate of incorporation, certificate of incumbency, memorandum and articles, and a board resolution',
+        ],
+        steps: [
+            'Select activities and trade name options.',
+            'Upload passport copies and pay online.',
+            'Receive the company documents: business licence, certificate of formation, share register, memorandum and articles, and lease agreement.',
+            'Apply for visas, which Meydan says can usually be done after the licence is issued.',
+        ],
+        special: {
+            heading: 'What is particular to Meydan Free Zone',
+            text: 'Meydan promotes an express licence that it says can be issued in under 60 minutes. That speed applies to straightforward applications. Activities needing outside approval, or corporate shareholders, take longer.',
+        },
+        faqs: [
+            { question: 'Can I set up a Meydan company from abroad?', answer: 'Meydan Free Zone describes its process as digital-first and fully online, so the company can be formed remotely. Visa steps are completed in the UAE.' },
+            { question: 'How many activities can I have?', answer: 'Up to three activity groups under one trade licence.' },
+            { question: 'How many shareholders are allowed?', answer: 'A maximum of 50 shareholders and 4 directors on a licence.' },
+        ],
+        sources: [
+            { name: 'Meydan Free Zone: Frequently asked questions', url: 'https://www.meydanfz.ae/faqs' },
+            { name: 'Meydan Free Zone: Documents required to set up a company', url: 'https://www.meydanfz.ae/blog/meydan-free-zone-company-documents-requirement' },
+        ],
+    },
+    {
+        slug: 'dmcc',
+        name: 'DMCC',
+        fullName: 'Dubai Multi Commodities Centre (DMCC)',
+        description: 'How DMCC company setup works: the four licence types, three formation routes, the four-step digital process, share capital rule and documents.',
+        answer: [
+            'In four steps on the DMCC portal: express interest, submit the online application, pay and sign the legal documents, then sign your office lease and receive the e-licence. DMCC says the process is fully digital and typically takes around two weeks.',
+            'DMCC also sets a minimum share capital that has to be deposited after the licence is issued. NXTSTAR prepares the application, the compliance documents and the office step with you.',
+        ],
+        suits: 'DMCC suits trading companies, especially in commodities such as gold, diamonds, tea, coffee and energy, as well as service firms that want an address in Jumeirah Lakes Towers.',
+        notSuits: 'Founders who want the lightest possible setup, with no office lease and no capital deposit, should compare other zones first.',
+        entities: [
+            'A new company owned by individuals.',
+            'A subsidiary of an existing company.',
+            'A branch of an existing company.',
+        ],
+        licences: [
+            'Service licence, for professional and consultancy services.',
+            'Trading licence, for importing, exporting and distributing goods.',
+            'Commercial licence, for broader trading across several product categories.',
+            'Industrial licence, for manufacturing, including precious metals.',
+        ],
+        documents: [
+            'Passport copies for shareholders, directors and authorised signatories, with UAE visa and Emirates ID where held',
+            'Proof of residential address, such as a current utility bill',
+            'The shareholding structure and, for a subsidiary or branch, the parent company\'s documents',
+            'Proposed company name and business activities',
+            'Third-party approvals for regulated activities',
+        ],
+        steps: [
+            'Decide the activity and structure and submit an enquiry.',
+            'Submit the online application. DMCC reviews the name, the management and compliance.',
+            'Pay the fees and sign the legal documents. DMCC issues a provisional approval and bank introduction letters.',
+            'Sign the lease for your office space and receive the e-licence.',
+        ],
+        special: {
+            heading: 'What is particular to DMCC',
+            text: 'DMCC requires share capital to be deposited in the company\'s UAE bank account within three weeks of the licence date, and says it can be withdrawn afterwards. That makes the bank account an early priority, so we start the banking file alongside the application.',
+        },
+        faqs: [
+            { question: 'How long does DMCC setup take?', answer: 'DMCC says the process typically takes around two weeks, depending on documentation and approvals.' },
+            { question: 'Is the DMCC share capital locked in?', answer: 'DMCC says the capital must be deposited within three weeks of the licence date and can be withdrawn any time after that.' },
+            { question: 'Do I need an office in DMCC?', answer: 'Yes. The e-licence is issued after you sign and submit the documents for your office space.' },
+        ],
+        sources: [
+            { name: 'DMCC: Set up a new business', url: 'https://dmcc.ae/business/set-up-a-new-business' },
+            { name: 'DMCC: Business activities and licences guide', url: 'https://dmcc.ae/blog/complete-guide-on-dmcc-licences' },
+        ],
+    },
+    {
+        slug: 'dwtc',
+        name: 'DWTC Free Zone',
+        fullName: 'Dubai World Trade Centre (DWTC) Free Zone',
+        description: 'How company setup works in the Dubai World Trade Centre Free Zone: FZCO, FZE and branch structures, licence categories, regulated activities and documents.',
+        answer: [
+            'You apply through the DWTC Authority\'s eServices portal with details of the owners and passport copies for all shareholders, directors and the manager. The authority says formation can be done online from anywhere in the world.',
+            'You can form a company with up to ten shareholders, a single-shareholder establishment, or a branch of a UAE or foreign company. NXTSTAR prepares the application and any outside approvals your activity needs.',
+        ],
+        suits: 'DWTC suits professional services, consultancies, event and exhibition businesses and regional offices that want a central address on Sheikh Zayed Road.',
+        notSuits: 'It is not a warehousing or industrial zone.',
+        entities: [
+            'Free Zone Company (FZCO): up to ten shareholders, managed by the shareholders or an appointed manager.',
+            'Free Zone Establishment (FZE): one shareholder, an individual or a company.',
+            'UAE branch: a branch of a local limited liability company.',
+            'Foreign branch: a branch of a company established outside the UAE, under the parent\'s name.',
+        ],
+        licences: [
+            'Commercial licence, for import, export, sale, distribution and storage.',
+            'General trading licence, for an unrestricted range of trading activities.',
+            'Professional licence, for services such as advisory, consulting, software, training and human resources.',
+        ],
+        documents: [
+            'Online application through the eServices portal',
+            'Ultimate beneficial owner details',
+            'Passport copies for all shareholders, directors and the manager',
+            'For a branch: the parent company\'s corporate documents',
+        ],
+        steps: [
+            'Choose the structure and licence category.',
+            'Check whether your activity needs approval from another authority.',
+            'Submit the application online.',
+            'Receive the licence and arrange office space, visas and banking.',
+        ],
+        special: {
+            heading: 'What is particular to DWTC',
+            text: 'The authority issues some licences only after another regulator has approved the activity. It names healthcare, education, retail food outlets and hotels as examples. If your activity is one of these, that approval sets the pace of the whole setup.',
+        },
+        faqs: [
+            { question: 'How many shareholders can a DWTC company have?', answer: 'An FZCO can have up to ten shareholders. An FZE has one.' },
+            { question: 'Can I open a branch of my foreign company in DWTC?', answer: 'Yes. A foreign branch keeps 100% ownership and operates under the parent company\'s name.' },
+            { question: 'Can I apply from outside the UAE?', answer: 'The DWTC Authority says company formation can be done online from anywhere in the world.' },
+        ],
+        sources: [
+            { name: 'DWTC Free Zone: Set up your business', url: 'https://www.dwtc.com/en/free-zone/set-up-your-business/' },
+            { name: 'DWTC Free Zone: Company types', url: 'https://www.dwtc.com/en/free-zone/set-up-your-business/company-types/' },
+        ],
+    },
+    {
+        slug: 'rakez',
+        name: 'RAKEZ',
+        fullName: 'Ras Al Khaimah Economic Zone (RAKEZ)',
+        description: 'How RAKEZ company setup works in Ras Al Khaimah: free zone and non-free zone entities, the range of licence types, documents and what you receive.',
+        answer: [
+            'You choose between a free zone entity and a non-free zone entity, pick a licence type and facility, and submit RAKEZ\'s forms. RAKEZ issues the licence after the documents and payment are received.',
+            'RAKEZ offers an unusually wide range of licences, from commercial and service to industrial, media and educational. NXTSTAR helps you choose the entity type and licence that match where your customers are.',
+        ],
+        suits: 'RAKEZ suits manufacturers and traders that need land, warehouses or industrial units, and smaller service businesses that want a base in Ras Al Khaimah.',
+        notSuits: 'If you need a Dubai address for clients or banking, compare a Dubai zone.',
+        entities: [
+            'Free zone entity, with full foreign ownership.',
+            'Non-free zone entity, established under RAKEZ for business in the local market.',
+            'Individual or professional setup, for one owner with one specialised activity.',
+        ],
+        licences: [
+            'Commercial and general trading, for trading in goods and services.',
+            'Service and professional, for consultancy and services.',
+            'E-commerce, for trading by electronic means.',
+            'Industrial, for manufacturing, importing, packaging and exporting.',
+            'Media and educational, for media businesses, training and education providers.',
+        ],
+        documents: [
+            'Client confirmation letter',
+            'Specimen signature form',
+            'Memorandum of association, where applicable',
+            'Passport copies and, for a corporate shareholder, the parent company\'s documents',
+        ],
+        steps: [
+            'Choose a free zone or non-free zone entity.',
+            'Select the licence type, activities and facility.',
+            'Submit the documents and payment.',
+            'Receive the certificate of incorporation, licence, bank letter and partners list.',
+        ],
+        special: {
+            heading: 'What is particular to RAKEZ',
+            text: 'The free zone or non-free zone choice matters more here than the licence name. It decides who you can sell to directly and which labour rules apply, so we settle it first.',
+        },
+        faqs: [
+            { question: 'What is the difference between a RAKEZ free zone and non-free zone company?', answer: 'RAKEZ offers both. A free zone entity allows full foreign ownership. A non-free zone entity is set up for business in the local market under different rules.' },
+            { question: 'Does RAKEZ license training and education businesses?', answer: 'Yes. RAKEZ has educational licence categories for schools, higher education, training and education consultancy.' },
+            { question: 'What do I receive when the company is formed?', answer: 'RAKEZ sends the certificate of incorporation, the licence, a bank letter and, where relevant, the partners list.' },
+        ],
+        sources: [
+            { name: 'RAKEZ: Licence types', url: 'https://rakez.com/Join-Us/Licence-Types' },
+            { name: 'RAKEZ: Legal entities', url: 'https://rakez.com/Join-Us/Legal-Entities' },
+            { name: 'RAKEZ: Getting started', url: 'https://rakez.com/en/join-us/getting-started' },
+        ],
+    },
+    {
+        slug: 'spc',
+        name: 'SPC Free Zone',
+        fullName: 'Sharjah Publishing City (SPC) Free Zone',
+        description: 'How company setup works in Sharjah Publishing City Free Zone: FZE and FZC structures, commercial and service licences, and the online application.',
+        answer: [
+            'You fill in SPC\'s online application and choose a legal structure: an establishment with one shareholder, or a company with up to seven. SPC issues commercial and service licences.',
+            'SPC says the setup can be completed in a single day. NXTSTAR checks your activity fits before you apply and handles the steps after the licence.',
+        ],
+        suits: 'SPC suits small service and trading businesses that want a simple Sharjah free zone company, and businesses in publishing, printing and related creative work.',
+        notSuits: 'A company that needs more than seven shareholders, or a Dubai address, should look elsewhere.',
+        entities: [
+            'Free Zone Establishment (FZE): a single shareholder, an individual or a corporate entity.',
+            'Free Zone Company (FZC): multiple shareholders, up to seven.',
+        ],
+        licences: [
+            'Commercial licence, for import, export, distribution, consolidation, storage and warehousing.',
+            'Service licence, for service activities.',
+        ],
+        documents: [
+            'Passport copy for each shareholder',
+            'The completed online application form',
+            'Your chosen activities and trade name',
+            'For a corporate shareholder: the parent company\'s documents',
+        ],
+        steps: [
+            'Choose FZE or FZC.',
+            'Choose a commercial or service licence and your activities.',
+            'Complete the online application.',
+            'Receive the licence, then arrange visas and banking.',
+        ],
+        special: {
+            heading: 'What is particular to SPC',
+            text: 'The seven-shareholder cap on an FZC is lower than in most zones. It rarely matters for a small business, but it rules SPC out for ventures with many investors.',
+        },
+        faqs: [
+            { question: 'How many shareholders can an SPC company have?', answer: 'An FZC can have up to seven shareholders. An FZE has one.' },
+            { question: 'How fast is SPC setup?', answer: 'SPC says the business setup can be completed in a single day. Activities that need extra approval take longer.' },
+            { question: 'Is SPC only for publishers?', answer: 'No. SPC issues commercial and service licences for a broad range of activities.' },
+        ],
+        sources: [{ name: 'SPC Free Zone: Company registration', url: 'https://www.spcfz.com/en/setup-a-new-company/' }],
+    },
+    {
+        slug: 'shams',
+        name: 'Shams',
+        fullName: 'Sharjah Media City (Shams)',
+        description: 'How company setup works in Sharjah Media City (Shams): service, trade and light-industrial licences, up to five activities, documents and visas.',
+        answer: [
+            'You apply through Shams\' online platform with identification documents, an onboarding form, a beneficial owner form and a business plan. Shams issues service, trade and light-industrial licences, and lets you combine up to five activities on one licence.',
+            'Shareholders do not need to be in the UAE to incorporate. NXTSTAR picks the activity mix with you and manages visas after the licence.',
+        ],
+        suits: 'Shams suits media and creative businesses, freelancers, consultants and small online traders who want a low-overhead company formed remotely.',
+        notSuits: 'It does not suit heavy industry or businesses that need a Dubai-registered address.',
+        entities: [
+            'A new free zone company, with 100% foreign ownership.',
+            'A branch of an existing company.',
+            'A freelance package for individuals.',
+        ],
+        licences: [
+            'Service licence, for producing and distributing services.',
+            'Trade licence, for buying, selling, importing and exporting goods, with related services.',
+            'Light-industrial licence, for producing and manufacturing goods.',
+        ],
+        documents: [
+            'Identification documents for each shareholder',
+            'Completed onboarding form',
+            'Ultimate beneficial owner form',
+            'Business plan',
+            'For a branch: the parent\'s certificate of incorporation, articles and good standing certificate',
+        ],
+        steps: [
+            'Identify the nature of the business and choose activities under media, trade or services.',
+            'Select a licence package.',
+            'Submit the application online.',
+            'Receive the licence and apply for visas.',
+        ],
+        special: {
+            heading: 'What is particular to Shams',
+            text: 'Shams says a licence can carry up to 50 visas, allocated according to the business\'s needs and structure. It also advertises licences issued in under 60 minutes for standard online applications.',
+        },
+        faqs: [
+            { question: 'Do I have to visit Sharjah to form a Shams company?', answer: 'No. Shams states that shareholders are not required to be physically present in the UAE to incorporate.' },
+            { question: 'How many activities can a Shams licence have?', answer: 'Up to five business activities on one licence.' },
+            { question: 'Is Shams suitable for content creators?', answer: 'Shams has media activities and a freelance package. A creator who advertises still needs the UAE Media Council\'s Advertiser Permit.' },
+        ],
+        sources: [
+            { name: 'Shams: Business setup and licensing', url: 'https://www.shams.ae/business-setup/licensing' },
+            { name: 'Shams: Frequently asked questions', url: 'https://www.shams.ae/knowledge-center/faqs' },
+            { name: 'Shams: Documents required for a business licence', url: 'https://www.shams.ae/media-center/blog/documents-required-to-get-a-business-license-in-sharjah' },
+        ],
+    },
+    {
+        slug: 'afz',
+        name: 'Ajman Free Zone',
+        fullName: 'Ajman Free Zone (AFZ)',
+        description: 'How company setup works in Ajman Free Zone: FZE, FZC and branch structures, commercial, industrial and service licences, and the three-step process.',
+        answer: [
+            'In three steps: choose your business type, submit the documents and payment, and obtain the licence. Ajman Free Zone then issues the licence with a bank letter and registration kit, and the visa process starts.',
+            'It offers establishments, companies and branches of local or foreign companies, across more than 3,500 activities. NXTSTAR handles the application and the lease that the licence depends on.',
+        ],
+        suits: 'Ajman Free Zone suits trading, light manufacturing and service businesses that want low overheads with access to Ajman Port, and freelancers using its dedicated package.',
+        notSuits: 'A business whose clients expect a Dubai or Abu Dhabi address should weigh that before choosing Ajman.',
+        entities: [
+            'Free Zone Establishment (FZE).',
+            'Free Zone Company (FZC).',
+            'Branch of a local company.',
+            'Branch of a foreign company.',
+        ],
+        licences: [
+            'Commercial licence.',
+            'Industrial or manufacturing licence.',
+            'Services licence.',
+            'E-commerce licence.',
+            'Freelancer and pioneer packages for individuals and early-stage founders.',
+        ],
+        documents: [
+            'Passport copy for each shareholder and the manager',
+            'Application through the customer portal',
+            'Chosen activities and trade name',
+            'For a branch: the parent company\'s corporate documents',
+        ],
+        steps: [
+            'Choose the business type and activities.',
+            'Submit the documents and pay.',
+            'Receive the licence, bank letter and registration kit.',
+            'Begin visa applications.',
+        ],
+        special: {
+            heading: 'What is particular to Ajman Free Zone',
+            text: 'The zone\'s rules require a licensee to hold both a valid licence and a valid lease, so the two renew together. Its services run through a paperless customer portal.',
+        },
+        faqs: [
+            { question: 'What company types does Ajman Free Zone offer?', answer: 'FZE, FZC, a branch of a local company and a branch of a foreign company.' },
+            { question: 'When can I apply for visas?', answer: 'Ajman Free Zone says the visa application process begins after the licence, bank letter and registration kit are issued.' },
+            { question: 'Is there a freelancer option?', answer: 'Yes. Ajman Free Zone lists a freelancer package among its licence types.' },
+        ],
+        sources: [
+            { name: 'Ajman Free Zone: Start your business', url: 'https://afz.ae/start-your-business' },
+            { name: 'Ajman Free Zone: Service manual', url: 'https://www.afz.ae/media/AFZ/Files/downloads/AFZ-Service-Manual/AFZ%20Service%20Manual%20updated.pdf' },
+        ],
+    },
+    {
+        slug: 'dic',
+        name: 'Dubai Internet City',
+        fullName: 'Dubai Internet City (DIC)',
+        description: 'How company setup works in Dubai Internet City: FZ-LLC or branch, technology licence segments, the freelance option and the registration timeline.',
+        answer: [
+            'You incorporate a free zone limited liability company (FZ-LLC) or register a branch of an existing company, in a technology segment that Dubai Internet City licenses. It says registration usually takes seven working days once documents and payments are in.',
+            'An FZ-LLC has a minimum paid-up capital requirement. A branch does not. NXTSTAR matches your activity to the right segment and prepares the application.',
+        ],
+        suits: 'Dubai Internet City is for technology companies: software, AI, cloud, e-commerce platforms, IT services, telecoms, gaming and digital content.',
+        notSuits: 'A business outside technology will not fit its licence segments and should look at a general free zone.',
+        entities: [
+            'Free Zone Limited Liability Company (FZ-LLC), a new incorporation.',
+            'Branch of an existing foreign or UAE company.',
+            'Freelance permit through the GoFreelance programme, issued in the individual\'s own name.',
+        ],
+        licences: [
+            'Software solutions: creating, installing and modifying software, with consultancy and support.',
+            'Internet and multimedia: digital content and platforms, including gaming, video and social media.',
+            'IT services, telecommunications, cloud, e-commerce, AI and blockchain technologies.',
+        ],
+        documents: [
+            'Application and business plan describing the technology activity',
+            'Passport copies for shareholders, directors and the manager',
+            'For a branch: the parent company\'s corporate documents and a board resolution',
+        ],
+        steps: [
+            'Confirm the activity fits a licensed segment.',
+            'Submit the application for initial approval, which Dubai Internet City puts at four working days.',
+            'Complete documents, lease and payment. It puts licence issue at three working days.',
+            'Use the axs platform for visas and government services.',
+        ],
+        special: {
+            heading: 'What is particular to Dubai Internet City',
+            text: 'It is a sector-specific zone run by TECOM Group, and services such as visas and registration run through TECOM\'s axs platform. Licences are valid for one year and renew annually.',
+        },
+        faqs: [
+            { question: 'How long does Dubai Internet City registration take?', answer: 'It says registration usually takes seven working days after documents and payments are submitted: four for initial approval and three to issue the licence.' },
+            { question: 'Is there a minimum capital?', answer: 'An FZ-LLC must have a minimum paid-up capital. A branch of an existing company has no minimum capital requirement.' },
+            { question: 'Can a freelancer work from Dubai Internet City?', answer: 'Yes, through the GoFreelance permit, which is issued in your name as it appears on your passport.' },
+        ],
+        sources: [
+            { name: 'Dubai Internet City: Set up your business', url: 'https://www.dic.ae/offerings/set-up-your-business' },
+            { name: 'Dubai Internet City: Frequently asked questions', url: 'https://www.dic.ae/connect/faqs' },
+            { name: 'Dubai Internet City: GoFreelance', url: 'https://www.dic.ae/offerings/gofreelance' },
+        ],
+    },
+    {
+        slug: 'dmc',
+        name: 'Dubai Media City',
+        fullName: 'Dubai Media City (DMC)',
+        description: 'How company setup works in Dubai Media City: media licence segments, company and freelance options, and what creators and agencies should know.',
+        answer: [
+            'You set up a company or take a freelance permit in one of the media segments that Dubai Media City licenses, such as advertising, marketing services, events, new media or gaming. Setup and visa services run through TECOM Group\'s axs platform.',
+            'It hosts freelancers, startups, small firms and large media groups. NXTSTAR matches your work to the right segment and prepares the application.',
+        ],
+        suits: 'Dubai Media City is for media and marketing businesses: agencies, PR firms, production and event companies, publishers, gaming studios and individual creatives.',
+        notSuits: 'A trading or non-media service business will not fit its segments.',
+        entities: [
+            'A free zone company for startups, small firms and large enterprises.',
+            'A branch of an existing media company.',
+            'A freelance permit through GoFreelance for individuals.',
+        ],
+        licences: [
+            'Advertising and communication: media agencies, online advertisers and creative teams.',
+            'Media and marketing services: PR, sales promotion and branding.',
+            'Media support services: media buying, monitoring, translation and news distribution.',
+            'Event management and event support.',
+            'New media: search, mobile media and web analytics.',
+            'Gaming and e-sports: developers, publishers and promoters.',
+        ],
+        documents: [
+            'Application and a description of the media activity',
+            'Passport copies for shareholders, directors and the manager',
+            'For a freelance permit: your passport, a portfolio or evidence of experience, and the application in your own name',
+            'For a branch: the parent company\'s corporate documents',
+        ],
+        steps: [
+            'Choose company, branch or freelance.',
+            'Match the work to a licensed media segment.',
+            'Submit the application through axs.',
+            'Receive the licence or permit and apply for the visa.',
+        ],
+        special: {
+            heading: 'What is particular to Dubai Media City',
+            text: 'Dubai Media City lists influencers among the creative roles its freelance permit covers, and says a freelance permit holder can apply for a one-year or two-year visa. The permit is a licence to work. Publishing advertising content still needs the UAE Media Council\'s Advertiser Permit.',
+        },
+        faqs: [
+            { question: 'Can an influencer get a licence in Dubai Media City?', answer: 'Dubai Media City lists influencers among the creative and media roles covered by its freelance permit. The Advertiser Permit from the UAE Media Council is a separate requirement.' },
+            { question: 'What visa comes with the freelance permit?', answer: 'Dubai Media City says a GoFreelance permit holder is eligible to apply for a one-year or two-year visa.' },
+            { question: 'Is Dubai Media City only for big media companies?', answer: 'No. It hosts freelancers, startups and small firms as well as large enterprises.' },
+        ],
+        sources: [
+            { name: 'Dubai Media City', url: 'https://dmc.ae/' },
+            { name: 'Dubai Media City: Freelance licence for media activities', url: 'https://dmc.ae/offerings/freelance-license' },
+            { name: 'Dubai Media City: axs services', url: 'https://dmc.ae/the-community/axs-services' },
+        ],
+    },
+    {
+        slug: 'dkp',
+        name: 'Dubai Knowledge Park',
+        fullName: 'Dubai Knowledge Park (DKP)',
+        description: 'How to set up a training, HR or recruitment company in Dubai Knowledge Park, including the KHDA educational permit that training institutes need.',
+        answer: [
+            'You register a company in Dubai Knowledge Park for human resources, recruitment, consultancy, executive search, vocational training or professional development. A training institute also needs an Educational Services Permit from Dubai\'s education regulator, the KHDA.',
+            'The KHDA step has a deadline: six months from initial approval. NXTSTAR runs the company registration and the permit application together so that deadline is met.',
+        ],
+        suits: 'Dubai Knowledge Park is for training institutes, professional development providers, HR consultancies, recruitment firms and executive search companies.',
+        notSuits: 'It is not for schools or universities, and businesses outside the HR and learning sectors will not fit.',
+        entities: [
+            'A free zone company registered with the park.',
+            'A branch of an existing training or HR company.',
+            'A freelance permit for individual trainers and education professionals.',
+        ],
+        licences: [
+            'Vocational training and professional development.',
+            'Human resource management and consultancy.',
+            'Recruitment and executive search.',
+            'Business process outsourcing for HR functions.',
+        ],
+        documents: [
+            'Passport copies for shareholders, directors and the manager',
+            'Initial approval and trade name reservation from the park',
+            'For a training institute: a list of course names and descriptions',
+            'For exam preparation courses: approval from the body that awards the certificate',
+        ],
+        steps: [
+            'Obtain initial approval and a trade name reservation from the licensing authority.',
+            'Apply to the KHDA for the Educational Services Permit.',
+            'Get prior approval from any other government body whose field your courses fall under.',
+            'Complete the licence, premises and visas.',
+        ],
+        special: {
+            heading: 'What is particular to Dubai Knowledge Park',
+            text: 'The KHDA gives a maximum of six months from the date of initial approval to complete the permit and licence. Course lists and awarding-body approvals take time to assemble, so prepare them before the clock starts.',
+        },
+        faqs: [
+            { question: 'Does a training company need KHDA approval?', answer: 'Yes. The KHDA requires an Educational Services Permit to establish and operate a training institute in Dubai.' },
+            { question: 'How long do I have to complete the permit?', answer: 'The KHDA grants a maximum of six months from the date of initial approval.' },
+            { question: 'Does a recruitment or HR consultancy need the KHDA permit?', answer: 'The permit is for training institutes. An HR or recruitment firm that delivers no training registers with the park for its own activity.' },
+        ],
+        sources: [
+            { name: 'Dubai Knowledge Park: Set up your business', url: 'https://dkp.ae/offerings/set-up-your-business' },
+            { name: 'KHDA: Educational Services Permit for a training institute', url: 'https://web.khda.gov.ae/en/Services/Training-Institute-Permit-Services/Issuing-an-Educational-Services-Permit-for-a-Train' },
+        ],
+    },
+    {
+        slug: 'difc',
+        name: 'DIFC',
+        fullName: 'Dubai International Financial Centre (DIFC)',
+        description: 'How company setup works in the Dubai International Financial Centre: financial and non-financial firms, DFSA authorisation, holding structures and foundations.',
+        answer: [
+            'It depends on what the company will do. A firm providing financial services must be authorised and licensed by the Dubai Financial Services Authority (DFSA). A non-financial company registers with the DIFC Registrar of Companies and may not provide financial services.',
+            'DIFC also offers holding structures, foundations and subsidised licences for technology firms. NXTSTAR identifies which route applies and prepares the application.',
+        ],
+        suits: 'DIFC suits banks, asset managers, advisers and FinTech firms that need a financial regulator, as well as law firms, consultancies, family holding structures and technology companies.',
+        notSuits: 'A small trading or general services business will usually find DIFC heavier than it needs.',
+        entities: [
+            'Companies and partnerships, registered by the Registrar of Companies.',
+            'Prescribed companies, a simplified structure often used for holding assets.',
+            'Foundations, for wealth protection, family planning, philanthropy and holding businesses or investments.',
+            'Non-profit incorporated organisations.',
+        ],
+        licences: [
+            'Financial services: authorisation and a licence from the DFSA.',
+            'Designated non-financial businesses and professions: registration with the DFSA.',
+            'Non-financial activities: a commercial licence, with no right to provide financial services.',
+            'Technology firms: the AI Licence and the Innovation Licence.',
+        ],
+        documents: [
+            'Application through the DIFC portal',
+            'Passport copies for shareholders, directors and officers, with beneficial ownership details',
+            'A business plan describing the proposed activity',
+            'For a regulated firm: the DFSA application pack, including the regulatory business plan and details of key individuals',
+        ],
+        steps: [
+            'Classify the activity: financial, designated non-financial, or non-financial.',
+            'For a regulated firm, apply to the DFSA for authorisation.',
+            'Register the entity with the DIFC Registrar of Companies and secure premises.',
+            'Receive the licence and continue to visas and banking.',
+        ],
+        special: {
+            heading: 'What is particular to DIFC',
+            text: 'DIFC has its own laws, its own regulator and its own Registrar of Companies, so choosing the wrong category at the start costs time. A company without a DFSA licence is not permitted to provide financial services in or from the centre.',
+        },
+        faqs: [
+            { question: 'Does every DIFC company need DFSA approval?', answer: 'No. Only firms conducting financial services need DFSA authorisation. Non-financial companies register with the DIFC Registrar of Companies.' },
+            { question: 'Can I use DIFC to hold assets or shares?', answer: 'Yes. Prescribed companies and foundations are used for holding structures and family wealth planning.' },
+            { question: 'Is there a route for AI and technology startups?', answer: 'Yes. DIFC offers a subsidised AI Licence and Innovation Licence for non-financial technology firms.' },
+        ],
+        sources: [
+            { name: 'DIFC: Business setup', url: 'https://www.difc.com/business' },
+            { name: 'DIFC: Registrar of Companies', url: 'https://www.difc.com/business/registrars-and-commissioners/registrar-of-companies' },
+            { name: 'DFSA: Authorisation overview', url: 'https://www.dfsa.ae/what-we-do/authorisation-services/overview' },
+        ],
+        extraRelated: [{ name: 'DIFC AI and Innovation Licence', path: '/services/difc-ai-licence' }],
+    },
+    {
+        slug: 'masdar',
+        name: 'Masdar City Free Zone',
+        fullName: 'Masdar City Free Zone',
+        description: 'How company setup works in Masdar City Free Zone, Abu Dhabi: licence types, FZ-LLC and branch structures, sectors, documents and the stated timeline.',
+        answer: [
+            'You select your activities, choose a free zone limited liability company or a branch, and apply through the e-services portal. Masdar City Free Zone says registration takes as little as three days and generally no more than five.',
+            'It issues commercial, service and industrial licences and a freelance permit. NXTSTAR prepares the application and the Abu Dhabi approvals with you.',
+        ],
+        suits: 'Masdar City suits companies that want an Abu Dhabi base, particularly in clean technology, renewable energy, technology, healthcare and life sciences, as well as regional headquarters and holding companies.',
+        notSuits: 'If your team and clients are in Dubai, the commute and address are worth weighing.',
+        entities: [
+            'Free Zone Limited Liability Company, with one or more shareholders.',
+            'Branch of a foreign company.',
+            'Branch of a UAE company.',
+        ],
+        licences: [
+            'Commercial licence, for trading and selling products.',
+            'Service licence, for consultancy and professional services.',
+            'Industrial licence, for manufacturing, processing and production.',
+            'Freelance permit, for individuals offering creative or consultancy services.',
+        ],
+        documents: [
+            'Passport copy, with visa or Emirates ID if applicable',
+            'Proposed company name',
+            'Business activity description',
+            'Shareholder details and completed application forms',
+        ],
+        steps: [
+            'Select activities from the approved list of more than 1,000.',
+            'Choose a company or branch structure.',
+            'Reserve the name and submit initial details on the e-services portal.',
+            'Provide documents and obtain approvals from the Abu Dhabi authorities and the free zone.',
+            'Receive the licence and registration certificate.',
+        ],
+        special: {
+            heading: 'What is particular to Masdar City',
+            text: 'Its sector focus is sustainability and technology, and its approved list includes energy, clean technology, information technology, healthcare services and regional headquarters. Being in Abu Dhabi also matters for companies that work with Abu Dhabi government entities.',
+        },
+        faqs: [
+            { question: 'How long does Masdar City registration take?', answer: 'Masdar City Free Zone says registration takes as little as three days and generally not more than five, in no more than five steps.' },
+            { question: 'Is Masdar City only for green energy companies?', answer: 'No. Its licensed sectors also include technology, marketing and events, human resources, healthcare services, trading and holding companies.' },
+            { question: 'Can I open a branch instead of a new company?', answer: 'Yes. Masdar City Free Zone registers branches of both foreign and UAE companies.' },
+        ],
+        sources: [
+            { name: 'Masdar City Free Zone: Licence and registration', url: 'https://masdarcityfreezone.com/explore/license-and-registration' },
+            { name: 'Masdar City Free Zone: Legal and regulation', url: 'https://masdarcityfreezone.com/explore/legal-and-regulation' },
+        ],
+    },
+    {
+        slug: 'srtip',
+        name: 'SRTIP',
+        fullName: 'Sharjah Research, Technology and Innovation Park (SRTIP)',
+        description: 'How company setup works in the Sharjah Research, Technology and Innovation Park: licence types, FZE and FZC structures, documents and timeline.',
+        answer: [
+            'You choose an activity, reserve a trade name, prepare your documents and submit them through the park\'s digital portal. The park says a licence can be issued in 7 to 10 days.',
+            'It issues commercial, service, industrial and consultancy licences, plus permits for research and development. NXTSTAR prepares the business plan and application with you.',
+        ],
+        suits: 'The park suits technology and research-led businesses, especially in water, renewable energy, environmental technology, transport and logistics, digitalisation and smart manufacturing.',
+        notSuits: 'A business with no innovation or technology angle will get less from the park than from a general Sharjah zone.',
+        entities: [
+            'Free Zone Establishment (FZE): one shareholder.',
+            'Free Zone Company (FZC): two or more shareholders.',
+            'Branch of a UAE or foreign company.',
+        ],
+        licences: [
+            'Commercial licence.',
+            'Service licence.',
+            'Industrial licence.',
+            'Consultancy licence.',
+            'Research, development and innovation permits.',
+        ],
+        documents: [
+            'Passport copies and photographs',
+            'Application form',
+            'Business plan',
+            'Memorandum of association',
+            'Office lease',
+        ],
+        steps: [
+            'Choose the activity from more than 1,500 approved activities.',
+            'Reserve the trade name.',
+            'Prepare the documents listed above.',
+            'Submit through the digital portal.',
+            'Receive the licence once approved.',
+        ],
+        special: {
+            heading: 'What is particular to the park',
+            text: 'The park was established by royal decree in 2016 to support research and enterprise, and sits beside the American University of Sharjah. A business plan is part of the application, so the quality of that document matters more here than in a general zone.',
+        },
+        faqs: [
+            { question: 'How long does setup take?', answer: 'The park says you can get your licence in 7 to 10 days.' },
+            { question: 'Do I need a business plan?', answer: 'Yes. The park lists a business plan among the documents to prepare.' },
+            { question: 'Can a single founder set up here?', answer: 'Yes, as a Free Zone Establishment with one shareholder.' },
+        ],
+        sources: [
+            { name: 'SRTIP: Free zone business setup', url: 'https://srtip.ae/freezone-business-setup/' },
+            { name: 'SRTIP: Establishing companies and institutions', url: 'https://srtip.ae/rules-regulations/establishing-companies-institutions/' },
+        ],
+    },
+    {
+        slug: 'dafza',
+        name: 'Dubai Airport Freezone',
+        fullName: 'Dubai Airport Freezone (DAFZ)',
+        description: 'How company setup works in Dubai Airport Freezone: FZCO and branch structures, trade, service and industrial licences, family office licences and documents.',
+        answer: [
+            'You form a free zone company (FZCO) with between one and fifty shareholders, or register a branch of an existing company, and choose a trade, service, industrial or general trading licence.',
+            'Every application includes a declaration of the ultimate beneficial owners. NXTSTAR prepares the application and the ownership documents with you.',
+        ],
+        suits: 'Dubai Airport Freezone suits businesses that move high-value or time-sensitive goods by air, such as electronics, pharmaceuticals, luxury goods and aviation, and regional offices that want to be next to Dubai International Airport.',
+        notSuits: 'A low-overhead solo business will usually find it more than it needs.',
+        entities: [
+            'Free Zone Company (FZCO): 1 to 50 shareholders, individuals or companies.',
+            'Branch of a foreign company, with no share capital required.',
+        ],
+        licences: [
+            'Trade licence, for import, export, re-export, distribution and storage of specific products.',
+            'General trading licence, for trading across general activities.',
+            'Service licence, for the services named on the licence.',
+            'Industrial licence, for light manufacturing, packaging and assembly.',
+            'Single-family office and multi-family office licences.',
+        ],
+        documents: [
+            'Ultimate beneficial ownership declaration form',
+            'Certified passport or national identity copies for each beneficial owner, with English translation if needed',
+            'Passport copies for shareholders, directors and the secretary',
+            'For a branch: the parent company\'s corporate documents',
+        ],
+        steps: [
+            'Choose FZCO or branch.',
+            'Choose the licence type and activities.',
+            'Submit the application with the ownership declaration.',
+            'Secure premises, then receive the licence and continue to visas.',
+        ],
+        special: {
+            heading: 'What is particular to Dubai Airport Freezone',
+            text: 'It is one of the few zones that licenses single-family and multi-family offices, which manage the finances and affairs of wealthy families. A company here also needs directors and a secretary in place.',
+        },
+        faqs: [
+            { question: 'How many shareholders can a DAFZ company have?', answer: 'An FZCO can have between 1 and 50 shareholders, who can be individuals, companies or both.' },
+            { question: 'Does a branch need share capital?', answer: 'No. DAFZ states that no share capital is required for a branch.' },
+            { question: 'Can I set up a family office in DAFZ?', answer: 'Yes. DAFZ offers single-family office and multi-family office licences.' },
+        ],
+        sources: [
+            { name: 'Dubai Airport Freezone: Start your business', url: 'https://www.dafz.ae/en/start-your-business-in-dubai/' },
+            { name: 'Dubai Airport Freezone: Business setup process', url: 'https://www.dafz.ae/en/business-setup/process' },
+        ],
+    },
+    {
+        slug: 'nuventures',
+        name: 'Ajman NuVentures',
+        fullName: 'Ajman NuVentures Centre Free Zone (ANCFZ)',
+        description: 'How company setup works in Ajman NuVentures Centre Free Zone: remote digital application, FZE, FZC and branch structures, activities and visas.',
+        answer: [
+            'You apply remotely through the zone\'s digital platform. Ajman NuVentures Centre Free Zone says the whole setup can be completed without a visit or in-person paperwork.',
+            'It offers establishments, companies with up to 50 shareholders and branches, across more than 3,500 activities. NXTSTAR chooses the activities with you and manages visas after the licence.',
+        ],
+        suits: 'The zone suits startups, small businesses and overseas founders who want a low-overhead company formed entirely online, in technology, trading, media or professional services.',
+        notSuits: 'Businesses that need industrial premises, or an established zone name for client or bank comfort, should compare alternatives.',
+        entities: [
+            'Free Zone Establishment (FZE): a single shareholder.',
+            'Free Zone Company (FZC): multiple shareholders, up to 50.',
+            'Branch office.',
+        ],
+        licences: [
+            'Commercial activities.',
+            'Service and consultancy activities.',
+            'Industrial activities.',
+            'Education activities.',
+            'Several activities can be combined under one licence.',
+        ],
+        documents: [
+            'Passport copy for each shareholder',
+            'Chosen activities and trade name',
+            'Online application through the digital platform',
+            'For a corporate shareholder or branch: the parent company\'s documents',
+        ],
+        steps: [
+            'Choose the structure and activities.',
+            'Apply through the digital platform.',
+            'Receive the licence.',
+            'Add visas and other services when you need them.',
+        ],
+        special: {
+            heading: 'What is particular to Ajman NuVentures',
+            text: 'The zone advertises licences in as little as two hours and residence visas within 48 hours. Those are its own headline figures for simple cases. It also lets you add services such as visas and office upgrades later instead of buying them at the start.',
+        },
+        faqs: [
+            { question: 'Can any nationality set up in Ajman NuVentures?', answer: 'The zone says there are no nationality restrictions for shareholders.' },
+            { question: 'Do I have to travel to Ajman?', answer: 'No. The zone says the entire setup can be completed remotely through its digital platform. Residence visa steps are done in the UAE.' },
+            { question: 'How many shareholders can the company have?', answer: 'One for an FZE, and up to 50 for an FZC.' },
+        ],
+        sources: [
+            { name: 'ANCFZ: Types of companies', url: 'https://ancfz.ae/types-of-companies/' },
+            { name: 'ANCFZ: Frequently asked questions', url: 'https://ancfz.ae/faq/' },
+        ],
+    },
+    {
+        slug: 'rakicc',
+        name: 'RAK ICC',
+        fullName: 'Ras Al Khaimah International Corporate Centre (RAK ICC)',
+        description: 'How RAK ICC company incorporation works: international companies and foundations, the registered agent requirement and the certified documents needed.',
+        answer: [
+            'Through a registered agent. RAK ICC is a corporate registry for international companies and foundations, and it does not accept applications directly from the public. A certified registered agent files the incorporation.',
+            'The owners provide certified identity and address documents, and a signed memorandum and articles. NXTSTAR prepares the file and arranges the filing through a registered agent.',
+        ],
+        suits: 'RAK ICC suits owners who need a holding company for shares, property or other assets, or a foundation for succession and family wealth planning.',
+        notSuits: 'It is not for a business that needs a UAE trade licence, an office or residence visas. Use a free zone or mainland company for an operating business.',
+        entities: [
+            'International business company, for holding and structuring.',
+            'Foundation, an independent legal entity for succession and asset protection.',
+        ],
+        licences: [
+            'RAK ICC registers entities. It does not issue trade licences in the way a free zone does.',
+            'An international company is used to hold assets and shares, not to trade from UAE premises.',
+        ],
+        documents: [
+            'Memorandum and articles of association, signed by all shareholders',
+            'Agent appointment letter',
+            'For each individual shareholder and beneficial owner: a certified copy of a valid passport',
+            'Certified proof of current address, such as a utility bill, tenancy agreement or bank statement',
+            'For a corporate shareholder: certified certificate of incorporation, memorandum and articles, certificate of incumbency and certificate of good standing',
+        ],
+        steps: [
+            'Decide between a company and a foundation.',
+            'Gather the certified documents.',
+            'Appoint the registered agent.',
+            'The agent files the incorporation with RAK ICC.',
+            'Receive the certificate of incorporation and corporate documents.',
+        ],
+        special: {
+            heading: 'What is particular to RAK ICC',
+            text: 'Documents that must be current have to be dated within three months of the application, and anything not in English or Arabic needs a certified translation. Most delays come from certification and dates, not from the registry.',
+        },
+        faqs: [
+            { question: 'Can I incorporate a RAK ICC company myself?', answer: 'No. RAK ICC requires incorporation to be carried out by a certified registered agent.' },
+            { question: 'Does a RAK ICC company give me a UAE residence visa?', answer: 'No. It is a holding vehicle and does not come with a trade licence or visa allocation.' },
+            { question: 'How recent must my documents be?', answer: 'RAK ICC requires documents that must be current to be dated within three months of the application.' },
+        ],
+        sources: [
+            { name: 'RAK ICC: Company formation', url: 'https://www.rakicc.com/company-formation-page/company-formation/' },
+            { name: 'RAK ICC: Company incorporation checklist', url: 'https://www.rakicc.com/wp-content/uploads/2021/05/CHECKLIST-COMPANY-INCORPORATION-3.pdf' },
+        ],
+        extraRelated: [{ name: 'Offshore company formation', path: '/business/offshore' }],
+    },
+];
+
+const buildGuide = (zone) => ({
+    path: `${parent.path}/${zone.slug}`,
+    parent,
+    breadcrumb: zone.name,
+    h1: `How do you set up a company in ${zone.name}?`,
+    seoTitle: `${zone.name} Company Setup | NXTSTAR`,
+    description: zone.description,
+    serviceName: `${zone.fullName} company setup`,
+    serviceType: 'Free zone company formation support',
+    headerImage,
+    reviewed,
+    cta: `Talk to NXTSTAR about ${zone.name}`,
+    answer: zone.answer,
+    sections: [
+        { heading: `Who ${zone.name} suits`, blocks: [{ text: zone.suits }, { text: zone.notSuits }] },
+        { heading: 'Company structures', blocks: [{ list: zone.entities }] },
+        { heading: 'Licences and activities', blocks: [{ list: zone.licences }] },
+        { heading: 'Documents', blocks: [{ list: zone.documents }] },
+        { heading: 'The process, step by step', blocks: [{ ordered: true, list: zone.steps }] },
+        { heading: zone.special.heading, blocks: [{ text: zone.special.text }] },
+        {
+            heading: 'What NXTSTAR does, and what we do not',
+            blocks: [
+                {
+                    list: [
+                        'We help you choose the structure, licence and activities.',
+                        'We prepare and submit the application.',
+                        'We handle the visa and bank account steps afterwards.',
+                        'We do not decide approvals. The authority does, and banks decide on accounts.',
+                        `We are an independent consultancy and are not part of ${zone.name}.`,
+                    ],
+                },
+            ],
+        },
+    ],
+    faqs: [...zone.faqs, { question: `How much does ${zone.name} setup cost?`, answer: 'We do not publish prices. Ask us for a written quote that separates authority fees from our service fee.' }],
+    sources: zone.sources,
+    related: [...(zone.extraRelated || []), allZones, { name: 'IFZA company setup', path: `${parent.path}/ifza` }, { name: 'Mainland company setup', path: '/business/mainland' }, contact],
+});
+
+const freezoneGuides = zones.map(buildGuide);
+
+export default freezoneGuides;

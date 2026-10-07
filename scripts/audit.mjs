@@ -17,7 +17,10 @@ const MONEY_ALLOWED = new Map([
     ['/blog/offshore-vs-mainland-which-is-right-for-your-business', 'corporate tax threshold'],
     ['/blog/dubai-investor-visa-updates-2026', 'investor visa property thresholds'],
     ['/faqs', 'Golden Visa eligibility thresholds'],
+    ['/business/setup-for/freelancers', 'Green Visa income condition set by the immigration authority'],
 ]);
+// Golden Visa pages quote the eligibility thresholds published by the immigration authority.
+const MONEY_ALLOWED_PREFIXES = ['/services/golden-visa'];
 const MONEY = /(?:\b(?:AED|USD|Dhs?|Dirhams?)\.?\s?\d[\d,.]*|\$\s?\d[\d,.]*|\b\d[\d,.]*\s?(?:AED|USD|dirhams)\b)/gi;
 const BANNED_PHRASES = [
     /no hidden (?:costs?|fees?|charges?)/i,
@@ -128,7 +131,7 @@ for (const { route, html } of pages) {
     }
 
     const visible = textOf(body);
-    if (!MONEY_ALLOWED.has(route)) {
+    if (!MONEY_ALLOWED.has(route) && !MONEY_ALLOWED_PREFIXES.some((prefix) => route.startsWith(prefix))) {
         const money = visible.match(MONEY);
         if (money) fail('price or money amount on page', route, [...new Set(money)].slice(0, 5).join(', '));
     }

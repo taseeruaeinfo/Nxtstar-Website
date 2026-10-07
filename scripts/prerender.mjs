@@ -8,7 +8,7 @@ import { staticRoutes, SITE_URL, namedCrawlers } from './routes.mjs';
 const root = process.cwd();
 const dist = path.join(root, 'dist');
 const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
-const { render, blogPosts } = await import(pathToFileURL(path.join(root, 'dist-ssr', 'entry-server.js')).href);
+const { render, blogPosts, dataRoutes } = await import(pathToFileURL(path.join(root, 'dist-ssr', 'entry-server.js')).href);
 
 for (const marker of ['<!--seo-head-->', '<!--app-html-->']) {
     if (!template.includes(marker)) throw new Error(`index.html is missing the ${marker} marker`);
@@ -16,6 +16,7 @@ for (const marker of ['<!--seo-head-->', '<!--app-html-->']) {
 
 const routes = [
     ...staticRoutes.map((route) => ({ route })),
+    ...dataRoutes.map((route) => ({ route })),
     ...blogPosts.map((post) => ({ route: `/blog/${post.slug}`, lastmod: post.date })),
 ];
 

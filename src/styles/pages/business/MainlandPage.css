@@ -429,3 +429,31 @@
         padding: 0 1rem;
     }
 }
+/* Links to the per-emirate guides */
+.emirates-section {
+    padding: 3rem 0;
+}
+
+.emirate-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.5rem 0 0;
+    padding: 0;
+}
+
+.emirate-links a {
+    display: inline-block;
+    padding: 0.6rem 1.1rem;
+    border: 1px solid #0056b3;
+    border-radius: 6px;
+    color: #0056b3;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.emirate-links a:hover {
+    background: #0056b3;
+    color: #ffffff;
+}

@@ -6,6 +6,9 @@ import Visa from './services/Visa';
 import Accounting from './services/Accounting';
 import AdvertiserPermit from './services/AdvertiserPermit';
 import DifcAiLicence from './services/DifcAiLicence';
+import ServiceGuide from '../components/layout/ServiceGuide';
+import advertiserAudienceGuides from '../data/advertiserAudienceGuides';
+import goldenVisaGuides from '../data/goldenVisaGuides';
 import Freelancers from './services/Freelancers';
 import Startups from './services/Startups';
 import Investors from './services/Investors';
@@ -28,6 +31,13 @@ const ServicesPage = () => {
             description: 'Company setup in the Dubai International Financial Centre for AI and technology businesses.',
             icon: '🤖',
             link: '/services/difc-ai-licence'
+        },
+        {
+            id: 'golden-visa',
+            title: 'UAE Golden Visa',
+            description: 'Long-term residence for investors, professionals, creators, doctors, scientists and students.',
+            icon: '🏅',
+            link: '/services/golden-visa'
         },
         {
             id: 'ifza-setup',
@@ -255,6 +265,12 @@ const ServicesPage = () => {
                 </PageLayout>
             } />
             <Route path="/advertiser-permit" element={<AdvertiserPermit />} />
+            {advertiserAudienceGuides.map((guide) => (
+                <Route key={guide.slug} path={`/advertiser-permit/${guide.slug}`} element={<ServiceGuide guide={guide} />} />
+            ))}
+            {goldenVisaGuides.map((guide) => (
+                <Route key={guide.path} path={guide.path.replace('/services', '')} element={<ServiceGuide guide={guide} />} />
+            ))}
             <Route path="/difc-ai-licence" element={<DifcAiLicence />} />
             <Route path="/freelancers" element={<Freelancers />} />
             <Route path="/startups" element={<Startups />} />

@@ -1,5 +1,7 @@
 import React from 'react';
 import PageLayout from '../../components/layout/PageLayout';
+import mainlandGuides from '../../data/mainlandGuides';
+import { Link } from 'react-router-dom';
 import '../../styles/pages/business/MainlandPage.css';
 
 const MainlandPage = () => {
@@ -247,6 +249,18 @@ const MainlandPage = () => {
                             <p>Still have questions about mainland business setup?</p>
                             <a href="/contact" className="contact-btn">Contact Our Experts</a>
                         </div>
+                    </div>
+                </section>
+
+                <section className="emirates-section">
+                    <div className="section-content">
+                        <h2>Mainland setup by emirate</h2>
+                        <p className="section-intro">Each emirate has its own licensing authority and its own steps.</p>
+                        <ul className="emirate-links">
+                            {mainlandGuides.map((guide) => (
+                                <li key={guide.path}><Link to={guide.path}>{guide.breadcrumb}</Link></li>
+                            ))}
+                        </ul>
                     </div>
                 </section>
 

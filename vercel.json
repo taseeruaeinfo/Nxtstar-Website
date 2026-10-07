@@ -7,7 +7,6 @@
     { "source": "/services/creators", "destination": "/services/advertiser-permit", "permanent": true },
     { "source": "/services/registration-licenses", "destination": "/services", "permanent": true },
     { "source": "/services/visa-pro", "destination": "/services/pro", "permanent": true },
-    { "source": "/services/golden-visa", "destination": "/services/visa", "permanent": true },
     { "source": "/services/taxation", "destination": "/services/accounting", "permanent": true },
     { "source": "/services/corporate-structuring", "destination": "/services", "permanent": true },
     { "source": "/services/website", "destination": "/services", "permanent": true }

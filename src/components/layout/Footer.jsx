@@ -149,7 +149,7 @@ const Footer = () => {
                                     <Link to="/business/freezone/ifza">IFZA Company Setup</Link>
                                 </motion.li>
                                 <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
-                                    <Link to="/services/pro">PRO Services</Link>
+                                    <Link to="/services/golden-visa">UAE Golden Visa</Link>
                                 </motion.li>
                                 <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
                                     <Link to="/services/visa">Visa Services</Link>

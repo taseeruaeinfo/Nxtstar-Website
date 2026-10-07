@@ -214,3 +214,31 @@
         grid-template-columns: 1fr;
     }
 }
+/* Links to the per-business-type guides */
+.guides-section {
+    margin: 3rem 0;
+}
+
+.guide-links {
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 0.75rem;
+}
+
+.guide-links a {
+    display: block;
+    padding: 0.9rem 1.1rem;
+    background: #ffffff;
+    border: 1px solid #e3e6ea;
+    border-radius: 8px;
+    color: #0056b3;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.guide-links a:hover {
+    border-color: #0056b3;
+}

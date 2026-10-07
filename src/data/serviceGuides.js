@@ -144,9 +144,16 @@ export const advertiserPermit = {
         { name: 'UAE Media Council: Licensing services', url: 'https://uaemc.gov.ae/en/licensing-services/' },
     ],
     related: [
+        { name: 'Foreign creators: European, American and other nationalities', path: '/services/advertiser-permit/foreign-creators' },
+        { name: 'Visiting influencers', path: '/services/advertiser-permit/visiting-influencers' },
+        { name: 'Creators under 18', path: '/services/advertiser-permit/creators-under-18' },
+        { name: 'Business owners promoting their own business', path: '/services/advertiser-permit/business-owners' },
+        { name: 'Gifted and unpaid posts', path: '/services/advertiser-permit/gifted-and-unpaid-posts' },
+        { name: 'Brands hiring influencers', path: '/services/advertiser-permit/brands-hiring-influencers' },
+        { name: 'Finance influencers', path: '/services/advertiser-permit/finance-influencers' },
+        { name: 'Health and fitness creators', path: '/services/advertiser-permit/health-and-fitness-creators' },
+        { name: 'Real estate influencers', path: '/services/advertiser-permit/real-estate-influencers' },
         { name: 'IFZA company setup', path: '/business/freezone/ifza' },
-        { name: 'Free zone company setup', path: '/business/freezone' },
-        { name: 'Mainland company setup', path: '/business/mainland' },
         { name: 'Contact NXTSTAR', path: '/contact' },
     ],
 };

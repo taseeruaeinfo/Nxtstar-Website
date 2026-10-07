@@ -32,6 +32,7 @@ const Navbar = () => {
                 { name: 'Advertiser Permit for Creators', path: '/services/advertiser-permit' },
                 { name: 'DIFC AI & Innovation Licence', path: '/services/difc-ai-licence' },
                 { name: 'IFZA Company Setup', path: '/business/freezone/ifza' },
+                { name: 'UAE Golden Visa', path: '/services/golden-visa' },
                 { name: 'UAE Residents', path: '/services/residents' }
             ]
         },

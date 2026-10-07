@@ -5,8 +5,15 @@ import App from './App.jsx';
 import HeadContext from './seo/HeadContext';
 import { buildHead, headToString } from './seo/head';
 import blogPosts from './data/blogPosts';
+import advertiserAudienceGuides from './data/advertiserAudienceGuides';
+import goldenVisaGuides from './data/goldenVisaGuides';
+import mainlandGuides from './data/mainlandGuides';
+import businessGuides from './data/businessGuides';
 
 export { blogPosts };
+
+// Routes that are generated from data files rather than listed in scripts/routes.mjs.
+export const dataRoutes = [...advertiserAudienceGuides, ...goldenVisaGuides, ...mainlandGuides, ...businessGuides].map((guide) => guide.path);
 
 // Renders one route to HTML. Used only by scripts/prerender.mjs at build time.
 export const render = (url) => {
