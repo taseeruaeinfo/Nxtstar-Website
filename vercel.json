@@ -4,6 +4,8 @@
   "redirects": [
     { "source": "/home", "destination": "/", "permanent": true },
     { "source": "/blog", "destination": "/blogs", "permanent": true },
+    { "source": "/blog/lopty-pascal-ai-seo-positioning-uae", "destination": "/blog/ai-seo-geo-strategy-uae-business-setup", "permanent": true },
+    { "source": "/blog/prezlo-ai-visibility-uae-businesses", "destination": "/blog/data-driven-insights-ai-visibility-geo-tool", "permanent": true },
     { "source": "/services/creators", "destination": "/services/advertiser-permit", "permanent": true },
     { "source": "/services/registration-licenses", "destination": "/services", "permanent": true },
     { "source": "/services/visa-pro", "destination": "/services/pro", "permanent": true },
