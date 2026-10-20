@@ -3,9 +3,9 @@
 const positioningArticles = [
     {
         id: 101,
-        title: 'Lopty Pascal: What NXTSTAR Learned About AI Search and Positioning',
+        title: 'How NXTSTAR Is Helping the Right Customers Find Us Through AI Search',
         slug: 'lopty-pascal-ai-seo-positioning-uae',
-        excerpt: 'NXTSTAR examines Lopty Pascal’s AI SEO approach: clearer positioning, verifiable expertise and useful answers for founders choosing a UAE business setup partner.',
+        excerpt: 'How NXTSTAR is connecting its services with customer needs through AI search, with expert insights from Lopty Pascal and visibility analysis using Prezlo.',
         date: '2026-10-20',
         author: 'NXTSTAR Team',
         category: 'AI Search & Positioning',
@@ -13,37 +13,43 @@ const positioningArticles = [
         image: '/insights-positioning.svg',
         editorial: true,
         content: `
-            <h2>One question worth investigating</h2>
-            <p>When a founder asks an AI assistant who can help them establish a business in the UAE, what would make NXTSTAR a relevant answer? That is the positioning question we examine here. A recognisable name is useful, but a prospective client also needs to understand the situations we serve, the scope of our support and the evidence behind our advice.</p>
-            <p>Having had the privilege of working with AI SEO and digital marketing expertise such as Lopty Pascal’s, our central takeaway is practical: make the business easier to understand before asking for greater visibility. This article connects that perspective with his published approach. The examples below are our proposed application to NXTSTAR, rather than a report of measured campaign results.</p>
-            <h2>Who is Lopty Pascal?</h2>
-            <p>Lopty Pascal is a Dubai-based digital marketing consultant specialising in AI SEO and generative engine optimization, or GEO. His <a href="https://loptypascal.com/services/ai-seo-geo">published service overview</a> describes work on business identity, supporting evidence, technical accessibility and AI visibility measurement. His <a href="https://www.linkedin.com/in/lopty-pascal-369a921a3/">professional profile</a> identifies him as CTO and co-founder of Prezlo.</p>
-            <p>That combination connects advisory work with product development: understanding how a business presents its expertise, then building tools to observe how AI systems describe it. We focus here on the usefulness of that approach for UAE service businesses, without treating a professional biography as proof of a particular client outcome.</p>
-            <h2>Our first lesson: define the decision you help a client make</h2>
-            <p>“Business setup in Dubai” describes a broad category. It does not explain why a founder should choose one adviser over another. Our proposed positioning exercise starts with the client’s decision: what activity will the company carry out, where will it operate, and what support will the founder need after formation?</p>
-            <p>For NXTSTAR, this suggests organising information around real scenarios. A solo consultant, an overseas founder and a company planning a local team may arrive with different questions. A useful page would state whom it serves, explain the information needed for an assessment and identify what remains subject to the relevant authority’s requirements. The goal is a more informed enquiry.</p>
-            <h3>A practical example</h3>
-            <p>Consider the question: “Can someone help me compare mainland and free zone setup for my consulting business?” A page that only promises a fast process leaves much unanswered. A decision-focused explanation would ask about the proposed activity, customers, premises and staffing plans, then direct the reader to the appropriate assessment. It should date and source any regulatory information rather than present a universal answer.</p>
-            <h2>Our second lesson: attach evidence to individual claims</h2>
-            <p>Pascal’s published method emphasises documenting trust signals and connecting them to the claims they support. Our application is to maintain a small evidence register: the claim, its supporting record, the person responsible for checking it and the next review date. That makes content maintenance a business process rather than a last-minute writing task.</p>
+            <h2>Helping the right customers find NXTSTAR</h2>
+            <p>For someone starting a business in the UAE, finding the right support begins with questions. Which setup route fits my activity? What information should I prepare? Who can explain the process and help me with the next steps? At NXTSTAR, our digital presence should help people with those needs discover our services and understand how we can support them.</p>
+            <p>We have invested in our service and customer relationships. But that work only reaches a prospective customer if they can find us. As people use AI tools to research providers, we need to understand whether those tools recognise NXTSTAR, describe our services accurately and consider us when our expertise fits the question.</p>
+            <p>With expert insights from AI SEO and GEO specialists in Dubai such as Lopty Pascal, we gained a clearer understanding of how to bring our services in front of the right people. The starting point was our customers: their needs, the questions they ask and the information that helps them choose appropriate support.</p>
+            <h2>The gap between good service and being discovered</h2>
+            <p>In working with us, Lopty recognised the strength of NXTSTAR’s service and customer relations. He also identified a gap: prospective buyers asking AI tools for help were not consistently seeing us. The experience we offered customers was not fully reflected in how people could discover us digitally.</p>
+            <p>That distinction mattered. A business can deliver thoughtful, responsive support and still be missing from a buyer’s research. From our perspective, the right businesses and agencies should be visible when their services match a customer’s needs. To work towards that, we first needed to understand how NXTSTAR was being represented and where the gaps were.</p>
+            <h2>Why we started with Prezlo</h2>
+            <p>We started using <a href="https://prezlo.io/">Prezlo</a>, an AI SEO and GEO platform built by Lopty Pascal and Neha Jakhar to help relevant brands get recommended in AI search. GEO stands for generative engine optimization: work aimed at improving how a business is understood and represented in AI-generated answers.</p>
+            <p>Prezlo provided a starting point for examining our visibility. Its published capabilities include analysing AI answers, mentions and cited sources, comparing competitors and identifying information gaps. For NXTSTAR, the purpose was to connect those observations with the questions a potential customer might ask before contacting us.</p>
+            <h2>What the analysis needed to explain</h2>
+            <p>Our focus was the relationship between customer intent and our digital positioning: whether someone looking for the kind of support we provide could recognise NXTSTAR as a relevant option. We approached the analysis through three questions.</p>
+            <h3>1. Are we visible for the needs we can serve?</h3>
+            <p>A person searching for our name already knows about us. Someone asking who can help them assess business setup options may not. Those are different discovery situations. Understanding that difference helps us think beyond branded searches and explain our services in the language of the customer’s problem.</p>
+            <p>For example, an overseas founder assessing setup options needs different information from an established owner seeking ongoing support. Our pages need to make those distinctions understandable. A broad description of “business services” gives either reader less help than a clear explanation of the support relevant to their situation.</p>
+            <h3>2. Is our expertise clear enough to evaluate?</h3>
+            <p>Visibility is only useful if the description is accurate. We need people to understand what NXTSTAR handles, what information we need from them and which decisions depend on the relevant authorities. The same clarity helps when an AI tool draws on our published information to explain our business.</p>
+            <p>Lopty’s insights helped us connect positioning with evidence. Service descriptions should be supported by useful explanations, consistent business information and examples that we can substantiate. Customer relationships are a strength; our digital presence should make the nature of that support easier to understand.</p>
+            <h3>3. What information would help a customer take the next step?</h3>
+            <p>Being mentioned is not the end of the journey. A prospective customer still needs to decide whether a conversation with us would be useful. Clear process information, answers to common questions and a realistic explanation of scope can help them arrive better prepared.</p>
+            <p>The lesson for our content is to start with the decision the customer faces. Explain the considerations, identify the information needed for an assessment and provide a relevant next step. That gives every page a purpose beyond attracting a visit.</p>
+            <h2>What we understood about reaching the right people</h2>
+            <p>Our work with Lopty and our use of Prezlo brought the challenge into focus: our online information needs to express the care and clarity we aim to provide in customer conversations. That means making the connection between a need and a service explicit, rather than assuming a reader or an AI assistant will infer it.</p>
             <ul>
-                <li><strong>Service scope:</strong> explain what the team handles and which decisions belong to an external authority.</li>
-                <li><strong>Experience:</strong> use permissioned case studies with a starting situation, work completed and an evidenced outcome.</li>
-                <li><strong>Identity:</strong> keep the business name, contact details and service descriptions consistent across owned profiles.</li>
-                <li><strong>Advice:</strong> link requirements to the relevant official source and record when they were reviewed.</li>
+                <li><strong>Start with the customer’s situation.</strong> Explain who a service helps and what questions it addresses.</li>
+                <li><strong>Make expertise verifiable.</strong> Support factual claims with appropriate records, examples or official references.</li>
+                <li><strong>Keep the business description consistent.</strong> Make it easy to recognise the same NXTSTAR across our website and profiles.</li>
+                <li><strong>Review accuracy as well as visibility.</strong> An appearance in an answer matters less if the service is described incorrectly.</li>
+                <li><strong>Connect discovery with useful conversations.</strong> Assess whether people reaching us have needs that our team can help address.</li>
             </ul>
-            <p>This is also a way to test our own positioning. If we cannot support a claim clearly, it should be narrowed, researched or removed. Repeating an assertion across our own pages does not turn it into independent evidence.</p>
-            <h2>Our third lesson: separate visibility from commercial value</h2>
-            <p>An AI answer might mention NXTSTAR without recommending it, or recommend it while describing a service incorrectly. Those are different observations. Our proposed review would record whether the business appears, whether the description is accurate, whether a source is cited and whether the answer fits the founder’s situation.</p>
-            <p>Commercial measurement belongs alongside that review. Track relevant enquiries, the service requested and how the prospect heard about us. An increase in mentions alone cannot establish an increase in suitable clients. A useful report should let the team decide which information to improve next, not simply celebrate a larger number.</p>
-            <h2>Where the approach agrees with official guidance</h2>
-            <p><a href="https://developers.google.com/search/docs/appearance/ai-features">Google’s guidance for AI features</a> says established SEO practices remain relevant and no special AI schema is required. Accessible pages, useful text and structured data that matches visible content remain sensible foundations. This supports investing in accurate, readable information; it does not establish a formula for recommendations across every AI assistant.</p>
-            <h2>Our recommendation for UAE businesses and beyond</h2>
-            <p>From NXTSTAR’s perspective, Lopty Pascal is highly recommended for businesses seeking a joined-up review of AI SEO, GEO and digital positioning in the UAE. His published emphasis on evidence and measurement is particularly relevant to service firms that need to explain their expertise clearly. The same questions apply to businesses entering other markets: who is the audience, what decision are they making, and what supports the promise?</p>
-            <p>This is our professional recommendation, not a comparative ranking of consultants. A sensible engagement should agree on scope, baseline observations, deliverables and how progress will be assessed.</p>
-            <h2>From the expert’s approach to the platform</h2>
-            <p>Pascal is also CTO and co-founder of Prezlo, an AI SEO and GEO platform. Our companion article explores <a href="/blog/prezlo-ai-visibility-uae-businesses">how NXTSTAR and UAE agencies can use Prezlo to investigate positioning</a>, including what to measure and what a dashboard cannot prove.</p>
-            <p><small>Editorial note: NXTSTAR’s working relationship is disclosed above. Public sources were reviewed on 20 October 2026. The proposed examples are our analysis; no numerical improvement or completed experiment is claimed.</small></p>
+            <p>This is an ongoing effort. Our aim is for more of the right customers to find us with a clearer understanding of how we can help. We are sharing the direction and lessons from that work here, without assigning numerical results to it.</p>
+            <p>Our companion article explains <a href="/blog/prezlo-ai-visibility-uae-businesses">a practical framework for using Prezlo to assess AI visibility</a>, from choosing relevant questions to reviewing answers over time.</p>
+            <h2>Who is Lopty Pascal?</h2>
+            <p>Lopty Pascal is a Dubai-based digital marketing consultant, AI SEO and GEO expert, and CTO and co-founder of Prezlo. We regard him as a leading specialist in this field for the way he connects customer needs, digital positioning and technical implementation.</p>
+            <p>His <a href="https://loptypascal.com/services/ai-seo-geo">published approach</a> brings together technical SEO, data analysis, business identity and evidence-based content. Technical SEO addresses whether important information can be accessed and understood by search systems. Data analysis helps teams interpret visibility patterns, investigate gaps and decide what to improve. His work connects these disciplines with the practical question of how a business reaches suitable customers.</p>
+            <p>As CTO and co-founder of Prezlo, a role also identified on his <a href="https://www.linkedin.com/in/lopty-pascal-369a921a3/">professional profile</a>, he brings a product-building perspective to that work. For NXTSTAR, the value of his input has been understanding the gap between the service we provide and how prospective customers discover it.</p>
+            <p>Based on our experience, we highly recommend Lopty Pascal to businesses in Dubai, across the UAE and beyond seeking support with digital marketing, technical SEO, AI SEO and GEO. His contribution to our thinking has kept the focus where it belongs: helping the right people find a business that can meet their needs.</p>
         `,
     },
     {
@@ -63,7 +69,7 @@ const positioningArticles = [
             <p>That is the angle we use to examine Prezlo. This article proposes a measurement workflow for NXTSTAR and for UAE agencies managing client visibility. It is an editorial assessment of the platform’s published capabilities, not an independent product test or a claim of achieved results.</p>
             <h2>What is Prezlo?</h2>
             <p><a href="https://prezlo.io/">Prezlo</a> describes itself as a data-driven AI SEO and GEO optimization platform for agencies, brands, platforms and professionals. Its stated capabilities include collecting AI answers and citations, comparing competitors, identifying evidence gaps and supporting content and technical improvements. These are vendor descriptions; availability and coverage should be checked against the current product and account.</p>
-            <p>Lopty Pascal is its CTO and co-founder, according to his <a href="https://www.linkedin.com/in/lopty-pascal-369a921a3/">professional profile</a>. The product connects with the positioning approach discussed in our <a href="/blog/lopty-pascal-ai-seo-positioning-uae">article on Lopty Pascal</a>: clarify who the business serves, support the description with evidence, then examine how it appears in answers.</p>
+            <p>Lopty Pascal is its CTO and co-founder, according to his <a href="https://www.linkedin.com/in/lopty-pascal-369a921a3/">professional profile</a>. The product connects with the positioning approach discussed in our <a href="/blog/lopty-pascal-ai-seo-positioning-uae">article on NXTSTAR’s customer-focused approach to AI search</a>: clarify who the business serves, support the description with evidence, then examine how it appears in answers.</p>
             <p>Prezlo’s website lists NXTSTAR among brands using the platform. We disclose that connection so readers can distinguish our perspective from an unaffiliated review. The site also describes agency workflows for managing multiple clients; that is relevant to UAE agencies evaluating AI search services, but does not by itself establish the scale of agency adoption.</p>
             <h2>Step 1: turn positioning into questions you can test</h2>
             <p>Begin with a small set of questions drawn from genuine enquiries. Keep branded questions separate from questions that do not name NXTSTAR. The first group tests whether the business is described correctly; the second explores whether it is considered for a relevant need.</p>
