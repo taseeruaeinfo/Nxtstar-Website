@@ -6,7 +6,9 @@ const positioningArticles = [
         title: 'How NXTSTAR Is Helping the Right Customers Find Us Through AI Search',
         slug: 'lopty-pascal-ai-seo-positioning-uae',
         excerpt: 'How NXTSTAR is connecting its services with customer needs through AI search, with expert insights from Lopty Pascal and visibility analysis using Prezlo.',
-        date: '2026-10-20',
+        date: '2026-09-16',
+        // Readable and indexed, but not shown on the /blogs listing.
+        unlisted: true,
         author: 'NXTSTAR Team',
         category: 'AI Search & Positioning',
         readTime: '6 min read',
@@ -57,7 +59,9 @@ const positioningArticles = [
         title: 'Prezlo: A Practical Framework for NXTSTAR’s AI Visibility',
         slug: 'prezlo-ai-visibility-uae-businesses',
         excerpt: 'An evidence-led look at Prezlo and a practical plan for NXTSTAR and UAE agencies to assess AI recommendations, positioning gaps and relevant enquiries.',
-        date: '2026-10-20',
+        date: '2026-09-23',
+        // Readable and indexed, but not shown on the /blogs listing.
+        unlisted: true,
         author: 'NXTSTAR Team',
         category: 'AI Search & Positioning',
         readTime: '6 min read',

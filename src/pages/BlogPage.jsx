@@ -5,7 +5,8 @@ import blogPosts from '../data/blogPosts';
 import '../styles/pages/BlogPage.css';
 
 const BlogPage = () => {
-    const blogs = blogPosts;
+    // Unlisted posts keep their own page and sitemap entry but stay off this listing.
+    const blogs = blogPosts.filter((post) => !post.unlisted);
 
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('All');
