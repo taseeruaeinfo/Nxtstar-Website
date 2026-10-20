@@ -1,5 +1,8 @@
+import positioningArticles from './positioningArticles';
+
 // All blog posts. Listing, post pages, prerendering and the sitemap read from here.
 const blogPosts = [
+        ...positioningArticles,
         {
         	id: 1,
             title: "Guide to Starting a Business in UAE Mainland",

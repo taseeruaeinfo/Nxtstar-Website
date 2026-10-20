@@ -52,13 +52,13 @@ const BlogPostPage = () => {
                 </div>
 
                 {/* CTA Section */}
-                <div className="blog-cta-section">
+                {!blog.editorial && <div className="blog-cta-section">
                     <div className="blog-cta-content">
                         <h2>Ready to Start Your Business Journey?</h2>
                         <p>Talk to the NXTSTAR team about your business setup in the UAE.</p>
                         <Button to="/contact" type="primary">Get in Touch with NXTSTAR</Button>
                     </div>
-                </div>
+                </div>}
 
                 <div className="blog-post-navigation">
                     <Button to="/blogs" type="outline">← Back to Blogs</Button>
