@@ -1,3 +1,4 @@
+import prezloRouteMetadata from './prezlo-route-metadata.json';
 import { useContext, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import HeadContext from '../../seo/HeadContext';
@@ -9,7 +10,7 @@ const SEO = ({ title, description, canonicalUrl, noindex = false, ogType, image,
     const { pathname } = useLocation();
     const collector = useContext(HeadContext);
     const path = normalizePath(canonicalUrl || pathname);
-    const tags = buildHead({ title, description, path, noindex, ogType, image, jsonLd });
+    const tags = buildHead({ title: prezloRouteMetadata[pathname.replace(/\/+$/, '') || '/']?.title ?? title, description: prezloRouteMetadata[pathname.replace(/\/+$/, '') || '/']?.description ?? description, path, noindex, ogType, image, jsonLd });
 
     if (collector) collector.tags = tags;
 
