@@ -1,0 +1,194 @@
+{
+  "/contact": {
+    "title": "Contact Nxtstar | UAE Business Setup & Management Consultancy",
+    "description": "Contact Nxtstar Management Consultancy to start your UAE business. Speak with our team about company formation, licensing, and partnership opportunities."
+  },
+  "/services/residents": {
+    "title": "UAE Resident Services | Sponsorship, Golden Visa & Insurance | Nxtstar",
+    "description": "Nxtstar helps UAE residents sponsor dependents, apply for a Golden Visa, and secure tailored insurance and attestation support. Practical guidance for founders and families."
+  },
+  "/business/commercial-licence/online-selling": {
+    "title": "UAE Online Selling Licence | Nxtstar Management Consultancy",
+    "description": "Selling online in the UAE requires the right commercial licence. Nxtstar helps founders understand Dubai and mainland e-commerce licence options and setup steps."
+  },
+  "/blog/uae-media-council-approval-content-creators-2025": {
+    "title": "UAE Media Council Approval for Content Creators 2025",
+    "description": "Understand the 2025 requirements and steps to obtain UAE Media Council approval for content creators. Navigate the process with Nxtstar's guidance."
+  },
+  "/blog/dubai-investor-visa-updates-2026": {
+    "title": "Dubai Investor Visa 2026: New Rules & Limits",
+    "description": "Navigate the 2026 Dubai investor visa updates. Learn about new property ownership rules, eligibility changes, and residency requirements for investors."
+  },
+  "/blog/registering-a-special-purpose-vehicle-spv-in-difc": {
+    "title": "Register a DIFC SPV: Benefits & Process | NXTSTAR",
+    "description": "Learn the benefits and step-by-step process for registering a Special Purpose Vehicle (SPV) in DIFC. Understand requirements for structuring assets in the UAE."
+  },
+  "/services/golden-visa/business-investors": {
+    "title": "UAE Golden Visa for Business Investors | Nxtstar",
+    "description": "Company shareholders, depositors and major taxpayers can qualify for a 10-year UAE Golden Visa. The three investor routes and documents GDRFA Dubai requires."
+  },
+  "/services/golden-visa/content-creators": {
+    "title": "UAE Golden Visa for Content Creators | NXTSTAR",
+    "description": "Creators can qualify for a 10-year UAE Golden Visa in the culture and art category with an official nomination. Who nominates, what they look for, and the steps."
+  },
+  "/services/freelancers": {
+    "title": "UAE Freelance Visa & Permit Setup | NXTSTAR",
+    "description": "Start your freelance business in the UAE with visa, permit, tax registration, banking, and contract support. Practical setup guidance for independent consultants."
+  },
+  "/services/investors": {
+    "title": "Foreign Investor Setup in UAE | Nxtstar Management Consultancy",
+    "description": "Practical UAE company formation, investor visa and Golden Visa guidance for foreign founders and expats. Nxtstar helps structure your mainland or free zone entry."
+  },
+  "/blog/how-to-choose-the-right-business-activity-for-your-uae-company": {
+    "title": "Choose the Right Business Activity for Your UAE Company",
+    "description": "Practical guidance for founders on selecting the correct business activity for a UAE trade license, covering mainland and free zone options."
+  },
+  "/services": {
+    "title": "UAE Business Setup & Growth Services | NXTSTAR",
+    "description": "Nxtstar helps founders start and grow their business in the UAE. Explore our business setup, advisory, and partnership support services."
+  },
+  "/services/startups": {
+    "title": "UAE Startup Setup & Company Formation | NXTSTAR",
+    "description": "NXTSTAR helps founders start a business in the UAE with practical guidance on company formation, trade licences, visas, and launch readiness."
+  },
+  "/refer-earn": {
+    "title": "Refer & Earn UAE Business Setup Rewards | NXTSTAR",
+    "description": "Refer a founder to NXTSTAR for UAE company setup and earn a reward when their registration is completed. Start sharing your referral link today."
+  },
+  "/blog/offshore-vs-mainland-which-is-right-for-your-business": {
+    "title": "Offshore vs Mainland UAE: Right Setup for Your Business",
+    "description": "Compare UAE offshore and mainland company formation: ownership rules, office needs, visa eligibility, and business activity scope. Find the right fit for your goals."
+  },
+  "/services/pro": {
+    "title": "PRO Services UAE | Government Paperwork & Visa Processing",
+    "description": "Streamline UAE government paperwork, visas, and licensing with Nxtstar's PRO services. We manage official procedures so you can focus on your business."
+  },
+  "/blog/office-options-dubai-best-area-office-business-owners": {
+    "title": "Office Options in Dubai: Best Area for Business Owners",
+    "description": "A practical guide to choosing the right office type and business location in Dubai based on your business model and licensing needs."
+  },
+  "/business/freezone/jafza": {
+    "title": "Jafza Company Setup in Dubai – Free Zone Business Formation | NXTSTAR",
+    "description": "Understand Jafza company setup in Dubai: formation types, trading and logistics licences, required documents, and how Nxtstar helps founders start."
+  },
+  "/business/freezone/dmcc": {
+    "title": "DMCC Company Setup in Dubai – Licence Types & Process | Nxtstar",
+    "description": "Understand DMCC company setup: four licence types, three formation routes, the four-step digital process, share capital rules and required documents. Nxtstar helps founders start their UAE business."
+  },
+  "/services/advertiser-permit/creators-under-18": {
+    "title": "UAE Advertiser Permit for Creators Under 18 | NXTSTAR",
+    "description": "The UAE advertiser permit requires creators to be 18. Learn the limited exceptions for minors working under a guardian and what parents must know."
+  },
+  "/services/advertiser-permit/brands-hiring-influencers": {
+    "title": "Hiring Influencers in UAE: Advertiser Permit Rules",
+    "description": "UAE brands must verify an influencer's advertiser permit and sign a written agreement before any paid promotion. Nxtstar explains the compliance checklist."
+  },
+  "/services/advertiser-permit/health-and-fitness-creators": {
+    "title": "UAE Health & Fitness Influencer Ad Rules | NXTSTAR",
+    "description": "Health, wellness and fitness creators in the UAE need a health advertisement licence plus an advertiser permit. Learn what to check before promoting products or clinics."
+  },
+  "/services/golden-visa/doctors": {
+    "title": "UAE Golden Visa for Doctors & Healthcare Pros | NXTSTAR",
+    "description": "Doctors and healthcare specialists can qualify for a 10-year UAE Golden Visa through health authority nomination. Nxtstar helps you prepare the required documents and navigate GDRFA Dubai procedures."
+  },
+  "/services/golden-visa/executives-and-professionals": {
+    "title": "UAE Golden Visa for Executives & Professionals | NXTSTAR",
+    "description": "Qualify for a 10-year UAE Golden Visa as a skilled professional. We explain the AED 30,000 salary rule, degree requirements, job level and GDRFA documents."
+  },
+  "/business/setup-for/foreign-investors": {
+    "title": "UAE Business Setup for Foreign Investors | Nxtstar",
+    "description": "Foreign investors can now fully own most UAE mainland companies. Understand the law, restricted activities, and how to choose your business structure."
+  },
+  "/business/setup-for/tech-startups": {
+    "title": "Tech Startup Setup UAE: Compare Zones | NXTSTAR",
+    "description": "Compare DIFC, Dubai Internet City, Masdar City, SRTIP and general free zones for tech startups, using what each authority publishes. Nxtstar helps founders choose."
+  },
+  "/blog/data-driven-insights-ai-visibility-geo-tool": {
+    "title": "AI Visibility & GEO Tool Insights | NXTSTAR Measurement Framework",
+    "description": "An evidence-led look at Prezlo and a practical plan for NXTSTAR and UAE agencies to assess AI recommendations, positioning gaps and relevant enquiries."
+  },
+  "/blog/how-to-set-up-a-foundation-in-the-uae-2025": {
+    "title": "How to Set Up a Foundation in the UAE (2025 Guide) | NXTSTAR",
+    "description": "Step-by-step guide to establishing a foundation in the UAE in 2025. Learn the legal structures, jurisdiction options, and registration process for founders."
+  },
+  "/blog/golden-visa-for-content-creators": {
+    "title": "Golden Visa for Dubai Creators: How to Get it in 2026",
+    "description": "Step-by-step guide for content creators to obtain the UAE Golden Visa in 2026. Covers eligibility, required documents, and the application process."
+  },
+  "/blog/get-business-in-ai-search-results": {
+    "title": "Get Your UAE Business in AI Search Results | Nxtstar",
+    "description": "Learn how UAE founders can improve visibility in AI-driven search results and attract more clients through practical positioning strategies."
+  },
+  "/business/freezone/shams": {
+    "title": "Shams Free Zone Company Setup in Sharjah | Nxtstar",
+    "description": "Start your business in Sharjah Media City (Shams) with service, trade or industrial licences. Nxtstar helps founders handle documents, activities and visas."
+  },
+  "/blog/world-trade-centre-business-setup-dubai": {
+    "title": "DWTC Business Setup Dubai | NXTSTAR",
+    "description": "Explore DWTC Free Zone business setup, license types, office solutions and company formation benefits in Dubai with NXTSTAR's guidance."
+  },
+  "/business/freezone/difc": {
+    "title": "DIFC Company Setup for Founders – Nxtstar Management Consultancy",
+    "description": "Start your business in the Dubai International Financial Centre. Nxtstar helps founders with DIFC company setup, DFSA authorisation, holding structures and foundations."
+  },
+  "/business/freezone/srtip": {
+    "title": "SRTIP Company Setup in Sharjah Free Zone | Nxtstar",
+    "description": "Nxtstar helps founders set up in Sharjah Research, Technology and Innovation Park. Compare FZE and FZC structures, licence types, documents and timeline."
+  },
+  "/privacy-policy": {
+    "title": "Privacy Policy – Nxtstar Management Consultancy UAE",
+    "description": "Understand how Nxtstar Management Consultancy collects, uses, and protects your personal data when you explore business setup services in the UAE."
+  },
+  "/services/advertiser-permit/visiting-influencers": {
+    "title": "UAE Advertiser Permit for Visiting Influencers | NXTSTAR",
+    "description": "Visiting influencers need a UAE Visitor Advertiser Permit for paid content. NXTSTAR explains the agency requirement, process and validity period."
+  },
+  "/services/advertiser-permit/gifted-and-unpaid-posts": {
+    "title": "Advertiser Permit for Gifted & Unpaid Posts UAE",
+    "description": "UAE advertiser permit rules for gifted products, barter deals and unpaid posts. Understand when a permit is required and how Nxtstar helps creators comply."
+  },
+  "/services/advertiser-permit/finance-influencers": {
+    "title": "UAE Finance Influencer Rules: SCA & Media Council",
+    "description": "Finance creators in the UAE answer to the SCA for financial recommendations and the Media Council for advertising. Understand how the two fit together."
+  },
+  "/services/advertiser-permit/foreign-creators": {
+    "title": "UAE Advertiser Permit for Foreign Creators | Nxtstar",
+    "description": "European, American, British and other foreign creators can obtain a UAE advertiser permit. Nxtstar helps you choose the right visitor or resident route."
+  },
+  "/services/golden-visa/entrepreneurs": {
+    "title": "UAE Golden Visa for Entrepreneurs | NXTSTAR",
+    "description": "Startup founders can qualify for a 10-year UAE Golden Visa through three project routes. Understand the GDRFA Dubai nomination requirement and eligibility."
+  },
+  "/services/golden-visa/scientists-and-engineers": {
+    "title": "UAE Golden Visa for Scientists & Engineers | NXTSTAR",
+    "description": "Researchers, engineers and tech specialists can qualify for a 10-year UAE Golden Visa. Understand the degree, citation and nomination requirements."
+  },
+  "/services/golden-visa/students-and-graduates": {
+    "title": "UAE Golden Visa for Students & Graduates | NXTSTAR",
+    "description": "Outstanding school students and university graduates can qualify for a UAE Golden Visa. Learn the grade thresholds, university rankings and time limits applied by GDRFA Dubai."
+  },
+  "/blog/ai-seo-geo-strategy-uae-business-setup": {
+    "title": "AI SEO & GEO Strategy for UAE Business Setup | NXTSTAR",
+    "description": "See how NXTSTAR uses AI search and GEO to connect founders with UAE business setup services, with insights from Lopty Pascal and Prezlo visibility analysis."
+  },
+  "/blog/understanding-uae-tax-regulations-for-foreign-businesses": {
+    "title": "UAE Tax Guide for Foreign Businesses | NXTSTAR",
+    "description": "Learn how UAE tax regulations affect foreign business owners. Understand corporate tax, VAT, and free zone benefits to plan your setup with NXTSTAR."
+  },
+  "/blog/e-trader-license-dubai-2025": {
+    "title": "E-Trader License Dubai 2025: How to Apply",
+    "description": "Learn what the Dubai E-Trader license is, who qualifies, and the 2025 application steps for UAE and GCC residents selling online. Get practical guidance from Nxtstar."
+  },
+  "/business/freezone/rakez": {
+    "title": "RAKEZ Company Setup in Ras Al Khaimah | Nxtstar Management Consultancy",
+    "description": "Understand RAKEZ company setup: free zone and non-free zone licence types, required documents, and what you receive. Nxtstar helps founders start their UAE business."
+  },
+  "/blog/special-tech-licences-difc-adgm-ai-startups": {
+    "title": "Special Tech Licences in DIFC & ADGM for AI Startups",
+    "description": "Compare startup-friendly tech licences in DIFC and ADGM for AI ventures. Learn how Nxtstar helps founders choose the right UAE free zone."
+  },
+  "/blog/national-media-authority-permit-uae-publishing-media-businesses": {
+    "title": "UAE National Media Authority Permit for Publishing & Media",
+    "description": "Understand the National Media Authority permit process for UAE publishing, media, and digital content businesses. A practical guide from Nxtstar."
+  }
+}
