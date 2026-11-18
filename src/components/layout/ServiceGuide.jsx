@@ -26,6 +26,7 @@ const buildJsonLd = (guide) => {
         {
             '@context': 'https://schema.org',
             '@type': 'Service',
+            '@id': `${url}#service`,
             name: guide.serviceName,
             serviceType: guide.serviceType,
             description: guide.description,
@@ -89,6 +90,7 @@ const ServiceGuide = ({ guide }) => (
                 <p className="guide-reviewed">
                     Last reviewed: <time dateTime={guide.reviewed}>{formatDate(guide.reviewed)}</time> by the {SITE_NAME} team.
                 </p>
+                {guide.sourceUpdate && <p className="guide-reviewed">{guide.sourceUpdate} <Link to="/services/advertiser-permit">Current application overview</Link></p>}
                 <p className="guide-reviewed">Rules are set by the authority and can change. Confirm the current position before you apply.</p>
             </section>
 

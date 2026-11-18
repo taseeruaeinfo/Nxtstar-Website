@@ -44,8 +44,8 @@
     "description": "Practical guidance for founders on selecting the correct business activity for a UAE trade license, covering mainland and free zone options."
   },
   "/services": {
-    "title": "UAE Business Setup & Growth Services | NXTSTAR",
-    "description": "Nxtstar helps founders start and grow their business in the UAE. Explore our business setup, advisory, and partnership support services."
+    "title": "UAE Business Setup, Advertiser Permits & PRO Services | NXTSTAR",
+    "description": "Find NXTSTAR support for company formation, advertiser permits, residence visas, corporate structuring, RERA registration and company administration in the UAE."
   },
   "/services/startups": {
     "title": "UAE Startup Setup & Company Formation | NXTSTAR",
@@ -190,5 +190,9 @@
   "/blog/national-media-authority-permit-uae-publishing-media-businesses": {
     "title": "UAE National Media Authority Permit for Publishing & Media",
     "description": "Understand the National Media Authority permit process for UAE publishing, media, and digital content businesses. A practical guide from Nxtstar."
+  },
+  "/services/advertiser-permit": {
+    "title": "Advertiser Permit Dubai: Application & Licence Support | NXTSTAR",
+    "description": "Need an advertiser permit in Dubai? NXTSTAR helps creators assess the route, prepare trade licensing and organise their advertiser permit application."
   }
 }

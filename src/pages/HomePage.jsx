@@ -356,7 +356,7 @@ const HomePage = () => {
                         <div className="section-header">
                             <h2 className="section-title">Our Core Services</h2>
                             <p className="section-description">
-                                Three services we focus on. We also handle <Link to="/business/mainland">mainland</Link>, <Link to="/business/freezone">free zone</Link> and <Link to="/business/offshore">offshore</Link> company setup.
+                                Support for creators, founders and business owners. Explore our <Link to="/services">full service directory</Link>, including permits, visas, corporate structuring and PRO administration. We also handle <Link to="/business/mainland">mainland</Link>, <Link to="/business/freezone">free zone</Link> and <Link to="/business/offshore">offshore</Link> company setup.
                             </p>
                         </div>
 

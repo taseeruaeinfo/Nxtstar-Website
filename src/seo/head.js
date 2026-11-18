@@ -18,7 +18,7 @@ const escapeHtml = (value) =>
  * @returns {HeadTag[]}
  */
 export const buildHead = ({ title, description, path = '/', noindex = false, ogType = 'website', image, jsonLd } = {}) => {
-    const fullTitle = !title ? SITE_NAME : title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
+    const fullTitle = !title ? SITE_NAME : title.toLowerCase().includes(SITE_NAME.toLowerCase()) ? title : `${title} | ${SITE_NAME}`;
     const desc = description || DEFAULT_DESCRIPTION;
     const url = absoluteUrl(path);
     const img = absoluteUrl(image || DEFAULT_OG_IMAGE);

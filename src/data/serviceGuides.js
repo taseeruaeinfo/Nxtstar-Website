@@ -6,156 +6,188 @@ const PRICE_ANSWER =
     'We do not publish prices. Ask us for a written quote that separates authority fees from our service fee.';
 
 export const advertiserPermit = {
-    path: '/services/advertiser-permit',
-    parent: { name: 'Services', path: '/services' },
-    breadcrumb: 'Advertiser permit',
-    h1: 'Do content creators need an advertiser permit in the UAE?',
-    seoTitle: 'UAE Advertiser Permit for Content Creators | NXTSTAR',
-    description:
-        'Who needs the UAE Media Council advertiser permit, who is exempt, the trade licence it depends on, and how NXTSTAR helps creators and influencers apply.',
-    serviceName: 'Advertiser permit and trade licence setup for content creators',
-    serviceType: 'UAE Media Council advertiser permit application support',
-    headerImage: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop',
-    reviewed: '2026-10-06',
-    cta: 'Talk to NXTSTAR about your advertiser permit',
-    answer: [
-        'Yes. The UAE Media Council requires every individual, whether a citizen, a resident or a visitor, to hold an Advertiser Permit before publishing advertising content on social media from within the UAE. The rule applies whether or not you are paid for the post.',
-        'Citizens and residents also need a valid trade licence that covers electronic media activity. NXTSTAR helps creators and influencers set up that licence and prepare the permit application.',
+    "path": "/services/advertiser-permit",
+    "parent": {
+        "name": "Services",
+        "path": "/services"
+    },
+    "breadcrumb": "Advertiser permit",
+    "h1": "Advertiser Permit Application Support in Dubai",
+    "seoTitle": "Advertiser Permit Dubai: Application & Licence Support | NXTSTAR",
+    "description": "Need an advertiser permit in Dubai? NXTSTAR helps creators assess the route, prepare trade licensing and organise their advertiser permit application.",
+    "serviceName": "NXTSTAR advertiser permit application and trade licence support in Dubai",
+    "serviceType": "Advertiser permit application support",
+    "headerImage": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop",
+    "reviewed": "2026-11-17",
+    "cta": "Need an advertiser permit in Dubai? Talk to NXTSTAR",
+    "answer": [
+        "NXTSTAR helps content creators and influencers in Dubai with advertiser permit application preparation and the related trade licence setup. Tell us whether you live in the UAE or are visiting, whether you already have a licence, and what kind of content you plan to publish. We can then explain the support relevant to your situation.",
+        "The official permit is issued by the media authority, not by NXTSTAR. The current service pages are published by the National Media Authority (NMA); you may also encounter the earlier UAE Media Council name when searching for an advertiser or influencer permit."
     ],
-    sections: [
+    "sections": [
         {
-            heading: 'Who needs the permit',
-            blocks: [
-                { text: 'The Council\'s guide applies the permit to individuals who produce advertising content on social media platforms, or by any other modern technical means, from within the UAE. It covers:' },
-                { list: ['UAE citizens', 'UAE residents', 'Visitors who create advertising content while they are in the country'] },
-                { text: 'The test is whether the content advertises a product, service, event or activity. Payment is not the test, so unpaid promotion is covered as well.' },
-            ],
-        },
-        {
-            heading: 'Who is exempt',
-            blocks: [
-                { text: 'The Council\'s guide lists two cases where the permit is not required:' },
+            "heading": "Start with your situation",
+            "blocks": [
                 {
-                    list: [
-                        'An individual promoting a product or service that belongs to them, or to a company they own, on their own account.',
-                        'Individuals under 18 who produce educational, sports, cultural or awareness content.',
-                    ],
-                },
-                { text: 'If you are unsure whether your content falls inside an exemption, check with the Council before you post. We can help you frame the question.' },
-            ],
+                    "list": [
+                        "Living in the UAE: review your existing commercial licence and the individual permit requirements.",
+                        "Starting a creator business: plan the trade licence and permit preparation together.",
+                        "Visiting Dubai for a campaign: the visitor route requires submission through a licensed UAE advertising agency. NXTSTAR does not act as that agency.",
+                        "Publishing financial recommendations or specialist advertising: check the relevant sector requirements as well as the media permit."
+                    ]
+                }
+            ]
         },
         {
-            heading: 'Conditions for citizens and residents',
-            blocks: [
+            "heading": "How NXTSTAR helps with an advertiser permit",
+            "blocks": [
                 {
-                    list: [
-                        'You are legally competent and at least 18 years old. The guide allows some exceptions for younger creators, who may operate under a guardian\'s licence.',
-                        'You are of good conduct and have not been convicted of a crime involving dishonour or breach of trust, unless rehabilitated.',
-                        'You have not previously violated media content standards.',
-                        'You hold a valid commercial licence for electronic media activity, issued by the relevant licensing authority.',
-                    ],
+                    "text": "Our work starts with an enquiry about your current setup. We help identify the licensing work needed, organise application information and explain what remains for you or the issuing authority to complete."
                 },
-                { text: 'The last condition is the one most creators are missing. The permit sits on top of a trade licence, so the licence comes first.' },
-            ],
-        },
-        {
-            heading: 'The process, step by step',
-            blocks: [
                 {
-                    ordered: true,
-                    list: [
-                        'Choose where to hold your trade licence. Both mainland and free zone authorities issue licences, and the licence must list an electronic media activity.',
-                        'Set up the licence with that authority.',
-                        'Apply to the UAE Media Council for the Advertiser Permit with your licence and identity documents.',
-                        'Once the permit is issued, display the permit number clearly on every social media account registered with it.',
-                    ],
+                    "list": [
+                        "Review the creator activity and current trade licence.",
+                        "Help coordinate trade licence setup where needed.",
+                        "Prepare the permit application information with the applicant.",
+                        "Identify missing items and explain the next administrative step.",
+                        "Discuss renewal and changes to the underlying business records."
+                    ]
                 },
-                { text: 'The Council states that it reviews an application within three working days after all required documents have been submitted. Setting up the trade licence takes additional time, which depends on the licensing authority you choose.' },
-            ],
-        },
-        {
-            heading: 'Validity and renewal',
-            blocks: [
-                { text: 'For citizens and residents the permit is valid for one year and is renewable. Your trade licence has its own renewal date, and the permit depends on the licence staying valid, so both need to be kept current.' },
-                { text: 'The Visitor Advertiser Permit is valid for three months. It can be extended, but the total period cannot exceed six months.' },
-            ],
-        },
-        {
-            heading: 'What NXTSTAR does',
-            blocks: [
                 {
-                    list: [
-                        'Helps you choose a licensing authority and the activity your licence needs to list.',
-                        'Sets up the trade licence with you.',
-                        'Prepares the Advertiser Permit application with you and tells you which documents the Council asks for.',
-                        'Tells you what has to stay in place at renewal.',
-                    ],
-                },
-            ],
+                    "text": "We provide setup and application support. We do not issue permits, approve advertising content or promise an approval date."
+                }
+            ]
         },
         {
-            heading: 'What we do not do',
-            blocks: [
+            "heading": "Documents and conditions to check",
+            "blocks": [
                 {
-                    list: [
-                        'We do not decide whether a permit is granted. The UAE Media Council does.',
-                        'We do not review or approve your content against media standards.',
-                        'We are not a talent or advertising agency and we do not find brand deals.',
-                    ],
+                    "text": "The current individual service page lists digital ID, passport, a personal photograph and a commercial licence. It also sets conduct and compliance conditions, including awareness training. Check the authority’s live requirements before submission."
                 },
-            ],
+                {
+                    "text": "For an initial conversation, tell us your residency status, licence status and intended content. There is no need to send identity documents in your first message. We will agree how application information should be shared after the scope is clear."
+                }
+            ]
         },
         {
-            heading: 'Where applications go wrong',
-            blocks: [
+            "heading": "The application sequence",
+            "blocks": [
                 {
-                    list: [
-                        'The trade licence does not list an electronic media activity, so the permit application cannot proceed.',
-                        'The creator assumes gifted or unpaid posts are outside the rule. They are not.',
-                        'The permit number is not shown on the accounts it covers.',
-                        'A visiting creator posts advertising content before a visitor permit is in place.',
-                    ],
+                    "ordered": true,
+                    "list": [
+                        "Discuss your status and creator activity with NXTSTAR.",
+                        "Confirm whether licensing work is needed before the permit application.",
+                        "Prepare the requested information and check the current official service requirements.",
+                        "Complete the appropriate authority application process.",
+                        "Review the decision and follow the permit conditions before publishing covered content."
+                    ]
                 },
-            ],
+                {
+                    "text": "The authority’s individual service lists a three-working-day delivery time. Licence preparation and any follow-up are separate, so this is not an end-to-end timeline promised by NXTSTAR."
+                }
+            ]
         },
+        {
+            "heading": "If you are visiting Dubai",
+            "blocks": [
+                {
+                    "text": "The NMA visitor service requires a licensed UAE advertising agency to submit the application. Its temporary permit lasts three months and may be extended up to six months in total. Ask the agency to confirm its role before scheduling campaign publication."
+                },
+                {
+                    "text": "If you instead intend to base your creator business in the UAE, discuss the company, residence and individual permit route with NXTSTAR. A relocation plan and a short campaign visit need different preparation."
+                }
+            ]
+        },
+        {
+            "heading": "Advertiser permit, influencer licence or finfluencer permit?",
+            "blocks": [
+                {
+                    "text": "People use “influencer licence” and “advertiser permit” when looking for help with creator advertising, but a commercial licence and a media permit serve different purposes. Financial recommendations introduce a separate regulatory question. Explain the activity rather than relying on the name of a package."
+                },
+                {
+                    "text": "NXTSTAR can discuss the trade licence and media application support it provides. Financial-content authorisation and other specialist approvals need their own assessment; holding a media permit does not settle those requirements."
+                }
+            ]
+        }
     ],
-    faqs: [
+    "faqs": [
         {
-            question: 'Do I need an advertiser permit if I am not paid for the post?',
-            answer: 'Yes. The UAE Media Council applies the permit to advertising content produced with or without compensation.',
+            "question": "I need an advertiser permit in Dubai. Can NXTSTAR help?",
+            "answer": "Yes. NXTSTAR helps with creator trade licence setup and advertiser permit application preparation. Start by telling us your UAE residency and licence status. The media authority decides the application; visitors need the licensed-agency route."
         },
         {
-            question: 'I only promote my own business. Do I still need the permit?',
-            answer: 'The Council\'s guide says the permit is not required for an individual promoting a product or service that belongs to them, or to a company they own, on their own account. If you also promote other brands, the permit applies.',
+            "question": "Can I apply directly instead of using a consultancy?",
+            "answer": "The authority provides an electronic application service. NXTSTAR offers support for people who need help with the related licence and application preparation; using our consultancy is not an official requirement."
         },
         {
-            question: 'How long does the advertiser permit take?',
-            answer: 'The Council states that it reviews an application within three working days after all required documents are submitted. The trade licence that the permit depends on is a separate step with its own timeline.',
+            "question": "Does the permit cover unpaid advertising?",
+            "answer": "The current NMA service description covers advertising content whether compensated or provided free of charge. Confirm how the requirements and any exemptions apply to your content."
         },
         {
-            question: 'How long is the permit valid?',
-            answer: 'One year for citizens and residents, renewable. The visitor permit is valid for three months and can be extended up to a total of six months.',
+            "question": "Do visitors use the same route as residents?",
+            "answer": "No. The NMA has a separate visitor service requiring an application through a licensed UAE advertising agency. NXTSTAR can explain the distinction but does not act as that agency."
         },
-        { question: 'How much does it cost?', answer: PRICE_ANSWER },
+        {
+            "question": "How do I get a quote for help with the application?",
+            "answer": "Contact NXTSTAR with your residency status, current licence and intended creator activity. Ask for a written scope separating licensing work, permit preparation and any authority charges."
+        }
     ],
-    sources: [
-        { name: 'UAE Media Council: Guide for the Permit to Regulate Advertising Content on Social Media', url: 'https://uaemc.gov.ae/wp-content/uploads/2025/08/Advertiser-Guide.pdf' },
-        { name: 'UAE Media Council: Visitor Advertiser Permit', url: 'https://uaemc.gov.ae/en/visitor-advertiser-permit/' },
-        { name: 'UAE Media Council: Licensing services', url: 'https://uaemc.gov.ae/en/licensing-services/' },
+    "sources": [
+        {
+            "name": "National Media Authority: individual advertising permit service",
+            "url": "https://www.nma.gov.ae/en/services/permit-for-an-individual-to-provide-advertising-or-media-content-on-social-media-and-other-digital-platforms"
+        },
+        {
+            "name": "National Media Authority: visiting advertiser permit service",
+            "url": "https://www.nma.gov.ae/en/services/permit-for-visiting-individuals-to-provide-advertising-or-media-content-on-social-media"
+        }
     ],
-    related: [
-        { name: 'Foreign creators: European, American and other nationalities', path: '/services/advertiser-permit/foreign-creators' },
-        { name: 'Visiting influencers', path: '/services/advertiser-permit/visiting-influencers' },
-        { name: 'Creators under 18', path: '/services/advertiser-permit/creators-under-18' },
-        { name: 'Business owners promoting their own business', path: '/services/advertiser-permit/business-owners' },
-        { name: 'Gifted and unpaid posts', path: '/services/advertiser-permit/gifted-and-unpaid-posts' },
-        { name: 'Brands hiring influencers', path: '/services/advertiser-permit/brands-hiring-influencers' },
-        { name: 'Finance influencers', path: '/services/advertiser-permit/finance-influencers' },
-        { name: 'Health and fitness creators', path: '/services/advertiser-permit/health-and-fitness-creators' },
-        { name: 'Real estate influencers', path: '/services/advertiser-permit/real-estate-influencers' },
-        { name: 'IFZA company setup', path: '/business/freezone/ifza' },
-        { name: 'Contact NXTSTAR', path: '/contact' },
-    ],
+    "related": [
+        {
+            "name": "Visiting influencers",
+            "path": "/services/advertiser-permit/visiting-influencers"
+        },
+        {
+            "name": "Foreign creators moving to the UAE",
+            "path": "/services/advertiser-permit/foreign-creators"
+        },
+        {
+            "name": "Finance influencers and finfluencer requirements",
+            "path": "/services/advertiser-permit/finance-influencers"
+        },
+        {
+            "name": "Business owners promoting their own products",
+            "path": "/services/advertiser-permit/business-owners"
+        },
+        {
+            "name": "Gifted and unpaid posts",
+            "path": "/services/advertiser-permit/gifted-and-unpaid-posts"
+        },
+        {
+            "name": "Brands hiring influencers",
+            "path": "/services/advertiser-permit/brands-hiring-influencers"
+        },
+        {
+            "name": "Creators under 18",
+            "path": "/services/advertiser-permit/creators-under-18"
+        },
+        {
+            "name": "Health and fitness creators",
+            "path": "/services/advertiser-permit/health-and-fitness-creators"
+        },
+        {
+            "name": "Real estate creators",
+            "path": "/services/advertiser-permit/real-estate-influencers"
+        },
+        {
+            "name": "All NXTSTAR services",
+            "path": "/services"
+        },
+        {
+            "name": "Contact NXTSTAR",
+            "path": "/contact"
+        }
+    ]
 };
 
 export const difcAiLicence = {

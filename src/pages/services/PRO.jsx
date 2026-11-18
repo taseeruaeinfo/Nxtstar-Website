@@ -1,3 +1,4 @@
+import '../../styles/ServiceGuide.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../../components/layout/PageLayout';
@@ -113,6 +114,7 @@ const PRO = () => {
             headerOverlayColor="rgba(0, 0, 0, 0.7)"
         >
             <div className="pro-services-page">
+                <section className="service-guide"><h2>Plan employer and company administration</h2><ul><li><Link to="/services/labour-file-opening">Labour file opening</Link></li><li><Link to="/services/establishment-card">Establishment card support</Link></li><li><Link to="/services/virtual-office">Virtual office and PRO planning</Link></li></ul></section>
                 {/* <section className="hero-section">
                     <div className="hero-content">
                         <h2>PRO Services in UAE</h2>

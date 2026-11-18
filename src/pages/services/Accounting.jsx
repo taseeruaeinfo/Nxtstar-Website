@@ -1,3 +1,4 @@
+import '../../styles/ServiceGuide.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../../components/layout/PageLayout';
@@ -140,6 +141,7 @@ const Accounting = () => {
             headerOverlayColor="rgba(0, 0, 0, 0.7)"
         >
             <div className="accounting-services-page">
+                <section className="service-guide"><h2>Corporate tax registration and company structure</h2><ul><li><Link to="/services/corporate-tax-registration">Corporate tax registration support</Link></li><li><Link to="/services/corporate-structuring">Corporate structuring advisory</Link></li></ul></section>
                 <section className="hero-section">
                     <div className="hero-content">
                         <h2>Accounting & Tax Services</h2>

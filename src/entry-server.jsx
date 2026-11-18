@@ -9,11 +9,12 @@ import advertiserAudienceGuides from './data/advertiserAudienceGuides';
 import goldenVisaGuides from './data/goldenVisaGuides';
 import mainlandGuides from './data/mainlandGuides';
 import businessGuides from './data/businessGuides';
+import serviceBriefs from './data/serviceBriefs';
 
 export { blogPosts };
 
 // Routes that are generated from data files rather than listed in scripts/routes.mjs.
-export const dataRoutes = [...advertiserAudienceGuides, ...goldenVisaGuides, ...mainlandGuides, ...businessGuides].map((guide) => guide.path);
+export const dataRoutes = [...advertiserAudienceGuides, ...goldenVisaGuides, ...mainlandGuides, ...businessGuides, ...serviceBriefs].map((guide) => guide.path);
 
 // Renders one route to HTML. Used only by scripts/prerender.mjs at build time.
 export const render = (url) => {

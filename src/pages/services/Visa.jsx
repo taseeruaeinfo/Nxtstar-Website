@@ -1,3 +1,4 @@
+import '../../styles/ServiceGuide.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../../components/layout/PageLayout';
@@ -150,6 +151,7 @@ const Visa = () => {
             headerOverlayColor="rgba(0, 0, 0, 0.7)"
         >
             <div className="visa-services-page">
+                <section className="service-guide"><h2>Choose the relevant visa enquiry</h2><ul><li><Link to="/services/tourist-visa">Tourist visa consultancy</Link></li><li><Link to="/services/golden-visa">Golden Visa routes</Link></li><li><Link to="/services/establishment-card">Employer establishment card support</Link></li></ul></section>
                 <section className="hero-section">
                     <div className="hero-content">
                         <h2>UAE Visa Services</h2>

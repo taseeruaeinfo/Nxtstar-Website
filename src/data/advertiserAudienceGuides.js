@@ -77,7 +77,7 @@ const guides = [
             { question: 'How long can I work on a visitor permit?', answer: 'Three months, extendable once for another three months. Six months is the maximum.' },
             { question: 'How much does it cost?', answer: PRICE_ANSWER },
         ],
-        sources: [MEDIA_COUNCIL_GUIDE, { name: 'UAE Media Council: Visitor Advertiser Permit', url: 'https://uaemc.gov.ae/en/visitor-advertiser-permit/' }],
+        sources: [MEDIA_COUNCIL_GUIDE, { name: 'UAE Media Council: Visitor Advertiser Permit', url: 'https://www.nma.gov.ae/en/services/permit-for-visiting-individuals-to-provide-advertising-or-media-content-on-social-media' }],
         related: [mainPage, { name: 'What brands must check before hiring an influencer', path: `${parent.path}/brands-hiring-influencers` }, { name: 'Visa services', path: '/services/visa' }, contact],
     },
     {
@@ -609,13 +609,15 @@ const guides = [
             { question: 'I am American and visit Dubai twice a year for brand trips. Which route do I need?', answer: 'The visitor route, each time you publish advertising content from within the UAE, unless you become a resident.' },
             { question: 'How much does it cost?', answer: PRICE_ANSWER },
         ],
-        sources: [MEDIA_COUNCIL_GUIDE, { name: 'UAE Media Council: Visitor Advertiser Permit', url: 'https://uaemc.gov.ae/en/visitor-advertiser-permit/' }],
+        sources: [MEDIA_COUNCIL_GUIDE, { name: 'UAE Media Council: Visitor Advertiser Permit', url: 'https://www.nma.gov.ae/en/services/permit-for-visiting-individuals-to-provide-advertising-or-media-content-on-social-media' }],
         related: [mainPage, { name: 'Visiting influencers', path: `${parent.path}/visiting-influencers` }, { name: 'IFZA company setup', path: '/business/freezone/ifza' }, { name: 'Visa services', path: '/services/visa' }, contact],
     },
 ];
 
 const advertiserAudienceGuides = guides.map((guide) => ({
     ...guide,
+    sources: [...guide.sources, { name: 'National Media Authority: current individual permit service', url: "https://www.nma.gov.ae/en/services/permit-for-an-individual-to-provide-advertising-or-media-content-on-social-media-and-other-digital-platforms" }],
+    sourceUpdate: 'Permit service links updated to the National Media Authority on 17 November 2026.',
     path: `${parent.path}/${guide.slug}`,
     parent,
     headerImage,

@@ -1,4 +1,8 @@
 import React from 'react';
+import ServiceDirectory from '../components/layout/ServiceDirectory';
+import { serviceCatalogueSchema } from '../seo/serviceCatalogueSchema';
+import ServiceBrief from './services/ServiceBrief';
+import serviceBriefs from '../data/serviceBriefs';
 import { Routes, Route, Link } from 'react-router-dom';
 import PageLayout from '../components/layout/PageLayout';
 import PRO from './services/PRO';
@@ -17,113 +21,6 @@ import NotFound from './NotFound';
 import '../styles/pages/ServicesPage.css';
 
 const ServicesPage = () => {
-    const services = [
-        {
-            id: 'advertiser-permit',
-            title: 'Advertiser Permit for Creators',
-            description: 'Trade licence setup and UAE Media Council advertiser permit applications for content creators and influencers.',
-            icon: '🎥',
-            link: '/services/advertiser-permit'
-        },
-        {
-            id: 'difc-ai-licence',
-            title: 'DIFC AI and Innovation Licence',
-            description: 'Company setup in the Dubai International Financial Centre for AI and technology businesses.',
-            icon: '🤖',
-            link: '/services/difc-ai-licence'
-        },
-        {
-            id: 'golden-visa',
-            title: 'UAE Golden Visa',
-            description: 'Long-term residence for investors, professionals, creators, doctors, scientists and students.',
-            icon: '🏅',
-            link: '/services/golden-visa'
-        },
-        {
-            id: 'ifza-setup',
-            title: 'IFZA Company Setup',
-            description: 'Free zone company formation with the International Free Zone Authority in Dubai.',
-            icon: '🏢',
-            link: '/business/freezone/ifza'
-        },
-        {
-            id: 'pro-services',
-            title: 'PRO Services',
-            description: 'Streamline your administrative tasks with our professional PRO services, handling government paperwork, visa processing, and document legalization.',
-            icon: '📝',
-            link: '/services/pro'
-        },
-        {
-            id: 'visa-services',
-            title: 'Visa Services',
-            description: 'Comprehensive visa solutions for investors, entrepreneurs, professionals, and their families, ensuring smooth entry and residency in the UAE.',
-            icon: '🛂',
-            link: '/services/visa'
-        },
-        {
-            id: 'accounting-services',
-            title: 'Accounting & Tax',
-            description: 'Expert accounting, bookkeeping, and tax compliance services to keep your business finances organized and compliant with UAE regulations.',
-            icon: '📊',
-            link: '/services/accounting'
-        },
-        {
-            id: 'corporate-banking',
-            title: 'Corporate Banking',
-            description: 'Navigate the UAE banking landscape with ease. We assist in opening corporate bank accounts for all types of business entities.',
-            icon: '🏦',
-            link: '/services/banking'
-        },
-        {
-            id: 'trademark-registration',
-            title: 'Trademark Registration',
-            description: 'Protect your brand identity in the UAE and GCC region with our comprehensive trademark registration services.',
-            icon: '™️',
-            link: '/services/trademark'
-        },
-        {
-            id: 'document-clearing',
-            title: 'Document Clearing',
-            description: 'Fast and reliable document attestation, legalization, and translation services for all your business needs.',
-            icon: '📄',
-            link: '/services/documents'
-        }, /*
-        { 
-            id: 'digital-creators',
-            title: 'Digital Creators & Influencers',
-            description: 'Licensing, UAE Media Council approvals, visas, banking and compliant structures for creators.',
-            icon: '🎥',
-            link: '/services/creators'
-        },
-        {
-            id: 'freelancers-consultants',
-            title: 'Freelancers & Consultants',
-            description: 'Freelance permits, visas, tax/VAT setup, banking, contracts, and branding support.',
-            icon: '💼',
-            link: '/services/freelancers'
-        },
-        {
-            id: 'startups-entrepreneurs',
-            title: 'Startups & Entrepreneurs',
-            description: 'End-to-end company formation, approvals, visas, legal, tax, and launch readiness.',
-            icon: '🚀',
-            link: '/services/startups'
-        },
-        {
-            id: 'foreign-investors-expats',
-            title: 'Foreign Investors & Expats',
-            description: 'Investor visas, Golden Visa, holding/SPV structures, wealth and tax residency advisory.',
-            icon: '🌍',
-            link: '/services/investors'
-        },
-        {
-            id: 'uae-residents',
-            title: 'UAE Residents',
-            description: 'Dependent sponsorship, Golden Visa help, and tailored insurance/attestation support.',
-            icon: '🏠',
-            link: '/services/residents'
-        } */
-    ];
 
     return (
         <Routes>
@@ -131,38 +28,21 @@ const ServicesPage = () => {
                 path="/"
                 element={
                     <PageLayout
-                        title="Our Services"
-                        description="Comprehensive business support services to help you establish and grow your presence in the UAE."
+                        title="UAE Business Setup, Permits and Company Support"
+                        jsonLd={serviceCatalogueSchema}
+                        description="Explore NXTSTAR’s company formation, advertiser permits, visa consultancy, corporate structuring and PRO support for founders and businesses in the UAE."
                         headerImage="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         headerOverlayColor="rgba(0, 0, 0, 0.1)"
                     >
                         <div className="services-overview-page">
-                            <section className="hero-section">
-                                <div className="hero-content">
-                                    <h2>Business Support Services in UAE</h2>
-                                    <p>Beyond business setup, we offer a comprehensive range of support services to help your business thrive in the UAE.</p>
-                                </div>
-                            </section>
-
-                            <section className="services-grid-section">
+                            <section className="service-directory-intro">
                                 <div className="section-content">
-                                    <h2>Our Services</h2>
-                                    <p className="section-intro">
-                                        From handling government paperwork to managing your finances, we provide end-to-end business support services tailored to your specific needs.
-                                    </p>
-
-                                    <div className="services-grid">
-                                        {services.map((service) => (
-                                            <div key={service.id} className="service-card">
-                                                <div className="service-icon">{service.icon}</div>
-                                                <h3>{service.title}</h3>
-                                                <p>{service.description}</p>
-                                                <Link to={service.link} className="service-link">Learn More</Link>
-                                            </div>
-                                        ))}
-                                    </div>
+                                    <h2>Business Support Services in UAE</h2>
+                                    <p>NXTSTAR helps founders, creators and business owners organise company setup, licensing and ongoing administration. Select a service below to understand the support and next steps.</p>
                                 </div>
                             </section>
+
+                            <ServiceDirectory />
 
                             <section className="why-choose-section">
                                 <div className="section-content">
@@ -276,6 +156,7 @@ const ServicesPage = () => {
             <Route path="/startups" element={<Startups />} />
             <Route path="/investors" element={<Investors />} />
             <Route path="/residents" element={<Residents />} />
+            {serviceBriefs.map(service => <Route key={service.path} path={service.path.replace('/services/', '')} element={<ServiceBrief service={service} />} />)}
             <Route path="*" element={<NotFound />} />
         </Routes>
     );

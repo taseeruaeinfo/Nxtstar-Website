@@ -142,3 +142,8 @@
         text-align: center;
     }
 }
+
+.buyer-questions { margin-top:3rem; padding-top:2rem; border-top:1px solid #dce3eb; }
+.buyer-questions h2 { color:#173b68; margin-bottom:1.5rem; }
+.buyer-questions h3 { font-size:1.15rem; margin-bottom:0.75rem; }
+.buyer-questions > a { display:inline-block; margin-bottom:2rem; color:#0056b3; text-decoration:underline; }
