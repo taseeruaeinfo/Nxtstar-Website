@@ -25,6 +25,7 @@ export const staticRoutes = [
     '/services/banking',
     '/services/trademark',
     '/services/documents',
+    '/resources/india-contract-disputes-uae-founders',
     '/blogs',
     '/faqs',
     '/contact',

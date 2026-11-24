@@ -8,6 +8,7 @@ import NotFound from './pages/NotFound';
 import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 import BlogPage from './pages/BlogPage';
+import IndiaContractResource from './pages/IndiaContractResource';
 import BlogPostPage from './pages/BlogPostPage';
 import ReferAndEarnPage from './pages/ReferAndEarnPage';
 import CostCalculatorSuccess from './pages/CostCalculatorSuccess';
@@ -53,6 +54,8 @@ function AnimationLayout() {
             <BlogPage />
           </MotionWrapper>
         } />
+
+        <Route path="/resources/india-contract-disputes-uae-founders" element={<IndiaContractResource />} />
 
         {/* Individual Blog Post Page */}
         <Route path="/blog/:slug" element={

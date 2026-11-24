@@ -130,6 +130,9 @@ const Footer = () => {
                                     <Link to="/business/freezone">Freezone</Link>
                                 </motion.li>
                                 <motion.li className="footer-link" variants={itemVariants} whileHover={{ x: 5 }}>
+                                    <Link to="/resources/india-contract-disputes-uae-founders">Indian contract dispute guide</Link>
+                                </motion.li>
+                                <motion.li className="footer-link" variants={itemVariants}>
                                     <Link to="/business/offshore">Offshore</Link>
                                 </motion.li>
                             </motion.ul>
