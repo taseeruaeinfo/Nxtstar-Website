@@ -6,7 +6,7 @@ import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import '../styles/pages/ReferAndEarnPage.css';
 
-const backend_url = import.meta.env.VITE_BACKEND_URL;
+import { submitLead, isBot, formatPhone, LEADS_FALLBACK_MESSAGE } from '../lib/leads';
 
 const ReferAndEarnPage = () => {
     const [formData, setFormData] = useState({
@@ -80,48 +80,27 @@ const ReferAndEarnPage = () => {
             return;
         }
         
-        setIsSubmitting(true);
-        
-        // Prepare the data for submission with full phone numbers
-        const referralData = {
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone, // Already includes country code from react-phone-input-2
-            friendName: formData.friendName,
-            friendEmail: formData.friendEmail,
-            friendPhone: formData.friendPhone // Already includes country code from react-phone-input-2
-        };
-        
-        try {
-            const res = await fetch(`${backend_url}/api/refer`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(referralData),
-            });
+        if (isBot(e)) { setSubmitSuccess(true); return; }
 
-            const data = await res.json();
-            console.log('Response:', data);
-            
-            if (data.success) {
-                setSubmitSuccess(true);
-                setFormData({
-                    name: '',
-                    email: '',
-                    phone: '',
-                    friendName: '',
-                    friendEmail: '',
-                    friendPhone: ''
-                });
-                // Reset success message after 5 seconds
-                setTimeout(() => setSubmitSuccess(false), 5000);
-            } else {
-                alert("❌ Failed to submit referral: " + data.message);
-            }
-        } catch (err) {
-            console.error(err);
-            alert("⚠️ Something went wrong: " + err.message);
-        } finally {
-            setIsSubmitting(false);
+        setIsSubmitting(true);
+        // Saved to the NXTSTAR Google Sheet (no backend server). The referrer is the lead;
+        // the referred friend's details go in the notes column.
+        const saved = await submitLead({
+            name: formData.name,
+            phone: formData.phone,
+            email: formData.email,
+            subject: 'Referral: ' + formData.friendName,
+            notes: `Referred friend: ${formData.friendName}, ${formData.friendEmail}, ${formatPhone(formData.friendPhone)}`,
+        }, 'Refer and earn form');
+        setIsSubmitting(false);
+
+        if (saved) {
+            setSubmitSuccess(true);
+            setFormData({ name: '', email: '', phone: '', friendName: '', friendEmail: '', friendPhone: '' });
+            // Reset success message after 5 seconds
+            setTimeout(() => setSubmitSuccess(false), 5000);
+        } else {
+            alert(LEADS_FALLBACK_MESSAGE);
         }
     };
 
@@ -241,6 +220,7 @@ const ReferAndEarnPage = () => {
                             </div>
                         ) : (
                             <form className="refer-form" onSubmit={handleSubmit}>
+                                <input type="text" name="company_website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: 'absolute', left: '-10000px', width: 1, height: 1, opacity: 0 }} />
                                 <div className="form-row">
                                     <div className="form-group">
                                         <label htmlFor="name">Your Name *</label>

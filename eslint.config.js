@@ -5,7 +5,8 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist', 'dist-ssr']),
+  // public/leads and public/admin hold the plain browser lead-capture scripts shared with other sites.
+  globalIgnores(['dist', 'dist-ssr', 'public/leads', 'public/admin']),
   {
     files: ['**/*.{js,jsx,mjs}'],
     extends: [

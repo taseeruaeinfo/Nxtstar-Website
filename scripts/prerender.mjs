@@ -53,8 +53,8 @@ write(
 write(
     path.join(dist, 'robots.txt'),
     `# Search engines and AI assistants are welcome to read this site.\n${namedCrawlers
-        .map((bot) => `User-agent: ${bot}\nAllow: /\n`)
-        .join('\n')}\nUser-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`
+        .map((bot) => `User-agent: ${bot}\nAllow: /\nDisallow: /admin/\n`)
+        .join('\n')}\nUser-agent: *\nAllow: /\nDisallow: /admin/\n\nSitemap: ${SITE_URL}/sitemap.xml\n`
 );
 
 write(path.join(dist, 'llms.txt'), fs.readFileSync(path.join(root, 'scripts', 'llms.template.txt'), 'utf8')

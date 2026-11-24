@@ -64,8 +64,11 @@ const PrivacyPolicy = () => {
                             <li>Submit a contact form or business inquiry</li>
                             <li>Subscribe to newsletters or updates</li>
                             <li>Communicate with us directly via email or WhatsApp</li>
+                            <li>Press a WhatsApp or call button on our website, which first asks for your name, phone number and (optionally) email</li>
                         </ul>
-                        
+
+                        <p>Enquiries from our website forms and contact buttons are saved in a private Google spreadsheet that only our team can access, together with the page you were on, the button you pressed and the date. We use these details only to reply to and follow up on your enquiry.</p>
+
                         <p>This may include:</p>
                         <ul>
                             <li>Full name</li>

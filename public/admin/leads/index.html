@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Leads | Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/admin/leads/admin.css">
+  <script src="/leads/config.js"></script>
+</head>
+<body>
+  <main class="la-shell">
+    <section class="la-login" data-view="login" hidden>
+      <form class="la-card" data-login>
+        <span class="la-eyebrow" data-site-name>LEADS</span>
+        <h1>Sign in</h1>
+        <p class="la-muted">Only approved team members can see enquiries.</p>
+        <label for="la-email">Your name</label>
+        <input id="la-email" name="user" type="text" autocomplete="username" required maxlength="100" placeholder="Shown next to changes you make">
+        <label for="la-password">Password</label>
+        <input id="la-password" name="password" type="password" autocomplete="current-password" required>
+        <p class="la-error" role="alert" hidden></p>
+        <button class="la-btn la-btn-primary" type="submit">Sign in</button>
+      </form>
+    </section>
+
+    <section class="la-setup la-card" data-view="setup" hidden>
+      <span class="la-eyebrow">SETUP NEEDED</span>
+      <h1>Connect the leads sheet</h1>
+      <p class="la-muted">Paste the Google Apps Script web app URL into <code>endpoint</code> in <code>/leads/config.js</code>, then rebuild and deploy the site. The setup steps are in <code>docs/leads-setup.md</code>.</p>
+    </section>
+
+    <section data-view="app" hidden>
+      <header class="la-top">
+        <div>
+          <span class="la-eyebrow" data-site-name>LEADS</span>
+          <h1>Enquiries</h1>
+        </div>
+        <div class="la-top-actions">
+          <span class="la-muted la-user" data-user></span>
+          <button class="la-btn" type="button" data-refresh>Refresh</button>
+          <button class="la-btn" type="button" data-logout>Sign out</button>
+        </div>
+      </header>
+
+      <div class="la-stats" data-stats></div>
+
+      <form class="la-filters" data-filters>
+        <input type="search" name="q" placeholder="Search name, phone, email, enquiry or notes" aria-label="Search">
+        <select name="status" aria-label="Status">
+          <option value="">All statuses</option>
+        </select>
+        <select name="assigned" aria-label="Salesperson">
+          <option value="">Any salesperson</option>
+        </select>
+        <label class="la-date">From <input type="date" name="from"></label>
+        <label class="la-date">To <input type="date" name="to"></label>
+        <button class="la-btn" type="reset">Clear</button>
+        <span class="la-spacer"></span>
+        <button class="la-btn la-btn-primary" type="button" data-export="xlsx">Download Excel</button>
+        <button class="la-btn" type="button" data-export="csv">CSV</button>
+      </form>
+
+      <p class="la-error" role="alert" data-app-error hidden></p>
+
+      <div class="la-table-wrap">
+        <table class="la-table">
+          <thead>
+            <tr>
+              <th><button type="button" data-sort>Received <span data-sort-icon>↓</span></button></th>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Enquiry</th>
+              <th>Details</th>
+              <th>From page</th>
+              <th>Status</th>
+              <th>Salesperson</th>
+              <th>Team notes</th>
+            </tr>
+          </thead>
+          <tbody data-rows></tbody>
+        </table>
+        <p class="la-empty la-muted" data-empty hidden>No enquiries match these filters.</p>
+      </div>
+      <p class="la-muted la-foot" data-count></p>
+    </section>
+  </main>
+  <script src="/admin/leads/admin.js"></script>
+</body>
+</html>

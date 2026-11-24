@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaBuilding, FaGlobe, FaShieldAlt, FaMoneyBillWave, FaChartLine, FaHandshake, FaCalculator, FaDollarSign, FaPercentage, FaCheck, FaTags } from 'react-icons/fa';
 import SEO from '../components/layout/SEO';
@@ -8,7 +8,7 @@ import { PopUp, PopUpBounce, RotatePopUp } from '../components/ui/Motion';
 import AnimatedBackground from '../components/ui/AnimatedBackground';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-import ReCAPTCHA from 'react-google-recaptcha';
+import { submitLead, isBot, LEADS_FALLBACK_MESSAGE } from '../lib/leads';
 
 import '../styles/HomePage.css';
 import '../styles/AnimatedBackground.css';
@@ -16,8 +16,6 @@ import '../styles/DarkHomeTheme.css';
 import '../styles/FooterOverride.css';
 import '../styles/HeroThemeTransition.css';
 
-const backend_url = import.meta.env.VITE_BACKEND_URL;
-const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
 
 
@@ -30,18 +28,12 @@ const HomePage = () => {
         businessType: '',
     });
     const [isLoading, setIsLoading] = useState(false);
-    const [recaptchaToken, setRecaptchaToken] = useState(null);
-    const recaptchaRef = useRef(null);
 
     const handleChange = (e) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
         });
-    };
-
-    const onRecaptchaChange = (token) => {
-        setRecaptchaToken(token);
     };
 
     const handleSubmit = async (e) => {
@@ -77,46 +69,26 @@ const HomePage = () => {
             return;
         }
 
-        // Validate reCAPTCHA
-        if (!recaptchaToken) {
-            alert('Please complete the reCAPTCHA verification.');
-            return;
-        }
+        // Hidden anti-spam field replaces reCAPTCHA (which needed the old backend to verify).
+        if (isBot(e)) { navigate('/cost-calculator-success'); return; }
 
-        // Set loading state to true
         setIsLoading(true);
+        const businessLabel = { mainland: 'Mainland', freezone: 'Freezone', offshore: 'Offshore' }[formData.businessType] || formData.businessType;
+        // Saved to the NXTSTAR Google Sheet (no backend server).
+        const saved = await submitLead({
+            name: formData.name,
+            phone: formData.phone,
+            email: formData.email,
+            subject: 'Business setup cost calculator: ' + businessLabel,
+            interest: businessLabel,
+        }, 'Home cost calculator');
+        setIsLoading(false);
 
-        try {
-            const res = await fetch(`${backend_url}/api/send-form`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    ...formData,
-                    recaptchaToken: recaptchaToken
-                }),
-            });
-
-            const data = await res.json();
-            console.log('Response:', data);
-            if (data.success) {
-                // Clear form data
-                setFormData({ name: "", email: "", phone: "", businessType: "" });
-                setRecaptchaToken(null);
-                // Reset reCAPTCHA
-                if (recaptchaRef.current) {
-                    recaptchaRef.current.reset();
-                }
-                // Navigate to success page
-                navigate('/cost-calculator-success');
-            } else {
-                alert("❌ Failed to send form: " + data.message);
-            }
-        } catch (err) {
-            console.error(err);
-            alert("⚠️ Something went wrong: " + err.message);
-        } finally {
-            // Set loading state to false regardless of success or failure
-            setIsLoading(false);
+        if (saved) {
+            setFormData({ name: "", email: "", phone: "", businessType: "" });
+            navigate('/cost-calculator-success');
+        } else {
+            alert(LEADS_FALLBACK_MESSAGE);
         }
     };
 
@@ -315,14 +287,7 @@ const HomePage = () => {
                                                 <option value="offshore">Offshore</option>
                                             </select>
                                         </div>
-                                        <div className="form-group recaptcha-container">
-                                            <ReCAPTCHA
-                                                ref={recaptchaRef}
-                                                sitekey={recaptchaSiteKey}
-                                                onChange={onRecaptchaChange}
-                                                theme="dark"
-                                            />
-                                        </div>
+                                        <input type="text" name="company_website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: 'absolute', left: '-10000px', width: 1, height: 1, opacity: 0 }} />
                                         <Button className="cost-calc-button" type="submit" block disabled={isLoading}>
                                             {isLoading ? (
                                                 <>

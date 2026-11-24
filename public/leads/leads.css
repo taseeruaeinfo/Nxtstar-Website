@@ -1,0 +1,95 @@
+/* Lead capture dialog (shared by tuwaiq.ae and albaselrealestate.ae). */
+.sl-dialog {
+  --sl-ink: #232824;
+  --sl-muted: #70756f;
+  --sl-line: #e5e7e1;
+  --sl-soft: #f5f6f2;
+  --sl-accent: #ad1925;
+  --sl-accent-dark: #90151f;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(480px, calc(100vw - 24px));
+  max-height: calc(100dvh - 24px);
+  overflow-y: auto;
+  border: 1px solid var(--sl-line);
+  border-radius: 18px;
+  padding: 34px 32px 26px;
+  background: #fff;
+  color: var(--sl-ink);
+  font-family: Manrope, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: left;
+  box-shadow: 0 20px 90px rgba(0, 0, 0, 0.18);
+}
+.sl-dialog::backdrop { background: rgba(24, 36, 29, 0.8); backdrop-filter: blur(4px); }
+.sl-dialog *, .sl-dialog *::before, .sl-dialog *::after { box-sizing: border-box; }
+.sl-close {
+  position: absolute; right: 16px; top: 16px;
+  display: grid; place-items: center; width: 32px; height: 32px;
+  border: 1px solid var(--sl-line); border-radius: 50%;
+  background: #fff; color: var(--sl-muted); cursor: pointer;
+}
+.sl-close:hover { color: var(--sl-ink); border-color: #c9cec5; }
+.sl-eyebrow { display: block; font-size: 10px; letter-spacing: 1.6px; color: var(--sl-muted); margin: 4px 0 12px; }
+.sl-dialog h2 { margin: 0; font-size: 28px; line-height: 1.2; letter-spacing: -0.8px; font-weight: 500; color: var(--sl-ink); }
+.sl-subject { margin: 18px 0 4px; padding: 13px 16px; border-radius: 10px; background: var(--sl-soft); }
+.sl-subject > span { display: block; font-size: 11px; color: var(--sl-muted); }
+.sl-subject > strong { display: block; font-size: 13px; line-height: 1.6; font-weight: 500; }
+.sl-form { display: block; }
+.sl-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px; }
+.sl-field { margin-top: 14px; min-width: 0; }
+.sl-field label { display: block; font-size: 12px; font-weight: 500; color: var(--sl-ink); margin-bottom: 6px; }
+.sl-field input, .sl-field select, .sl-field textarea {
+  display: block; width: 100%; min-height: 44px;
+  padding: 10px 12px; border: 1px solid var(--sl-line); border-radius: 10px;
+  background: #fff; color: var(--sl-ink); font: inherit; font-size: 14px;
+  -webkit-appearance: none; appearance: none;
+}
+.sl-field select {
+  padding-right: 34px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6' fill='none' stroke='%2370756f' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 12px center;
+}
+.sl-field textarea { min-height: 64px; resize: vertical; }
+.sl-field input:focus, .sl-field select:focus, .sl-field textarea:focus { outline: 2px solid var(--sl-accent); outline-offset: 1px; border-color: transparent; }
+.sl-field input::placeholder, .sl-field textarea::placeholder { color: #a3a8a0; }
+.sl-trap { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; opacity: 0 !important; }
+.sl-error { margin: 14px 0 0; padding: 10px 12px; border-radius: 8px; background: #fdeeee; color: #8d1520; font-size: 13px; }
+.sl-submit {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  width: 100%; min-height: 48px; margin-top: 18px; padding: 12px 18px;
+  border: 0; border-radius: 10px; background: var(--sl-accent); color: #fff;
+  font: 500 14px/1.2 Manrope, Arial, sans-serif; text-decoration: none; cursor: pointer;
+  transition: background 0.2s;
+}
+.sl-submit:hover { background: var(--sl-accent-dark); color: #fff; }
+.sl-choice {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  width: 100%; min-height: 48px; margin-top: 10px; padding: 12px 18px;
+  border: 1px solid var(--sl-line); border-radius: 10px; background: #fff; color: var(--sl-ink);
+  font: 500 14px/1.2 Manrope, Arial, sans-serif; text-decoration: none;
+}
+.sl-choice:hover { border-color: #c9cec5; background: #fcfcfa; color: var(--sl-ink); }
+.sl-choice strong { font-weight: 600; }
+.sl-call { display: block; margin-top: 12px; text-align: center; font-size: 13px; color: var(--sl-muted); text-decoration: none; }
+.sl-call strong { color: var(--sl-ink); font-weight: 500; }
+.sl-call:hover strong { text-decoration: underline; }
+.sl-privacy { margin: 14px 0 0; font-size: 11px; line-height: 1.7; color: var(--sl-muted); text-align: center; }
+.sl-privacy a { color: inherit; text-decoration: underline; }
+.sl-done p { margin: 14px 0 0; color: var(--sl-muted); font-size: 14px; line-height: 1.8; }
+.sl-link { display: block; margin: 12px auto 0; background: none; border: 0; color: var(--sl-muted); font: inherit; font-size: 13px; cursor: pointer; text-decoration: underline; }
+@media (max-width: 520px) {
+  .sl-dialog { padding: 28px 20px 20px; border-radius: 16px; }
+  .sl-dialog h2 { font-size: 24px; }
+  .sl-row { grid-template-columns: 1fr; }
+}
+
+/* Author display rules must never override form/choice visibility. */
+.sl-dialog [hidden], .sl-dialog[hidden], .sl-dialog:not([open]) { display: none !important; }
+.sl-dialog[open] { display: block; z-index: 2147483000; }
+
+/* NXTSTAR brand: blue accent and Inter. */
+.sl-dialog { --sl-accent: #2563eb; --sl-accent-dark: #1d4ed8; --sl-ink: #0f172a; --sl-muted: #64748b; --sl-line: #e2e8f0; --sl-soft: #f8fafc; font-family: 'Inter', Arial, sans-serif; }
+.sl-submit, .sl-choice { font-family: 'Inter', Arial, sans-serif; }

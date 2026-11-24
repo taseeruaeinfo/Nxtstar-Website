@@ -57,7 +57,8 @@ const routeOf = (file) => {
     return rel === 'index.html' ? '/' : `/${rel.replace(/\.html$/, '')}`;
 };
 const pages = files
-    .filter((file) => file.endsWith('.html') && path.basename(file) !== '404.html')
+    // /admin/ is the private, noindex leads page (public/admin/leads), not a public SEO page.
+    .filter((file) => file.endsWith('.html') && path.basename(file) !== '404.html' && !routeOf(file).startsWith('/admin/'))
     .map((file) => ({ route: routeOf(file), html: fs.readFileSync(file, 'utf8') }));
 const knownRoutes = new Set(pages.map((p) => p.route));
 const knownFiles = new Set(files.map((file) => `/${path.relative(dist, file).split(path.sep).join('/')}`));

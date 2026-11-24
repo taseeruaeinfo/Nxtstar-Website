@@ -8,7 +8,7 @@ import 'react-phone-input-2/lib/style.css';
 import '../styles/pages/Contact.css';
 import contactimg from '../assets/images/contact.webp';
 
-const backend_url = import.meta.env.VITE_BACKEND_URL;
+import { submitLead, isBot, LEADS_FALLBACK_MESSAGE } from '../lib/leads';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -50,44 +50,26 @@ const Contact = () => {
             return;
         }
 
+        if (isBot(e)) { setSubmitSuccess(true); return; }
+
         setIsSubmitting(true);
-
-        // Prepare the data for submission
-        const contactData = {
+        // Saved to the NXTSTAR Google Sheet (no backend server).
+        const saved = await submitLead({
             name: formData.name,
-            phone: formData.mobile, // Already includes country code from react-phone-input-2
+            phone: formData.mobile, // includes the country code from react-phone-input-2
             email: formData.email,
-            message: formData.details
-        };
+            subject: 'Contact form',
+            notes: formData.details,
+        }, 'Contact page form');
+        setIsSubmitting(false);
 
-        try {
-            const res = await fetch(`${backend_url}/api/contact`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(contactData),
-            });
-
-            const data = await res.json();
-            console.log('Response:', data);
-
-            if (data.success) {
-                setSubmitSuccess(true);
-                setFormData({
-                    name: '',
-                    mobile: '',
-                    email: '',
-                    details: ''
-                });
-                // Reset success message after 5 seconds
-                setTimeout(() => setSubmitSuccess(false), 5000);
-            } else {
-                alert("❌ Failed to send message: " + data.message);
-            }
-        } catch (err) {
-            console.error(err);
-            alert("⚠️ Something went wrong: " + err.message);
-        } finally {
-            setIsSubmitting(false);
+        if (saved) {
+            setSubmitSuccess(true);
+            setFormData({ name: '', mobile: '', email: '', details: '' });
+            // Reset success message after 5 seconds
+            setTimeout(() => setSubmitSuccess(false), 5000);
+        } else {
+            alert(LEADS_FALLBACK_MESSAGE);
         }
     };
 
@@ -167,6 +149,7 @@ const Contact = () => {
                             </div>
                         ) : (
                             <form className="contact-form" onSubmit={handleSubmit}>
+                                <input type="text" name="company_website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: 'absolute', left: '-10000px', width: 1, height: 1, opacity: 0 }} />
                                 <div className="form-group">
                                     <label htmlFor="name">
                                         <FaUser className="input-icon" /> Full Name <span className="required">*</span>
