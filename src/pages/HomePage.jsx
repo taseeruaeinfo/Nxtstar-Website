@@ -5,7 +5,6 @@ import SEO from '../components/layout/SEO';
 import ServiceCard from '../components/ui/ServiceCard';
 import Button from '../components/ui/Button';
 import { PopUp, PopUpBounce, RotatePopUp } from '../components/ui/Motion';
-import AnimatedBackground from '../components/ui/AnimatedBackground';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import { submitLead, isBot, LEADS_FALLBACK_MESSAGE } from '../lib/leads';
@@ -15,6 +14,7 @@ import '../styles/AnimatedBackground.css';
 import '../styles/DarkHomeTheme.css';
 import '../styles/FooterOverride.css';
 import '../styles/HeroThemeTransition.css';
+import '../styles/ModernHome.css';
 
 
 
@@ -28,6 +28,7 @@ const HomePage = () => {
         businessType: '',
     });
     const [isLoading, setIsLoading] = useState(false);
+    const [formError, setFormError] = useState('');
 
     const handleChange = (e) => {
         setFormData({
@@ -38,34 +39,34 @@ const HomePage = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // console.log('Form submitted');
-        // console.log('Form data:', formData);
+        if (isLoading) return;
+        setFormError('');
 
         // Validate form data
         if (!formData.name.trim()) {
-            alert('Please enter your name.');
+            setFormError('Please enter your name.');
             return;
         }
 
         if (!formData.email.trim()) {
-            alert('Please enter your email address.');
+            setFormError('Please enter your email address.');
             return;
         }
 
         // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(formData.email)) {
-            alert('Please enter a valid email address.');
+            setFormError('Please enter a valid email address.');
             return;
         }
 
-        if (!formData.phone || formData.phone.length < 6) {
-            alert('Please enter a valid phone number.');
+        if (!formData.phone || formData.phone.replace(/\D/g, '').length < 7) {
+            setFormError('Please enter a valid phone number.');
             return;
         }
 
         if (!formData.businessType) {
-            alert('Please select a business type.');
+            setFormError('Please select a business type.');
             return;
         }
 
@@ -88,7 +89,7 @@ const HomePage = () => {
             setFormData({ name: "", email: "", phone: "", businessType: "" });
             navigate('/cost-calculator-success');
         } else {
-            alert(LEADS_FALLBACK_MESSAGE);
+            setFormError(LEADS_FALLBACK_MESSAGE);
         }
     };
 
@@ -179,40 +180,22 @@ const HomePage = () => {
                 canonicalUrl="/"
             />
 
-            {/* Hero Section with Dark Theme */}
-            <div className="dark-theme">
-                <section className="hero-section">
-                    <AnimatedBackground />
-                    <div className="hero-container">
-                        <div className="hero-content-home">
-                            <PopUp>
-                                <h1 className="hero-title" id='hero-heading'>
-                                    <span id='scs'>Start, Scale & Succeed </span> in the <span>UAE</span> – Your Partner in Business Setup
-                                </h1>
-                            </PopUp>
-                            <PopUpBounce delay={0.2}>
-                                <p className="hero-description" id='hero-desc'>
-                                    NXTStar provides assistance with business setup consulting services in UAE mainland, freezone, and offshore jurisdictions. We manage the entire process end to end on behalf of our clients to ensure a smooth and hassle-free business establishment.
-                                </p>
-                            </PopUpBounce>
-                            <PopUp delay={0.4}>
-                                <div className="hero-cta">
-                                    {/* <Button to="/contact" type="primary" size="lg">
-                                        Get Started
-                                    </Button>
-                                    <Button href="https://calendly.com/nxtstar" type="outline" size="lg">
-                                        Book a Consultation
-                                    </Button> */}
-                                </div>
-                            </PopUp>
+            <div className="modern-nxt-home">
+                <section className="nxt-hero" aria-labelledby="hero-heading">
+                    <div className="nxt-hero-grid">
+                        <div className="nxt-hero-copy">
+                            <p className="nxt-eyebrow">UAE BUSINESS SETUP</p>
+                            <h1 id="hero-heading">Set up your business in the UAE.</h1>
+                            <p className="nxt-intro">Choose a licence and company structure that fits what you do. Get practical help with mainland, free zone and offshore setup.</p>
+                            <div className="nxt-hero-actions"><a href="#setup-estimate">Request a setup estimate</a><Link to="/business">Compare setup options</Link></div>
+                            <nav className="nxt-quick-links" aria-label="Company setup options"><Link to="/business/mainland">Mainland</Link><Link to="/business/freezone">Free zone</Link><Link to="/business/offshore">Offshore</Link></nav>
                         </div>
-                        <PopUpBounce delay={0.2}>
-                            <div className="hero-calculator">
+                            <div className="hero-calculator" id="setup-estimate">
                                 <div className="calculator-header">
                                     <div className="calculator-icon">
                                         <FaCalculator />
                                     </div>
-                                    <h3>Business Setup Cost Calculator</h3>
+                                    <h2>Request a setup estimate</h2>
                                     <p>Tell us about your business and we will send you a cost estimate</p>
                                 </div>
                                 <div className="calculator-form">
@@ -296,24 +279,18 @@ const HomePage = () => {
                                                 </>
                                             ) : (
                                                 <>
-                                                    <FaTags className="btn-icon" /> Calculate Your Business Setup Cost
+                                                    <FaTags className="btn-icon" /> Request my estimate
                                                 </>
                                             )}
                                         </Button>
 
+                                        {formError && <p className="nxt-form-error" role="alert">{formError} <Link to="/contact">Contact options</Link></p>}
                                     </form>
                                 </div>
 
                             </div>
-                        </PopUpBounce>
                     </div>
                 </section>
-                {/* Add a transition div between dark and light sections */}
-                <div className="theme-transition"></div>
-            </div>
-
-            {/* Regular Light Theme Content Starts Here */}
-            <div className="light-content">
                 {/* Core Services Section */}
                 <section className="section core-services-section">
                     <div className="section-container">

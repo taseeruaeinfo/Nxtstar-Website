@@ -26,6 +26,8 @@ Every row records the date and time, the button or form used, and the page.
 5. Copy the **Web app URL** (ends in `/exec`) and put it in `endpoint: ''` in `public/leads/config.js`.
 6. Build and deploy. The tab **NXTSTAR Leads** is created with the first enquiry.
 
+To turn on email alerts, set `LEAD_NOTIFICATION_EMAIL` to the team's approved inbox in Script properties. Run `bindLeadSpreadsheet` from the bound project once and approve the Sheets and Mail permissions. Redeploy a new version using the existing URL. A saved lead sends an email with its ID and a link to the sheet. Duplicate delivery attempts and admin edits do not send another email. A failed email is logged separately from the saved lead.
+
 Later script changes: **Deploy > Manage deployments > pencil > New version > Deploy** (the URL stays the same).
 
 ## Admin page

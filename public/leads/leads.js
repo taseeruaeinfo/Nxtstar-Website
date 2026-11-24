@@ -18,7 +18,7 @@
   var C = window.SITE_LEADS || {};
   var CONTACT_KEY = 'site-leads-contact';
   var QUEUE_KEY = 'site-leads-queue';
-  var SENT_KEY = 'site-leads-sent';
+  var inFlight = Object.create(null);
   var ATTR_KEY = 'site-leads-attribution';
   // Google Apps Script web app URL.
   var configured = /^https:\/\/script\.google\.com\//.test(C.endpoint || '');
@@ -63,7 +63,10 @@
   function sendLead(record) {
     if (!configured) return Promise.reject(new Error('Lead storage is not configured'));
     // A readable positive acknowledgement is required before removing the queued lead.
+    var controller = new AbortController();
+    var timer = setTimeout(function () { controller.abort(); }, 12000);
     return fetch(C.endpoint, {
+      signal: controller.signal,
       method: 'POST',
       mode: 'cors',
       keepalive: true,
@@ -74,50 +77,37 @@
       return response.json();
     }).then(function (result) {
       if (!result || result.ok !== true) throw new Error('Lead could not be saved');
+    }).finally(function () { clearTimeout(timer); });
+  }
+
+  function sameSubmission(a, b) {
+    return ['site','name','phone','email','subject','source','interest','timeframe','travellers','budget','notes'].every(function (key) {
+      return (a[key] || '') === (b[key] || '');
     });
   }
 
   function saveLead(record) {
-    if (!configured) {
-      return Promise.resolve(false);
-    }
+    if (!configured) return Promise.resolve(false);
     var queue = readJson('localStorage', QUEUE_KEY, []);
-    queue.push(record);
-    writeJson('localStorage', QUEUE_KEY, queue.slice(-20));
-    return sendLead(record).then(function () {
-      var q = readJson('localStorage', QUEUE_KEY, []).filter(function (r) { return r.client_ref !== record.client_ref; });
+    var pending = queue.find(function (r) { return sameSubmission(r, record); });
+    if (pending) record = pending;
+    else writeJson('localStorage', QUEUE_KEY, queue.concat([record]).slice(-20));
+    var ref = record.client_ref;
+    if (!inFlight[ref]) inFlight[ref] = sendLead(record).then(function () {
+      var q = readJson('localStorage', QUEUE_KEY, []).filter(function (r) { return r.client_ref !== ref; });
       writeJson('localStorage', QUEUE_KEY, q);
       return true;
-    }).catch(function () { return false; /* retain for retry */ });
+    }).catch(function () { return false; }).finally(function () { delete inFlight[ref]; });
+    return inFlight[ref];
   }
 
-  // Retry any lead that could not be sent earlier (for example, the connection dropped).
   function flushQueue() {
-    if (!configured) return;
-    var queue = readJson('localStorage', QUEUE_KEY, []);
-    queue.forEach(function (record) {
-      sendLead(record).then(function () {
-        var q = readJson('localStorage', QUEUE_KEY, []).filter(function (r) { return r.client_ref !== record.client_ref; });
-        writeJson('localStorage', QUEUE_KEY, q);
-      }).catch(function () { /* still offline: try again on the next page view */ });
-    });
+    if (configured) readJson('localStorage', QUEUE_KEY, []).forEach(saveLead);
   }
 
   function makeRef() {
     if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
     return Date.now().toString(36) + Math.random().toString(36).slice(2);
-  }
-
-  // Skip saving the same phone + enquiry twice within 30 minutes (double clicks, back button).
-  function isDuplicate(phone, subject) {
-    var key = phone.replace(/\D/g, '') + '|' + subject;
-    var sent = readJson('localStorage', SENT_KEY, {});
-    var now = Date.now();
-    Object.keys(sent).forEach(function (k) { if (now - sent[k] > 30 * 60 * 1000) delete sent[k]; });
-    var dup = Boolean(sent[key]);
-    sent[key] = now;
-    writeJson('localStorage', SENT_KEY, sent);
-    return dup;
   }
 
   function buildRecord(f, source) {
@@ -176,14 +166,14 @@
   }
 
   // Save without showing the form (for forms that already ask for name and phone).
-  // Returns a promise: true when the sheet confirmed the save (or it was a repeat within 30 minutes), false otherwise.
+  // Returns a promise: true when the sheet confirmed the save false otherwise.
   function capture(fields, opts) {
     opts = opts || {};
     var f = Object.assign({}, fields);
     f.name = clean(f.name, 100);
     f.phone = clean(f.phone, 30);
     writeJson('localStorage', CONTACT_KEY, { name: f.name, phone: f.phone, email: clean(f.email, 200) });
-    var result = isDuplicate(f.phone, clean(f.subject, 300)) ? Promise.resolve(true) : saveLead(buildRecord(f, opts.source || 'contact-form'));
+    var result = saveLead(buildRecord(f, opts.source || 'contact-form'));
     if (opts.openWhatsApp !== false) openWhatsApp(waUrl(composeMessage(f, opts.waText)));
     return result;
   }

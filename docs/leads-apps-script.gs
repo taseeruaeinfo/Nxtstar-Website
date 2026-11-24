@@ -57,7 +57,9 @@ function siteOf(value) {
 
 function sheet(site) {
   var name = SITE_TABS[site];
-  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var id = PropertiesService.getScriptProperties().getProperty('LEADS_SPREADSHEET_ID');
+  var ss = id ? SpreadsheetApp.openById(id) : SpreadsheetApp.getActiveSpreadsheet();
+  if (!ss) throw new Error('Lead spreadsheet is not configured');
   var sh = ss.getSheetByName(name);
   if (!sh) {
     sh = ss.insertSheet(name);
@@ -90,14 +92,17 @@ function addLead(lead) {
   if (phone.replace(/\D/g, '').length < 7 || !/^[+0-9 ()\-.]+$/.test(phone)) return { ok: false, error: 'Phone required' };
 
   var ref = text(lead.client_ref, 'client_ref');
-  var cache = CacheService.getScriptCache();
-  if (ref && cache.get('ref:' + ref)) return { ok: true, duplicate: true };
-
   var lock = LockService.getScriptLock();
   lock.waitLock(20000);
+  var sh;
+  var id = Utilities.getUuid();
   try {
+    sh = sheet(site);
+    var last = sh.getLastRow();
+    if (ref && last > 1 && sh.getRange(2, COLUMNS.indexOf('client_ref') + 1, last - 1, 1)
+        .createTextFinder(ref).matchEntireCell(true).findNext()) return { ok: true, duplicate: true };
     var row = COLUMNS.map(function (c) {
-      if (c === 'id') return Utilities.getUuid();
+      if (c === 'id') return id;
       if (c === 'created_at') return new Date();
       if (c === 'status') return 'New';
       if (c === 'name') return cell(name);
@@ -105,12 +110,32 @@ function addLead(lead) {
       if (['assigned_to', 'admin_notes', 'updated_at', 'updated_by'].indexOf(c) !== -1) return '';
       return cell(text(lead[c], c));
     });
-    sheet(site).appendRow(row);
-    if (ref) cache.put('ref:' + ref, '1', 21600);
+    sh.appendRow(row);
+    SpreadsheetApp.flush();
   } finally {
     lock.releaseLock();
   }
+  notifyNewLead(sh, id);
   return { ok: true };
+}
+
+// Run once from the spreadsheet's Apps Script editor before redeployment.
+function bindLeadSpreadsheet() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  if (!ss) throw new Error('Open Apps Script from the NXTSTAR spreadsheet');
+  PropertiesService.getScriptProperties().setProperty('LEADS_SPREADSHEET_ID', ss.getId());
+  MailApp.getRemainingDailyQuota(); // Requests mail permission without sending an email.
+}
+
+function notifyNewLead(sh, id) {
+  try {
+    var to = PropertiesService.getScriptProperties().getProperty('LEAD_NOTIFICATION_EMAIL');
+    if (!to) return;
+    var url = sh.getParent().getUrl() + '#gid=' + sh.getSheetId();
+    MailApp.sendEmail(to, 'New NXTSTAR website enquiry', 'A new enquiry was saved to NXTSTAR Leads.\nLead ID: ' + id + '\nOpen the sheet: ' + url);
+  } catch (err) {
+    console.error('Lead saved but email notification failed', err.message);
+  }
 }
 
 function checkPassword(site, password) {
